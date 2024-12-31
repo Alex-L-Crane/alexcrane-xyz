@@ -7,7 +7,7 @@
       <g-image src="~/assets/images/about-abstract-header-1.png" width="3000" height="1685" class="w-full h-full object-cover object-left-top"/>
     </div>
     <div class="w-full -mt-[168px] lg:-mt-[194px]">
-      <svg viewBox="0 0 2561 1161" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg width="100%" height="100%" viewBox="0 0 2561 1161" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title>banner-waves</title>
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="Studio-Display-Copy" transform="translate(0, -1210)">
@@ -49,19 +49,24 @@ export default {
       let x = e.screenX;
       let y = e.screenY;
 
-      let xPercent = x/window.innerWidth * 100;
-      let yPercent = y/window.innerHeight * 100;
-
       let xDecimal = x/window.innerWidth;
-      let yDecimal = y/window.innerWidth;
+      let yDecimal = y/window.innerHeight;
+
+      console.log("xDecimal: " + xDecimal);
+      console.log("yDecimal: " + yDecimal);
+
 
       xDecimal = Math.round((xDecimal + Number.EPSILON) * 100) / 100;
 
-      let newFontWeight = minFontWeight + ( Math.round(fontWeightPercent * yPercent) )
-      let newFontStretch = minFontStretch + ( Math.round(fontStretchPercent * xPercent) )
       let hex1 = hexMix(color1, color2, xDecimal);
       let hex2 = hexMix(color1, color3, yDecimal);
       let hex3 = hexMix(hex2, hex1, 0.5);
+
+      let xPercent = xDecimal * 100;
+      let yPercent = yDecimal * 100;
+
+      let newFontWeight = minFontWeight + ( Math.round(fontWeightPercent * yPercent) )
+      let newFontStretch = minFontStretch + ( Math.round(fontStretchPercent * xPercent) )
 
       document.getElementById('variable-text').style.fontWeight = newFontWeight;
       document.getElementById('variable-text').style.fontStretch = newFontStretch + '%';
@@ -140,7 +145,7 @@ export default {
     }
 
     // ——————————————————————————————————————————————————
-    // Example
+    // TextScramble Implementation
     // ——————————————————————————————————————————————————
 
     const phrases = [
