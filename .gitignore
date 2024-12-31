@@ -5,3 +5,10 @@ src/.temp
 node_modules
 .env
 .env.*
+README.md
+gridsome.*
+*.js
+src/*
+static/*
+*.json
+yarn.lock
