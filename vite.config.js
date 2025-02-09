@@ -12,12 +12,10 @@ export default defineConfig({
     vueDevTools(),
     tailwindcss(),
   ],
+  base: '/alexcrane-xyz/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  server: {
-    port: '/alexcrane-xyz/'
-  }
 })
