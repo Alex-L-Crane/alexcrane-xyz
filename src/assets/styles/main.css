@@ -1,0 +1,75 @@
+@import './base.css';
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* NeoGeo */
+  @font-face {
+    font-family: NeoGeo;
+    src: url(../fonts/NeoGeo-Trial-VAR-VF.woff2) format("woff2");
+  }
+  /* Swiss Posters */
+  @font-face {
+    font-family: Swissposters;
+    src: url(../fonts/Swissposters-Trial-VAR-VF.woff2) format("woff2");
+  }
+  /* Crystal */
+  @font-face {
+    font-family: Crystal;
+    src: url(../fonts/Crystal-Trial-VAR-VF.ttf.woff2) format("woff2");
+  }
+  /* Alaska */
+  @font-face {
+    font-family: Alaska;
+    src: url(../fonts/Alaska-Trial-VAR-VF.ttf.woff2) format("woff2");
+  }
+
+  body {
+    font-family: 'Alaska', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+    font-size: 18px;
+    color: #fff;
+    background-color: #1C1C1C;
+  }
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+
+  .neogeo {
+    font-family: 'NeoGeo', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+  }
+
+  .swissposters {
+    font-family: 'Swissposters', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+  }
+
+  .crystal {
+    font-family: 'Crystal', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+  }
+
+  .alaska {
+    font-family: 'Alaska', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+  }
+  #app {
+    /*max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-weight: normal;*/
+  }
+
+  @media (hover: hover) {
+    a:hover {
+      background-color: hsla(160, 100%, 37%, 0.2);
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+  }
+}
+
