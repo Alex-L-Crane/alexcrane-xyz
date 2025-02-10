@@ -35,7 +35,7 @@
 </style>
 
 <script>
-  import philosophyBanner from '@/assets/images/about-abstract-header-1.png';
+import philosophyBanner from '@/assets/images/about-abstract-header-1.png';
   export default {
     name: 'PhilosophyBanner',
     mounted() {
