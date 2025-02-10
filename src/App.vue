@@ -8,7 +8,8 @@
       <div class="absolute top-[45%] lg:top-[40%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-full text-center p-6">
         <h1 id="variable-text" class="text-scramble crystal text-4xl lg:text-6xl text-punk-yellow">Perfectionism Kills.</h1>
       </div>
-      <image src="./images/about-abstract-header-1.png" width="3000" height="1685" class="w-full h-full object-cover object-left-top"/>
+      <!--<image src="./images/about-abstract-header-1.png" width="3000" height="1685" class="w-full h-full object-cover object-left-top"/>-->
+      <img :src="`${baseURL}images/logo.png`" alt="Abstract Philosophy Banner" width="3000" height="1685" class="w-full h-full object-cover object-left-top"/>
     </div>
     <div class="w-full -mt-[168px] lg:-mt-[194px]">
       <svg width="100%" height="100%" viewBox="0 0 2561 1161" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -34,6 +35,7 @@
 </style>
 
 <script>
+const baseURL = import.meta.env.BASE_URL;
   export default {
     name: 'PhilosophyBanner',
     mounted() {
