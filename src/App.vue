@@ -34,7 +34,7 @@
         <h2 class="neogeo text-5xl lg:text-7xl w-[42rem]">Methodical <br>non-utilitarianism.</h2>
       </div>
       <div class="flex justify-center xl:justify-end mb-32">
-        <p class="text-2xl lg:text-3xl leading-normal max-w-2xl">Make things up. Make mistakes. Be wrong and enjoy learning. This is all part of the creative process. It’s not about utility, it’s about growth and development. It's hard to slow down and embrace nuance in a world obsessed with short-sighted productivity...</p>
+        <p class="text-2xl lg:text-3xl leading-normal max-w-2xl">A context where making things up, making mistakes, and being wrong are all part of the creative process. Growth, development, and enjoyment, not utility. Slowing down and embracing nuance as an antidote to a world obsessed with short-sighted productivity.</p>
       </div>
     </div>
 
@@ -58,10 +58,10 @@
         </svg>
       </div>
       <div class="flex justify-center xl:justify-start mb-16 mt-[450px]">
-        <h2 class="neogeo text-5xl lg:text-7xl w-[42rem]">Sound is the source. <br>Simultaneously ubiquitous and subversive.</h2>
+        <h2 class="neogeo text-5xl lg:text-7xl w-[42rem]">Sound. <br>Simultaneously ubiquitous and subversive.</h2>
       </div>
       <div class="flex justify-center xl:justify-end mb-32">
-        <p class="text-2xl lg:text-3xl leading-normal max-w-2xl">I don’t believe in magic. I believe in the unfettered power of sound. Deeply misunderstood and underappreciated, sound permeates every aspect of life. For me, it has been the gateway to learning about visual arts, computer science, electronics, culture, psychology, politics, and, of course, music.</p>
+        <p class="text-2xl lg:text-3xl leading-normal max-w-2xl">I don’t believe in magic, but I've seen the unfettered power of sound. Deeply misunderstood and underappreciated, it has permeated every aspect of my life and has been my gateway to learning about visual arts, computer science, electronics, culture, psychology, politics, and, of course, music.</p>
       </div>
     </div>
 
