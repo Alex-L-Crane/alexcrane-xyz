@@ -6,7 +6,7 @@
   <div>
     <div style="height: 100vh;" class="w-full overflow-hidden">
       <div class="absolute top-[45%] lg:top-[40%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-full text-center p-6">
-        <h1 id="variable-text" class="text-scramble crystal text-4xl lg:text-6xl text-punk-yellow">Perfectionism Kills.</h1>
+        <h1 id="variable-text" class="text-scramble crystal text-4xl lg:text-5xl text-punk-yellow">Perfectionism Kills.</h1>
       </div>
       <!--<image src="./images/about-abstract-header-1.png" width="3000" height="1685" class="w-full h-full object-cover object-left-top"/>-->
       <img :src="philosophyBanner" alt="Abstract Philosophy Banner" width="3000" height="1685" class="w-full h-full object-cover object-left-top"/>
@@ -105,12 +105,16 @@
 
     <!-- footer -->
     <div class="bg-almost-black h-[600px]">
+      <p>Sign up to receive occasional emails.<br/>
+      I share projects, learnings, and inspirations.</p>
+
+
 
     </div>
   </div>
 </template>
 
-<style scoped>
+<style>
 
 </style>
 
