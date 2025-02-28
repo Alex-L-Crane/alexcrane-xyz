@@ -6,7 +6,7 @@
   <div>
     <div style="height: 100vh;" class="w-full overflow-hidden">
       <div class="absolute top-[45%] lg:top-[40%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-full text-center p-6">
-        <h1 id="variable-text" class="text-scramble crystal text-4xl lg:text-5xl text-punk-yellow">Perfectionism Kills.</h1>
+        <h1 id="variable-text" class="text-scramble crystal text-5xl text-punk-yellow">Perfectionism Kills.</h1>
       </div>
       <!--<image src="./images/about-abstract-header-1.png" width="3000" height="1685" class="w-full h-full object-cover object-left-top"/>-->
       <img :src="philosophyBanner" alt="Abstract Philosophy Banner" width="3000" height="1685" class="w-full h-full object-cover object-left-top"/>
@@ -30,11 +30,11 @@
 
     <!-- tagline -->
     <div class="p-4 lg:p-16">
-      <div class="flex justify-center xl:justify-start my-16">
-        <h2 class="neogeo text-5xl lg:text-7xl w-[42rem]">Methodical <br>non-utilitarianism.</h2>
+      <div class="flex justify-center mt-16 mb-6">
+        <h2 class="neogeo text-5xl/[1] w-[42rem]">Methodical <br>non-utilitarianism.</h2>
       </div>
-      <div class="flex justify-center xl:justify-end mb-32">
-        <p class="text-2xl lg:text-3xl leading-normal max-w-2xl">A context where making things up, making mistakes, and being wrong are all part of the creative process. Growth, development, and enjoyment, not utility. Slowing down and embracing nuance as an antidote to a world obsessed with short-sighted productivity.</p>
+      <div class="flex justify-center mb-32">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">A context where making things up, making mistakes, and being wrong are all part of the creative process. Growth, development, and enjoyment, not utility. Slowing down and embracing nuance as an antidote to a world obsessed with short-sighted productivity.</p>
       </div>
     </div>
 
@@ -57,49 +57,55 @@
           </g>
         </svg>
       </div>
-      <div class="flex justify-center xl:justify-start mb-16 mt-[450px]">
-        <h2 class="neogeo text-5xl lg:text-7xl w-[42rem]">Sound. <br>Simultaneously ubiquitous and subversive.</h2>
+      <div class="flex justify-center mt-[450px] mb-6">
+        <h2 class="neogeo text-5xl/[1] w-[42rem]">Sound. <br>Simultaneously<br/>ubiquitous and<br/>subversive.</h2>
       </div>
-      <div class="flex justify-center xl:justify-end mb-32">
-        <p class="text-2xl lg:text-3xl leading-normal max-w-2xl">I don’t believe in magic, but I've seen the unfettered power of sound. Deeply misunderstood and underappreciated, it has permeated every aspect of my life and has been my gateway to learning about visual arts, computer science, electronics, culture, psychology, politics, and, of course, music.</p>
+      <div class="flex justify-center mb-32">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">I don’t believe in magic, but I've seen the unfettered power of sound. Deeply misunderstood and underappreciated, it has permeated every aspect of my life and has been my gateway to learning about visual arts, computer science, electronics, culture, psychology, politics, and, of course, music.</p>
       </div>
     </div>
 
     <!-- manifesto -->
     <div class="bg-white text-black p-4 lg:p-16">
       <img :src="garagePhoto" alt="Garage music" width="full" class="-mt-[24%] relative z-30"/>
-      <div class="flex justify-center xl:justify-start mb-16 mt-16">
-        <h2 class="neogeo text-5xl lg:text-7xl w-[42rem]">Dreaming in audio visual perception systems and noise patterns, a manifesto:</h2>
+
+      <div class="flex justify-center mt-16 mb-12">
+        <h2 class="neogeo text-5xl/[1] w-[42rem]">Systems. <br/>Patterns. <br/>Perception.</h2>
       </div>
-      <div class="flex justify-center xl:justify-end mb-16">
-        <p class="text-2xl lg:text-3xl leading-normal w-[42rem]">By default, the mainstream is not conducive to awareness. Subvert mainstream thinking and via both process and aesthetic.</p>
+      <div class="flex justify-center mb-6">
+        <div class="max-w-2xl">
+          <h2 class="neogeo text-5xl/[1] w-[42rem] pl-32">A Manifesto:</h2>
+        </div>
       </div>
-      <div class="flex justify-center xl:justify-start flex-row mb-16">
-        <p class="text-2xl lg:text-3xl leading-normal w-[42rem]">No genres. They are not useful.</p>
+      <div class="flex justify-center mb-16">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">By default, the mainstream is not conducive to awareness. Subvert mainstream thinking via both process and aesthetic.</p>
       </div>
-      <div class="flex justify-center xl:justify-end mb-16">
-        <p class="text-2xl lg:text-3xl leading-normal w-[42rem]">Professional quality work can be meaningful, but “buttoned up" is not an aesthetic worth pursuing.</p>
+      <div class="flex justify-center mb-16">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">No genres. They are not useful.</p>
       </div>
-      <div class="flex justify-center xl:justify-start mb-16">
-        <p class="text-2xl lg:text-3xl leading-normal w-[42rem]">Improvisation is a core tenant of creativity. The unpredictable and fleeting nature is directly tied to the flow of reality.</p>
+      <div class="flex justify-center mb-16">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">Professional quality work can be meaningful, but “buttoned up" is not an aesthetic worth pursuing.</p>
       </div>
-      <div class="flex justify-center xl:justify-end mb-16">
-        <p class="text-2xl lg:text-3xl leading-normal w-[42rem]">Always be open to experimentation, even if that means experimenting with embracing mainstream thinking.</p>
+      <div class="flex justify-center mb-16">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">Improvisation is a core tenant of creativity. The unpredictable and fleeting nature is directly tied to the flow of reality.</p>
       </div>
-      <div class="flex justify-center xl:justify-start mb-16">
-        <p class="text-2xl lg:text-3xl leading-normal w-[42rem]">The idea of "progress" is irrelevant. Being present and grounded overrides black and white dogmas.</p>
+      <div class="flex justify-center mb-16">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">Always be open to experimentation, even if that means experimenting with embracing mainstream thinking.</p>
       </div>
-      <div class="flex justify-center xl:justify-end mb-16">
-        <p class="text-2xl lg:text-3xl leading-normal w-[42rem]">Don't hesitate to throw away or redo work. Also, don't get stuck in a loop where nothing is ever finished.</p>
+      <div class="flex justify-center mb-16">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">The idea of "progress" is irrelevant. Being present and grounded overrides black and white dogmas.</p>
       </div>
-      <div class="flex justify-center xl:justify-start mb-16">
-        <p class="text-2xl lg:text-3xl leading-normal w-[42rem]">The act of developing and exploring a creative process is more valuable than any creative output.</p>
+      <div class="flex justify-center mb-16">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">Don't hesitate to throw away or redo work. Also, don't get stuck in a loop where nothing is ever finished.</p>
       </div>
-      <div class="flex justify-center xl:justify-end mb-16">
-        <p class="text-2xl lg:text-3xl leading-normal w-[42rem]">Art does not need to be accessible.</p>
+      <div class="flex justify-center mb-16">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">The act of developing and exploring a creative process is more valuable than any creative output.</p>
       </div>
-      <div class="flex justify-center xl:justify-start mb-32">
-        <p class="text-2xl lg:text-3xl leading-normal w-[42rem]">There is nothing to work towards. You are already there and have always been there.</p>
+      <div class="flex justify-center mb-16">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">Art does not need to be accessible.</p>
+      </div>
+      <div class="flex justify-center mb-32">
+        <p class="text-2xl/[1.4] font-thin max-w-2xl pl-32">There is nothing to work towards. You are already there and have always been there.</p>
       </div>
     </div>
 
