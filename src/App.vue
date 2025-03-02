@@ -1,9 +1,17 @@
 <script setup>
- // import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
   <div>
+    <!--<div>
+      <RouterLink to="/">Projects</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+    </div>
+    <div>
+      <strong>Current route path:</strong> {{ $route.fullPath }}
+      <RouterView />
+    </div>-->
     <div style="height: 100vh;" class="w-full overflow-hidden">
       <div class="absolute top-[45%] lg:top-[40%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-full text-center p-6">
         <h1 id="variable-text" class="text-scramble crystal text-5xl text-punk-yellow">Perfectionism Kills.</h1>
@@ -128,7 +136,7 @@
   import philosophyBanner from '@/assets/images/about-abstract-header-1.png';
   import garagePhoto from '@/assets/images/garage-photo-3-31-24-v14.png';
   export default {
-    name: 'PhilosophyBanner',
+    name: 'App',
     mounted() {
       // browser only code
 
