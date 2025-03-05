@@ -40,7 +40,7 @@ export default {
     window.addEventListener('mousemove', e => {
       const minFontWeight = 100
       const maxFontWeight = 800
-      const minFontStretch = 70
+      const minFontStretch = 50
       const maxFontStretch = 100
       const fontWeightPercent = (maxFontWeight - minFontWeight) / 100;
       const fontStretchPercent = (maxFontStretch - minFontStretch) / 100;
@@ -52,8 +52,15 @@ export default {
       let x = e.screenX;
       let y = e.screenY;
 
-      let xDecimal = x/window.innerWidth;
-      let yDecimal = y/window.innerHeight;
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+
+      let xDecimal = x/width;
+      let yDecimal = y/height;
+
+      console.log("Width = " + width + " Height = " + height + " X = " + x + " Y = " + y);
+
+
 
       xDecimal = Math.round((xDecimal + Number.EPSILON) * 100) / 100;
 
