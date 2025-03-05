@@ -52,6 +52,9 @@ export default {
       let x = e.screenX;
       let y = e.screenY;
 
+      x = x/2;
+      y = y/2;
+
       let width = window.innerWidth;
       let height = window.innerHeight;
 
