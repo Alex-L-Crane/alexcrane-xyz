@@ -1,6 +1,7 @@
 <script setup>
   /* import { RouterLink, RouterView } from 'vue-router' */
   import Banner from '@/components/PhilosophyBanner.vue'
+  import garagePhoto from '@/assets/images/garage-photo-3-31-24-v14.png';
 </script>
 
 <template>
