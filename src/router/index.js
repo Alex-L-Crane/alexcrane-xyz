@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AboutSection from '../views/AboutSection.vue'
-import ProjectsSection from '../views/ProjectsSection.vue'
+import AboutLanding from '../views/about/AboutLanding.vue'
+import ProjectsLanding from '../views/projects/ProjectsLanding.vue'
+import PhilosophySection from '@/views/about/PhilosophySection.vue'
+import InspirationsSection from '@/views/about/InspirationsSection.vue'
+import BackgroundSection from '@/views/about/BackgroundSection.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,14 +12,30 @@ const router = createRouter({
     {
       path: '/',
       name: 'projects',
-      component: ProjectsSection
+      component: ProjectsLanding
     },
     {
       path: '/about',
       name: 'about',
-      component: AboutSection
+      component: AboutLanding,
+      children: [
+        {
+          path: '',
+          name: 'philosophy',
+          component: PhilosophySection
+        },
+        {
+          path: '/about/inspirations',
+          component: InspirationsSection
+        },
+        {
+          path: '/about/background',
+          name: 'background',
+          component: BackgroundSection
+        }
+      ]
     },
-  ],
+  ]
 })
 
 export default router
