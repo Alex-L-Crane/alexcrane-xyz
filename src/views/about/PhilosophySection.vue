@@ -6,7 +6,7 @@
 
 <template>
   <Banner />
-  <div class="p-8">
+  <div class="p-8 border-b-2 border-b-white">
     <Summary />
     <Manifesto />
   </div>

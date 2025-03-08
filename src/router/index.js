@@ -9,13 +9,13 @@ import BackgroundSection from '@/views/about/BackgroundSection.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
+    /*{
       path: '/',
       name: 'projects',
       component: ProjectsLanding
-    },
+    },*/
     {
-      path: '/about',
+      path: '/',
       name: 'about',
       component: AboutLanding,
       children: [
