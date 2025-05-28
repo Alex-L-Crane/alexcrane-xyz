@@ -1,26 +1,13 @@
 <script setup>
-  import { RouterLink, RouterView } from 'vue-router'
+import aboutLandingBanner from '@/components/about/AboutLandingBanner.vue'
+import MainMenuHoverImages from '@/components/navigation/MainMenuHoverImages.vue'
 </script>
 
 <template>
-  <div>
-    <div class="absolute left-1/2 z-10">
-      <!--<ul class="list-none flex flex-row -ml-[50%] text-xl">
-        <li><RouterLink to="/about/"><span class="nav">Philosophy</span></RouterLink></li>
-        <li><RouterLink to="/about/inspirations"><span class="nav">Inspirations</span></RouterLink></li>
-        <li><RouterLink to="/about/background"><span class="nav">Background</span></RouterLink></li>
-      </ul>-->
+  <div class="bg-[#F24607] pt-20 px-2 lg:px-8">
+    <about-landing-banner />
+    <div class="mt-6">
+      <MainMenuHoverImages :dark-theme="true"/>
     </div>
-    <RouterView />
   </div>
 </template>
-
-<style scoped>
-@reference "../app.css";
-span.nav {
-  @apply block p-4 opacity-50;
-}
-a.router-link-exact-active > span.nav{
-  @apply opacity-100;
-}
-</style>

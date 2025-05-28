@@ -1,15 +1,16 @@
 <script setup>
-  import philosophyBanner from '@/assets/images/about-abstract-header-1.png';
+  import abstractHeader from '@/assets/images/abstract-header-drumhead.png';
+  import MainMenu from '@/components/navigation/MainMenu.vue'
 </script>
 
 <template>
   <div>
-    <div style="height: 100vh;" class="w-full relative overflow-hidden">
-      <div class="absolute top-[45%] lg:top-[40%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-full text-center p-6">
-        <h1 id="variable-text" class="text-scramble crystal text-6xl text-punk-yellow">Perfectionism Kills.</h1>
+    <div style="height: 60vh;" class="w-full relative overflow-hidden -z-10">
+      <div class="absolute top-[45%] lg:top-[50%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-full text-center p-6">
+        <h1 id="variable-text" class="text-scramble crystal text-6xl">Perfectionism Kills.</h1>
       </div>
-      <img :src="philosophyBanner" alt="Abstract Philosophy Banner" width="3000" height="1685" class="w-full h-full object-cover object-left-top"/>
-      <div class="w-full absolute bottom-[-1px]">
+      <img :src="abstractHeader" alt="Abstract Philosophy Banner" width="3000" height="1685" class="w-full h-full object-cover object-left-top"/>
+      <!--<div class="w-full h-2/5 absolute bottom-[-1px]">
         <svg width="100%" height="100%" viewBox="0 0 2561 452" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title>banner-waves-short</title>
           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -20,9 +21,9 @@
             </g>
           </g>
         </svg>
-      </div>
+      </div>-->
     </div>
-
+    <MainMenu :dark-theme="true"/>
   </div>
 </template>
 
@@ -43,7 +44,7 @@ export default {
       const fontWeightPercent = (maxFontWeight - minFontWeight) / 100;
       const fontStretchPercent = (maxFontStretch - minFontStretch) / 100;
 
-      let color1 = "FBC028";
+      let color1 = "FFFFFF";
       let color2 = "FA8072";
       let color3 = "d8f172";
 
