@@ -14,12 +14,13 @@ import MainMenuHoverImages from '@/components/navigation/MainMenuHoverImages.vue
 </template>-->
 
 <script setup>
-import BackgroundSummary from '@/components/background/BackgroundSummary.vue'
+import BackgroundSection from '@/views/about/BackgroundSection.vue'
 </script>
 
 <template>
-  <div class="bg-[#F2C4B3] text-black p-8 pt-24">
-    <background-summary />
+  <!--<div class="bg-[#F2C4B3] text-black p-8 pt-24">-->
+  <div class="bg-[#F2C4B3] text-black p-8">
+    <background-section />
   </div>
 </template>
 

@@ -13,5 +13,5 @@ import TextBlockLeft from '@/components/formatting/TextBlockLeft.vue'
     <TextBlockRight>
     </TextBlockRight>
   </div>
-  <img :src="garagePhoto" alt="Garage music" width="full" class=""/>
+  <img :src="garagePhoto" alt="Garage music" width="full" class="max-w-6xl"/>
 </template>
