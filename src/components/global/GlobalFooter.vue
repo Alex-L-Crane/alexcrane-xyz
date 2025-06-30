@@ -1,6 +1,51 @@
 <template>
   <div class="bg-almost-black h-[600px]">
-    <!--<p>Sign up to receive occasional emails.<br/>
-      I share projects, learnings, and inspirations.</p>-->
+    <div class="ml-8 pt-64">
+      <h2 class="text-3xl">Emailer</h2>
+      <p class="font-thin mb-2">Thoughts and project updates.</p>
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/alexcrane"
+        method="post">
+        <label
+          for="email"
+          class="inline-block text-sm/6 font-light text-white"></label>
+        <input
+          type="email"
+          name="email"
+          class="h-10
+                inline-block min-w-72 grow
+                py-1.5 pr-3 pl-2
+                mb-2
+                bg-almost-black border border-white rounded-sm
+                text-sm/6 leading-none font-medium text-white
+                placeholder:text-gray-400 focus:outline-none"
+          placeholder="Email Address" />
+        <label
+          for="first-name"
+          class="block text-sm/6 font-medium text-white"></label>
+        <div class="flex">
+          <input
+            id="first-name"
+            type="text"
+            name="metadata__first-name"
+            required
+            placeholder="First Name"
+            class="h-10 block min-w-72
+                  py-1.5 pr-3 pl-2
+                  mb-2 mr-2
+                  bg-almost-black border border-white rounded-sm
+                  text-sm/6 leading-none font-medium text-white
+                  placeholder:text-gray-400 focus:outline-none"
+          />
+          <input type="hidden" value="1" name="embed" />
+          <input
+            type="submit"
+            value="Subscribe"
+            class="h-10 px-6 py-0 rounded-sm text-sm/6 leading-none font-medium text-white border border-white cursor-pointer"/>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
+<script setup>
+</script>
