@@ -4,7 +4,6 @@ import backgroundAbstract1 from '@/assets/images/background-abstract-1.png'
 import backgroundAbstract2 from '@/assets/images/background-abstract-2.png'
 import cuneiformWestbeach from '@/assets/images/CuneiformWestbeachThnxgiving.png'
 import fieldAmp from '@/assets/images/alex-field-amp-cropped-1.png'
-import geometricLines from '@/assets/images/geometric-diagonal-lines.svg'
 </script>
 
 <template>
@@ -19,7 +18,7 @@ import geometricLines from '@/assets/images/geometric-diagonal-lines.svg'
       <div class="w-3/4">
         <div class="max-w-[50%]">
           <div class="max-w-[15ch] mx-auto mt-24 mb-8">
-            <p>
+            <p class="mb-8">
               <span class="text-3xl">Life.</span><br><br>
               A difficult balance of avoiding societal norms, while still having a pesky need to survive.
               On this long road, the end goal is mostly unclear.
@@ -28,8 +27,8 @@ import geometricLines from '@/assets/images/geometric-diagonal-lines.svg'
                 So.&nbsp;&nbsp;&nbsp;&nbsp;
                 Much.&nbsp;&nbsp;&nbsp;&nbsp;
                 Time.</em>
-
-              <br><br>
+            </p>
+            <p>
               I’ve never liked being a cog in a soulless machine.
               I haven’t followed a straight professional path.
               Most things I've done that mattered were born from freelance work, personal projects, and from figuring things out on the fly.
@@ -95,8 +94,8 @@ import geometricLines from '@/assets/images/geometric-diagonal-lines.svg'
               <a href="https://resonate.coop/" target="_blank" class="text-[#9A2C2C] underline hover:opacity-80">Resonate</a>.
             </li>
             <li class="mb-8 border-l-8 border-[#444244] pl-4">
-              I collaborated with an engineer friend to create the
-              <a href="https://alexcrane.xyz/kinetic-beats/" target="_blank" class="text-[#9A2C2C] underline hover:opacity-80">Kinetic Beats</a> air drumming iPhone app.
+              I collaborated with an engineer friend to create
+              <a href="https://alexcrane.xyz/kinetic-beats/" target="_blank" class="text-[#9A2C2C] underline hover:opacity-80">Kinetic Beats</a>, an iPhone app for air drumming.
             </li>
             <li class="mb-8 border-l-8 border-[#444244] pl-4">
               <p class="pb-2"><em>I was hired to build websites for some musicians I admire:</em></p>
@@ -134,27 +133,46 @@ import geometricLines from '@/assets/images/geometric-diagonal-lines.svg'
         <div class="relative h-full">
           <div class="sticky top-32 z-10">
             <img :src="fieldAmp" alt="Sitting in a field adjusting an amplifier" width="full"/>
+            <span class="font-thin italic">2020: Playing with an amplifier in a field.</span>
           </div>
         </div>
       </div>
       <div class="w-[50%]">
-        <div class="max-w-[15ch] pl-4 mb-[36rem]">
+        <div class="max-w-[15ch] pl-4 mb-8">
           <p class="mb-8">
             I didn’t know the word “ideology” when I first felt it, but I knew it was everywhere.
-            Trying to make sense of the world involves plodding through a web of conflicting beliefs. Each one louder than the last. That’s what makes life fascinating. And exhausting.
+            Trying to make sense of the world involves plodding through a web of conflicting beliefs.
+            Each one louder than the last.<br><br>
+            <em>That’s what makes life <strike>exhausting</strike> fascinating.<br><br>
+            That’s what makes life <strike>fascinating</strike> exhausting.</em>
           </p>
           <p class="mb-8">
-            I was born in upstate New York, spent my childhood in the mountains of western Massachusetts, then landed in rural Arizona at thirteen. The desert, border towns, a different world entirely.
-            Since then: San Francisco. Tucson. L.A. Vegas. Eugene.
+            <em class="text-3xl font-thin">Maybe it isn't supposed to make sense...</em>
           </p>
+          <p class="leading-10 mb-8">
+            I was born in upstate
+            <span class="text-3xl font-thin">New York,</span>
+            spent my childhood in the mountains of western
+            <span class="text-3xl font-thin">Massachusetts,</span>
+            then landed in rural
+            <span class="text-3xl font-thin">Arizona</span>
+            at thirteen. The desert, border towns, a different world entirely.
+          </p>
+
+          <ul class="mb-8">
+            <li>Since then:</li>
+            <li class="text-3xl font-thin">San Francisco</li>
+            <li class="text-3xl font-thin">Tucson</li>
+            <li class="text-3xl font-thin">L.A.</li>
+            <li class="text-3xl font-thin">Vegas</li>
+            <li class="text-3xl font-thin">Eugene</li>
+          </ul>
           <p>
-            I’ve worked with people from just about every walk of life. That’s been one of the great joys.
-            But what they believe? That’s the puzzle.
-            I’ve never done well with ready-made worldviews. I’m not wired for doctrine.
-            Maybe that’s why I ended up here — chasing meaning the only way I know how: through art, through work, through rhythm.
+            I’ve worked with a melting pot of people from drastically different walks of life.
+            Still, I haven't found a ready-made worldview I'll buy. I’m not wired for doctrine.
+            Maybe that’s why I ended up here. Discovering meaning the only way I know how: through art, through work, through rhythm.
           </p>
         </div>
-        <span class="pl-4 font-thin italic">2020: Playing with an amplifier in a field.</span>
       </div>
     </div>
   </div>

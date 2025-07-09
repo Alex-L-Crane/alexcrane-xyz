@@ -1,8 +1,8 @@
 <template>
   <div class="bg-almost-black h-[600px]">
     <div class="ml-8 pt-64">
-      <h2 class="text-3xl">Emailer</h2>
-      <p class="font-thin mb-2">Thoughts and project updates.</p>
+      <h2 class="text-3xl">Email Signup</h2>
+      <p class="font-thin mb-2">For when there’s something worth saying.</p>
       <form
         action="https://buttondown.com/api/emails/embed-subscribe/alexcrane"
         method="post">
@@ -13,7 +13,7 @@
           type="email"
           name="email"
           class="h-10
-                inline-block min-w-72 grow
+                inline-block min-w-96
                 py-1.5 pr-3 pl-2
                 mb-2
                 bg-almost-black border border-white rounded-sm
@@ -30,7 +30,7 @@
             name="metadata__first-name"
             required
             placeholder="First Name"
-            class="h-10 block min-w-72
+            class="h-10 block min-w-96
                   py-1.5 pr-3 pl-2
                   mb-2 mr-2
                   bg-almost-black border border-white rounded-sm
