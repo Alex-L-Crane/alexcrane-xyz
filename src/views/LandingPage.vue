@@ -19,7 +19,7 @@ import BackgroundSection from '@/views/about/BackgroundSection.vue'
 
 <template>
   <!--<div class="bg-[#F2C4B3] text-black p-8 pt-24">-->
-  <div class="bg-[#F2C4B3] text-black p-8">
+  <div class="bg-[#F2C4B3] text-black">
     <background-section />
   </div>
 </template>
