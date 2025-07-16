@@ -1,58 +1,69 @@
 <script setup>
-import BackgroundSummary from '@/components/background/BackgroundSummary.vue'
 import backgroundAbstract1 from '@/assets/images/background-abstract-1.png'
 import backgroundAbstract2 from '@/assets/images/background-abstract-2.png'
 import cuneiformWestbeach from '@/assets/images/CuneiformWestbeachThnxgiving.png'
 import fieldAmp from '@/assets/images/alex-field-amp-cropped-1.png'
+import garagePhoto from '@/assets/images/garage-photo-cropped.png'
 </script>
 
 <template>
   <div class="bg-[#F6D9CE] text-[#444244] pt-24">
-    <div class="px-8 pb-16">
-      <background-summary />
+    <div class="px-2 sm:px-4 md:px-8 lg:pb-16">
+      <div class="lg:pt-78 pt-16">
+        <h2 class="neogeo text-5xl/[1] mb-3">All tech and no music <span class="hidden lg:inline"><br></span>makes Alex a dull boy.</h2>
+      </div>
+      <img :src="garagePhoto" alt="Garage music" width="auto" class="w-full max-w-6xl h-auto"/>
     </div>
 
-    <div class="flex px-8">
-      <div class="w-1/4 pr-8">
+    <div class="flex px-2 sm:px-4 md:px-8 ">
+      <div class="hidden lg:inline w-1/4 lg:pr-8">
       </div>
-      <div class="w-3/4">
-        <div class="max-w-[50%]">
-          <div class="max-w-[15ch] mx-auto mt-24 mb-8">
-            <p class="mb-8">
-              <span class="text-3xl">Life.</span><br><br>
-              A difficult balance of avoiding societal norms, while still having a pesky need to survive.
-              On this long road, the end goal is mostly unclear.
-              Engaging and cultivating something real takes time.<br><br>
-              <em class="text-3xl font-thin">It takes...&nbsp;&nbsp;&nbsp;&nbsp;
-                So.&nbsp;&nbsp;&nbsp;&nbsp;
-                Much.&nbsp;&nbsp;&nbsp;&nbsp;
-                Time.</em>
-            </p>
-            <p>
-              I’ve never liked being a cog in a soulless machine.
-              I haven’t followed a straight professional path.
-              Most things I've done that mattered were born from freelance work, personal projects, and from figuring things out on the fly.
-            </p>
-          </div>
+      <div class="w-full lg:w-3/4">
+        <div class="md:max-w-[15ch] mt-8 lg:mt-24 mb-8">
+          <p class="mb-8">
+            <span class="text-3xl">Life.</span><br><br>
+            A difficult balance of avoiding societal norms, while still having a pesky need to survive.
+            On this long road, the outcome is unclear.
+            Engaging and cultivating something real takes time.<br><br>
+            <em class="text-3xl font-thin">It takes...&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="inline lg:hidden"><br></span>
+              So.&nbsp;&nbsp;&nbsp;&nbsp;
+              Much.&nbsp;&nbsp;&nbsp;&nbsp;
+              Time.</em>
+          </p>
+          <p>
+            I’ve never liked being a cog in a soulless machine.
+            I haven’t followed a straight professional path.
+            Most things I've done that mattered were born from freelance work, personal projects, and from figuring things out on the fly.
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="flex px-8">
-      <div class="w-1/4 pr-8">
+    <div class="flex px-2 md:px-8">
+      <div class="invisible lg:w-1/4 lg:pr-8">
       </div>
-      <div class="w-3/4">
-        <img :src="backgroundAbstract1" alt="Garage music" width="full" class="w-full mb-24"/>
+      <div class="w-full lg:w-3/4">
+        <img :src="backgroundAbstract1" alt="Garage music" width="full" class="w-full mb-4 lg:mb-24"/>
       </div>
     </div>
 
-    <div class="-mt-36 bg-[#c6ccd7] rounded p-16 mr-16 mb-32 mx-8">
-      <h2 class="neogeo text-[#3E3D3F] text-7xl tracking-tight mb-3">It's far better to subtly baffle and annoy than to pacify.</h2>
+    <div class="lg:-mt-36 md:bg-[#c6ccd7] lg:rounded md:p-4 lg:p-16 lg:mr-16 mb-16 lg:mb-32 mx-2 md:mx-8">
+      <h2 class="neogeo text-[#3E3D3F] text-5xl lg:text-7xl tracking-tight lg:mb-3">It's far better to subtly baffle and annoy than to pacify.</h2>
     </div>
 
-    <div class="w-full flex p-8">
-      <div class="w-[50%]">
-        <div class="max-w-[15ch]">
+    <div class="w-full flex flex-col lg:flex-row-reverse p-2 md:p-8">
+      <!-- Right Side: Image Display -->
+      <div class="md:w-[50%]">
+        <div class="relative h-full">
+          <div class="lg:sticky lg:top-32 z-10">
+            <img :src="cuneiformWestbeach" alt="Garage music" width="full" class="mx-auto mb-4 md:mb-24"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:w-[50%]">
+        <div class="md:max-w-[15ch]">
           <h2 class="neogeo text-5xl/[1] mb-8">Swimming in Sound.</h2>
           <ul class="space-y-6 mb-24 list-none">
             <li class="mb-8 border-l-8 border-[#444244] pl-4">
@@ -88,14 +99,14 @@ import fieldAmp from '@/assets/images/alex-field-amp-cropped-1.png'
             </li>
           </ul>
           <h2 class="neogeo text-5xl/[1] mb-8">Design/Tech Entanglements.</h2>
-          <ul class="space-y-6 mb-24 list-none">
+          <ul class="space-y-6 md:mb-24 list-none">
             <li class="mb-8 border-l-8 border-[#444244] pl-4">
               I used my design and tech skills to help set the wheels in motion for the artist-friendly music streaming alternative
               <a href="https://resonate.coop/" target="_blank" class="text-[#9A2C2C] underline hover:opacity-80">Resonate</a>.
             </li>
             <li class="mb-8 border-l-8 border-[#444244] pl-4">
               I collaborated with an engineer friend to create
-              <a href="https://alexcrane.xyz/kinetic-beats/" target="_blank" class="text-[#9A2C2C] underline hover:opacity-80">Kinetic Beats</a>, an iPhone app for air drumming.
+              <a href="https://www.behance.net/gallery/58350023/KineticBeats-Music-App" target="_blank" class="text-[#9A2C2C] underline hover:opacity-80">Kinetic Beats</a>, an iPhone app for air drumming.
             </li>
             <li class="mb-8 border-l-8 border-[#444244] pl-4">
               <p class="pb-2"><em>I was hired to build websites for some musicians I admire:</em></p>
@@ -113,32 +124,15 @@ import fieldAmp from '@/assets/images/alex-field-amp-cropped-1.png'
           </ul>
         </div>
       </div>
-
-      <!-- Right Side: Image Display -->
-      <div class="w-[50%]">
-        <div class="relative h-full">
-          <div class="sticky top-32 z-10">
-            <img :src="cuneiformWestbeach" alt="Garage music" width="full" class="mx-auto mb-24"/>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <div class="max-w-5xl px-8">
+    <div class="max-w-5xl p-2 md:px-8">
       <img :src="backgroundAbstract2" alt="Garage music" width="full"/>
     </div>
 
-    <div class="w-full mb-24 flex pt-8 pb-8 pl-8">
-      <div class="w-[50%]">
-        <div class="relative h-full">
-          <div class="sticky top-32 z-10">
-            <img :src="fieldAmp" alt="Sitting in a field adjusting an amplifier" width="full"/>
-            <span class="font-thin italic">2020: Playing with an amplifier in a field.</span>
-          </div>
-        </div>
-      </div>
-      <div class="w-[50%]">
-        <div class="max-w-[15ch] pl-4 mb-8">
+    <div class="w-full mb-24 flex flex-col md:flex-row-reverse pt-8 pb-8 md:pl-8">
+      <div class="md:w-[50%]">
+        <div class="md:max-w-[15ch] pl-4 md:mb-8">
           <p class="mb-8">
             I didn’t know the word “ideology” when I first felt it, but I knew it was everywhere.
             Trying to make sense of the world involves plodding through a web of conflicting beliefs.
@@ -168,10 +162,19 @@ import fieldAmp from '@/assets/images/alex-field-amp-cropped-1.png'
             <li class="text-3xl font-thin">Eugene</li>
           </ul>
           <p>
-            I’ve worked with a melting pot of people from drastically different walks of life.
-            Still, I haven't found a ready-made worldview I'll buy. I’m not wired for doctrine.
+            In my different life situations, I’ve worked with an unclassifiable blend of people from drastically different walks of life.
+            Still, I haven't found a believable ready-made worldview. That only gets stronger. I’m not wired for doctrine.
             Maybe that’s why I ended up here. Discovering meaning the only way I know how: through art, through work, through rhythm.
           </p>
+        </div>
+      </div>
+
+      <div class="md:w-[50%]">
+        <div class="relative h-full p-2 md:p-0">
+          <div class="sticky top-32 z-10">
+            <img :src="fieldAmp" alt="Sitting in a field adjusting an amplifier" width="full"/>
+            <span class="font-thin italic">2020: Playing with an amplifier in a field.</span>
+          </div>
         </div>
       </div>
     </div>

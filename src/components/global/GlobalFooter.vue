@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-almost-black h-[600px]">
-    <div class="ml-8 pt-64">
+  <div class="bg-almost-black md:h-[600px] pb-8">
+    <div class="md:ml-8 lg:pt-64 p-4">
       <h2 class="text-3xl">Email Signup</h2>
       <p class="font-thin mb-2">For when there’s something worth saying.</p>
       <form
@@ -13,7 +13,7 @@
           type="email"
           name="email"
           class="h-10
-                inline-block min-w-96
+                inline-block min-w-full md:min-w-96
                 py-1.5 pr-3 pl-2
                 mb-2
                 bg-almost-black border border-white rounded-sm
@@ -23,14 +23,14 @@
         <label
           for="first-name"
           class="block text-sm/6 font-medium text-white"></label>
-        <div class="flex">
+        <div class="md:flex">
           <input
             id="first-name"
             type="text"
             name="metadata__first-name"
             required
             placeholder="First Name"
-            class="h-10 block min-w-96
+            class="h-10 block min-w-full md:min-w-96
                   py-1.5 pr-3 pl-2
                   mb-2 mr-2
                   bg-almost-black border border-white rounded-sm
@@ -41,7 +41,9 @@
           <input
             type="submit"
             value="Subscribe"
-            class="h-10 px-6 py-0 rounded-sm text-sm/6 leading-none font-medium text-white border border-white cursor-pointer"/>
+            class="h-10 px-6 py-0 rounded-sm text-sm/6
+            leading-none font-medium text-white border
+            border-white cursor-pointer"/>
         </div>
       </form>
     </div>
