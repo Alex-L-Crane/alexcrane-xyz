@@ -6,12 +6,11 @@ import TextBlockLeft from '@/components/formatting/TextBlockLeft.vue'
 
 <template>
   <div class="flex flex-col lg:flex-row lg:pt-78 pt-16 relative z-0">
-    <TextBlockLeft>
+    <div class="w-full lg:w-1/2 grow">
       <h2 class="neogeo text-5xl/[1] mb-3">All tech and no music<br>makes Alex a dull boy.</h2>
-      <!--<p class="text-2xl/[1.4] leading-tight font-thin">Something</p>-->
-    </TextBlockLeft>
-    <TextBlockRight>
-    </TextBlockRight>
-  </div>
-  <img :src="garagePhoto" alt="Garage music" width="full" class=""/>
+    </div>
+    <div class="w-full lg:w-1/2 grow">
+      </div>
+    </div>
+    <img :src="garagePhoto" alt="Garage music" width="auto" class="max-w-6xl"/>
 </template>
