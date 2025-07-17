@@ -75,7 +75,7 @@
       <button @click="goTo(nextPage)" class="invisible lg:visible">
         <arrow-icon customClass="hover:translate-x-1" />
       </button>
-      <button @click="showMenu = true"
+      <!--<button @click="showMenu = true"
               class="group p-2 overflow-visible text-[1.2rem] cursor-pointer bg-transparent border-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@
             r="9.4"
             class="origin-center transition-transform group-hover:animate-bounce-once-delay-300" />
         </svg>
-      </button>
+      </button>-->
     </div>
   </div>
 </template>
