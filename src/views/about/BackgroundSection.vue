@@ -34,7 +34,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
           <p>
             I’ve never liked being a cog in a soulless machine.
             I haven’t followed a straight professional path.
-            Most things I've done that mattered were born from freelance work, personal projects, and from figuring things out on the fly.
+            Most things I've done that mattered were born from personal projects, from freelance work, and from figuring things out on the fly.
           </p>
         </div>
       </div>
@@ -48,8 +48,8 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
       </div>
     </div>
 
-    <div class="lg:-mt-36 md:bg-[#c6ccd7] lg:rounded md:p-4 lg:p-16 lg:mr-16 mb-16 lg:mb-32 mx-2 md:mx-8">
-      <h2 class="neogeo text-[#3E3D3F] text-5xl lg:text-7xl tracking-tight lg:mb-3">It's far better to subtly baffle and annoy than to pacify.</h2>
+    <div class="lg:-mt-36 md:bg-[#FF7CEA] lg:rounded md:p-4 lg:p-16 lg:mr-16 mb-16 lg:mb-32 mx-2 md:mx-8">
+      <h2 class="neogeo text-black text-5xl lg:text-7xl tracking-tight lg:mb-3">It's far better to subtly baffle and annoy than to pacify.</h2>
     </div>
 
     <div class="w-full flex flex-col lg:flex-row-reverse p-2 md:p-8">
@@ -67,7 +67,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
           <h2 class="neogeo text-5xl/[1] mb-8">Swimming in Sound.</h2>
           <ul class="space-y-6 mb-24 list-none">
             <li class="mb-8 border-l-8 border-[#444244] pl-4">
-              <p class="pb-2">I've been starting and joining underground bands since my teens. Probably none you've heard of, but there's been well over a dozen.
+              <p class="pb-2">I've been starting and joining underground bands since my teens. You haven't heard them, but there's been well over a dozen.
                 I go into more depth on the music page, here I'll just brag about the fact that my bands have had the pleasure of sharing the stage with some more successful bands that I really like.
                 <em>To name a few:</em></p>
               <a href="https://en.wikipedia.org/wiki/Suicidal_Tendencies" target="_blank" class="text-[#9A2C2C] underline hover:opacity-80">Suicidal Tendencies</a><br>
@@ -118,7 +118,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
               </p>
             </li>
             <li class="mb-8 border-l-8 border-[#444244] pl-4">
-              I spent years as part of a team designing equipment for positron emission tomography (PET) scans at a tech startup called
+              I spent years attempting to beautify equipment and software for positron emission tomography (PET) scans at a tech startup called
               <a href="https://sofie.com/" target="_blank" class="text-[#9A2C2C] underline hover:opacity-80">Sofie Biosciences</a>.
             </li>
           </ul>
@@ -138,10 +138,10 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
             Trying to make sense of the world involves plodding through a web of conflicting beliefs.
             Each one louder than the last.<br><br>
             <em>That’s what makes life <strike>exhausting</strike> fascinating.<br><br>
-            That’s what makes life <strike>fascinating</strike> exhausting.</em>
+            That’s what makes life exhausting <strike>fascinating</strike>.</em>
           </p>
           <p class="mb-8">
-            <em class="text-3xl font-thin">Maybe it isn't supposed to make sense...</em>
+            <em class="text-3xl font-thin">Maybe none of it is supposed to make sense...</em>
           </p>
           <p class="leading-10 mb-8">
             I was born in upstate
@@ -162,8 +162,8 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
             <li class="text-3xl font-thin">Eugene</li>
           </ul>
           <p>
-            In my different life situations, I’ve worked with an unclassifiable blend of people from drastically different walks of life.
-            Still, I haven't found a believable ready-made worldview. That only gets stronger. I’m not wired for doctrine.
+            In these different situations, I’ve worked with an unclassifiable blend of people from drastically different walks of life.
+            Still, I haven't found a believable ready-made worldview. That feeling only gets stronger. I’m not wired for doctrine.
             Maybe that’s why I ended up here. Discovering meaning the only way I know how: through art, through work, through rhythm.
           </p>
         </div>
