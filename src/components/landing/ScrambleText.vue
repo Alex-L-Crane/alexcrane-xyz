@@ -1,11 +1,10 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import landingBanner from '@/assets/images/landing-banner-1.png'
 
 const variableText = ref(null)
 
 onMounted(() => {
-  const el = variableText.value
+  const el = variableText.value.querySelector('.scramble-output')
   if (!el) return
 
   // Skip font animation on small screens
@@ -38,17 +37,21 @@ onMounted(() => {
       this.update = this.update.bind(this)
     }
     setText(newText) {
+      this.fullText = newText  // save the raw phrase with \n
       const oldText = this.el.innerText
-      const length = Math.max(oldText.length, newText.length)
+      const flatNewText = newText.replace(/\n/g, '') // scramble without breaks
+      const length = Math.max(oldText.length, flatNewText.length)
       const promise = new Promise((resolve) => this.resolve = resolve)
       this.queue = []
+
       for (let i = 0; i < length; i++) {
         const from = oldText[i] || ''
-        const to = newText[i] || ''
+        const to = flatNewText[i] || ''
         const start = Math.floor(Math.random() * 40)
         const end = start + Math.floor(Math.random() * 40)
         this.queue.push({ from, to, start, end })
       }
+
       cancelAnimationFrame(this.frameRequest)
       this.frame = 0
       this.update()
@@ -74,6 +77,13 @@ onMounted(() => {
       }
       this.el.innerHTML = output
       if (complete === this.queue.length) {
+        const lines = this.fullText.split('\n')
+
+        const finalHTML = lines.map(line =>
+          `<span class="block leading-[0.9] text-left font-inherit">${line}</span>`
+        ).join('')
+
+        this.el.innerHTML = finalHTML
         this.resolve()
       } else {
         this.frameRequest = requestAnimationFrame(this.update)
@@ -86,11 +96,11 @@ onMounted(() => {
   }
 
   const phrases = [
-    'Perfectionism<br/>kills.',
-    'Life is a<br/>process.',
-    'Culture is<br/>fluid.',
-    'Media is<br/>currency.',
-    'Technology<br/>is a tool.'
+    'Perfectionism kills.',
+    'Life is a process.',
+    'Culture is fluid.',
+    'Media is currency.',
+    'Technology is a tool.'
   ]
 
   const fx = new TextScramble(el)
@@ -109,10 +119,9 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="min-h-48">
-      <h1 ref="variableText" class="text-scramble crystal text-7xl">Perfectionism Kills.</h1>
-    </div>
-    <img :src="landingBanner" alt="Equipment in a garage studio" width="auto" height="auto" class="w-full"/>
+    <h1 ref="variableText" class="text-8xl font-bold leading-none w-[90vw] max-w-[900px] text-left">
+      <div class="scramble-output space-y-0"></div>
+    </h1>
   </div>
 </template>
 
