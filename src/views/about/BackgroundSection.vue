@@ -137,7 +137,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
             I didn’t know the word “ideology” when I first felt it, but I knew it was everywhere.
             Trying to make sense of the world involves plodding through a web of conflicting beliefs.
             Each one louder than the last.<br><br>
-            <em>That’s what makes life <strike>exhausting</strike> fascinating.<br><br>
+            <em>That’s what makes life <strike>exhausting</strike> fascinating.<br>
             That’s what makes life exhausting <strike>fascinating</strike>.</em>
           </p>
           <p class="mb-8">
@@ -163,7 +163,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
           </ul>
           <p>
             In these different situations, I’ve worked with an unclassifiable blend of people from drastically different walks of life.
-            Still, I haven't found a believable ready-made worldview. That feeling only gets stronger. I’m not wired for doctrine.
+            I haven't found a believable ready-made worldview. That feeling only gets stronger. I’m not wired for doctrine.
             Maybe that’s why I ended up here. Discovering meaning the only way I know how: through art, through work, through rhythm.
           </p>
         </div>
