@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="p-8 border-b-2 pt-32  border-b-white">
+  <div class="bg-[#D8F172] text-black  p-8 border-b-2 pt-32  border-b-white">
     <Summary />
     <Manifesto />
   </div>

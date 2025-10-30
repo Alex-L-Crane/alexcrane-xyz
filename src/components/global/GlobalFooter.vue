@@ -2,7 +2,7 @@
   <div class="bg-almost-black md:h-[600px] pb-8">
     <div class="md:ml-8 lg:pt-64 p-4">
       <h2 class="text-3xl">Email Signup</h2>
-      <p class="font-thin mb-2">For when there’s something worth saying.</p>
+      <p class="font-thin mb-2">For things worth sharing.</p>
       <form
         action="https://buttondown.com/api/emails/embed-subscribe/alexcrane"
         method="post">

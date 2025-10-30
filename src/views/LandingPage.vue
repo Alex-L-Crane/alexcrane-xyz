@@ -5,15 +5,19 @@ import mainMenu from '@/components/navigation/MainMenuImageGrid.vue'
 </script>
 
 <template>
-  <div class="h-screen flex flex-col px-8 pt-8">
-    <div class="flex-grow flex items-center justify-center">
-      <scramble-text />
+  <div class="bg-white text-black">
+    <div class="h-screen flex flex-col px-8 pt-8">
+      <div class="flex-grow flex items-center justify-center">
+        <scramble-text />
+      </div>
+      <img :src="landingBanner" alt="Equipment in a garage studio" width="auto" height="auto" class="w-full"/>
     </div>
-    <img :src="landingBanner" alt="Equipment in a garage studio" width="auto" height="auto" class="w-full"/>
-  </div>
 
-  <div class="pt-4 px-8 pb-8 border-b border-white">
-    <main-menu :dark-theme="true"/>
+    <projects-feed/>
+
+    <div class="pt-4 px-8 pb-8 border-b border-white">
+      <main-menu :light-theme="true"/>
+    </div>
   </div>
 </template>
 

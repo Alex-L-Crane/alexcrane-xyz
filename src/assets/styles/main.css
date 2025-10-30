@@ -23,10 +23,25 @@
     font-family: Alaska;
     src: url(../fonts/Alaska-Trial-VAR-VF.ttf.woff2) format("woff2");
   }
+  /* Sunlight */
+  @font-face {
+    font-family: Sunlight;
+    src: url(../fonts/SunlightTrial-Regular.woff2) format("woff2");
+  }
+  /* Atacama */
+  @font-face {
+    font-family: Atacama;
+    src: url(../fonts/AtacamaTrial-Thin.woff2) format("woff2");
+  }
+  /* Atacama Medium*/
+  @font-face {
+    font-family: AtacamaMedium;
+    src: url(../fonts/AtacamaTrial-Medium.woff2) format("woff2");
+  }
 
   body {
     font-family: 'Alaska', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     background-color: #1C1C1C;
   }
@@ -52,6 +67,19 @@
   .alaska {
     font-family: 'Alaska', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
   }
+
+  .sunlight {
+    font-family: 'Sunlight', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+  }
+
+  .atacama {
+    font-family: 'Atacama', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+  }
+
+  .atacamamedium {
+    font-family: 'AtacamaMedium', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+  }
+
   #app {
     /*max-width: 1280px;
     margin: 0 auto;

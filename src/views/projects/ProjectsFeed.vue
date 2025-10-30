@@ -69,7 +69,7 @@ const filteredPosts = computed(() => {
 </script>
 
 <template>
-  <div class="bg-[#F0EFD4] text-black p-8 border-b-2 border-b-white pt-32">
+  <div class="bg-white text-black p-8 border-b-2 border-b-white pt-32">
     <div class="flex pt-16 pb-4 relative snap-start z-0">
       <div class="sticky self-start top-16 w-1/4 pr-40">
         <p class="pb-2 mb-4 border-b border-b-almost-black">Filter Projects</p>
