@@ -14,11 +14,24 @@ import PhilosophySection from '@/views/about/PhilosophySection.vue';
 import InspirationsSection from '@/views/about/InspirationsSection.vue';
 import BackgroundSection from '@/views/about/BackgroundSection.vue';
 
+import PostFeed from '@/views/feed/PostFeed.vue';
+import VideoPostDetail from '@/views/feed/VideoPostDetail.vue';
+
 const routes = [
   {
     path: '/',
     name: 'Landing',
     component: LandingPage
+  },
+  {
+    path: '/videos',
+    name: 'video-feed',
+    component: PostFeed
+  },
+  {
+    path: '/videos/:slug',
+    name: 'video-post',
+    component: VideoPostDetail
   },
   {
     path: '/projects',

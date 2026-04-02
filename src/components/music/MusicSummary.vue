@@ -24,12 +24,12 @@ import suicidalTragedy from '@/assets/images/music/tragedy-suicidal-wide-bw.png'
 <template>
   <div class="atacamamedium flex flex-col lg:flex-row lg:pt-78 pt-16 pb-4 relative z-0">
     <div class="w-1/4 pr-8">
-      <h2 class="neogeo text-5xl/[1] lg:text-[60pt] leading-[1] mb-4">Pulse +<br>impulse.</h2>
+      <h2 class="neogeo text-5xl/[1] lg:text-[60pt] leading-[1] mb-4">Drums.</h2>
     </div>
     <div class="w-3/4 flex flex-col">
       <div class="lg:max-w-lg">
         <p class="mb-4 border-l-8 border-[#444244] pl-4">
-          <span class="alaska font-bold text-2xl inline-block mb-2">Drumming.</span><br/>
+          <!--<span class="alaska font-bold text-2xl inline-block mb-2">Drumming.</span><br/>-->
           <span class="alaska text-2xl font-light inline-block mb-2">A guiding practice.</span><br/>
           <span class="alaska text-2xl font-light inline-block mb-2">A meditation.</span><br/>
           <span class="alaska text-2xl font-light inline-block">An art.</span><br/></p>

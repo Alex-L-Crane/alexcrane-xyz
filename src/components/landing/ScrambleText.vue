@@ -99,7 +99,7 @@ onMounted(() => {
     'Perfectionism kills.',
     'Life is a process.',
     'Culture is fluid.',
-    'Media is currency.',
+    'All media is political.',
     'Technology is a tool.'
   ]
 
@@ -118,8 +118,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <h1 ref="variableText" class="text-8xl font-bold leading-none w-[90vw] max-w-[900px] text-left">
+  <div class="bg-[#FF8A00] p-8">
+    <h1 ref="variableText" class="text-white text-8xl font-bold leading-none w-[90vw] max-w-[900px] text-left">
       <div class="scramble-output space-y-0"></div>
     </h1>
   </div>
