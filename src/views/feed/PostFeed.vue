@@ -39,9 +39,6 @@ const closeVideo = () => {
       :key="video.slug"
       class="mb-16"
     >
-      <h2 class="text-2xl font-semibold mb-1">
-        {{ video.title }}
-      </h2>
 
       <div class="mb-4">
         <div class="relative w-full aspect-video bg-black">
@@ -88,6 +85,10 @@ const closeVideo = () => {
           Close video
         </button>
       </div>
+
+      <h2 class="text-2xl font-semibold mb-1">
+        {{ video.title }}
+      </h2>
 
       <p class="text-sm opacity-70 mb-4">
         {{ video.date }}

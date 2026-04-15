@@ -61,14 +61,6 @@ import suicidalTragedy from '@/assets/images/music/tragedy-suicidal-wide-bw.png'
       <em>Finding beauty in imperfection, impermanence, or simplicity.</em></p>
   </div>
 
-  <div class="flex align-baseline pb-4 relative z-0 mb-4 pb-24">
-    <div class="lg:max-w-lg">
-      <p class="text-xl">I was late to get my first drumset at age twenty, but became instantly obsessed.
-        At the time of getting my first kit, I was working at Hyde Street Studios and spent my spare time practicing and recording drums in that classic analog studio environment.
-        The fundamentals of rhythm, acoustics, and audio are where it's at for me.</p><br>
-    </div>
-  </div>
-
   <!--<div class="lg:-mt-36 md:bg-white lg:rounded md:p-4 lg:p-16 lg:ml-16 mb-16 lg:mb-32 mx-2 md:mx-8">
     <h2 class="neogeo font-thin text-almost-black text-5xl tracking-tight lg:mb-3">
       wabi-sabi</h2>
@@ -119,68 +111,6 @@ import suicidalTragedy from '@/assets/images/music/tragedy-suicidal-wide-bw.png'
     </div>
   </div>
 
-  <div class="w-full flex space-x-16 mb-16">
-    <div class="w-full flex flex-col">
-      <div class="">
-        <img :src="sreCover" alt="TCA Soothing Rays of eternity album cover" width="full" class="w-full"/>
-      </div>
-      <div>
-        <div class="flex justify-between pt-2">
-          <p class="leading-snug mb-2">Soothing Rays of Eternity<br/>
-            <span class="font-thin">TCA</span><br/>
-          </p>
-          <span class="font-thin">2017</span>
-        </div>
-        <a href="https://thecruelestanimal.bandcamp.com/album/soothing-rays-of-eternity"
-           target="_blank"
-           class="inline-block border-t border-almost-black text-sm font-thin text-base pt-2">Bandcamp
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
-            <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="w-full flex flex-col">
-      <div class="">
-        <img :src="wavesCover" alt="TCA After the Waves Devour Us All album cover" width="full" class="w-full"/>
-      </div>
-      <div>
-        <div class="flex justify-between pt-2">
-          <p class="leading-snug mb-2">After the Waves Devour Us All<br/>
-            <span class="font-thin">TCA</span><br/>
-          </p>
-          <span class="font-thin">2014</span>
-        </div>
-        <a href="https://thecruelestanimal.bandcamp.com/album/after-the-waves-devour-us-all"
-           target="_blank"
-           class="inline-block border-t border-almost-black text-sm font-thin pt-2">Bandcamp
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
-            <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="w-full flex flex-col">
-      <div class="">
-        <img :src="whiteLightCover" alt="TCA White Light and the Empire Collapse album cover" width="full" class="w-full"/>
-      </div>
-      <div>
-        <div class="flex justify-between pt-2">
-          <p class="leading-snug mb-2">White Light and the Empire Collapse<br/>
-            <span class="font-thin">TCA</span><br/>
-          </p>
-          <span class="font-thin">2012</span>
-        </div>
-        <a href="https://thecruelestanimal.bandcamp.com/album/white-light-and-the-empire-collapse"
-           target="_blank"
-           class="inline-block border-t border-almost-black text-sm font-thin pt-2">Bandcamp
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
-            <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <div class="lg:max-w-lg mx-auto mb-36">
     <p class="text-xl font-thin">“Man is the cruelest animal. At tragedies, bullfights, and crucifixions he has so far felt best on
@@ -235,69 +165,6 @@ import suicidalTragedy from '@/assets/images/music/tragedy-suicidal-wide-bw.png'
           <img :src="suicidalTragedy" alt="Sitting in a field adjusting an amplifier" width="full"/>
           <span class="font-thin italic">2020: Playing with an amplifier in a field.</span>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="w-full flex space-x-16 mb-4">
-    <div class="w-full flex flex-col">
-      <div class="">
-        <img :src="holyDoseCover" alt="TCA Soothing Rays of eternity album cover" width="full" class="w-full"/>
-      </div>
-      <div>
-        <div class="flex justify-between pt-2">
-          <p class="leading-snug mb-2">Holy Dose EP<br/>
-            <span class="font-thin">Holy Dose</span><br/>
-          </p>
-          <span class="font-thin">2008</span>
-        </div>
-        <a href="https://holydose.bandcamp.com/album/holy-dose"
-           target="_blank"
-           class="inline-block border-t border-almost-black text-sm font-thin pt-2">Bandcamp
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
-            <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="w-full flex flex-col">
-      <div class="">
-        <img :src="cuneiformCover" alt="TCA After the Waves Devour Us All album cover" width="full" class="w-full"/>
-      </div>
-      <div>
-        <div class="flex justify-between pt-2">
-          <p class="leading-snug mb-2">Tabula Rasa<br/>
-            <span class="font-thin">Cuneiform</span><br/>
-          </p>
-          <span class="font-thin">2008</span>
-        </div>
-        <a href="https://cuneiformband.bandcamp.com/album/tabula-rasa"
-           target="_blank"
-           class="inline-block border-t border-almost-black text-sm font-thin pt-2">Bandcamp
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
-            <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="w-full flex flex-col">
-      <div class="">
-        <img :src="directActionCover" alt="TCA White Light and the Empire Collapse album cover" width="full" class="w-full"/>
-      </div>
-      <div>
-        <div class="flex justify-between pt-2">
-          <p class="leading-snug mb-2">Free Him<br/>
-            <span class="font-thin">Direct Action</span><br/>
-          </p>
-          <span class="font-thin">1997</span>
-        </div>
-        <a href="https://dissonantdreamland.bandcamp.com/album/direct-action-free-him"
-           target="_blank"
-           class="inline-block border-t border-almost-black text-sm font-thin pt-2">Bandcamp
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
-            <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>
-          </svg>
-        </a>
       </div>
     </div>
   </div>

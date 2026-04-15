@@ -1,30 +1,29 @@
 <script setup>
 import { ref, computed } from 'vue'
 import VideoPlayer from '@/components/formatting/VideoPlayer.vue'
-const inspirationsLink = "/about/inspirations";
 
 const posts = ref([
-  {
-    uri: "at://example.com/post/123",
-      title: "Some title about something here. And more.",
-      text: "I don’t believe in magic, but do believe in sound. Somehow simultaneously ubiquitous and subversive, deeply misunderstood and underappreciated, sound has permeated every aspect of my life and has been my gateway to learning about visual arts, computer science, electronics, culture, psychology, politics, and, of course, music.",
-      video: "Avqj5Wl2h_E",
-      facets: ["music"],
-      author: { handle: "alexcrane.xyz" }
-  },
   {
     uri: "at://example.com/post/123",
     title: "Some title about something here. And more.",
     text: "I don’t believe in magic, but do believe in sound. Somehow simultaneously ubiquitous and subversive, deeply misunderstood and underappreciated, sound has permeated every aspect of my life and has been my gateway to learning about visual arts, computer science, electronics, culture, psychology, politics, and, of course, music.",
     video: "Ks2xvsfmgOs",
-    facets: ["tech"],
+    facets: ["Logik Rift"],
     author: { handle: "alexcrane.xyz" }
+  },
+  {
+    uri: "at://example.com/post/123",
+      title: "Some title about something here. And more.",
+      text: "I don’t believe in magic, but do believe in sound. Somehow simultaneously ubiquitous and subversive, deeply misunderstood and underappreciated, sound has permeated every aspect of my life and has been my gateway to learning about visual arts, computer science, electronics, culture, psychology, politics, and, of course, music.",
+      video: "Avqj5Wl2h_E",
+      facets: ["Logik Rift"],
+      author: { handle: "alexcrane.xyz" }
   },
   {
     uri: 'at://example.com/post/1',
     title: "Some title about something here. And more.",
     text: 'Here’s a new video I made about sound design.',
-    facets: ['music'],
+    facets: ['Logik Rift'],
     author: { handle: 'alexcrane.xyz' }
   },
   {
@@ -51,7 +50,7 @@ const posts = ref([
 ])
 
 // Whitelisted facets
-const allowedFacets = ['music', 'tech', 'research'] // plus "all"
+const allowedFacets = ['Solo', 'Logik Rift', 'TCA'] // plus "all"
 
 // User-selected facet filter
 const selectedFacet = ref('all')
@@ -69,40 +68,38 @@ const filteredPosts = computed(() => {
 </script>
 
 <template>
-  <div class="bg-white text-black p-8 border-b-2 border-b-white pt-32">
-    <div class="flex pt-16 pb-4 relative snap-start z-0">
-      <div class="sticky self-start top-16 w-1/4 pr-40">
-        <p class="pb-2 mb-4 border-b border-b-almost-black">Filter Projects</p>
-        <ul class="text-l/[2] font-thin lg:max-w-lg border-b border-b-almost-black">
+  <div class="bg-white text-black p-8 pt-20">
+    <div class="flex pb-4 relative snap-start z-0">
+      <div class="sticky self-start top-40 w-1/4 pr-40">
+        <p class="pb-2 mb-4 border-b border-b-almost-black">Projects:</p>
+        <ul class="text-l/[2] font-thin lg:max-w-lg">
           <li
             v-for="facet in ['all', ...allowedFacets]"
             :key="facet"
             @click="selectedFacet = facet"
             :class="[
-              'cursor-pointer capitalize mb-4',
+              'cursor-pointer capitalize mb-2',
               selectedFacet === facet ? 'font-bold' : ''
             ]"
           >
             {{ facet }}
           </li>
         </ul>
-        <hr/>
+        <!--<hr/>
         <p class="text-xl/[1.4] lg:max-w-lg mt-16">
           <a :href='inspirationsLink' class="leading-tight">View&nbsp;&nbsp;&nbsp;<br>inspirations ><br>feed&nbsp;&nbsp;&nbsp;</a>
-        </p>
+        </p>-->
       </div>
 
-      <div class="flex flex-col w-1/2">
-        <!-- Filtered Posts -->
-        <div v-for="post in filteredPosts" class="mb-24">
-          <h2 class="neogeo text-5xl/[1] mb-2 pr-8">{{ post.title }}</h2>
-          <video-player v-if="post.video" :video-id="post.video" />
-          <p class="text-l/[1.2] leading-tight font-thin pt-2">{{post.text}}</p>
+      <div class="flex flex-col w-3/4">
+        <div class="max-w-4xl">
+          <!-- Filtered Posts -->
+          <div v-for="post in filteredPosts" :key="post.id" class="mb-24">
+            <video-player v-if="post.video" :video-id="post.video" />
+            <h2 class="neogeo text-5xl/[1] mb-2 pr-8">{{ post.title }}</h2>
+            <p class="text-l/[1.2] leading-tight font-thin pt-2">{{post.text}}</p>
+          </div>
         </div>
-      </div>
-
-      <div class="sticky top-0 self-start w-1/4 text-right">
-
       </div>
     </div>
   </div>
