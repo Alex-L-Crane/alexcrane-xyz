@@ -38,6 +38,10 @@
     font-family: AtacamaMedium;
     src: url(../fonts/AtacamaTrial-Medium.woff2) format("woff2");
   }
+  @font-face {
+    font-family: BaikalVar;
+    src: url("../fonts/Baikal Trial VAR-VF.ttf.woff2") format("woff2");
+  }
 
   body {
     font-family: 'Alaska', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
@@ -78,6 +82,10 @@
 
   .atacamamedium {
     font-family: 'AtacamaMedium', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+  }
+
+  .baikal {
+    font-family: 'BaikalVar', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
   }
 
   #app {

@@ -1,22 +1,8 @@
 <script setup>
-// import abstractSpeakers from '@/assets/images/abstract-speakers-1.png'
 import VideoPlayer from '@/components/formatting/VideoPlayer.vue'
 
-// import fieldKnob from '@/assets/images/music/knob-field.png'
-// import burningCar from '@/assets/images/music/burning-car.png'
-
-import sreCover from '@/assets/images/music/SRE-cover.jpg'
-import wavesCover from '@/assets/images/music/After-the-Waves-Devour-us-All_cover.jpg'
-import whiteLightCover from '@/assets/images/music/White light.png'
 import cuneiformWestbeachDrums from '@/assets/images/music/Cuneiform-Westbeach-drums.jpg'
-import holyDoseCover from '@/assets/images/music/Holy-Dose-Album-Cover.jpg'
-import cuneiformCover from '@/assets/images/music/Cuneiform-Tabula-Rasa-beach-cover.jpg'
-import directActionCover from '@/assets/images/music/Direct-Action-Cassette-photo-1.jpg'
-//import cuneiformWestbeach from '@/assets/images/CuneiformWestbeachThnxgiving.png'
-//import backgroundAbstract1 from '@/assets/images/background-abstract-1.png'
 import manifestoAbstract from '@/assets/images/manifesto-abstract.png'
-// import fieldAmp from '@/assets/images/alex-field-amp-cropped-1.png'
-//import backgroundAbstract1 from '@/assets/images/background-abstract-1.png'
 import tcaBandPic from '@/assets/images/tca-silouhette-pic-2017.jpg'
 import suicidalTragedy from '@/assets/images/music/tragedy-suicidal-wide-bw.png'
 </script>
@@ -24,56 +10,10 @@ import suicidalTragedy from '@/assets/images/music/tragedy-suicidal-wide-bw.png'
 <template>
   <div class="atacamamedium flex flex-col lg:flex-row lg:pt-78 pt-16 pb-4 relative z-0">
     <div class="w-1/4 pr-8">
-      <h2 class="neogeo text-5xl/[1] lg:text-[60pt] leading-[1] mb-4">Drums.</h2>
     </div>
     <div class="w-3/4 flex flex-col">
-      <div class="lg:max-w-lg">
-        <p class="mb-4 border-l-8 border-[#444244] pl-4">
-          <!--<span class="alaska font-bold text-2xl inline-block mb-2">Drumming.</span><br/>-->
-          <span class="alaska text-2xl font-light inline-block mb-2">A guiding practice.</span><br/>
-          <span class="alaska text-2xl font-light inline-block mb-2">A meditation.</span><br/>
-          <span class="alaska text-2xl font-light inline-block">An art.</span><br/></p>
-        <p class="mb-4 text-xl">A technology in which humans harness a rebounding drumstick to summon life-affirming, rhythmically induced trance states.</p>
-      </div>
-        <div class="mb-4 max-w-4xl">
-          <video-player
-            video-id="Avqj5Wl2h_E"
-          />
-        </div>
-      <div class="lg:max-w-lg">
-        <p class="text-xl">I've never pictured myself becoming a chops-heavy virtuoso drummer, but I do care about playing well and to I try to say something personal with my playing.
-          Above all else, I'd like to think I've been sincere in my art.</p><br/>
-      </div>
     </div>
   </div>
-
-  <div class="flex">
-    <div class="w-full lg:w-3/4">
-      <img :src="manifestoAbstract" alt="Garage music" width="full" class="w-full"/>
-    </div>
-    <div class="invisible lg:w-1/4 lg:pr-8">
-    </div>
-  </div>
-
-  <div class="flex align-baseline pb-4 relative z-0 mb-4 lg:mb-8">
-    <p class="font-thin"><span class="text-3xl tracking-tight mr-4">
-      wabi-sabi</span>
-      <em>Finding beauty in imperfection, impermanence, or simplicity.</em></p>
-  </div>
-
-  <!--<div class="lg:-mt-36 md:bg-white lg:rounded md:p-4 lg:p-16 lg:ml-16 mb-16 lg:mb-32 mx-2 md:mx-8">
-    <h2 class="neogeo font-thin text-almost-black text-5xl tracking-tight lg:mb-3">
-      wabi-sabi</h2>
-    <p><em>Finding beauty in imperfection, impermanence, or simplicity.</em></p>
-  </div>-->
-
-  <!--<div class="flex">
-    <div class="invisible lg:w-1/4 lg:pr-8">
-    </div>
-    <div class="w-full lg:w-3/4">
-      <img :src="manifestoAbstract" alt="Garage music" width="full" class="w-full mb-4 lg:mb-24"/>
-    </div>
-  </div>-->
 
   <div class="w-full flex flex-col lg:flex-row-reverse p-2">
     <!-- Right Side: Image Display -->

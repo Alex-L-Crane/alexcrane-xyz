@@ -2,7 +2,6 @@
   import { useRouter } from 'vue-router';
   import { ref, watch } from 'vue';
 
-  import BreadCrumbs from '@/components/navigation/BreadCrumbs.vue'
   import ArrowIcon from '@/components/icons/ArrowIcon.vue'
   import MainMenuOverlay from '@/components/navigation/MainMenuOverlay.vue'
 
@@ -37,6 +36,12 @@
     goLeft: () => goTo(prevPage.value),
     goRight: () => goTo(nextPage.value)
   })
+
+  const links = [
+    { to: '/', label: 'Performance' },
+    { to: '/equipment', label: 'Technology' },
+    { to: '/about/background', label: 'About' }
+  ]
 </script>
 
 <template>
@@ -65,11 +70,33 @@
         </svg>
       </a>
       <!--<BreadCrumbs :darkTheme="darkTheme" class="pl-2 lg:pl-4"/>-->
-      <span class="pl-4">Ritual :: Rhythm</span>
+      <span class="pl-4 font-bold">Ritual :: Rhythm</span>
     </div>
 
-    <div :class="['flex gap-4 items-center',
-         darkTheme ? 'text-white' : 'text-almost-black']">
+    <div :class="[
+      'flex gap-4 items-center',
+      darkTheme ? 'text-white' : 'text-almost-black'
+    ]">
+      <RouterLink
+        v-for="link in links"
+        :key="link.to"
+        :to="link.to"
+        custom
+        v-slot="{ href, navigate, isExactActive }"
+      >
+        <a
+          :href="href"
+          @click="navigate"
+          :class="[
+            'mr-4 hover:bg-transparent focus:bg-transparent active:bg-transparent',
+            isExactActive ? 'font-bold border-b-2' : '',
+            darkTheme ? 'border-white' : 'border-almost-black'
+          ]"
+        >
+          {{ link.label }}
+        </a>
+      </RouterLink>
+
       <button @click="goTo(prevPage)" class="hidden sm:block">
         <arrow-icon direction="left" customClass="hover:-translate-x-1" />
       </button>

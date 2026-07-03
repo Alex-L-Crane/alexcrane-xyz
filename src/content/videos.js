@@ -84,6 +84,7 @@ A few thoughts on time feel, phrasing, and motion.
     title: 'Red Cloud - Viva Cascadia - Drum Playthrough',
     date: '2026-03-08',
     youtubeId: 'TyKsowvmngs',
+    facets: ["Logik Rift"],
     description: 'Short performance study.',
     body: `
 A few thoughts on time feel, phrasing, and motion.
@@ -94,6 +95,7 @@ A few thoughts on time feel, phrasing, and motion.
     title: 'Intronaut - Fast Worms - Drum Cover',
     date: '2026-03-08',
     youtubeId: 'iWecdzFCryc',
+    facets: ["Logik Rift"],
     description: 'Short performance study.',
     body: `A few thoughts on time feel, phrasing, and motion.`,
   },
@@ -102,6 +104,7 @@ A few thoughts on time feel, phrasing, and motion.
     title: 'TCA - Soothing Rays of Eternity - Playthrough',
     date: '2026-03-08',
     youtubeId: 'oLMcug_N1PA',
+    facets: ['tech'],
     description: 'Short performance study.',
     body: `A few thoughts on time feel, phrasing, and motion.`,
   }

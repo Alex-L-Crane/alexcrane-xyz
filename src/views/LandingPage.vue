@@ -2,13 +2,13 @@
 /*import landingBanner from '@/assets/images/landing-banner-1.png'
 import scrambleText from '@/components/landing/ScrambleText.vue'
 import mainMenu from '@/components/navigation/MainMenuImageGrid.vue'*/
-import PostFeed from '@/views/feed/PostFeed.vue'
+import ProjectstFeed from '@/views/projects/ProjectsFeed.vue'
 </script>
 
 <template>
   <div class="bg-white text-black">
     <section>
-      <PostFeed />
+      <ProjectstFeed />
     </section>
     <!--<div class="h-screen flex flex-col px-8 pt-8">
       <div class="flex-grow flex items-center justify-center">

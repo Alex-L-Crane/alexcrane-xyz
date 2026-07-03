@@ -1,5 +1,12 @@
 <template>
-  <div class="bg-almost-black md:h-[600px] pb-8">
+  <div class="bg-almost-black md:h-[600px] pb-8 flex">
+    <div class="pl-10 pr-40">
+      <ul>
+        <li><a href="/projects/music" class="text-red-500" target="_blank">music</a></li>
+        <li><a href="/projects/design" class="text-red-500" target="_blank">design</a></li>
+      </ul>
+
+    </div>
     <div class="md:ml-8 lg:pt-64 p-4">
       <h2 class="text-3xl">Email Signup</h2>
       <p class="font-thin mb-2">For things worth sharing.</p>
