@@ -15,7 +15,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
       <img :src="garagePhoto" alt="Garage music" width="auto" class="w-full max-w-6xl h-auto"/>
     </div>
 
-    <div class="flex px-2 sm:px-4 md:px-8 ">
+    <!--<div class="flex px-2 sm:px-4 md:px-8 ">
       <div class="hidden lg:inline w-1/4 lg:pr-8">
       </div>
       <div class="w-full lg:w-3/4">
@@ -53,7 +53,6 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
     </div>
 
     <div class="w-full flex flex-col lg:flex-row-reverse p-2 md:p-8">
-      <!-- Right Side: Image Display -->
       <div class="md:w-[50%]">
         <div class="relative h-full">
           <div class="lg:sticky lg:top-32 z-10">
@@ -177,6 +176,6 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
