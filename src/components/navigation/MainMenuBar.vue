@@ -38,7 +38,7 @@
   })
 
   const links = [
-    { to: '/', label: 'Performance' },
+    { to: '/', label: 'Drumming' },
     { to: '/equipment', label: 'Technology' },
     { to: '/about/background', label: 'About' }
   ]

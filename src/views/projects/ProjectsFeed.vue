@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { videos } from '@/content/videos.js'
-console.log('videos:', videos)
+import { drumVideos } from '@/content/videos.js'
+console.log('videos:', drumVideos)
 
 const activeSlug = ref(null)
 const brokenThumbs = ref({})
@@ -38,10 +38,10 @@ const selectedFacet = ref('all')
 
 const filteredPosts = computed(() => {
   if (selectedFacet.value === 'all') {
-    return videos
+    return drumVideos
   }
 
-  return videos.filter((post) => {
+  return drumVideos.filter((post) => {
     const facets = post.facets ?? []
     return facets.includes(selectedFacet.value)
   })
@@ -51,21 +51,27 @@ const filteredPosts = computed(() => {
 <template>
   <main class="bg-white text-black p-8 pt-20">
     <div class="flex pb-4 relative snap-start z-0">
-      <div class="sticky self-start top-40 w-1/4 pr-40 text-right">
-        <p class=" inline-block pb-2 mb-4 border-b border-b-almost-black">Projects:</p>
-        <ul class="text-l/[2] font-thin lg:max-w-lg">
-         <li
-            v-for="facet in ['all', ...allowedFacets]"
-            :key="facet"
-            @click="selectedFacet = facet"
-            :class="[
-              'cursor-pointer capitalize mb-2',
-              selectedFacet === facet ? 'font-bold' : ''
-            ]"
-          >
-            {{ facet }}
-          </li>
-        </ul>
+      <div class="w-1/4 pt-24 pr-40">
+        <h2 class="neogeo text-5xl/[1] mb-24">
+          Ritual ::<br/>Rhythm
+        </h2>
+
+        <div class="sticky self-start top-40">
+          <p class=" inline-block pb-2 mb-4 border-b border-b-almost-black">Projects:</p>
+          <ul class="text-l/[2] font-thin lg:max-w-lg">
+            <li
+                v-for="facet in ['all', ...allowedFacets]"
+                :key="facet"
+                @click="selectedFacet = facet"
+                :class="[
+            'cursor-pointer capitalize mb-2',
+            selectedFacet === facet ? 'font-bold' : ''
+          ]"
+            >
+              {{ facet }}
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="flex flex-col w-3/4">

@@ -1,4 +1,4 @@
-export const videos = [
+export const drumVideos = [
   {
     slug: 'logik-rift-4',
       title: 'Logik Rift 4',
@@ -107,5 +107,18 @@ A few thoughts on time feel, phrasing, and motion.
     facets: ['tech'],
     description: 'Short performance study.',
     body: `A few thoughts on time feel, phrasing, and motion.`,
+  }
+].sort((a, b) => new Date(b.date) - new Date(a.date))
+
+export const techVideos = [
+  {
+    slug: 'aloke-talks-nudity-sutra',
+    title: 'Aloke Talks Nudity Sutra',
+    date: '2014-11-11',
+    youtubeId: '5OQBt6Mey5E',
+    description: 'Short performance study.',
+    body: `
+  A few thoughts on time feel, phrasing, and motion.
+      `,
   }
 ].sort((a, b) => new Date(b.date) - new Date(a.date))

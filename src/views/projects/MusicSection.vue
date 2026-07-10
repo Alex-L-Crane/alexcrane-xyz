@@ -31,7 +31,7 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
       </div>
       <div class="w-full lg:w-3/4">
         <div class="mb-8">
-          <div class="md:max-w-[15ch]">
+          <div class="md:max-w-[36rem]">
             <p class="mb-8 text-xl leading-8">
               Compared to some, I was late to the game. I got my first drumset at age twenty after playing guitar in my first band for a few years.
               I was instantly obsessed.
@@ -66,7 +66,7 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
           </div>
         </div>
 
-        <div class="md:max-w-[15ch] md:mb-8">
+        <div class="md:max-w-[36rem] md:mb-8">
           <p class="text-xl leading-8">
             Underground music has been a core aspect of my identity since my teens. DIY band like Fugazi have always resonated with me.
             I've had a bunch of little known underground bands. The struggles have been real, but the rewards have been priceless.
@@ -218,7 +218,7 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
       <div class="hidden lg:inline w-1/4 lg:pr-8">
       </div>
       <div class="w-full lg:w-3/4">
-        <div class="md:max-w-[15ch] mt-6 mb-8">
+        <div class="md:max-w-[36rem] mt-6 mb-8">
         <h2 class="neogeo text-5xl/[1] mb-8">Personal Music.</h2>
         <p class="pb-8">The longer I play, the more I'm interested in improvisation both as a soloist and in collaboration with other musicians.
           Increasingly, I find I want to make music in a way that is more like cooking than composing.</p>

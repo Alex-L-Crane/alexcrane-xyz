@@ -27,38 +27,6 @@ const routes = [
     component: EquipmentSection
   },
   {
-    path: '/projects',
-    name: 'projects',
-    component: ProjectsWrapper,
-    meta: { breadcrumb: 'Projects' },
-    children: [
-      {
-        path: '',
-        name: 'projects-landing',
-        component: ProjectsLanding,
-        meta: { breadcrumb: 'Projects' }
-      },
-      {
-        path: 'feed',
-        name: 'feed',
-        component: ProjectsFeed,
-        meta: { breadcrumb: 'Feed' }
-      },
-      {
-        path: 'music',
-        name: 'music',
-        component: MusicSection,
-        meta: { breadcrumb: 'Music' }
-      },
-      {
-        path: 'design',
-        name: 'tech/design',
-        component: DesignSection,
-        meta: { breadcrumb: 'Design' }
-      }
-    ]
-  },
-  {
     path: '/about',
     name: 'about',
     component: AboutWrapper,
@@ -87,6 +55,38 @@ const routes = [
         name: 'background',
         component: BackgroundSection,
         meta: { breadcrumb: 'Background' }
+      }
+    ]
+  },
+  {
+    path: '/projects',
+    name: 'projects',
+    component: ProjectsWrapper,
+    meta: { breadcrumb: 'Projects' },
+    children: [
+      {
+        path: '',
+        name: 'projects-landing',
+        component: ProjectsLanding,
+        meta: { breadcrumb: 'Projects' }
+      },
+      {
+        path: 'feed',
+        name: 'feed',
+        component: ProjectsFeed,
+        meta: { breadcrumb: 'Feed' }
+      },
+      {
+        path: 'music',
+        name: 'music',
+        component: MusicSection,
+        meta: { breadcrumb: 'Music' }
+      },
+      {
+        path: 'design',
+        name: 'tech/design',
+        component: DesignSection,
+        meta: { breadcrumb: 'Design' }
       }
     ]
   },

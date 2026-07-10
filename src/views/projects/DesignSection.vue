@@ -23,14 +23,14 @@ import kineticBeatsUI from '@/assets/images/kinetic-beats.png'
       <div class="hidden lg:inline w-1/4 lg:pr-8">
       </div>
       <div class="w-full lg:w-3/4">
-        <div class="md:max-w-[18ch] mt-6 mb-8">
+        <div class="md:max-w-[36rem] mt-6 mb-8">
           <p class="mb-8 text-2xl font-bold leading-8">
             <em>
               Splitting away from audio engineering, a career as a designer led me into the tech startup world and solidified my interest in thinking about the world in terms of systems.
             </em>
           </p>
         </div>
-        <div class="md:max-w-[15ch] md:mb-8">
+        <div class="md:max-w-[36rem] md:mb-8">
           <p class="mb-8 text-xl leading-8">
             Projects are born, they grow, and then they die.
             Sometimes they don’t die right away, but they usually die.
