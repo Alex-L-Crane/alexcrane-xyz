@@ -1,21 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import LandingPage from '@/views/LandingPage.vue'
+import MainLanding from '@/views/MainLanding.vue'
 import TechnologySection from '@/views/TechnologySection.vue'
 
 import ProjectsFeed from '@/views/ProjectsFeed.vue';
-import MusicSection from '@/views/MusicSection.vue';
-import DesignSection from '@/views/DesignSection.vue';
+import MusicPage from '@/views/MusicPage.vue';
+import DesignPage from '@/views/DesignPage.vue';
 
-import PhilosophySection from '@/views/PhilosophySection.vue';
-import InspirationsSection from '@/views/InspirationsSection.vue';
+import PhilosophyPage from '@/views/PhilosophyPage.vue';
+import InspirationsPage from '@/views/InspirationsPage.vue';
 import BackgroundSection from '@/views/BackgroundSection.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Landing',
-    component: LandingPage
+    component: MainLanding
   },
   {
     path: '/technology',
@@ -30,12 +30,12 @@ const routes = [
   {
     path: '/philosophy',
     name: 'philosophy',
-    component: PhilosophySection
+    component: PhilosophyPage
   },
   {
     path: '/inspirations',
     name: 'inspirations',
-    component: InspirationsSection
+    component: InspirationsPage
   },
   {
     path: '/feed',
@@ -45,12 +45,12 @@ const routes = [
   {
     path: '/music',
     name: 'music',
-    component: MusicSection
+    component: MusicPage
   },
   {
     path: '/design',
     name: 'tech/design',
-    component: DesignSection
+    component: DesignPage
   },
   {
     path: '/:pathMatch(.*)*', // Catch-all for 404
