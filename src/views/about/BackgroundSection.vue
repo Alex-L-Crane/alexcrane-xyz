@@ -87,10 +87,10 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
             Maybe that’s why I keep on living. Discovering meaning the only way I know how:  through logic, through art, through rhythm.
           </p>
           <p class="alaska text-3xl mb-8 leading-8">
-            More about <a href="/projects/music" class="text-red-500" target="_blank">bands</a>
+            More about <a href="/music" class="text-red-500" target="_blank">bands</a>
           </p>
           <p class="alaska text-3xl leading-8">
-            More about <a href="/projects/design" class="text-red-500" target="_blank">design</a>
+            More about <a href="/design" class="text-red-500" target="_blank">design</a>
           </p>
           <div class="flex align-baseline pt-8 pb-4 relative z-0">
             <p><span class="alaska tracking-tight mr-2"><em>kaizen (Japanese):</em></span>

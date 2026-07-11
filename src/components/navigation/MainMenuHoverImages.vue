@@ -18,19 +18,19 @@ function close() {
 
 const projectLinks = [
   {
-    to: '/projects/feed',
+    to: '/feed',
     heading: 'Feed',
     description: 'Regularly updated',
     imageSrc: '/src/assets/images/nav-images/feed-nav-image.png'
   },
   {
-    to: '/projects/music',
+    to: '/music',
     heading: 'Music',
     description: 'Overview and history',
     imageSrc: '/src/assets/images/nav-images/music-nav-image.png'
   },
   {
-    to: '/projects/design',
+    to: '/design',
     heading: 'Design',
     description: 'Tech and visual',
     imageSrc: '/src/assets/images/nav-images/design-nav-image.png'
@@ -39,19 +39,19 @@ const projectLinks = [
 
 const aboutLinks = [
   {
-    to: '/about/philosophy',
+    to: '/philosophy',
     heading: 'Philosophy',
     description: 'My operation manual',
     imageSrc: '/src/assets/images/design-nav.png'
   },
   {
-    to: '/about/inspirations',
+    to: '/inspirations',
     heading: 'Inspirations',
     description: 'Some motivation',
     imageSrc: '/src/assets/images/design-nav.png'
   },
   {
-    to: '/about/background',
+    to: '/background',
     heading: 'Background',
     description: 'Who I am',
     imageSrc: '/src/assets/images/design-nav.png'

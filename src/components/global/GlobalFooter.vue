@@ -18,8 +18,8 @@
     <div class="pr-40 self-end">
       <ul>
         <li><h4 class="text-white inline-block mb-4 font-bold">More info:</h4></li>
-        <li><a href="/projects/music" class="text-white font-thin inline-block mb-4" target="_blank">Music</a></li>
-        <li><a href="/projects/design" class="text-white font-thin inline-block mb-4" target="_blank">Design</a></li>
+        <li><a href="/music" class="text-white font-thin inline-block mb-4" target="_blank">Music</a></li>
+        <li><a href="/design" class="text-white font-thin inline-block mb-4" target="_blank">Design</a></li>
         <li><a class="text-white font-thin inline-block mb-4" target="_blank">Philosophy</a></li>
         <li><a class="text-white font-thin" target="_blank inline-block mb-4">Resume</a></li>
       </ul>
