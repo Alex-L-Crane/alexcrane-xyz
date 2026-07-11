@@ -1,7 +1,4 @@
 <script setup>
-/*import landingBanner from '@/assets/images/landing-banner-1.png'
-import scrambleText from '@/components/landing/ScrambleText.vue'
-import mainMenu from '@/components/navigation/MainMenuImageGrid.vue'*/
 import ProjectstFeed from '@/views/projects/ProjectsFeed.vue'
 </script>
 

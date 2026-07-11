@@ -1,5 +1,4 @@
 <script setup>
-/*import landingBanner from '@/assets/images/landing-banner-1.png'*/
 </script>
 
 <template>
