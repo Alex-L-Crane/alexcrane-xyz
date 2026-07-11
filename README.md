@@ -21,9 +21,7 @@ There is no `/about` or `/projects` landing route — those section-index pages 
 
 **Global shell** (`src/App.vue`, rendered on every route): `MainMenuBar.vue` (nav) + `GlobalFooter.vue`. Navigation state/behavior lives in `src/composables/` (`useNavigation`, `useArrowNavigation`, `useSwipeNavigation`).
 
-**Reused building blocks** (`src/components/formatting/`): `VideoPlayer.vue`.
-
-**Content data**: `src/content/videos.js` feeds `DrummingFeed.vue` and `TechnologySection.vue`.
+**Content data**: `src/content/videos.js` feeds `DrummingFeed.vue` and `TechnologySection.vue`. Both embed YouTube directly via `<iframe src="https://www.youtube-nocookie.com/embed/...">` — no video library/SDK involved.
 
 ## Setup
 
@@ -92,3 +90,7 @@ To recover anything on this list: `git checkout pre-refactor -- <path>`.
 ### Also removed: /about and /projects section routes
 
 `src/views/about/AboutWrapper.vue`, `src/views/projects/ProjectsWrapper.vue`, `src/views/about/AboutLanding.vue`, `src/views/projects/ProjectsLanding.vue`, `src/components/about/AboutLandingBanner.vue`, and `src/components/projects/ProjectsLandingBanner.vue` were removed when the `/about` and `/projects` landing routes were dropped in favor of top-level sub-page routes (see table above). Recoverable the same way, from `pre-refactor` or `music-page`.
+
+### Also removed: unused VideoPlayer component and its assets
+
+`src/components/formatting/VideoPlayer.vue` (an unused `vue3-youtube`-based player — the live pages use a plain `<iframe>` instead) and the `vue3-youtube` dependency, plus nine images that had become unreferenced as side effects of earlier removals (`kinetic-beats-sketch.png`, `abstract-header-drumhead.png`, `landing-banner-1.png`, `Phenyx-portfolio-mockup.png`, `tca-silouhette-pic-2017.jpg`, `music/tragedy-suicidal-wide-bw.png`, `music/DSC_0217.JPG`, `nav-images/music-nav-1024x576.png`, `nav-images/background-nav-1024x576.png`). Recoverable from `pre-refactor` or `music-page`.
