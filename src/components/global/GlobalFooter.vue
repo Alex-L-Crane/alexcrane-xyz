@@ -43,7 +43,9 @@
                 mb-2
                 bg-almost-black border border-white rounded-sm
                 text-sm/6 leading-none font-medium text-white
-                placeholder:text-gray-400 focus:outline-none"
+                placeholder:text-gray-400
+                focus-visible:outline focus-visible:outline-2
+                focus-visible:outline-offset-2 focus-visible:outline-white"
           placeholder="Email Address" />
           <input
             type="submit"

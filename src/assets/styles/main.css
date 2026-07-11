@@ -7,40 +7,48 @@
   @font-face {
     font-family: NeoGeo;
     src: url(../fonts/NeoGeo-Trial-VAR-VF.woff2) format("woff2");
+    font-display: swap;
   }
   /* Swiss Posters */
   @font-face {
     font-family: Swissposters;
     src: url(../fonts/Swissposters-Trial-VAR-VF.woff2) format("woff2");
+    font-display: swap;
   }
   /* Crystal */
   @font-face {
     font-family: Crystal;
     src: url(../fonts/Crystal-Trial-VAR-VF.ttf.woff2) format("woff2");
+    font-display: swap;
   }
   /* Alaska */
   @font-face {
     font-family: Alaska;
     src: url(../fonts/Alaska-Trial-VAR-VF.ttf.woff2) format("woff2");
+    font-display: swap;
   }
   /* Sunlight */
   @font-face {
     font-family: Sunlight;
     src: url(../fonts/SunlightTrial-Regular.woff2) format("woff2");
+    font-display: swap;
   }
   /* Atacama */
   @font-face {
     font-family: Atacama;
     src: url(../fonts/AtacamaTrial-Thin.woff2) format("woff2");
+    font-display: swap;
   }
   /* Atacama Medium*/
   @font-face {
     font-family: AtacamaMedium;
     src: url(../fonts/AtacamaTrial-Medium.woff2) format("woff2");
+    font-display: swap;
   }
   @font-face {
     font-family: BaikalVar;
     src: url("../fonts/Baikal Trial VAR-VF.ttf.woff2") format("woff2");
+    font-display: swap;
   }
 
   body {
@@ -124,7 +132,9 @@
 
   /* Inline link with a highlighted background, used for cross-page references */
   .highlight-link {
-    @apply bg-highlight/40 px-1 -mx-0.5 text-inherit decoration-clone hover:bg-highlight/60 transition-colors;
+    @apply bg-highlight/40 px-1 -mx-0.5 text-inherit decoration-clone hover:bg-highlight/60 transition-colors
+           focus-visible:bg-highlight/60 focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-offset-2 focus-visible:outline-almost-black;
   }
 
   /* Small italic caption under a photo */

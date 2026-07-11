@@ -6,11 +6,11 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
 </script>
 
 <template>
-  <div class="atacamamedium bg-[#F6D9CE] text-[#444244] pt-20 text-black">
+  <main class="atacamamedium bg-[#F6D9CE] text-[#444244] pt-20 text-black">
 
     <div class="section-panel">
-      <img :src="backgroundAbstract3" alt="Garage music" width="full" class="w-full"/>
-      <h2 class="swissposters font-light text-[10rem]/[1] pb-8 w-full">All tech and no music<br>makes Alex a dull boy</h2>
+      <img :src="backgroundAbstract3" alt="" width="1024" height="248" class="w-full"/>
+      <h1 class="swissposters font-light text-[10rem]/[1] pb-8 w-full">All tech and no music<br>makes Alex a dull boy</h1>
     </div>
     <div class="mt-6 mb-8 pl-48">
       <p class="alaska mb-8 text-3xl">
@@ -54,8 +54,8 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
             I didn’t know the word “ideology” when I first felt it, but I knew it was everywhere.
             Trying to make sense of the world involves plodding through a web of conflicting beliefs.
             Each one louder than the last.<br><br>
-            <em>That’s what makes life <strike>exhausting</strike> fascinating.<br>
-              That’s what makes life exhausting <strike>fascinating</strike>.</em>
+            <em>That’s what makes life <s>exhausting</s> fascinating.<br>
+              That’s what makes life exhausting <s>fascinating</s>.</em>
           </p>
           <p class="mb-8">
             <em class="alaska text-xl">Maybe none of it is supposed to make sense...</em>
@@ -97,22 +97,22 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
     <div class="section-panel">
       <div class="w-full flex pb-2">
         <div class="md:w-[50%] pr-2">
-          <img :src="fieldAmp" alt="Sitting in a field adjusting an amplifier" width="full"/>
+          <img :src="fieldAmp" alt="Sitting in a field adjusting an amplifier" width="1024" height="761" loading="lazy"/>
           <span class="photo-caption">
             2020: Dabbling with audio equipment in a field near Eugene, OR
           </span>
         </div>
         <div class="md:w-[50%] pl-2">
-          <img :src="cuneiformWestbeach" alt="Garage music" width="full"/>
+          <img :src="cuneiformWestbeach" alt="Listening back to a drum recording at Westbeach Studios, Hollywood, CA" width="1024" height="761" loading="lazy"/>
           <span class="photo-caption">
            2007: Listening back to a drum recording at Westbeach Studios, Hollywood, CA
           </span>
         </div>
       </div>
-      <img :src="garagePhoto" alt="Garage music" width="auto" class="w-full h-auto border border-gray-400"/>
+      <img :src="garagePhoto" alt="Hanging out with recording equipment in a home garage studio, Eugene, OR" width="3000" height="1346" loading="lazy" class="w-full h-auto border border-gray-400"/>
       <span class="photo-caption mb-2">
         2024: Hanging out with some equipment in my garage, Eugene, OR
       </span>
     </div>
-  </div>
+  </main>
 </template>
