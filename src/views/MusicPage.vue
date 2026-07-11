@@ -47,20 +47,20 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
                 <p class="pb-2">Audio engineering has been a parallel discipline with music making.
                   The artists I’ve worked with have included:</p>
                 <p>
-                  <a href="https://en.wikipedia.org/wiki/George_Clinton_(funk_musician)" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">George Clinton and the P-Funk All Stars</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Hieroglyphics_(group)" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Michael Manring</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Michael_Manring" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Hieroglyphics</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Ziggy_Modeliste" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Ziggy Modeliste</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Sage_Francis" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Sage Francis</a>
+                  <a href="https://en.wikipedia.org/wiki/George_Clinton_(funk_musician)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">George Clinton and the P-Funk All Stars</a><br>
+                  <a href="https://en.wikipedia.org/wiki/Hieroglyphics_(group)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Michael Manring</a><br>
+                  <a href="https://en.wikipedia.org/wiki/Michael_Manring" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Hieroglyphics</a><br>
+                  <a href="https://en.wikipedia.org/wiki/Ziggy_Modeliste" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Ziggy Modeliste</a><br>
+                  <a href="https://en.wikipedia.org/wiki/Sage_Francis" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Sage Francis</a>
                 </p>
               </li>
               <li class="text-xl mb-8">
                 <p class="pb-2"><em>I've had some musical mentors:</em></p>
                 <p>
-                  <a href="http://www.treygunn.com/bio/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Trey Gunn</a> - virtuoso and music coach<br>
-                  <a href="https://alokedutta.com/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Aloke Dutta</a> - tabla guru<br>
-                  <a href="https://daveelitch.com/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Dave Elitch</a> - drumset master<br>
-                  <a href="https://patrickworley.com/about/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Patrick Worley</a> - guitar expert</p>
+                  <a href="http://www.treygunn.com/bio/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Trey Gunn</a> - virtuoso and music coach<br>
+                  <a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Aloke Dutta</a> - tabla guru<br>
+                  <a href="https://daveelitch.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Dave Elitch</a> - drumset master<br>
+                  <a href="https://patrickworley.com/about/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Patrick Worley</a> - guitar expert</p>
               </li>
             </ul>
           </div>
@@ -74,13 +74,13 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
           </p>
           <ul class="text-xl space-y-6 list-none mb-8">
             <li>
-              <a href="https://en.wikipedia.org/wiki/Suicidal_Tendencies" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Suicidal Tendencies</a><br>
-              <a href="https://en.wikipedia.org/wiki/Author_&amp;_Punisher" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Author and Punisher</a><br>
-              <a href="https://en.wikipedia.org/wiki/Qui_(band)" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Qui (with David Yow on vocals)</a><br>
-              <a href="https://en.wikipedia.org/wiki/Dwarves_(band)" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Dwarves (with Nick Oliveri on bass)</a><br>
-              <a href="https://www.instagram.com/yearofthecobra/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Year of the Cobra</a><br>
-              <a href="https://www.instagram.com/mammothgrinder/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Mammoth Grinder</a><br>
-              <a href="https://www.instagram.com/electrichawkband/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Electric Hawk</a>
+              <a href="https://en.wikipedia.org/wiki/Suicidal_Tendencies" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Suicidal Tendencies</a><br>
+              <a href="https://en.wikipedia.org/wiki/Author_&amp;_Punisher" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Author and Punisher</a><br>
+              <a href="https://en.wikipedia.org/wiki/Qui_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Qui (with David Yow on vocals)</a><br>
+              <a href="https://en.wikipedia.org/wiki/Dwarves_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Dwarves (with Nick Oliveri on bass)</a><br>
+              <a href="https://www.instagram.com/yearofthecobra/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Year of the Cobra</a><br>
+              <a href="https://www.instagram.com/mammothgrinder/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Mammoth Grinder</a><br>
+              <a href="https://www.instagram.com/electrichawkband/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Electric Hawk</a>
             </li>
           </ul>
           <p class="text-xl leading-8 mb-8">A few of the more interesting releases from my discography:
@@ -103,6 +103,7 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
           </div>
           <a href="https://thecruelestanimal.bandcamp.com/album/soothing-rays-of-eternity"
              target="_blank"
+             rel="noopener noreferrer"
              class="inline-block border-t border-almost-black text-sm font-thin text-base pt-2">Bandcamp
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
               <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>
@@ -123,6 +124,7 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
           </div>
           <a href="https://thecruelestanimal.bandcamp.com/album/after-the-waves-devour-us-all"
              target="_blank"
+             rel="noopener noreferrer"
              class="inline-block border-t border-almost-black text-sm font-thin pt-2">Bandcamp
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
               <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>
@@ -143,6 +145,7 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
           </div>
           <a href="https://thecruelestanimal.bandcamp.com/album/white-light-and-the-empire-collapse"
              target="_blank"
+             rel="noopener noreferrer"
              class="inline-block border-t border-almost-black text-sm font-thin pt-2">Bandcamp
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
               <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>
@@ -165,6 +168,7 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
           </div>
           <a href="https://holydose.bandcamp.com/album/holy-dose"
              target="_blank"
+             rel="noopener noreferrer"
              class="inline-block border-t border-almost-black text-sm font-thin pt-2">Bandcamp
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
               <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>
@@ -185,6 +189,7 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
           </div>
           <a href="https://cuneiformband.bandcamp.com/album/tabula-rasa"
              target="_blank"
+             rel="noopener noreferrer"
              class="inline-block border-t border-almost-black text-sm font-thin pt-2">Bandcamp
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
               <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>
@@ -205,6 +210,7 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
           </div>
           <a href="https://dissonantdreamland.bandcamp.com/album/direct-action-free-him"
              target="_blank"
+             rel="noopener noreferrer"
              class="inline-block border-t border-almost-black text-sm font-thin pt-2">Bandcamp
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" class="inline h-[1em] w-[1em] align-text-bottom fill-current">
               <path d="m38.344 56.258 42.738-42.738h-18.137v-7.6367h27.355c2.1094 0 3.8164 1.7109 3.8164 3.8164v27.355h-7.6367v-18.137l-42.738 42.738zm47.102-1.9219h-7.6367v26.793c0 2.9375-2.418 5.3516-5.3516 5.3516h-53.586c-2.9375 0-5.3516-2.4141-5.3516-5.3516v-53.586c0-2.9375 2.4141-5.3516 5.3516-5.3516h26.793v-7.6367h-26.793c-7.1523 0-12.988 5.8359-12.988 12.988v53.586c0 7.1523 5.8398 12.988 12.988 12.988h53.586c7.1523 0 12.988-5.8359 12.988-12.988l0.003907-26.793z" fill-rule="evenodd"/>

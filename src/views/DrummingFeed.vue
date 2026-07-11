@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { drumVideos } from '@/content/videos.js'
-console.log('videos:', drumVideos)
 
 const activeSlug = ref(null)
 const brokenThumbs = ref({})

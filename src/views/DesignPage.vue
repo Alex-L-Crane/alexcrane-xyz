@@ -69,24 +69,24 @@ import kineticBeatsUI from '@/assets/images/kinetic-beats.png'
           <ul class="space-y-6 md:mb-24 list-none">
             <li class="mb-8">
               I used my design and tech skills to help set the wheels in motion for the artist-friendly music streaming alternative
-              <a href="https://resonate.coop/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Resonate</a>.
+              <a href="https://resonate.coop/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Resonate</a>.
             </li>
             <li class="mb-8">
               I collaborated with an engineer friend to create
-              <a href="https://www.behance.net/gallery/58350023/KineticBeats-Music-App" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Kinetic Beats</a>, an iPhone app for air drumming.
+              <a href="https://www.behance.net/gallery/58350023/KineticBeats-Music-App" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Kinetic Beats</a>, an iPhone app for air drumming.
             </li>
             <li class="mb-8">
               <p class="pb-2"><em>I was hired to build websites for some musicians I admire:</em></p>
               <p>
-                <a href="https://daveelitch.com/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Dave Elitch</a><br>
-                <a href="https://www.trevordunn.net/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Trevor Dunn</a><br>
-                <a href="https://alokedutta.com/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Aloke Dutta</a><br>
+                <a href="https://daveelitch.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Dave Elitch</a><br>
+                <a href="https://www.trevordunn.net/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Trevor Dunn</a><br>
+                <a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Aloke Dutta</a><br>
                 Dunable Guitars
               </p>
             </li>
             <li class="mb-8">
               I spent years attempting to beautify equipment and software for positron emission tomography (PET) scans at a tech startup called
-              <a href="https://sofie.com/" target="_blank" class="alaska text-[#9A2C2C] hover:opacity-80">Sofie Biosciences</a>.
+              <a href="https://sofie.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Sofie Biosciences</a>.
             </li>
           </ul>
         </div>

@@ -111,17 +111,17 @@
             cx="9.4"
             cy="9.4"
             r="9.4"
-            class="origin-center transition-transform group-hover:animate-bounce-once" />
+            class="origin-center transition-transform motion-safe:group-hover:animate-bounce-once" />
           <circle
             cx="37.5"
             cy="9.4"
             r="9.4"
-            class="origin-center transition-transform group-hover:animate-bounce-once-delay-150" />
+            class="origin-center transition-transform motion-safe:group-hover:animate-bounce-once-delay-150" />
           <circle
             cx="65.6"
             cy="9.4"
             r="9.4"
-            class="origin-center transition-transform group-hover:animate-bounce-once-delay-300" />
+            class="origin-center transition-transform motion-safe:group-hover:animate-bounce-once-delay-300" />
         </svg>
       </button>
       <button @click="goTo(nextPage)" class="invisible lg:visible">

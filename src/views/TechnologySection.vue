@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { techVideos } from '@/content/videos.js'
-console.log('videos:', techVideos)
 
 const activeSlug = ref(null)
 const brokenThumbs = ref({})
