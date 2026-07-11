@@ -8,14 +8,14 @@ Alex Crane's personal site — Vue 3 (Composition API, `<script setup>`) + Vite 
 
 | Path | Component |
 |---|---|
-| `/` | `src/views/LandingPage.vue` |
+| `/` | `src/views/MainLanding.vue` |
 | `/technology` | `src/views/TechnologySection.vue` |
-| `/philosophy` | `src/views/PhilosophySection.vue` |
-| `/inspirations` | `src/views/InspirationsSection.vue` |
+| `/philosophy` | `src/views/PhilosophyPage.vue` |
+| `/inspirations` | `src/views/InspirationsPage.vue` |
 | `/background` | `src/views/BackgroundSection.vue` |
 | `/feed` | `src/views/ProjectsFeed.vue` |
-| `/music` | `src/views/MusicSection.vue` |
-| `/design` | `src/views/DesignSection.vue` |
+| `/music` | `src/views/MusicPage.vue` |
+| `/design` | `src/views/DesignPage.vue` |
 
 There is no `/about` or `/projects` landing route — those section-index pages were removed since nothing linked to them; the sub-pages above are top-level. Unknown paths (including old `/about`/`/projects` links) redirect to `/`.
 
