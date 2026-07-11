@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import MainLanding from '@/views/MainLanding.vue'
 import TechnologySection from '@/views/TechnologySection.vue'
 
-import ProjectsFeed from '@/views/ProjectsFeed.vue';
+import DrummingFeed from '@/views/DrummingFeed.vue';
 import MusicPage from '@/views/MusicPage.vue';
 import DesignPage from '@/views/DesignPage.vue';
 
@@ -40,7 +40,7 @@ const routes = [
   {
     path: '/feed',
     name: 'feed',
-    component: ProjectsFeed
+    component: DrummingFeed
   },
   {
     path: '/music',

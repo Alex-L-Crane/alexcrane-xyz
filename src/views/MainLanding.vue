@@ -1,11 +1,11 @@
 <script setup>
-import ProjectstFeed from '@/views/ProjectsFeed.vue'
+import DrummingFeed from '@/views/DrummingFeed.vue'
 </script>
 
 <template>
   <div class="bg-white text-black">
     <section>
-      <ProjectstFeed />
+      <DrummingFeed />
     </section>
   </div>
 </template>

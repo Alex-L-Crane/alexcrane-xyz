@@ -13,7 +13,7 @@ Alex Crane's personal site — Vue 3 (Composition API, `<script setup>`) + Vite 
 | `/philosophy` | `src/views/PhilosophyPage.vue` |
 | `/inspirations` | `src/views/InspirationsPage.vue` |
 | `/background` | `src/views/BackgroundSection.vue` |
-| `/feed` | `src/views/ProjectsFeed.vue` |
+| `/feed` | `src/views/DrummingFeed.vue` |
 | `/music` | `src/views/MusicPage.vue` |
 | `/design` | `src/views/DesignPage.vue` |
 
@@ -21,9 +21,9 @@ There is no `/about` or `/projects` landing route — those section-index pages 
 
 **Global shell** (`src/App.vue`, rendered on every route): `MainMenuBar.vue` (nav) + `GlobalFooter.vue`. Navigation state/behavior lives in `src/composables/` (`useNavigation`, `useArrowNavigation`, `useSwipeNavigation`).
 
-**Reused building blocks** (`src/components/formatting/`): `TextBlockLeft.vue`, `TextBlockRight.vue`, `VideoPlayer.vue` — shared layout pieces used across multiple content pages.
+**Reused building blocks** (`src/components/formatting/`): `VideoPlayer.vue`.
 
-**Content data**: `src/content/videos.js` feeds `ProjectsFeed.vue` and `EquipmentSection.vue`.
+**Content data**: `src/content/videos.js` feeds `DrummingFeed.vue` and `TechnologySection.vue`.
 
 ## Setup
 
