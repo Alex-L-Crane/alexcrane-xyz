@@ -11,6 +11,7 @@ export default {
       colors: {
         'almost-black': '#1c1c1c',
         'punk-yellow': '#FBC028',
+        'highlight': '#f2695c',
       },
       keyframes: {
         'bounce-once': {

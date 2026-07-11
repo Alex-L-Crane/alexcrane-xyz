@@ -106,3 +106,30 @@
   }
 }
 
+@layer components {
+  /* Section wrapper with a horizontal margin on md+ screens (page hero/photo blocks) */
+  .section-panel {
+    @apply md:mx-8 relative;
+  }
+
+  /* Constrains a text column to a comfortable reading width on md+ screens */
+  .prose-col {
+    @apply md:max-w-[36rem];
+  }
+
+  /* Standard body paragraph */
+  .body-copy {
+    @apply mb-8 text-xl leading-8;
+  }
+
+  /* Inline link with a highlighted background, used for cross-page references */
+  .highlight-link {
+    @apply bg-highlight/40 px-1 -mx-0.5 text-inherit decoration-clone hover:bg-highlight/60 transition-colors;
+  }
+
+  /* Small italic caption under a photo */
+  .photo-caption {
+    @apply font-thin text-xs italic inline-block;
+  }
+}
+
