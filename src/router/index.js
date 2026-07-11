@@ -3,13 +3,13 @@ import { createRouter, createWebHistory } from 'vue-router';
 import LandingPage from '@/views/LandingPage.vue'
 import EquipmentSection from '@/views/EquipmentSection.vue'
 
-import ProjectsFeed from '@/views/projects/ProjectsFeed.vue';
-import MusicSection from '@/views/projects/MusicSection.vue';
-import DesignSection from '@/views/projects/DesignSection.vue';
+import ProjectsFeed from '@/views/ProjectsFeed.vue';
+import MusicSection from '@/views/MusicSection.vue';
+import DesignSection from '@/views/DesignSection.vue';
 
-import PhilosophySection from '@/views/about/PhilosophySection.vue';
-import InspirationsSection from '@/views/about/InspirationsSection.vue';
-import BackgroundSection from '@/views/about/BackgroundSection.vue';
+import PhilosophySection from '@/views/PhilosophySection.vue';
+import InspirationsSection from '@/views/InspirationsSection.vue';
+import BackgroundSection from '@/views/BackgroundSection.vue';
 
 const routes = [
   {

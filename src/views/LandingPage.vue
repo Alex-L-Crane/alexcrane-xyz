@@ -1,5 +1,5 @@
 <script setup>
-import ProjectstFeed from '@/views/projects/ProjectsFeed.vue'
+import ProjectstFeed from '@/views/ProjectsFeed.vue'
 </script>
 
 <template>
