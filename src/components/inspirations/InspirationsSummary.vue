@@ -1,14 +1,10 @@
-<script setup>
-  import TextBlockLeft from '@/components/formatting/TextBlockLeft.vue'
-  import TextBlockRight from '@/components/formatting/TextBlockRight.vue'
-</script>
 <template>
   <div class="flex flex-col lg:flex-row lg:pt-78 pt-16 relative z-0">
-    <TextBlockLeft>
+    <div class="w-full lg:w-1/2 grow">
       <h2 class="neogeo text-5xl/[1] mb-3">Systems. <br/>Patterns. <br/>Perception.</h2>
       <p class="text-2xl/[1.4] leading-tight font-thin">I don’t believe in magic, but do believe in sound. Somehow simultaneously ubiquitous and subversive, deeply misunderstood and underappreciated, sound has permeated every aspect of my life and has been my gateway to learning about visual arts, computer science, electronics, culture, psychology, politics, and, of course, music.</p>
-    </TextBlockLeft>
-    <TextBlockRight>
+    </div>
+    <div class="w-full lg:w-1/2 grow">
       <div class="w-[750px] ml-10 mt-10 -mb-48">
         <svg width="auto" height="auto" viewBox="0 0 1868 1577" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -26,6 +22,6 @@
           </g>
         </svg>
       </div>
-    </TextBlockRight>
+    </div>
   </div>
 </template>
