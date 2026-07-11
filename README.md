@@ -10,14 +10,14 @@ Alex Crane's personal site — Vue 3 (Composition API, `<script setup>`) + Vite 
 |---|---|
 | `/` | `src/views/LandingPage.vue` |
 | `/equipment` | `src/views/EquipmentSection.vue` |
-| `/about` | `src/views/about/AboutWrapper.vue` (layout) → `src/views/about/AboutLanding.vue` |
-| `/about/philosophy` | `src/views/about/PhilosophySection.vue` |
-| `/about/inspirations` | `src/views/about/InspirationsSection.vue` |
-| `/about/background` | `src/views/about/BackgroundSection.vue` |
-| `/projects` | `src/views/projects/ProjectsWrapper.vue` (layout) → `src/views/projects/ProjectsLanding.vue` |
-| `/projects/feed` | `src/views/projects/ProjectsFeed.vue` |
-| `/projects/music` | `src/views/projects/MusicSection.vue` |
-| `/projects/design` | `src/views/projects/DesignSection.vue` |
+| `/philosophy` | `src/views/about/PhilosophySection.vue` |
+| `/inspirations` | `src/views/about/InspirationsSection.vue` |
+| `/background` | `src/views/about/BackgroundSection.vue` |
+| `/feed` | `src/views/projects/ProjectsFeed.vue` |
+| `/music` | `src/views/projects/MusicSection.vue` |
+| `/design` | `src/views/projects/DesignSection.vue` |
+
+There is no `/about` or `/projects` landing route — those section-index pages were removed since nothing linked to them; the sub-pages above are top-level. Unknown paths (including old `/about`/`/projects` links) redirect to `/`.
 
 **Global shell** (`src/App.vue`, rendered on every route): `MainMenuBar.vue` (nav) + `GlobalFooter.vue`. Navigation state/behavior lives in `src/composables/` (`useNavigation`, `useArrowNavigation`, `useSwipeNavigation`).
 
@@ -88,3 +88,7 @@ This repo went through a long period of iterating on page designs directly on fe
 **Assets** (~98MB, confirmed unreferenced by any `.vue`/`.js`/`.css` file): 34 images under `src/assets/images/` (including several superseded duplicate/variant images, e.g. `garage-photo-3-31-24-v14.png`, `background-abstract-1.png`/`-2.png`, `tragedy-suicidal.png`/`-bw.png`) and one duplicate font format (`NeoGeo-Trial-VAR-VF.otf`, the `.woff2` version is what's actually loaded).
 
 To recover anything on this list: `git checkout pre-refactor -- <path>`.
+
+### Also removed: /about and /projects section routes
+
+`src/views/about/AboutWrapper.vue`, `src/views/projects/ProjectsWrapper.vue`, `src/views/about/AboutLanding.vue`, `src/views/projects/ProjectsLanding.vue`, `src/components/about/AboutLandingBanner.vue`, and `src/components/projects/ProjectsLandingBanner.vue` were removed when the `/about` and `/projects` landing routes were dropped in favor of top-level sub-page routes (see table above). Recoverable the same way, from `pre-refactor` or `music-page`.
