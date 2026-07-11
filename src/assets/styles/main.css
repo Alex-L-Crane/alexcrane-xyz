@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --font-fallback: 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+    --font-fallback: "Arial", "Helvetica", "Nimbus Sans", "Liberation Sans", "sans-serif";
   }
 
   /* NeoGeo */
@@ -13,53 +13,39 @@
     src: url(../fonts/NeoGeo-Trial-VAR-VF.woff2) format("woff2");
     font-display: swap;
   }
+
   /* Swiss Posters */
   @font-face {
     font-family: Swissposters;
     src: url(../fonts/Swissposters-Trial-VAR-VF.woff2) format("woff2");
     font-display: swap;
   }
-  /* Crystal */
-  @font-face {
-    font-family: Crystal;
-    src: url(../fonts/Crystal-Trial-VAR-VF.ttf.woff2) format("woff2");
-    font-display: swap;
-  }
+
   /* Alaska */
   @font-face {
     font-family: Alaska;
     src: url(../fonts/Alaska-Trial-VAR-VF.ttf.woff2) format("woff2");
     font-display: swap;
   }
-  /* Sunlight */
-  @font-face {
-    font-family: Sunlight;
-    src: url(../fonts/SunlightTrial-Regular.woff2) format("woff2");
-    font-display: swap;
-  }
+
   /* Atacama */
   @font-face {
     font-family: Atacama;
     src: url(../fonts/AtacamaTrial-Thin.woff2) format("woff2");
     font-display: swap;
   }
-  /* Atacama Medium*/
+
+  /* Atacama Medium */
   @font-face {
     font-family: AtacamaMedium;
     src: url(../fonts/AtacamaTrial-Medium.woff2) format("woff2");
     font-display: swap;
   }
-  @font-face {
-    font-family: BaikalVar;
-    src: url("../fonts/Baikal Trial VAR-VF.ttf.woff2") format("woff2");
-    font-display: swap;
-  }
 
   body {
-    font-family: 'Alaska', var(--font-fallback);
+    @apply bg-almost-black text-white;
+    font-family: "Alaska", var(--font-fallback);
     font-size: 16px;
-    color: #fff;
-    background-color: #1C1C1C;
   }
   h1 {
     @apply text-2xl;
@@ -69,41 +55,23 @@
   }
 
   .neogeo {
-    font-family: 'NeoGeo', var(--font-fallback);
+    font-family: "NeoGeo", var(--font-fallback);
   }
 
   .swissposters {
-    font-family: 'Swissposters', var(--font-fallback);
-  }
-
-  .crystal {
-    font-family: 'Crystal', var(--font-fallback);
+    font-family: "Swissposters", var(--font-fallback);
   }
 
   .alaska {
-    font-family: 'Alaska', var(--font-fallback);
-  }
-
-  .sunlight {
-    font-family: 'Sunlight', var(--font-fallback);
+    font-family: "Alaska", var(--font-fallback);
   }
 
   .atacama {
-    font-family: 'Atacama', var(--font-fallback);
+    font-family: "Atacama", var(--font-fallback);
   }
 
   .atacamamedium {
-    font-family: 'AtacamaMedium', var(--font-fallback);
-  }
-
-  .baikal {
-    font-family: 'BaikalVar', var(--font-fallback);
-  }
-
-  @media (hover: hover) {
-    a:hover {
-      background-color: hsla(160, 100%, 37%, 0.2);
-    }
+    font-family: "AtacamaMedium", var(--font-fallback);
   }
 }
 
