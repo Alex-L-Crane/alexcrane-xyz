@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  purge: ['./src/**/*.{js,jsx,ts,tsx,vue}', './public/index.html'],
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}", // Ensure Vue files are included
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -25,12 +23,6 @@ export default {
         'bounce-once-delay-300': 'bounce-once 0.4s ease-out forwards 300ms',
       }
     },
-    safelist: [
-      'bg-red-500', 'text-white', 'p-6', // Add common classes here
-    ],
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }

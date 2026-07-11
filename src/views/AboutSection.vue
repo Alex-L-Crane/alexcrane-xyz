@@ -17,7 +17,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
         <em>Sound is not a backdrop.</em>
       </p>
     </div>
-    <div class="flex px-2 sm:px-4 md:px-8 ">
+    <div class="flex px-2 sm:px-4 md:px-8">
       <div class="hidden lg:inline w-1/4 lg:pr-8">
       </div>
       <div class="w-full lg:w-3/4">
