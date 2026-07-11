@@ -97,11 +97,11 @@
         </a>
       </RouterLink>
 
-      <button @click="goTo(prevPage)" class="hidden sm:block">
+      <button @click="goTo(prevPage)" class="hidden sm:block ml-8">
         <arrow-icon direction="left" customClass="hover:-translate-x-1" />
       </button>
       <button @click="showMenu = true"
-              class="group p-2 overflow-visible text-[1.2rem] cursor-pointer bg-transparent border-none">
+              class="group p-2 mx-4 overflow-visible text-[1.2rem] cursor-pointer bg-transparent border-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -4 75 24"
