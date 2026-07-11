@@ -40,7 +40,7 @@
   const links = [
     { to: '/', label: 'Drumming' },
     { to: '/technology', label: 'Technology' },
-    { to: '/background', label: 'About' }
+    { to: '/about', label: 'About' }
   ]
 </script>
 

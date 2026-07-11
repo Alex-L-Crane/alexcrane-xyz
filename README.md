@@ -12,12 +12,12 @@ Alex Crane's personal site — Vue 3 (Composition API, `<script setup>`) + Vite 
 | `/technology` | `src/views/TechnologySection.vue` |
 | `/philosophy` | `src/views/PhilosophyPage.vue` |
 | `/inspirations` | `src/views/InspirationsPage.vue` |
-| `/background` | `src/views/BackgroundSection.vue` |
+| `/about` | `src/views/AboutSection.vue` |
 | `/feed` | `src/views/DrummingFeed.vue` |
 | `/music` | `src/views/MusicPage.vue` |
 | `/design` | `src/views/DesignPage.vue` |
 
-There is no `/about` or `/projects` landing route — those section-index pages were removed since nothing linked to them; the sub-pages above are top-level. Unknown paths (including old `/about`/`/projects` links) redirect to `/`.
+There is no `/projects` landing route — that section-index page was removed since nothing linked to it; the sub-pages above are top-level. `/about` was reintroduced later as the route for `AboutSection.vue` (renamed from `BackgroundSection.vue`) to match its "About" nav label — it is unrelated to the old `/about` landing page. Unknown paths (including old `/projects`/`/background` links) redirect to `/`.
 
 **Global shell** (`src/App.vue`, rendered on every route): `MainMenuBar.vue` (nav) + `GlobalFooter.vue`. Navigation state/behavior lives in `src/composables/` (`useNavigation`, `useArrowNavigation`, `useSwipeNavigation`).
 

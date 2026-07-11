@@ -9,7 +9,7 @@ import DesignPage from '@/views/DesignPage.vue';
 
 import PhilosophyPage from '@/views/PhilosophyPage.vue';
 import InspirationsPage from '@/views/InspirationsPage.vue';
-import BackgroundSection from '@/views/BackgroundSection.vue';
+import AboutSection from '@/views/AboutSection.vue';
 
 const routes = [
   {
@@ -23,9 +23,9 @@ const routes = [
     component: TechnologySection
   },
   {
-    path: '/background',
-    name: 'background',
-    component: BackgroundSection
+    path: '/about',
+    name: 'about',
+    component: AboutSection
   },
   {
     path: '/philosophy',
