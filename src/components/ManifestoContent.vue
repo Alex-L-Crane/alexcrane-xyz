@@ -18,7 +18,7 @@ import burningcar from '@/assets/images/burning-car.png'
       <h2 class="neogeo text-5xl/[1]">Mission</h2>
     </div>
     <div class="w-3/4">
-      <div class="max-w-[18ch]">
+      <div class="max-w-[36rem]">
         <p class="text-2xl/[1.24] pl-8">To showcase abstract drum-based soundscapes as a form of technology.</p>
       </div>
     </div>
@@ -29,7 +29,7 @@ import burningcar from '@/assets/images/burning-car.png'
       <h2 class="neogeo text-5xl/[1] mb-6">Manifesto</h2>
     </div>
     <div class="w-3/4">
-      <div class="max-w-[18ch]">
+      <div class="max-w-[36rem]">
         <ul class="p-0 m-0">
           <li class="text-2xl/[1.24] mb-16 pl-8 ">Make daily minimal, hypnotic grooves - patterns that evolve over time. [break-beat, drum n bass, and prog]</li>
           <li class="text-2xl/[1.24] mb-16 pl-8">Improvise pieces from start to finish. In the moment. Repeatedly re-improvise the best ideas.</li>
@@ -46,7 +46,7 @@ import burningcar from '@/assets/images/burning-car.png'
       <h2 class="neogeo text-5xl/[1] mb-6">My Why</h2>
     </div>
     <div class="w-3/4">
-      <div class="max-w-[18ch]">
+      <div class="max-w-[36rem]">
         <p class="text-2xl/[1.4] pl-8">I believe human purpose is unleashed through rhythm, repetition, logic, systems, and evolutionary processes, not via superficial ideas of progress, human-made belief systems, or human institutions.</p>
       </div>
     </div>

@@ -23,6 +23,11 @@ const routes = [
     component: TechnologySection
   },
   {
+    path: '/background',
+    name: 'background',
+    component: BackgroundSection
+  },
+  {
     path: '/philosophy',
     name: 'philosophy',
     component: PhilosophySection
@@ -31,11 +36,6 @@ const routes = [
     path: '/inspirations',
     name: 'inspirations',
     component: InspirationsSection
-  },
-  {
-    path: '/background',
-    name: 'background',
-    component: BackgroundSection
   },
   {
     path: '/feed',
