@@ -15,42 +15,50 @@ const routes = [
   {
     path: '/',
     name: 'Landing',
-    component: MainLanding
+    component: MainLanding,
+    meta: { title: 'Ritual :: Rhythm — Drumming & Technology' }
   },
   {
     path: '/technology',
     name: 'Technology',
-    component: TechnologySection
+    component: TechnologySection,
+    meta: { title: 'Technology — Ritual :: Rhythm' }
   },
   {
     path: '/about',
     name: 'about',
-    component: AboutSection
+    component: AboutSection,
+    meta: { title: 'About — Ritual :: Rhythm' }
   },
   {
     path: '/philosophy',
     name: 'philosophy',
-    component: PhilosophyPage
+    component: PhilosophyPage,
+    meta: { title: 'Philosophy — Ritual :: Rhythm' }
   },
   {
     path: '/inspirations',
     name: 'inspirations',
-    component: InspirationsPage
+    component: InspirationsPage,
+    meta: { title: 'Inspirations — Ritual :: Rhythm' }
   },
   {
     path: '/feed',
     name: 'feed',
-    component: DrummingFeed
+    component: DrummingFeed,
+    meta: { title: 'Feed — Ritual :: Rhythm' }
   },
   {
     path: '/music',
     name: 'music',
-    component: MusicPage
+    component: MusicPage,
+    meta: { title: 'Music — Ritual :: Rhythm' }
   },
   {
     path: '/design',
     name: 'tech/design',
-    component: DesignPage
+    component: DesignPage,
+    meta: { title: 'Design — Ritual :: Rhythm' }
   },
   {
     path: '/:pathMatch(.*)*', // Catch-all for 404
@@ -67,6 +75,10 @@ const router = createRouter({
     }
     return { top: 0 }
   }
+})
+
+router.afterEach((to) => {
+  document.title = to.meta.title ?? 'Ritual :: Rhythm'
 })
 
 export default router;

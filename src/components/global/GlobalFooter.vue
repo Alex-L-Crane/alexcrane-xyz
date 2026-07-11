@@ -22,7 +22,7 @@
         <li><a href="/music" class="text-white font-thin inline-block mb-4">Music</a></li>
         <li><a href="/design" class="text-white font-thin inline-block mb-4">Design</a></li>
         <li><a href="/philosophy" class="text-white font-thin inline-block mb-4">Philosophy</a></li>
-        <li><a class="text-white font-thin inline-block mb-4" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="/AlexCrane-Resume.pdf" class="text-white font-thin inline-block" target="_blank" rel="noopener noreferrer">Resume</a></li>
       </ul>
     </div>
     <div class="self-end">
