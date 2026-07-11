@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import LandingPage from '@/views/LandingPage.vue'
-import EquipmentSection from '@/views/EquipmentSection.vue'
+import TechnologySection from '@/views/TechnologySection.vue'
 
 import ProjectsFeed from '@/views/ProjectsFeed.vue';
 import MusicSection from '@/views/MusicSection.vue';
@@ -18,9 +18,9 @@ const routes = [
     component: LandingPage
   },
   {
-    path: '/equipment',
-    name: 'Equipment',
-    component: EquipmentSection
+    path: '/technology',
+    name: 'Technology',
+    component: TechnologySection
   },
   {
     path: '/philosophy',

@@ -9,7 +9,7 @@ Alex Crane's personal site — Vue 3 (Composition API, `<script setup>`) + Vite 
 | Path | Component |
 |---|---|
 | `/` | `src/views/LandingPage.vue` |
-| `/equipment` | `src/views/EquipmentSection.vue` |
+| `/technology` | `src/views/TechnologySection.vue` |
 | `/philosophy` | `src/views/PhilosophySection.vue` |
 | `/inspirations` | `src/views/InspirationsSection.vue` |
 | `/background` | `src/views/BackgroundSection.vue` |
