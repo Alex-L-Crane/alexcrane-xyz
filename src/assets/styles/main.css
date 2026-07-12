@@ -76,9 +76,18 @@
 }
 
 @layer components {
-  /* Section wrapper with a horizontal margin on md+ screens (page hero/photo blocks) */
+  /* Section wrapper with a horizontal margin on md+ screens (page hero/photo blocks).
+     Tighter at tablet (near-bleed) than true desktop. */
   .section-panel {
-    @apply md:mx-8 relative;
+    @apply md:mx-4 lg:mx-8 relative;
+  }
+
+  /* Caps and centers a block at the body column's reading width for tablet only;
+     reverts to full/flush at lg so desktop's existing layout is untouched. Used to
+     line up elements (subhead, footer) that live outside the body column's own
+     row/wrapper structure but need to match its rendered position. */
+  .body-column {
+    @apply md:max-w-[36rem] md:mx-auto lg:max-w-none lg:mx-0;
   }
 
   /* Constrains a text column to a comfortable reading width on md+ screens */

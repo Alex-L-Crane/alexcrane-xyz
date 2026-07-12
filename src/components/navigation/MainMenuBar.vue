@@ -97,7 +97,7 @@
         </a>
       </RouterLink>
 
-      <button @click="goTo(prevPage)" class="hidden md:block ml-8">
+      <button @click="goTo(prevPage)" class="hidden lg:block ml-8">
         <arrow-icon direction="left" customClass="hover:-translate-x-1" />
       </button>
       <button @click="showMenu = true"
@@ -124,7 +124,7 @@
             class="origin-center transition-transform motion-safe:group-hover:animate-bounce-once-delay-300" />
         </svg>
       </button>
-      <button @click="goTo(nextPage)" class="hidden md:block md:invisible lg:visible">
+      <button @click="goTo(nextPage)" class="hidden lg:block">
         <arrow-icon customClass="hover:translate-x-1" />
       </button>
     </div>
