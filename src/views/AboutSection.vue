@@ -42,8 +42,8 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
               Time.</em>
           </p>
         </div>
-        <div class="lg:pl-[40rem] md:mb-16">
-          <div class="flex align-baseline lg:max-w-[18rem] md:pt-8 pb-4 relative z-0">
+        <div class="lg:pl-[40rem] mb-8 md:mb-16">
+          <div class="flex align-baseline lg:max-w-[18rem] pt-6 md:pt-8 pb-4 relative z-0">
             <p><span class="alaska tracking-tight mr-2"><em>kaizen (Japanese):</em></span>
               <em class="atacama font-thin">The practice of continually seeking improvement.</em>
             </p>
@@ -57,7 +57,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
             <em>That’s what makes life <s>exhausting</s> fascinating.<br>
               That’s what makes life exhausting <s>fascinating</s>.</em>
           </p>
-          <p class="mb-8">
+          <p class="body-copy">
             <em class="alaska text-xl">Maybe none of it is supposed to make sense...</em>
           </p>
           <p class="body-copy">
@@ -76,7 +76,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
           </ul>
         </div>
         <div class="prose-col md:mb-8">
-          <p class="body-copy mb-16">
+          <p class="body-copy md:mb-16">
             In these different situations, I’ve known an unclassifiable blend of people from drastically different walks of life.
             Still, I haven't found a believable ready-made worldview and I'm sure I won't. That feeling only gets stronger. I’m not wired for doctrine.
             Maybe that’s why I keep on going, discovering meaning the only way I know how:  through logic, through art, through rhythm.
