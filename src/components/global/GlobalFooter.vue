@@ -1,7 +1,7 @@
 <template>
   <div class="bg-almost-black lg:h-[600px] px-8 pb-36 lg:flex lg:flex-col lg:justify-end">
-  <div class="flex flex-col lg:flex-row items-start lg:items-end lg:justify-between">
-    <div class="mb-8 lg:mb-0 mt-16 flex items-center lg:w-[200px] md:-ml-6 lg:ml-0">
+  <div class="body-column flex flex-col lg:flex-row items-start lg:items-end lg:justify-between">
+    <div class="mb-8 lg:mb-0 mt-16 flex items-center lg:w-[200px]">
       <svg width="43" height="42" viewBox="0 0 43 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_9837_606)">
           <path d="M0 0V42H43V0H0ZM27.4442 2.63386H40.2999V25.5687H27.4442V2.63386ZM13.7624 2.49204C20.0895 2.49204 25.2277 7.65847 25.2277 14.0203C25.2277 20.3821 20.0895 25.5485 13.7624 25.5485C7.43533 25.5485 2.29709 20.3821 2.29709 14.0203C2.27694 7.65847 7.41518 2.49204 13.7624 2.49204ZM40.3201 39.3054H2.15604V28.466H5.82334V28.4457H37.9021V28.466H40.3201V39.3054Z" fill="currentColor"/>
@@ -16,7 +16,7 @@
       </svg>
       <span class="font-bold pl-4">Ritual :: Rhythm</span>
     </div>
-    <div class="mb-8 lg:mb-0 mt-16 lg:pr-40 self-start lg:self-end md:w-full lg:w-auto body-column">
+    <div class="mb-8 lg:mb-0 mt-16 lg:pr-40 self-start lg:self-end">
       <ul>
         <li><h4 class="text-white inline-block mb-4 font-bold">About:</h4></li>
         <li><a href="/about" class="text-white font-thin inline-block mb-4 hover:opacity-80">Overview</a></li>
@@ -26,7 +26,7 @@
         <li><a href="/AlexCrane-Resume.pdf" class="text-white font-thin inline-block hover:opacity-80" target="_blank" rel="noopener noreferrer">Resume</a></li>
       </ul>
     </div>
-    <div class="w-full lg:w-auto mt-16 self-start lg:self-end body-column">
+    <div class="w-full lg:w-auto mt-16 self-start lg:self-end">
       <h2 class="text-3xl">Email Signup</h2>
       <p class="font-thin mb-2">Drumming and technology</p>
       <form

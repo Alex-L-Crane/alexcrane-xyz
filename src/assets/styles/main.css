@@ -82,13 +82,14 @@
      property (that's what caused the md padding to get zeroed out originally --
      both classes are in the components layer, and .mobile-gutter's md:px-0, being
      defined later in this file, won the cascade tie).
-     The page datum: at tablet (md), left/right exactly match the nav's own logo
-     (pl-2 = 8px, zero extra offset beyond the nav's p-2) and dots-menu icon
-     (pr-8 = 32px, accounting for the dots button's own p-2 + mx-4) -- the nav
-     itself isn't symmetric, so this isn't either. Reverts to the original
+     The page datum: at tablet (md), the left edge matches the nav logo (pl-2 =
+     8px, zero extra offset beyond the nav's p-2). The right edge mirrors it
+     symmetrically rather than chasing the dots menu's own inset (which carries
+     extra tap-target padding) -- matching that pixel-for-pixel reads as an
+     unbalanced margin rather than an aligned one. Reverts to the original
      symmetric lg:mx-8 margin at true desktop, unchanged. */
   .section-panel {
-    @apply px-2 md:pl-2 md:pr-8 lg:px-0 lg:mx-8 relative;
+    @apply px-2 lg:px-0 lg:mx-8 relative;
   }
 
   /* Caps and centers a block at the body column's reading width for tablet only;
