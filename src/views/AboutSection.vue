@@ -10,7 +10,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
 
     <div class="section-panel">
       <img :src="backgroundAbstract3" alt="" width="1024" height="248" class="aspect-[3/2] md:aspect-auto w-full object-cover object-[75%_center]"/>
-      <h1 class="swissposters font-light text-6xl/[1] sm:text-7xl/[1] md:text-[10rem]/[1] pb-8 w-full">All tech and no music<br>makes Alex a dull boy</h1>
+      <h1 class="mobile-gutter swissposters font-light text-6xl/[1] sm:text-7xl/[1] md:text-[10rem]/[1] pb-8 w-full">All tech and no music<br>makes Alex a dull boy</h1>
     </div>
     <div class="mt-6 mb-8 pl-48">
       <p class="alaska mb-8 text-3xl">

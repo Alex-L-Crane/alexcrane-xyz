@@ -102,5 +102,10 @@
   .photo-caption {
     @apply font-thin text-xs italic inline-block;
   }
+
+  /* Minimum horizontal inset below md so nothing sits flush against the viewport edge; matches MainMenuBar's p-2 */
+  .mobile-gutter {
+    @apply px-2 md:px-0;
+  }
 }
 
