@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-almost-black lg:h-[600px] px-8 pb-36 flex flex-col lg:flex-row items-start lg:items-end lg:justify-between">
+  <div class="bg-almost-black lg:h-[600px] px-8 pb-36 lg:flex lg:flex-col lg:justify-end">
+  <div class="body-column flex flex-col lg:flex-row items-start lg:items-end lg:justify-between">
     <div class="mb-8 lg:mb-0 mt-16 flex items-center lg:w-[200px]">
       <svg width="43" height="42" viewBox="0 0 43 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_9837_606)">
@@ -39,7 +40,7 @@
           type="email"
           name="email"
           class="h-10
-                w-full lg:w-auto lg:inline-block lg:min-w-96
+                w-full md:max-w-sm lg:w-auto lg:inline-block lg:min-w-96
                 py-1.5 pr-3 pl-3 lg:mr-2
                 mb-2
                 bg-almost-black border border-white rounded-sm
@@ -51,11 +52,12 @@
           <input
             type="submit"
             value="Subscribe"
-            class="h-10 w-full lg:w-auto px-6 py-0 rounded-sm text-sm/6
+            class="h-10 w-full md:w-auto md:self-start px-6 py-0 rounded-sm text-sm/6
             leading-none font-medium text-white border
             border-white cursor-pointer"/>
       </form>
     </div>
+  </div>
   </div>
 </template>
 <script setup>
