@@ -69,10 +69,10 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
           <ul class="alaska body-copy">
             <li>Since then:</li>
             <li class="text-3xl lg:pl-[4rem]">San Francisco</li>
-            <li class="text-3xl lg:pl-[12rem]">Tucson</li>
-            <li class="text-3xl lg:pl-[24rem]">L.A.</li>
-            <li class="text-3xl lg:pl-[36rem]">Vegas</li>
-            <li class="text-3xl lg:pl-[48rem]">Eugene</li>
+            <li class="text-3xl pl-3 md:pl-0 lg:pl-[12rem]">Tucson</li>
+            <li class="text-3xl pl-6 md:pl-0 lg:pl-[24rem]">L.A.</li>
+            <li class="text-3xl pl-9 md:pl-0 lg:pl-[36rem]">Vegas</li>
+            <li class="text-3xl pl-12 md:pl-0 lg:pl-[48rem]">Eugene</li>
           </ul>
         </div>
         <div class="prose-col md:mb-8">
