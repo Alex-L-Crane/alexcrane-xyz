@@ -9,8 +9,8 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
   <main class="atacamamedium bg-[#F6D9CE] text-[#444244] pt-20 text-black">
 
     <div class="section-panel">
-      <img :src="backgroundAbstract3" alt="" width="1024" height="248" class="w-full"/>
-      <h1 class="swissposters font-light text-[10rem]/[1] pb-8 w-full">All tech and no music<br>makes Alex a dull boy</h1>
+      <img :src="backgroundAbstract3" alt="" width="1024" height="248" class="aspect-[3/2] md:aspect-auto w-full object-cover object-[75%_center]"/>
+      <h1 class="swissposters font-light text-6xl/[1] sm:text-7xl/[1] md:text-[10rem]/[1] pb-8 w-full">All tech and no music<br>makes Alex a dull boy</h1>
     </div>
     <div class="mt-6 mb-8 pl-48">
       <p class="alaska mb-8 text-3xl">
@@ -35,15 +35,15 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
             I haven’t followed a straight professional path.
             Most things I've done that mattered were born from personal projects, from freelance work, and from figuring things out on the fly.
             Engaging and cultivating something <em>REAL</em> takes time.<br><br>
-            <em class="alaska text-3xl">It takes...&nbsp;&nbsp;&nbsp;&nbsp;
+            <em class="alaska text-3xl">It takes...<span class="inline-block w-4 lg:w-8"></span>
               <span class="inline lg:hidden"><br></span>
-              So.&nbsp;&nbsp;&nbsp;&nbsp;
-              Much.&nbsp;&nbsp;&nbsp;&nbsp;
+              So.<span class="inline-block w-2 lg:w-8"></span>
+              Much.<span class="inline-block w-2 lg:w-8"></span>
               Time.</em>
           </p>
         </div>
-        <div class="md:pl-[40rem] mb-16">
-          <div class="flex align-baseline md:max-w-[18rem] pt-8 pb-4 relative z-0">
+        <div class="lg:pl-[40rem] mb-16">
+          <div class="flex align-baseline lg:max-w-[18rem] pt-8 pb-4 relative z-0">
             <p><span class="alaska tracking-tight mr-2"><em>kaizen (Japanese):</em></span>
               <em class="atacama font-thin">The practice of continually seeking improvement.</em>
             </p>
@@ -68,11 +68,11 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
         <div class="pb-8">
           <ul class="alaska body-copy">
             <li>Since then:</li>
-            <li class="text-3xl pl-[4rem]">San Francisco</li>
-            <li class="text-3xl pl-[12rem]">Tucson</li>
-            <li class="text-3xl pl-[24rem]">L.A.</li>
-            <li class="text-3xl pl-[36rem]">Vegas</li>
-            <li class="text-3xl pl-[48rem]">Eugene</li>
+            <li class="text-3xl lg:pl-[4rem]">San Francisco</li>
+            <li class="text-3xl lg:pl-[12rem]">Tucson</li>
+            <li class="text-3xl lg:pl-[24rem]">L.A.</li>
+            <li class="text-3xl lg:pl-[36rem]">Vegas</li>
+            <li class="text-3xl lg:pl-[48rem]">Eugene</li>
           </ul>
         </div>
         <div class="prose-col md:mb-8">
@@ -95,15 +95,15 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
     </div>
 
     <div class="section-panel">
-      <div class="w-full flex pb-2">
-        <div class="md:w-[50%] pr-2">
-          <img :src="fieldAmp" alt="Sitting in a field adjusting an amplifier" width="1024" height="761" loading="lazy"/>
+      <div class="w-full flex flex-col md:flex-row pb-2">
+        <div class="mb-4 md:mb-0 md:w-[50%] md:pr-2">
+          <img :src="fieldAmp" alt="Sitting in a field adjusting an amplifier" width="1024" height="761" loading="lazy" class="w-full"/>
           <span class="photo-caption">
             2020: Dabbling with audio equipment in a field near Eugene, OR
           </span>
         </div>
-        <div class="md:w-[50%] pl-2">
-          <img :src="cuneiformWestbeach" alt="Listening back to a drum recording at Westbeach Studios, Hollywood, CA" width="1024" height="761" loading="lazy"/>
+        <div class="md:w-[50%] md:pl-2">
+          <img :src="cuneiformWestbeach" alt="Listening back to a drum recording at Westbeach Studios, Hollywood, CA" width="1024" height="761" loading="lazy" class="w-full"/>
           <span class="photo-caption">
            2007: Listening back to a drum recording at Westbeach Studios, Hollywood, CA
           </span>
