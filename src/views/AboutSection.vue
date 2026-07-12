@@ -94,15 +94,15 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
       </div>
     </div>
 
-    <div class="section-panel">
-      <div class="w-full flex flex-col md:flex-row pb-2">
+    <div class="section-panel mobile-gutter">
+      <div class="w-full flex flex-col md:flex-row pb-0 md:pb-2">
         <div class="mb-4 md:mb-0 md:w-[50%] md:pr-2">
           <img :src="fieldAmp" alt="Sitting in a field adjusting an amplifier" width="1024" height="761" loading="lazy" class="w-full"/>
           <span class="photo-caption">
             2020: Dabbling with audio equipment in a field near Eugene, OR
           </span>
         </div>
-        <div class="md:w-[50%] md:pl-2">
+        <div class="mb-4 md:mb-0 md:w-[50%] md:pl-2">
           <img :src="cuneiformWestbeach" alt="Listening back to a drum recording at Westbeach Studios, Hollywood, CA" width="1024" height="761" loading="lazy" class="w-full"/>
           <span class="photo-caption">
            2007: Listening back to a drum recording at Westbeach Studios, Hollywood, CA
