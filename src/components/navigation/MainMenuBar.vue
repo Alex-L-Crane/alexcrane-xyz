@@ -70,7 +70,7 @@
         </svg>
       </a>
       <!--<BreadCrumbs :darkTheme="darkTheme" class="pl-2 lg:pl-4"/>-->
-      <span class="pl-4 font-bold">Ritual :: Rhythm</span>
+      <span class="pl-4 font-bold whitespace-nowrap">Ritual :: Rhythm</span>
     </div>
 
     <div :class="[
@@ -88,7 +88,7 @@
           :href="href"
           @click="navigate"
           :class="[
-            'mr-4 hover:bg-transparent focus:bg-transparent active:bg-transparent',
+            'hidden md:inline mr-4 hover:bg-transparent focus:bg-transparent active:bg-transparent',
             isExactActive ? 'font-bold border-b-2' : '',
             darkTheme ? 'border-white' : 'border-almost-black'
           ]"
@@ -97,7 +97,7 @@
         </a>
       </RouterLink>
 
-      <button @click="goTo(prevPage)" class="hidden sm:block ml-8">
+      <button @click="goTo(prevPage)" class="hidden md:block ml-8">
         <arrow-icon direction="left" customClass="hover:-translate-x-1" />
       </button>
       <button @click="showMenu = true"
@@ -124,7 +124,7 @@
             class="origin-center transition-transform motion-safe:group-hover:animate-bounce-once-delay-300" />
         </svg>
       </button>
-      <button @click="goTo(nextPage)" class="invisible lg:visible">
+      <button @click="goTo(nextPage)" class="hidden md:block md:invisible lg:visible">
         <arrow-icon customClass="hover:translate-x-1" />
       </button>
     </div>
