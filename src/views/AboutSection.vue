@@ -60,7 +60,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
           <p class="mb-8">
             <em class="alaska text-xl">Maybe none of it is supposed to make sense...</em>
           </p>
-          <p class="body-copy leading-10">
+          <p class="body-copy">
             I was born in upstate New York, spent my childhood in the mountains of western Massachusetts,
             then landed in rural Arizona at thirteen. The desert, border towns, a different world entirely.
           </p>
