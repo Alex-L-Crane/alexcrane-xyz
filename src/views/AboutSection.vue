@@ -8,7 +8,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
 <template>
   <main class="atacamamedium bg-[#F6D9CE] text-[#444244] pt-14 lg:pt-20 text-black">
 
-    <div class="section-panel mobile-gutter">
+    <div class="section-panel">
       <img :src="backgroundAbstract3" alt="" width="1024" height="248" class="aspect-[3/2] md:aspect-[16/9] lg:aspect-auto w-full object-cover object-[75%_center]"/>
       <h1 class="swissposters font-light text-balance text-6xl/[1] sm:text-7xl/[1] md:text-[7rem]/[1] lg:text-[10rem]/[1] pb-8 w-full">All tech and no music<br>makes Alex a dull boy</h1>
     </div>
@@ -94,7 +94,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
       </div>
     </div>
 
-    <div class="section-panel mobile-gutter">
+    <div class="section-panel">
       <div class="w-full flex flex-col md:flex-row pb-0 md:pb-2">
         <div class="mb-4 md:mb-0 md:w-[50%] md:pr-2">
           <img :src="fieldAmp" alt="Sitting in a field adjusting an amplifier" width="1024" height="761" loading="lazy" class="w-full"/>

@@ -76,10 +76,19 @@
 }
 
 @layer components {
-  /* Section wrapper with a horizontal margin on md+ screens (page hero/photo blocks).
-     Tighter at tablet (near-bleed) than true desktop. */
+  /* Section wrapper with a horizontal inset (page hero/photo blocks; the headline
+     inherits this too, since it's a child of the same hero panel). Self-contained
+     across all three tiers so it doesn't compete with .mobile-gutter over the same
+     property (that's what caused the md padding to get zeroed out originally --
+     both classes are in the components layer, and .mobile-gutter's md:px-0, being
+     defined later in this file, won the cascade tie).
+     The page datum: at tablet (md), left/right exactly match the nav's own logo
+     (pl-2 = 8px, zero extra offset beyond the nav's p-2) and dots-menu icon
+     (pr-8 = 32px, accounting for the dots button's own p-2 + mx-4) -- the nav
+     itself isn't symmetric, so this isn't either. Reverts to the original
+     symmetric lg:mx-8 margin at true desktop, unchanged. */
   .section-panel {
-    @apply md:mx-4 lg:mx-8 relative;
+    @apply px-2 md:pl-2 md:pr-8 lg:px-0 lg:mx-8 relative;
   }
 
   /* Caps and centers a block at the body column's reading width for tablet only;
