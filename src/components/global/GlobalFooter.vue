@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-almost-black md:h-[600px] px-2 md:px-8 pb-36 flex flex-col md:flex-row items-start md:items-end md:justify-between">
+  <div class="bg-almost-black md:h-[600px] px-8 pb-36 flex flex-col md:flex-row items-start md:items-end md:justify-between">
     <div class="mb-8 md:mb-0 mt-16 flex items-center md:w-[200px]">
       <svg width="43" height="42" viewBox="0 0 43 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_9837_606)">
