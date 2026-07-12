@@ -6,14 +6,14 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
 </script>
 
 <template>
-  <main class="atacamamedium bg-[#F6D9CE] text-[#444244] pt-20 text-black">
+  <main class="atacamamedium bg-[#F6D9CE] text-[#444244] pt-14 md:pt-20 text-black">
 
     <div class="section-panel mobile-gutter">
       <img :src="backgroundAbstract3" alt="" width="1024" height="248" class="aspect-[3/2] md:aspect-auto w-full object-cover object-[75%_center]"/>
       <h1 class="swissposters font-light text-6xl/[1] sm:text-7xl/[1] md:text-[10rem]/[1] pb-8 w-full">All tech and no music<br>makes Alex a dull boy</h1>
     </div>
-    <div class="mobile-gutter mt-6 mb-8 md:pl-48">
-      <p class="alaska mb-8 text-3xl">
+    <div class="mobile-gutter mt-6 md:mb-16 md:pl-48">
+      <p class="alaska text-3xl">
         <em>Sound is not a backdrop.</em>
       </p>
     </div>
@@ -42,8 +42,8 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
               Time.</em>
           </p>
         </div>
-        <div class="lg:pl-[40rem] mb-16">
-          <div class="flex align-baseline lg:max-w-[18rem] pt-8 pb-4 relative z-0">
+        <div class="lg:pl-[40rem] md:mb-16">
+          <div class="flex align-baseline lg:max-w-[18rem] md:pt-8 pb-4 relative z-0">
             <p><span class="alaska tracking-tight mr-2"><em>kaizen (Japanese):</em></span>
               <em class="atacama font-thin">The practice of continually seeking improvement.</em>
             </p>
