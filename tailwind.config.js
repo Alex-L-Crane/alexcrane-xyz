@@ -10,6 +10,7 @@ export default {
         'almost-black': '#1c1c1c',
         'punk-yellow': '#FBC028',
         'highlight': '#f2695c',
+        'muted-ink': '#8A8478',
       },
       keyframes: {
         'bounce-once': {

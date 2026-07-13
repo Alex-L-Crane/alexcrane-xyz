@@ -12,7 +12,6 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
 import fieldAmp from "@/assets/images/alex-field-amp-cropped-1.png";
 import cuneiformWestbeach from "@/assets/images/CuneiformWestbeachThnxgiving.png";
 import garagePhoto from "@/assets/images/garage-photo-cropped.png";
-import ArrowIcon from "@/components/icons/ArrowIcon.vue";
 </script>
 
 <template>
@@ -26,11 +25,11 @@ import ArrowIcon from "@/components/icons/ArrowIcon.vue";
         </div>
       </div>
       <img :src="manifestoAbstract" alt="Garage music" width="full" class="w-full relative z-0"/>
-      <div class="pt-4">
-        <p class="alaska text-3xl">
-          <em class="flex items-center gap-2">About&nbsp;&nbsp;<arrow-icon />&nbsp;Music</em>
-        </p>
-      </div>
+      <nav aria-label="Breadcrumb" class="alaska pt-4 flex items-center gap-2 text-sm italic text-muted-ink">
+        <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+        <span aria-hidden="true">→</span>
+        <span>Music</span>
+      </nav>
       <h2 class="swissposters font-light text-[10rem]/[1] pb-8 w-full">A Mess of Bands</h2>
     </div>
     <div class="flex px-2 sm:px-4 md:px-8">
