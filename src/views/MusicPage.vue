@@ -153,7 +153,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
     <div class="max-w-[90%] flex space-x-8 mb-4 px-16 mx-auto">
       <div class="w-full flex flex-col">
         <div class="">
-          <img :src="holyDoseCover" alt="TCA Soothing Rays of eternity album cover" width="full" class="w-full"/>
+          <img :src="holyDoseCover" alt="Holy Dose EP album cover" width="full" class="w-full"/>
         </div>
         <div>
           <div class="flex justify-between pt-2">
@@ -174,7 +174,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
       </div>
       <div class="w-full flex flex-col">
         <div class="">
-          <img :src="cuneiformCover" alt="TCA After the Waves Devour Us All album cover" width="full" class="w-full"/>
+          <img :src="cuneiformCover" alt="Cuneiform Tabula Rasa album cover" width="full" class="w-full"/>
         </div>
         <div>
           <div class="flex justify-between pt-2">
@@ -195,7 +195,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
       </div>
       <div class="w-full flex flex-col">
         <div class="">
-          <img :src="directActionCover" alt="TCA White Light and the Empire Collapse album cover" width="full" class="w-full"/>
+          <img :src="directActionCover" alt="Direct Action Free Him cassette cover" width="full" class="w-full"/>
         </div>
         <div>
           <div class="flex justify-between pt-2">
