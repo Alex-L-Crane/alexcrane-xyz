@@ -143,10 +143,10 @@ const discographyRows = [
             <li class="text-xl mb-8">
               <p class="pb-2"><em>I've had some musical mentors:</em></p>
               <p>
-                <a href="http://www.treygunn.com/bio/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C]">Trey Gunn</a> - virtuoso and music coach<br>
-                <a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C]">Aloke Dutta</a> - tabla guru<br>
-                <a href="https://daveelitch.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C]">Dave Elitch</a> - drumset master<br>
-                <a href="https://patrickworley.com/about/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C]">Patrick Worley</a> - guitar expert</p>
+                <a href="http://www.treygunn.com/bio/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C]">Trey Gunn</a> <span class="text-muted-ink">virtuoso and music coach</span><br>
+                <a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C]">Aloke Dutta</a> <span class="text-muted-ink">tabla guru</span><br>
+                <a href="https://daveelitch.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C]">Dave Elitch</a> <span class="text-muted-ink">drumset master</span><br>
+                <a href="https://patrickworley.com/about/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C]">Patrick Worley</a> <span class="text-muted-ink">guitar expert</span></p>
             </li>
           </ul>
           <p class="body-copy">When it's time to actually make music, solo or with other players, I want it to work more like cooking than composing:</p>
