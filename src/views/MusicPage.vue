@@ -38,7 +38,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
       <div class="w-full lg:w-3/4">
         <div class="mb-8">
           <div class="md:max-w-[36rem]">
-            <p class="mb-8 text-xl leading-8">
+            <p class="body-copy">
               After a few years playing guitar in my first band, I got my first drumset at age twenty.
               I was instantly obsessed. By then I was already an audio engineer at Hyde Street Studios in San Francisco.
               I spent my days working sessions in that classic analog room. I spent my nights there too, practicing and recording my own drums.
@@ -60,10 +60,10 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
         </div>
 
         <div class="md:max-w-[36rem] md:mb-8">
-          <p class="text-xl leading-8">
+          <p class="body-copy">
             Underground music has been part of who I am since my teens.
             DIY bands like Fugazi were the blueprint: book it yourself, record it yourself, answer to no one.
-            I've played in a long line of little-known bands. None of them made me famous. All of them made me who I am.<br><br>
+            I've played in a long line of little-known bands. None of them made me famous. All of them made me who I am.
           </p>
           <ul class="text-xl space-y-6 list-none mb-8">
             <li>
@@ -79,7 +79,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
               </p>
             </li>
           </ul>
-          <p class="text-xl leading-8 mb-8">A few of the more interesting releases from my discography:
+          <p class="body-copy">A few of the more interesting releases from my discography:
           </p>
         </div>
       </div>
@@ -225,7 +225,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
           <p class="body-copy">The work now is subtler. I'm focused on the things that take decades.
             In the practice room I'm chasing feel, sound, technique, and vocabulary.
             Always tightening.</p>
-          <p class="mb-8 text-xl leading-8">
+          <p class="body-copy">
             <em class="alaska text-3xl">A guiding practice.<br>
               <span class="inline lg:hidden"><br></span>
               A meditation.<br>
@@ -241,7 +241,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
                 <a href="https://patrickworley.com/about/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Patrick Worley</a> — guitar expert</p>
             </li>
           </ul>
-          <p class="pb-8">When it's time to actually make music, solo or with other players, I want it to work more like cooking than composing:</p>
+          <p class="body-copy">When it's time to actually make music, solo or with other players, I want it to work more like cooking than composing:</p>
           <p class="text-xl mb-8">
             <span class="alaska text-2xl font-light inline-block pb-4">I make what I want to eat.</span><br/>
             <span class="alaska text-2xl font-light inline-block pb-4">I use the available ingredients.</span><br/>
