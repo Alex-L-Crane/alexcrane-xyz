@@ -9,21 +9,28 @@ import cuneiformCover from '@/assets/images/music/Cuneiform-Tabula-Rasa-beach-co
 import directActionCover from '@/assets/images/music/Direct-Action-Cassette-photo-1.jpg'
 import cuneiformWestbeachDrums from '@/assets/images/music/Cuneiform-Westbeach-drums.jpg'
 import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.png'
+import fieldAmp from "@/assets/images/alex-field-amp-cropped-1.png";
+import cuneiformWestbeach from "@/assets/images/CuneiformWestbeachThnxgiving.png";
+import garagePhoto from "@/assets/images/garage-photo-cropped.png";
+import ArrowIcon from "@/components/icons/ArrowIcon.vue";
 </script>
 
 <template>
   <div class="atacamamedium bg-[#F5D37D] text-[#444244] pt-20 text-black">
 
     <div class="md:mx-8 relative z-0">
-      <!--<img :src="garagePhoto" alt="Garage music" width="auto" class="w-full h-auto"/> -->
       <div class="absolute w-full h-full top-0 left-0 flex">
         <div class="hidden lg:inline w-1/4 lg:pr-8">
         </div>
         <div class="w-full lg:w-3/4 flex flex-col pb-8">
-          <!--<h2 class="neogeo text-5xl/[1] text-white md:max-w-[15ch] mt-auto">Drums, recording,<span class="hidden lg:inline"><br></span>and bands.</h2>-->
         </div>
       </div>
       <img :src="manifestoAbstract" alt="Garage music" width="full" class="w-full relative z-0"/>
+      <div class="pt-4">
+        <p class="alaska text-3xl">
+          <em class="flex items-center gap-2">About&nbsp;&nbsp;<arrow-icon />&nbsp;Music</em>
+        </p>
+      </div>
       <h2 class="swissposters font-light text-[10rem]/[1] pb-8 w-full">A Mess of Bands</h2>
     </div>
     <div class="flex px-2 sm:px-4 md:px-8">
@@ -33,19 +40,14 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
         <div class="mb-8">
           <div class="md:max-w-[36rem]">
             <p class="mb-8 text-xl leading-8">
-              Compared to some, I was late to the game. I got my first drumset at age twenty after playing guitar in my first band for a few years.
-              I was instantly obsessed.
-              At that time, I was an audio engineer at Hyde Street Studios in San Fransisco. I spent a lot of time working recording sessions and the rest of my time practicing and recording my drums in that classic analog studio environment.
-              The quest to develop an intimate understanding of rhythm, acoustics, and audio has been the fuel that has driven me forward in life:<br><br>
-              <em class="alaska text-3xl">A guiding practice.<br>
-                <span class="inline lg:hidden"><br></span>
-                A meditation.<br>
-                An art.</em>
+              After a few years playing guitar in my first band, I got my first drumset at age twenty.
+              I was instantly obsessed. By then I was already an audio engineer at Hyde Street Studios in San Francisco.
+              I spent my days working sessions in that classic analog room. I spent my nights there too, practicing and recording my own drums.
+              That obsession, rhythm, acoustics, how sound actually works, has driven everything since.
             </p>
             <ul>
               <li class="text-xl mb-8">
-                <p class="pb-2">Audio engineering has been a parallel discipline with music making.
-                  The artists I’ve worked with have included:</p>
+                <p class="pb-2">The artists I’ve worked with as an engineer have included:</p>
                 <p>
                   <a href="https://en.wikipedia.org/wiki/George_Clinton_(funk_musician)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">George Clinton and the P-Funk All Stars</a><br>
                   <a href="https://en.wikipedia.org/wiki/Hieroglyphics_(group)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Michael Manring</a><br>
@@ -54,33 +56,28 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
                   <a href="https://en.wikipedia.org/wiki/Sage_Francis" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Sage Francis</a>
                 </p>
               </li>
-              <li class="text-xl mb-8">
-                <p class="pb-2"><em>I've had some musical mentors:</em></p>
-                <p>
-                  <a href="http://www.treygunn.com/bio/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Trey Gunn</a> - virtuoso and music coach<br>
-                  <a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Aloke Dutta</a> - tabla guru<br>
-                  <a href="https://daveelitch.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Dave Elitch</a> - drumset master<br>
-                  <a href="https://patrickworley.com/about/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Patrick Worley</a> - guitar expert</p>
-              </li>
             </ul>
           </div>
         </div>
 
         <div class="md:max-w-[36rem] md:mb-8">
           <p class="text-xl leading-8">
-            Underground music has been a core aspect of my identity since my teens. DIY band like Fugazi have always resonated with me.
-            I've had a bunch of little known underground bands. The struggles have been real, but the rewards have been priceless.
-            The high points have included sharing the stage with some bands I like:<br><br>
+            Underground music has been part of who I am since my teens.
+            DIY bands like Fugazi were the blueprint: book it yourself, record it yourself, answer to no one.
+            I've played in a long line of little-known bands. None of them made me famous. All of them made me who I am.<br><br>
           </p>
           <ul class="text-xl space-y-6 list-none mb-8">
             <li>
-              <a href="https://en.wikipedia.org/wiki/Suicidal_Tendencies" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Suicidal Tendencies</a><br>
-              <a href="https://en.wikipedia.org/wiki/Author_&amp;_Punisher" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Author and Punisher</a><br>
-              <a href="https://en.wikipedia.org/wiki/Qui_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Qui (with David Yow on vocals)</a><br>
-              <a href="https://en.wikipedia.org/wiki/Dwarves_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Dwarves (with Nick Oliveri on bass)</a><br>
-              <a href="https://www.instagram.com/yearofthecobra/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Year of the Cobra</a><br>
-              <a href="https://www.instagram.com/mammothgrinder/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Mammoth Grinder</a><br>
-              <a href="https://www.instagram.com/electrichawkband/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Electric Hawk</a>
+              <p class="pb-2"><em>I've opened for some bands I like:</em></p>
+              <p>
+                <a href="https://en.wikipedia.org/wiki/Suicidal_Tendencies" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Suicidal Tendencies</a><br>
+                <a href="https://en.wikipedia.org/wiki/Author_&amp;_Punisher" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Author and Punisher</a><br>
+                <a href="https://en.wikipedia.org/wiki/Qui_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Qui (with David Yow on vocals)</a><br>
+                <a href="https://en.wikipedia.org/wiki/Dwarves_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Dwarves (with Nick Oliveri on bass)</a><br>
+                <a href="https://www.instagram.com/yearofthecobra/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Year of the Cobra</a><br>
+                <a href="https://www.instagram.com/mammothgrinder/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Mammoth Grinder</a><br>
+                <a href="https://www.instagram.com/electrichawkband/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80 inline-block">Electric Hawk</a>
+              </p>
             </li>
           </ul>
           <p class="text-xl leading-8 mb-8">A few of the more interesting releases from my discography:
@@ -225,31 +222,64 @@ import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.pn
       </div>
       <div class="w-full lg:w-3/4">
         <div class="md:max-w-[36rem] mt-6 mb-8">
-        <h2 class="neogeo text-5xl/[1] mb-8">Personal Music.</h2>
-        <p class="pb-8">The longer I play, the more I'm interested in improvisation both as a soloist and in collaboration with other musicians.
-          Increasingly, I find I want to make music in a way that is more like cooking than composing.</p>
-        <p class="text-xl mb-8 border-l-8 border-[#444244] pl-4">
-          <span class="alaska text-2xl font-light inline-block pb-4">I make what I want to eat.</span><br/>
-          <span class="alaska text-2xl font-light inline-block pb-4">I use the available ingredients.</span><br/>
-          <span class="alaska text-2xl font-light inline-block pb-4">I trust my senses.</span><br/>
-          <span class="alaska text-2xl font-light inline-block pb-4">I cook with others in mind.</span><br/>
-          <span class="alaska text-2xl font-light inline-block">I adapt as needed.</span>
+          <h2 class="neogeo text-5xl/[1] mb-8">Personal Music</h2>
+          <p class="pb-8">The work now is subtler. I'm focused on the things that take decades.
+            In the practice room I'm chasing feel, sound, technique, and vocabulary.
+            Always tightening.</p>
+          <p class="mb-8 text-xl leading-8">
+            <em class="alaska text-3xl">A guiding practice.<br>
+              <span class="inline lg:hidden"><br></span>
+              A meditation.<br>
+              An art.</em>
+          </p>
+          <ul>
+            <li class="text-xl mb-8">
+              <p class="pb-2"><em>I've had some musical mentors:</em></p>
+              <p>
+                <a href="http://www.treygunn.com/bio/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Trey Gunn</a> - virtuoso and music coach<br>
+                <a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Aloke Dutta</a> - tabla guru<br>
+                <a href="https://daveelitch.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Dave Elitch</a> - drumset master<br>
+                <a href="https://patrickworley.com/about/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] hover:opacity-80">Patrick Worley</a> - guitar expert</p>
+            </li>
+          </ul>
+          <p class="pb-8">When it's time to actually make music, solo or with other players, I want it to work more like cooking than composing:</p>
+          <p class="text-xl mb-8">
+            <span class="alaska text-2xl font-light inline-block pb-4">I make what I want to eat.</span><br/>
+            <span class="alaska text-2xl font-light inline-block pb-4">I use the available ingredients.</span><br/>
+            <span class="alaska text-2xl font-light inline-block pb-4">I trust my senses.</span><br/>
+            <span class="alaska text-2xl font-light inline-block pb-4">I cook with others in mind.</span><br/>
+          </p>
+        </div>
+        <p class="body-copy mb-16">
+          More about my
+          <a href="/philosophy" class="highlight-link">
+            philosophy
+          </a>
+          <br>and
+          <a href="/design" class="highlight-link">
+            design background</a>.
         </p>
       </div>
-      </div>
     </div>
-
-    <div class="md:mx-8 relative">
-      <div class="w-full flex pb-4">
-        <div class="md:w-[50%] pr-2">
-          <img :src="suicidalTragedy" alt="Sitting in a field adjusting an amplifier" width="full"/>
+    <div class="section-panel">
+      <div class="w-full flex flex-col md:flex-row pb-0 md:pb-2">
+        <div class="mb-4 md:mb-0 md:w-[50%] md:pr-2">
+          <img :src="suicidalTragedy" alt="Playing Drums for The Great American Tragedy opening for Suicidal Tendencies in Tucson, AZ" width="1024" height="761" loading="lazy" class="w-full"/>
+          <span class="photo-caption">
+            2007: Playing drums for The Great American Tragedy opening for Suicidal Tendencies, Tucson, AZ
+          </span>
         </div>
-        <div class="md:w-[50%] pl-2">
-          <img :src="cuneiformWestbeachDrums" alt="Garage music" width="full"/>
+        <div class="mb-4 md:mb-0 md:w-[50%] md:pl-2">
+          <img :src="cuneiformWestbeachDrums" alt="Recording drums for Cuneiform at Westbeach Studios in Hollywood, CA" width="1024" height="761" loading="lazy" class="w-full"/>
+          <span class="photo-caption">
+           2007: Recording drums for Cuneiform at Westbeach Studios, Hollywood, CA
+          </span>
         </div>
       </div>
-      <img :src="bearBaiting" alt="Garage music" width="auto" class="w-full h-auto"/>
-      <span class="font-thin italic">2020: Dabbling with audio equipment in a field near Eugene, Oregon.</span>
+      <img :src="bearBaiting" alt="Hanging out with recording equipment in a home garage studio, Eugene, OR" width="3000" height="1346" loading="lazy" class="w-full h-auto"/>
+      <span class="photo-caption mb-2">
+        2013: Drumming with Bear Baiting, Oakland, CA
+      </span>
     </div>
   </div>
 </template>
