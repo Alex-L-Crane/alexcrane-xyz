@@ -117,6 +117,16 @@
            focus-visible:outline-offset-2 focus-visible:outline-almost-black;
   }
 
+  /* Site-wide resting-underline text link: a thin rule at rest that strengthens
+     on hover -- the default signature for inline text links (wayfinding and name
+     lists), outside the main nav (which reserves underlines for the active page).
+     Decoration color/opacity at rest is set per-usage (e.g. decoration-muted-ink/40,
+     decoration-[#9A2C2C]/40) since the same structural rule serves multiple ink
+     colors; hover strengthens to decoration-2 at full opacity. */
+  .link-underline {
+    @apply underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors;
+  }
+
   /* Small italic caption under a photo */
   .photo-caption {
     @apply font-thin text-xs italic inline-block;

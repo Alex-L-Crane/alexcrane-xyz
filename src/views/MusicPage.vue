@@ -41,7 +41,7 @@ const discographyRows = [
     <div class="md:mx-8 relative z-0">
       <img :src="manifestoAbstract" alt="Garage music" width="1024" height="248" class="w-full relative z-0"/>
       <nav aria-label="Breadcrumb" class="alaska pt-4 flex items-center gap-2 text-sm italic text-muted-ink">
-        <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+        <a href="/about" class="link-underline decoration-muted-ink/40 hover:decoration-muted-ink">About</a>
         <span aria-hidden="true">→</span>
         <span>Music</span>
       </nav>
