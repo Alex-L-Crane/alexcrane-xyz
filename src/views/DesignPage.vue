@@ -34,7 +34,7 @@ import kineticBeatsUI from '@/assets/images/kinetic-beats.png'
           <p class="mb-8 text-xl leading-8">
             Projects are born, they grow, and then they die.
             Sometimes they don’t die right away, but they usually die.
-            There's a tangible lifecycle.
+            There’s a tangible lifecycle.
             Sometimes they are just envisioned and then die before they are even born.
           </p>
 
@@ -46,7 +46,7 @@ import kineticBeatsUI from '@/assets/images/kinetic-beats.png'
               Engineering <strike>Design</strike> is design <strike>engineering</strike>.</em>
           </p>
           <p class="mb-8">
-            <em class="alaska text-3xl">Maybe none of it is supposed to make sense...</em>
+            <em class="alaska text-3xl">Maybe none of it is supposed to make sense…</em>
           </p>
 
           <div class="mb-8">
@@ -55,7 +55,7 @@ import kineticBeatsUI from '@/assets/images/kinetic-beats.png'
 
           <p class="text-xl mb-8">
             Yes, design is colors, shapes, proportions, and text arranged in ways driven by stylistic tastes.
-            But, it's also experiences and engineering. Any good experience is designed.
+            But, it’s also experiences and engineering. Any good experience is designed.
             Design is an engineering process and engineering is a design process.
           </p>
 

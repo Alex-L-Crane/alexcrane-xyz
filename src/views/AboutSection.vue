@@ -33,9 +33,9 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
           <p class="body-copy">
             I’ve never been satisfied as a cog in a soulless machine.
             I haven’t followed a straight professional path.
-            Most things I've done that mattered were born from personal projects, from freelance work, and from figuring things out on the fly.
+            Most things I’ve done that mattered were born from personal projects, from freelance work, and from figuring things out on the fly.
             Engaging and cultivating something <em>REAL</em> takes time.<br><br>
-            <em class="alaska text-3xl">It takes...<span class="inline-block w-4 lg:w-8"></span>
+            <em class="alaska text-3xl">It takes…<span class="inline-block w-4 lg:w-8"></span>
               <span class="inline lg:hidden"><br></span>
               So.<span class="inline-block w-2 lg:w-8"></span>
               Much.<span class="inline-block w-2 lg:w-8"></span>
@@ -58,7 +58,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
               That’s what makes life exhausting <s>fascinating</s>.</em>
           </p>
           <p class="body-copy">
-            <em class="alaska text-xl">Maybe none of it is supposed to make sense...</em>
+            <em class="alaska text-xl">Maybe none of it is supposed to make sense…</em>
           </p>
           <p class="body-copy">
             I was born in upstate New York, spent my childhood in the mountains of western Massachusetts,
@@ -78,7 +78,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
         <div class="prose-col lg:mb-8">
           <p class="body-copy lg:mb-16">
             In these different situations, I’ve known an unclassifiable blend of people from drastically different walks of life.
-            Still, I haven't found a believable ready-made worldview and I'm sure I won't. That feeling only gets stronger. I’m not wired for doctrine.
+            Still, I haven’t found a believable ready-made worldview and I’m sure I won’t. That feeling only gets stronger. I’m not wired for doctrine.
             Maybe that’s why I keep on going, discovering meaning the only way I know how:  through logic, through art, through rhythm.
           </p>
           <p class="body-copy mb-16">

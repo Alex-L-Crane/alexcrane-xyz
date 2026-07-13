@@ -77,8 +77,8 @@
           <li class="text-2xl/[1.24] mb-16">Professional quality work can be meaningful, but “buttoned up" is not an aesthetic worth pursuing.</li>
           <li class="text-2xl/[1.24] mb-16">Improvisation is a core tenant of creativity. The unpredictable and fleeting nature is directly tied to the flow of reality.</li>
           <li class="text-2xl/[1.24] mb-16">Always be open to experimentation, even if that means experimenting with embracing mainstream thinking.</li>
-          <li class="text-2xl/[1.24] mb-16">The idea of "progress" is irrelevant. Being present and grounded overrides black and white dogmas.</li>
-          <li class="text-2xl/[1.24] mb-16">Don't hesitate to throw away or redo work. Also, don't get stuck in a loop where nothing is ever finished.</li>
+          <li class="text-2xl/[1.24] mb-16">The idea of “progress” is irrelevant. Being present and grounded overrides black and white dogmas.</li>
+          <li class="text-2xl/[1.24] mb-16">Don’t hesitate to throw away or redo work. Also, don’t get stuck in a loop where nothing is ever finished.</li>
           <li class="text-2xl/[1.24] mb-16">The act of developing and exploring a creative process is more valuable than any creative output.</li>
           <li class="text-2xl/[1.24] mb-16">Art does not need to be accessible.</li>
           <li class="text-2xl/[1.24]">There is nothing to work towards. You are already there and have always been there.</li>

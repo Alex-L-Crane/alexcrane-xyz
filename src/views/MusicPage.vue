@@ -78,11 +78,11 @@ const discographyRows = [
           <p class="body-copy">
             Underground music has been part of who I am since my teens.
             DIY bands like Fugazi were the blueprint: book it yourself, record it yourself, answer to no one.
-            I've played in a long line of little-known bands. None of them made me famous. All of them made me who I am.
+            I’ve played in a long line of little-known bands. None of them made me famous. All of them made me who I am.
           </p>
           <ul class="text-xl space-y-6 list-none mb-8">
             <li>
-              <p class="pb-2"><em>I've opened for some bands I like:</em></p>
+              <p class="pb-2"><em>I’ve opened for some bands I like:</em></p>
               <p>
                 <a href="https://en.wikipedia.org/wiki/Suicidal_Tendencies" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block">Suicidal Tendencies</a><br>
                 <a href="https://en.wikipedia.org/wiki/Author_&amp;_Punisher" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block">Author and Punisher</a><br>
@@ -130,8 +130,8 @@ const discographyRows = [
       <div class="w-full lg:w-3/4">
         <div class="md:max-w-[36rem] mt-6 mb-8">
           <h2 class="movement-heading">Personal Music</h2>
-          <p class="body-copy">The work now is subtler. I'm focused on the things that take decades.
-            In the practice room I'm chasing feel, sound, technique, and vocabulary.
+          <p class="body-copy">The work now is subtler. I’m focused on the things that take decades.
+            In the practice room I’m chasing feel, sound, technique, and vocabulary.
             Always tightening.</p>
           <p class="body-copy">
             <em class="alaska text-3xl">A guiding practice.<br>
@@ -141,7 +141,7 @@ const discographyRows = [
           </p>
           <ul>
             <li class="text-xl mb-8">
-              <p class="pb-2"><em>I've had some musical mentors:</em></p>
+              <p class="pb-2"><em>I’ve had some musical mentors:</em></p>
               <p>
                 <a href="http://www.treygunn.com/bio/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Trey Gunn</a> <span class="text-muted-ink">virtuoso and music coach</span><br>
                 <a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Aloke Dutta</a> <span class="text-muted-ink">tabla guru</span><br>
@@ -149,7 +149,7 @@ const discographyRows = [
                 <a href="https://patrickworley.com/about/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Patrick Worley</a> <span class="text-muted-ink">guitar expert</span></p>
             </li>
           </ul>
-          <p class="body-copy">When it's time to actually make music, solo or with other players, I want it to work more like cooking than composing:</p>
+          <p class="body-copy">When it’s time to actually make music, solo or with other players, I want it to work more like cooking than composing:</p>
           <p class="text-xl mb-8">
             <span class="alaska text-2xl font-light inline-block pb-4">I make what I want to eat.</span><br/>
             <span class="alaska text-2xl font-light inline-block pb-4">I use the available ingredients.</span><br/>
