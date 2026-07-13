@@ -54,14 +54,14 @@ const discographyRows = [
         <div class="mt-6 mb-8">
           <div class="md:max-w-[36rem]">
             <p class="body-copy">
-              After a few years playing guitar in my first band, I got my first drumset at age twenty.
+              I played guitar in my first band for a few years, then I got my first drumset at age twenty.
               I was instantly obsessed. By then I was already an audio engineer at Hyde Street Studios in San Francisco.
               I spent my days working sessions in that classic analog room. I spent my nights there too, practicing and recording my own drums.
               That obsession, rhythm, acoustics, how sound actually works, has driven everything since.
             </p>
             <ul>
               <li class="text-xl mb-8">
-                <p class="pb-2">The artists I’ve worked with as an engineer have included:</p>
+                <p class="pb-2">I’ve engineered for some artists:</p>
                 <p>
                   <a href="https://en.wikipedia.org/wiki/George_Clinton_(funk_musician)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">George Clinton and the P-Funk All Stars</a><br>
                   <a href="https://en.wikipedia.org/wiki/Hieroglyphics_(group)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Michael Manring</a><br>
@@ -150,11 +150,16 @@ const discographyRows = [
             </li>
           </ul>
           <p class="body-copy">When it’s time to actually make music, solo or with other players, I want it to work more like cooking than composing:</p>
+        </div>
+        <div>
           <p class="text-xl mb-8">
-            <span class="alaska text-2xl font-light inline-block pb-4">I make what I want to eat.</span><br/>
-            <span class="alaska text-2xl font-light inline-block pb-4">I use the available ingredients.</span><br/>
-            <span class="alaska text-2xl font-light inline-block pb-4">I trust my senses.</span><br/>
-            <span class="alaska text-2xl font-light inline-block pb-4">I cook with others in mind.</span><br/>
+            <ul class="alaska body-copy">
+              <li>Since then:</li>
+              <li class="text-3xl lg:pl-[4rem]">I make what I want to eat.</li>
+              <li class="text-3xl pl-3 lg:pl-[8rem]">I use the available ingredients.</li>
+              <li class="text-3xl pl-6 lg:pl-[16rem]">I trust my senses.</li>
+              <li class="text-3xl pl-9 lg:pl-[24rem]">I cook with others in mind.</li>
+            </ul>
           </p>
         </div>
         <p class="body-copy mb-16">
