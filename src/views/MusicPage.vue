@@ -24,7 +24,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
         <div class="w-full lg:w-3/4 flex flex-col pb-8">
         </div>
       </div>
-      <img :src="manifestoAbstract" alt="Garage music" width="full" class="w-full relative z-0"/>
+      <img :src="manifestoAbstract" alt="Garage music" width="1024" height="248" class="w-full relative z-0"/>
       <nav aria-label="Breadcrumb" class="alaska pt-4 flex items-center gap-2 text-sm italic text-muted-ink">
         <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
         <span aria-hidden="true">→</span>
@@ -88,7 +88,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
     <div class="max-w-[90%] flex space-x-8 mb-8 px-16 mx-auto">
       <div class="w-full flex flex-col">
         <div class="">
-          <img :src="sreCover" alt="TCA Soothing Rays of eternity album cover" width="full" class="w-full"/>
+          <img :src="sreCover" alt="TCA Soothing Rays of eternity album cover" width="1920" height="1920" loading="lazy" class="w-full"/>
         </div>
         <div>
           <div class="flex justify-between pt-2">
@@ -109,7 +109,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
       </div>
       <div class="w-full flex flex-col">
         <div class="">
-          <img :src="wavesCover" alt="TCA After the Waves Devour Us All album cover" width="full" class="w-full"/>
+          <img :src="wavesCover" alt="TCA After the Waves Devour Us All album cover" width="1000" height="1000" loading="lazy" class="w-full"/>
         </div>
         <div>
           <div class="flex justify-between pt-2">
@@ -130,7 +130,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
       </div>
       <div class="w-full flex flex-col">
         <div class="">
-          <img :src="whiteLightCover" alt="TCA White Light and the Empire Collapse album cover" width="full" class="w-full"/>
+          <img :src="whiteLightCover" alt="TCA White Light and the Empire Collapse album cover" width="1958" height="1954" loading="lazy" class="w-full"/>
         </div>
         <div>
           <div class="flex justify-between pt-2">
@@ -153,7 +153,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
     <div class="max-w-[90%] flex space-x-8 mb-4 px-16 mx-auto">
       <div class="w-full flex flex-col">
         <div class="">
-          <img :src="holyDoseCover" alt="Holy Dose EP album cover" width="full" class="w-full"/>
+          <img :src="holyDoseCover" alt="Holy Dose EP album cover" width="2700" height="2700" loading="lazy" class="w-full"/>
         </div>
         <div>
           <div class="flex justify-between pt-2">
@@ -174,7 +174,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
       </div>
       <div class="w-full flex flex-col">
         <div class="">
-          <img :src="cuneiformCover" alt="Cuneiform Tabula Rasa album cover" width="full" class="w-full"/>
+          <img :src="cuneiformCover" alt="Cuneiform Tabula Rasa album cover" width="2700" height="2700" loading="lazy" class="w-full"/>
         </div>
         <div>
           <div class="flex justify-between pt-2">
@@ -195,7 +195,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
       </div>
       <div class="w-full flex flex-col">
         <div class="">
-          <img :src="directActionCover" alt="Direct Action Free Him cassette cover" width="full" class="w-full"/>
+          <img :src="directActionCover" alt="Direct Action Free Him cassette cover" width="1773" height="1773" loading="lazy" class="w-full"/>
         </div>
         <div>
           <div class="flex justify-between pt-2">
