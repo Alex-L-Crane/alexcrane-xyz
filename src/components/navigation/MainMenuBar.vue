@@ -1,5 +1,5 @@
 <script setup>
-  import { useRouter } from 'vue-router';
+  import { useRoute, useRouter } from 'vue-router';
   import { ref, watch } from 'vue';
 
   import ArrowIcon from '@/components/icons/ArrowIcon.vue'
@@ -11,6 +11,7 @@
 
   const showMenu = ref(false)
   const router = useRouter()
+  const route = useRoute()
 
   watch(showMenu, (isOpen) => {
     document.body.classList.toggle('overflow-hidden', isOpen)
@@ -40,7 +41,7 @@
   const links = [
     { to: '/', label: 'Drumming' },
     { to: '/technology', label: 'Technology' },
-    { to: '/about', label: 'About' }
+    { to: '/about', label: 'About', section: 'about' }
   ]
 </script>
 
@@ -89,7 +90,7 @@
           @click="navigate"
           :class="[
             'hidden md:inline mr-4 hover:bg-transparent focus:bg-transparent active:bg-transparent',
-            isExactActive ? 'font-bold border-b-2' : '',
+            (link.section ? route.meta.section === link.section : isExactActive) ? 'font-bold border-b-2' : '',
             darkTheme ? 'border-white' : 'border-almost-black'
           ]"
         >

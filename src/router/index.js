@@ -28,13 +28,13 @@ const routes = [
     path: '/about',
     name: 'about',
     component: AboutSection,
-    meta: { title: 'About — Ritual :: Rhythm' }
+    meta: { title: 'About — Ritual :: Rhythm', section: 'about' }
   },
   {
     path: '/philosophy',
     name: 'philosophy',
     component: PhilosophyPage,
-    meta: { title: 'Philosophy — Ritual :: Rhythm' }
+    meta: { title: 'Philosophy — Ritual :: Rhythm', section: 'about' }
   },
   {
     path: '/inspirations',
@@ -52,13 +52,13 @@ const routes = [
     path: '/music',
     name: 'music',
     component: MusicPage,
-    meta: { title: 'Music — Ritual :: Rhythm' }
+    meta: { title: 'Music — Ritual :: Rhythm', section: 'about' }
   },
   {
     path: '/design',
     name: 'tech/design',
     component: DesignPage,
-    meta: { title: 'Design — Ritual :: Rhythm' }
+    meta: { title: 'Design — Ritual :: Rhythm', section: 'about' }
   },
   {
     path: '/:pathMatch(.*)*', // Catch-all for 404
