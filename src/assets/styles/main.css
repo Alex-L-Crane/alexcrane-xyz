@@ -122,9 +122,12 @@
      lists), outside the main nav (which reserves underlines for the active page).
      Decoration color/opacity at rest is set per-usage (e.g. decoration-muted-ink/40,
      decoration-[#9A2C2C]/40) since the same structural rule serves multiple ink
-     colors; hover strengthens to decoration-2 at full opacity. */
+     colors; hover strengthens to decoration-2 at full opacity. focus-visible gets
+     the same decoration-2 thickness bump here (structural, shared); each usage
+     also pairs its own hover:decoration-COLOR with a matching focus-visible:
+     decoration-COLOR, since color/opacity is instance-specific. */
   .link-underline {
-    @apply underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors;
+    @apply underline decoration-1 underline-offset-2 hover:decoration-2 focus-visible:decoration-2 transition-colors;
   }
 
   /* Small italic caption under a photo */

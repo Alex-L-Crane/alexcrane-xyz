@@ -89,7 +89,7 @@
           :href="href"
           @click="navigate"
           :class="[
-            'hidden md:inline mr-4 hover:bg-transparent focus:bg-transparent active:bg-transparent',
+            'hidden md:inline mr-4 hover:bg-transparent focus:bg-transparent active:bg-transparent hover:border-b-2 focus-visible:border-b-2',
             (link.section ? route.meta.section === link.section : isExactActive) ? 'font-bold border-b-2' : '',
             darkTheme ? 'border-white' : 'border-almost-black'
           ]"
