@@ -30,7 +30,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
         <span aria-hidden="true">→</span>
         <span>Music</span>
       </nav>
-      <h2 class="swissposters font-light text-[10rem]/[1] pb-8 w-full">A Mess of Bands</h2>
+      <h1 class="swissposters font-light text-[10rem]/[1] pb-8 w-full">A Mess of Bands</h1>
     </div>
     <div class="flex px-2 sm:px-4 md:px-8">
       <div class="hidden lg:inline w-1/4 lg:pr-8">
