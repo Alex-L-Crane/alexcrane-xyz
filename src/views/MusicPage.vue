@@ -36,7 +36,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
       <div class="hidden lg:inline w-1/4 lg:pr-8">
       </div>
       <div class="w-full lg:w-3/4">
-        <div class="mb-8">
+        <div class="mt-6 mb-8">
           <div class="md:max-w-[36rem]">
             <p class="body-copy">
               After a few years playing guitar in my first band, I got my first drumset at age twenty.
