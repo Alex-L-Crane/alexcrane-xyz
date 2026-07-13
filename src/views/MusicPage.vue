@@ -221,7 +221,7 @@ import garagePhoto from "@/assets/images/garage-photo-cropped.png";
       </div>
       <div class="w-full lg:w-3/4">
         <div class="md:max-w-[36rem] mt-6 mb-8">
-          <h2 class="neogeo text-5xl/[1] mb-8">Personal Music</h2>
+          <h2 class="movement-heading">Personal Music</h2>
           <p class="body-copy">The work now is subtler. I'm focused on the things that take decades.
             In the practice room I'm chasing feel, sound, technique, and vocabulary.
             Always tightening.</p>

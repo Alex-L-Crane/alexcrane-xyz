@@ -122,6 +122,13 @@
     @apply font-thin text-xs italic inline-block;
   }
 
+  /* Marks a shift into a new movement within a long page (e.g. Music's "Personal
+     Music") -- a tier between the page's hero h1/h2 and its regular body content,
+     for pages long enough to need an internal section break. */
+  .movement-heading {
+    @apply neogeo text-5xl/[1] mb-8;
+  }
+
   /* Minimum horizontal inset below md so nothing sits flush against the viewport edge; matches MainMenuBar's p-2 */
   .mobile-gutter {
     @apply px-2 md:px-0;
