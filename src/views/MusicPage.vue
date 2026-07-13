@@ -39,12 +39,6 @@ const discographyRows = [
   <div class="atacamamedium bg-[#F5D37D] text-[#444244] pt-20 text-black">
 
     <div class="md:mx-8 relative z-0">
-      <div class="absolute w-full h-full top-0 left-0 flex">
-        <div class="hidden lg:inline w-1/4 lg:pr-8">
-        </div>
-        <div class="w-full lg:w-3/4 flex flex-col pb-8">
-        </div>
-      </div>
       <img :src="manifestoAbstract" alt="Garage music" width="1024" height="248" class="w-full relative z-0"/>
       <nav aria-label="Breadcrumb" class="alaska pt-4 flex items-center gap-2 text-sm italic text-muted-ink">
         <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
