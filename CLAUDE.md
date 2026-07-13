@@ -14,7 +14,7 @@ Structure:
 
 ```html
 <nav aria-label="Breadcrumb" class="alaska pt-4 flex items-center gap-2 text-sm italic text-muted-ink">
-  <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+  <a href="/about" class="link-underline decoration-muted-ink/40 hover:decoration-muted-ink">About</a>
   <span aria-hidden="true">→</span>
   <span>Music</span>
 </nav>
@@ -43,3 +43,27 @@ pages long enough to need an internal section break (e.g. Music's "Personal
 Music"). Class: `.movement-heading` (`neogeo text-5xl/[1] mb-8`). Reach for
 this on any future long page that needs the same kind of internal break,
 rather than re-typing the three utilities.
+
+## Link grammar (site-wide)
+
+- **Thin underline** = a text link at rest. Structural class `.link-underline`
+  (`underline decoration-1 underline-offset-2 hover:decoration-2
+  transition-colors`) plus a per-usage decoration color at ~40% opacity that
+  strengthens to full opacity on hover (e.g. `decoration-muted-ink/40
+  hover:decoration-muted-ink`, or `decoration-[#9A2C2C]/40
+  hover:decoration-[#9A2C2C]`). This is the default signature for inline text
+  links: wayfinding (the eyebrow) and name lists alike.
+  - Add an **external icon** only for a solitary outbound link (e.g. the
+    Bandcamp icon+link on Music) -- lists of links don't get per-item icons.
+- **Highlighter** (`.highlight-link`, background wash) = an internal
+  content-to-content link (e.g. "More about my music background").
+- **Red** (`text-[#9A2C2C]`) = link, always. No red text may be
+  non-interactive on a content page -- if it's red, it must be a real `<a>`
+  with the `.link-underline` treatment.
+- **Main nav is the one exception**: no resting underline there. It reserves
+  a persistent underline (`border-b-2` + bold) for the active page/section,
+  shown on hover only otherwise. Don't apply `.link-underline` inside
+  `MainMenuBar.vue`.
+- **Outbound links** (anything leaving the site) always use
+  `target="_blank" rel="noopener noreferrer"` -- verified consistent across
+  every red link and the Bandcamp links already.
