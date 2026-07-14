@@ -85,7 +85,7 @@ const albums = [
       </div>
     </div>
 
-    <div class="max-w-[90%] px-16 mx-auto mb-4">
+    <div class="px-2 md:max-w-[90%] md:px-16 mx-auto mb-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
         <div v-for="album in albums" :key="album.title" class="flex flex-col">
           <div>
