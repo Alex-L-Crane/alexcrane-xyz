@@ -48,11 +48,11 @@ const albums = [
               <li class="text-xl mb-8">
                 <p class="pb-2">I’ve engineered for some artists:</p>
                 <p>
-                  <a href="https://en.wikipedia.org/wiki/George_Clinton_(funk_musician)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">George Clinton and the P-Funk All Stars</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Hieroglyphics_(group)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Michael Manring</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Michael_Manring" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Hieroglyphics</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Ziggy_Modeliste" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Ziggy Modeliste</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Sage_Francis" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Sage Francis</a>
+                  <a href="https://en.wikipedia.org/wiki/George_Clinton_(funk_musician)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">George Clinton and the P-Funk All Stars</a><br>
+                  <a href="https://en.wikipedia.org/wiki/Hieroglyphics_(group)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Michael Manring</a><br>
+                  <a href="https://en.wikipedia.org/wiki/Michael_Manring" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Hieroglyphics</a><br>
+                  <a href="https://en.wikipedia.org/wiki/Ziggy_Modeliste" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Ziggy Modeliste</a><br>
+                  <a href="https://en.wikipedia.org/wiki/Sage_Francis" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Sage Francis</a>
                 </p>
               </li>
             </ul>
@@ -69,13 +69,13 @@ const albums = [
             <li>
               <p class="pb-2">I’ve opened for some bands I like:</p>
               <p>
-                <a href="https://en.wikipedia.org/wiki/Suicidal_Tendencies" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block">Suicidal Tendencies</a><br>
-                <a href="https://en.wikipedia.org/wiki/Author_&amp;_Punisher" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block">Author and Punisher</a><br>
-                <a href="https://en.wikipedia.org/wiki/Qui_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block">Qui (with David Yow on vocals)</a><br>
-                <a href="https://en.wikipedia.org/wiki/Dwarves_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block">Dwarves (with Nick Oliveri on bass)</a><br>
-                <a href="https://www.instagram.com/yearofthecobra/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block">Year of the Cobra</a><br>
-                <a href="https://www.instagram.com/mammothgrinder/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block">Mammoth Grinder</a><br>
-                <a href="https://www.instagram.com/electrichawkband/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block">Electric Hawk</a>
+                <a href="https://en.wikipedia.org/wiki/Suicidal_Tendencies" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Suicidal Tendencies</a><br>
+                <a href="https://en.wikipedia.org/wiki/Author_&amp;_Punisher" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Author and Punisher</a><br>
+                <a href="https://en.wikipedia.org/wiki/Qui_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Qui (with David Yow on vocals)</a><br>
+                <a href="https://en.wikipedia.org/wiki/Dwarves_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Dwarves (with Nick Oliveri on bass)</a><br>
+                <a href="https://www.instagram.com/yearofthecobra/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Year of the Cobra</a><br>
+                <a href="https://www.instagram.com/mammothgrinder/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Mammoth Grinder</a><br>
+                <a href="https://www.instagram.com/electrichawkband/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Electric Hawk</a>
               </p>
             </li>
           </ul>
@@ -130,10 +130,10 @@ const albums = [
             <li class="text-xl mb-8">
               <p class="pb-2">I’ve had some musical mentors:</p>
               <p>
-                <a href="http://www.treygunn.com/bio/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Trey Gunn</a> <span class="text-muted-ink">virtuoso and music coach</span><br>
-                <a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Aloke Dutta</a> <span class="text-muted-ink">tabla guru</span><br>
-                <a href="https://daveelitch.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Dave Elitch</a> <span class="text-muted-ink">drumset master</span><br>
-                <a href="https://patrickworley.com/about/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Patrick Worley</a> <span class="text-muted-ink">guitar expert</span></p>
+                <a href="http://www.treygunn.com/bio/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Trey Gunn</a> <span class="text-muted-ink">virtuoso and music coach</span><br>
+                <a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Aloke Dutta</a> <span class="text-muted-ink">tabla guru</span><br>
+                <a href="https://daveelitch.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Dave Elitch</a> <span class="text-muted-ink">drumset master</span><br>
+                <a href="https://patrickworley.com/about/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Patrick Worley</a> <span class="text-muted-ink">guitar expert</span></p>
             </li>
           </ul>
           <p class="body-copy">When it’s time to actually make music, solo or with other players, I want it to work more like cooking than composing:</p>
