@@ -183,7 +183,7 @@ const discographyRows = [
           </span>
         </div>
       </div>
-      <img :src="bearBaiting" alt="Hanging out with recording equipment in a home garage studio, Eugene, OR" width="3000" height="1346" loading="lazy" class="w-full h-auto"/>
+      <img :src="bearBaiting" alt="Hanging out with recording equipment in a home garage studio, Eugene, OR" width="3000" height="1346" loading="lazy" class="w-full h-auto border border-gray-400"/>
       <span class="photo-caption mb-2">
         2013: Drumming with Bear Baiting, Oakland, CA
       </span>
