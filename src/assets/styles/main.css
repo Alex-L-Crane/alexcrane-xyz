@@ -92,6 +92,14 @@
     @apply px-2 lg:px-0 lg:mx-8 relative;
   }
 
+  /* Hero headline: the large page-title treatment sitting inside a .section-panel
+     hero. text-balance prevents orphan words at any width; the four size steps
+     were tuned against About's headline text and reused as-is for Music (both
+     land at text-[10rem]/[1] by lg, same as before this was a shared class). */
+  .hero-headline {
+    @apply swissposters font-light text-balance text-6xl/[1] sm:text-7xl/[1] md:text-[7rem]/[1] lg:text-[10rem]/[1] pb-8 w-full;
+  }
+
   /* Caps and centers a block at the body column's reading width for tablet only;
      reverts to full/flush at lg so desktop's existing layout is untouched. Used to
      line up elements (subhead, footer) that live outside the body column's own
