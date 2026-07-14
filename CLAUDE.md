@@ -4,11 +4,46 @@ Shared classes live in `src/assets/styles/main.css` under `@layer components`;
 shared color tokens live in `tailwind.config.js`. Prefer these over re-deriving
 the same utility combination as a one-off on a page.
 
+## Standing rule: About is the reference implementation
+
+About was the first page built with this site's design system and remains its
+source of truth. When a new page needs a treatment About already has (body
+text, italic subheads, captions, highlighter/thin-underline links, the
+eyebrow, `muted-ink`, `.movement-heading`, photo/caption blocks, section
+spacing), it must **adopt the existing shared class/component/token** --
+never re-derive an equivalent utility stack that happens to render the same.
+
+**Visual similarity achieved through duplicated ad-hoc styling is a defect,
+not a pass.** Two elements that render identically but are styled
+differently will drift apart the next time either one is edited -- that's
+the failure mode this rule exists to prevent (it's exactly what happened to
+Music's hero wrapper, body columns, and headline before the pass that fixed
+them: all three matched About's rendered output at desktop while silently
+reimplementing it with independent utilities).
+
+When a new page needs a genuine variation of an About pattern (a different
+section background, a new heading tier), extend the shared implementation
+with a modifier, prop, or token -- never fork it into a page-local copy. If
+adopting a shared class would change a page's current rendering, that's
+worth flagging and deciding deliberately, not picking a side silently.
+
+**Concrete now, refactor at second use:** a pattern that exists on exactly
+one page (the breadcrumb eyebrow, the discography grid) should stay as
+plain, concrete markup on that page -- built from existing shared
+primitives where they apply, but not pre-emptively extracted into its own
+component/props API. Componentize it only once a second page actually needs
+the same shape; extracting the abstraction before that point means guessing
+at an API against a sample size of one.
+
 ## Breadcrumb eyebrow
 
-A small "About → Music"-style line above a page's headline, used on
-long/sub-pages under a section (Music, and eventually Design, Philosophy,
-Resume).
+A small "About → Music"-style line above a page's headline. Currently used
+on Music only -- built from shared primitives (`.link-underline`,
+`muted-ink`) but left as concrete markup rather than a component, per the
+concrete-now/refactor-at-second-use rule above. Componentize (e.g. an
+`EyebrowNav.vue` taking parent label/href + current-page label as props)
+once Design or Philosophy actually needs the same structure -- don't
+pre-build that API now.
 
 Structure:
 
@@ -58,6 +93,28 @@ pages long enough to need an internal section break (e.g. Music's "Personal
 Music"). Class: `.movement-heading` (`neogeo text-5xl/[1] mb-8`). Reach for
 this on any future long page that needs the same kind of internal break,
 rather than re-typing the three utilities.
+
+## `.hero-headline`
+
+The large page-title treatment inside a page's hero `.section-panel`:
+`swissposters font-light text-balance text-6xl/[1] sm:text-7xl/[1]
+md:text-[7rem]/[1] lg:text-[10rem]/[1] pb-8 w-full`. Originally typed
+directly on About's `h1`; Music's `h1` had independently retyped just the
+`lg:` value (`text-[10rem]/[1]`), which rendered identically at desktop
+while missing the responsive steps and `text-balance` entirely -- exactly
+the "renders the same, styled differently" defect this file warns about.
+Both pages' `h1` now use this class. Any future page's hero headline should
+too, rather than retyping the utility stack (even partially).
+
+## Section-background "stock" tokens
+
+Named `tailwind.config.js` color tokens for page-root background colors --
+`stock-blush` (`#F6D9CE`, About), `stock-yellow` (`#F5D37D`, Music) --
+applied as `bg-stock-*` on the page root. A future page's background color
+is a new one-line token (`'stock-<name>': '#hex'`) plus `bg-stock-<name>`
+on its root, not a fresh `bg-[#hex]` arbitrary value. This is the
+"extend, don't fork" mechanism for the one legitimate kind of per-page
+variation the design system needs to support: each section's own color.
 
 ## Link grammar (site-wide)
 
