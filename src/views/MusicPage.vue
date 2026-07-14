@@ -111,7 +111,7 @@ const albums = [
       </div>
     </div>
 
-    <div class="flex px-2 sm:px-4 md:px-8 mt-32">
+    <div class="flex px-2 sm:px-4 md:px-8 mt-16 md:mt-24 lg:mt-32">
       <div class="hidden lg:inline w-1/4 lg:pr-8">
       </div>
       <div class="w-full body-column lg:w-3/4">
