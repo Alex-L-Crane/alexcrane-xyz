@@ -9,9 +9,6 @@ import cuneiformCover from '@/assets/images/music/Cuneiform-Tabula-Rasa-beach-co
 import directActionCover from '@/assets/images/music/Direct-Action-Cassette-photo-1.jpg'
 import cuneiformWestbeachDrums from '@/assets/images/music/Cuneiform-Westbeach-drums.jpg'
 import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.png'
-import fieldAmp from "@/assets/images/alex-field-amp-cropped-1.png";
-import cuneiformWestbeach from "@/assets/images/CuneiformWestbeachThnxgiving.png";
-import garagePhoto from "@/assets/images/garage-photo-cropped.png";
 
 const discographyRows = [
   {
@@ -183,7 +180,7 @@ const discographyRows = [
           </span>
         </div>
       </div>
-      <img :src="bearBaiting" alt="Hanging out with recording equipment in a home garage studio, Eugene, OR" width="3000" height="1346" loading="lazy" class="w-full h-auto border border-gray-400"/>
+      <img :src="bearBaiting" alt="Hanging out with recording equipment in a home garage studio, Eugene, OR" width="3000" height="1346" loading="lazy" class="w-full h-auto"/>
       <span class="photo-caption mb-2">
         2013: Drumming with Bear Baiting, Oakland, CA
       </span>
