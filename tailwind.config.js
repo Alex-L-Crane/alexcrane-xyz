@@ -11,6 +11,11 @@ export default {
         'punk-yellow': '#FBC028',
         'highlight': '#f2695c',
         'muted-ink': '#5A554D',
+        // Section background "stocks" -- named page-root colors. Add a new
+        // stock here (one line) when a future page needs its own section
+        // background, rather than typing a raw hex on the page root.
+        'stock-blush': '#F6D9CE',
+        'stock-yellow': '#F5D37D',
       },
       keyframes: {
         'bounce-once': {

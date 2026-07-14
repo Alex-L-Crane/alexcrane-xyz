@@ -36,7 +36,7 @@ const discographyRows = [
 </script>
 
 <template>
-  <div class="atacamamedium bg-[#F5D37D] text-[#444244] pt-20 text-black">
+  <main class="atacamamedium bg-stock-yellow text-[#444244] pt-14 lg:pt-20 text-black">
 
     <div class="section-panel">
       <img :src="manifestoAbstract" alt="Garage music" width="1024" height="248" class="w-full"/>
@@ -188,5 +188,5 @@ const discographyRows = [
         2013: Drumming with Bear Baiting, Oakland, CA
       </span>
     </div>
-  </div>
+  </main>
 </template>
