@@ -26,7 +26,7 @@ const albums = [
     <div class="section-panel">
       <img :src="manifestoAbstract" alt="Garage music" width="1024" height="248" class="aspect-[3/2] md:aspect-[21/9] md:max-h-[40vh] lg:aspect-auto lg:max-h-none w-full object-cover object-[70%_center]"/>
       <nav aria-label="Breadcrumb" class="alaska pt-4 flex items-center gap-2 text-base italic text-muted-ink">
-        <a href="/about" class="link-underline decoration-muted-ink/40 hover:decoration-muted-ink focus-visible:decoration-muted-ink">About</a>
+        <a href="/about" class="link-underline decoration-muted-ink/40 hover:decoration-muted-ink focus-visible:decoration-muted-ink py-2.5 -my-2.5">About</a>
         <span aria-hidden="true">→</span>
         <span>Music</span>
       </nav>
