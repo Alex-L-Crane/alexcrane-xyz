@@ -38,8 +38,8 @@ const discographyRows = [
 <template>
   <div class="atacamamedium bg-[#F5D37D] text-[#444244] pt-20 text-black">
 
-    <div class="md:mx-8 relative z-0">
-      <img :src="manifestoAbstract" alt="Garage music" width="1024" height="248" class="w-full relative z-0"/>
+    <div class="section-panel">
+      <img :src="manifestoAbstract" alt="Garage music" width="1024" height="248" class="w-full"/>
       <nav aria-label="Breadcrumb" class="alaska pt-4 flex items-center gap-2 text-base italic text-muted-ink">
         <a href="/about" class="link-underline decoration-muted-ink/40 hover:decoration-muted-ink focus-visible:decoration-muted-ink">About</a>
         <span aria-hidden="true">→</span>
@@ -50,9 +50,9 @@ const discographyRows = [
     <div class="flex px-2 sm:px-4 md:px-8">
       <div class="hidden lg:inline w-1/4 lg:pr-8">
       </div>
-      <div class="w-full lg:w-3/4">
+      <div class="w-full body-column lg:w-3/4">
         <div class="mt-6 mb-8">
-          <div class="md:max-w-[36rem]">
+          <div class="prose-col">
             <p class="body-copy">
               I played guitar in my first band for a few years, then I got my first drumset at age twenty.
               I was instantly obsessed. By then I was already an audio engineer at Hyde Street Studios in San Francisco.
@@ -74,7 +74,7 @@ const discographyRows = [
           </div>
         </div>
 
-        <div class="md:max-w-[36rem] md:mb-8">
+        <div class="prose-col md:mb-8">
           <p class="body-copy">
             Underground music has been part of who I am since my teens.
             DIY bands like Fugazi were the blueprint: book it yourself, record it yourself, answer to no one.
@@ -82,7 +82,7 @@ const discographyRows = [
           </p>
           <ul class="text-xl space-y-6 list-none mb-8">
             <li>
-              <p class="pb-2"><em>I’ve opened for some bands I like:</em></p>
+              <p class="pb-2">I’ve opened for some bands I like:</p>
               <p>
                 <a href="https://en.wikipedia.org/wiki/Suicidal_Tendencies" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block">Suicidal Tendencies</a><br>
                 <a href="https://en.wikipedia.org/wiki/Author_&amp;_Punisher" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block">Author and Punisher</a><br>
@@ -124,11 +124,11 @@ const discographyRows = [
       </div>
     </div>
 
-    <div class="flex px-2 sm:px-4 md:px-8 ">
+    <div class="flex px-2 sm:px-4 md:px-8 mt-32">
       <div class="hidden lg:inline w-1/4 lg:pr-8">
       </div>
-      <div class="w-full lg:w-3/4">
-        <div class="md:max-w-[36rem] mt-6 mb-8">
+      <div class="w-full body-column lg:w-3/4">
+        <div class="prose-col mt-6 mb-16">
           <h2 class="movement-heading">Personal Music</h2>
           <p class="body-copy">The work now is subtler. I’m focused on the things that take decades.
             In the practice room I’m chasing feel, sound, technique, and vocabulary.
@@ -141,7 +141,7 @@ const discographyRows = [
           </p>
           <ul>
             <li class="text-xl mb-8">
-              <p class="pb-2"><em>I’ve had some musical mentors:</em></p>
+              <p class="pb-2">I’ve had some musical mentors:</p>
               <p>
                 <a href="http://www.treygunn.com/bio/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Trey Gunn</a> <span class="text-muted-ink">virtuoso and music coach</span><br>
                 <a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Aloke Dutta</a> <span class="text-muted-ink">tabla guru</span><br>
@@ -150,17 +150,12 @@ const discographyRows = [
             </li>
           </ul>
           <p class="body-copy">When it’s time to actually make music, solo or with other players, I want it to work more like cooking than composing:</p>
-        </div>
-        <div>
-          <p class="text-xl mb-8">
-            <ul class="alaska body-copy">
-              <li>Since then:</li>
-              <li class="text-3xl lg:pl-[4rem]">I make what I want to eat.</li>
-              <li class="text-3xl pl-3 lg:pl-[8rem]">I use the available ingredients.</li>
-              <li class="text-3xl pl-6 lg:pl-[16rem]">I trust my senses.</li>
-              <li class="text-3xl pl-9 lg:pl-[24rem]">I cook with others in mind.</li>
-            </ul>
-          </p>
+          <ul class="alaska body-copy">
+            <li class="text-3xl">I make what I want to eat.</li>
+            <li class="text-3xl">I use the available ingredients.</li>
+            <li class="text-3xl">I trust my senses.</li>
+            <li class="text-3xl">I cook with others in mind.</li>
+          </ul>
         </div>
         <p class="body-copy mb-16">
           More about my
