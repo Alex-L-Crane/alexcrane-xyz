@@ -45,12 +45,6 @@ const aboutLinks = [
     imageSrc: '/src/assets/images/design-nav.png'
   },
   {
-    to: '/inspirations',
-    heading: 'Inspirations',
-    description: 'Some motivation',
-    imageSrc: '/src/assets/images/design-nav.png'
-  },
-  {
     to: '/about',
     heading: 'About',
     description: 'Who I am',

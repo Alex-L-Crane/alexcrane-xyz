@@ -6,5 +6,5 @@ export const pageSections = [
   { path: '/music', label: 'Music', dark: false},
   { path: '/design', label: 'Tech/Design', dark: true},
   { path: '/philosophy', label: 'Philosophy'},
-  { path: '/inspirations', label: 'Inspirations', dark: false}
+  { path: '/inspirations', label: 'Inspirations', dark: false, skipNav: true}
 ]
