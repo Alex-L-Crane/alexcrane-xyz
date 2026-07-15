@@ -143,6 +143,15 @@
     @apply font-thin text-xs italic inline-block;
   }
 
+  /* Italic spoken-voice register: short asides/epigraphs and lede paragraphs
+     (About's "Sound is not a backdrop.", "It takes... So. Much. Time.", Music's
+     "A guiding practice...", Philosophy's lede). Previously bare "alaska text-3xl"
+     utilities (plus a semantic <em> where the phrase is emphasis inside a larger
+     paragraph); extracted now that Philosophy's lede is a third, standalone use. */
+  .italic-subhead {
+    @apply alaska text-3xl italic;
+  }
+
   /* Marks a shift into a new movement within a long page (e.g. Music's "Personal
      Music") -- a tier between the page's hero h1/h2 and its regular body content,
      for pages long enough to need an internal section break. */

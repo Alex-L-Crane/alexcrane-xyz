@@ -9,6 +9,15 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
       <h1 class="hero-headline">Methodical non-utilitarianism</h1>
     </div>
 
+    <div class="flex mb-48">
+      <div class="w-1/4"></div>
+      <div class="ledger-text">
+        <div class="prose-col">
+          <p class="italic-subhead">Growth, development, and enjoyment, not utility. Slowing down and embracing nuance as an antidote to a world obsessed with short-sighted productivity and profit.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="ledger-row">
       <div class="ledger-label">
         <h2 class="neogeo text-5xl/[1]">Mission</h2>
