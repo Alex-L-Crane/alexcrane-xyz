@@ -56,5 +56,20 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
         </div>
       </div>
     </div>
+
+    <div class="flex">
+      <div class="w-1/4"></div>
+      <div class="ledger-text">
+        <p class="body-copy mb-16">
+          More about my
+          <a href="/inspirations" class="highlight-link">
+            inspirations
+          </a>
+          <br>and
+          <a href="/about" class="highlight-link">
+            the rest of my story</a>.
+        </p>
+      </div>
+    </div>
   </main>
 </template>
