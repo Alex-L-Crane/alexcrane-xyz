@@ -16,6 +16,7 @@ export default {
         // background, rather than typing a raw hex on the page root.
         'stock-blush': '#F6D9CE',
         'stock-yellow': '#F5D37D',
+        'stock-chartreuse': '#D8F172',
       },
       keyframes: {
         'bounce-once': {
