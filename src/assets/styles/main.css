@@ -154,5 +154,21 @@
   .mobile-gutter {
     @apply px-2 md:px-0;
   }
+
+  /* Ledger pattern: label | rule | text row, for document-genre pages (Philosophy's
+     Mission/Manifesto/My Why; Resume will reuse it). .ledger-row is the row shell
+     and spacing token (mb-32 separates entries); .ledger-label is the right-aligned
+     label column with its own rule (a border, not a separate element); .ledger-text
+     is the text column's own inset, pairing with .prose-col + .body-copy on the
+     actual content for the reading-width cap and standard paragraph treatment. */
+  .ledger-row {
+    @apply flex mb-32;
+  }
+  .ledger-label {
+    @apply w-1/4 text-right border-r-2 border-almost-black pr-8;
+  }
+  .ledger-text {
+    @apply w-3/4 pl-8;
+  }
 }
 
