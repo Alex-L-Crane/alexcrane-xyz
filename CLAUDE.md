@@ -35,34 +35,35 @@ component/props API. Componentize it only once a second page actually needs
 the same shape; extracting the abstraction before that point means guessing
 at an API against a sample size of one.
 
-## Breadcrumb eyebrow
+## Breadcrumb eyebrow: `EyebrowNav.vue`
 
-A small "About → Music"-style line above a page's headline. Currently used
-on Music only -- built from shared primitives (`.link-underline`,
-`muted-ink`) but left as concrete markup rather than a component, per the
-concrete-now/refactor-at-second-use rule above. Componentize (e.g. an
-`EyebrowNav.vue` taking parent label/href + current-page label as props)
-once Design or Philosophy actually needs the same structure -- don't
-pre-build that API now.
+A small "About → Music"-style line above a page's headline. Started as
+concrete markup on Music (its only consumer); once Philosophy needed the
+identical structure, it was pulled into `src/components/navigation/EyebrowNav.vue`
+per the concrete-now/refactor-at-second-use rule above -- that's the rule
+in action, not just a description of it. Used the same way on every
+essay/document page: `<EyebrowNav parent-label="About" parent-href="/about"
+current-label="Philosophy" />`.
 
-Structure:
+Internals (for reference, don't re-derive this elsewhere):
 
 ```html
 <nav aria-label="Breadcrumb" class="alaska pt-4 flex items-center gap-2 text-base italic text-muted-ink">
-  <a href="/about" class="link-underline decoration-muted-ink/40 hover:decoration-muted-ink focus-visible:decoration-muted-ink">About</a>
+  <a :href="parentHref" class="link-underline decoration-muted-ink/40 hover:decoration-muted-ink focus-visible:decoration-muted-ink py-2.5 -my-2.5">{{ parentLabel }}</a>
   <span aria-hidden="true">→</span>
-  <span>Music</span>
+  <span>{{ currentLabel }}</span>
 </nav>
 ```
 
-- The parent section links (`About`); the current page is a plain `<span>`.
+- The parent section links; the current page is a plain `<span>`.
 - Uses the `→` glyph directly, styled by the surrounding `italic`/`text-base`. Only
   swap to an SVG arrow (sized ~0.7em, `currentColor`) if the glyph renders
   heavier than the surrounding italic at a given size.
 - Colored with the `muted-ink` token (see below), not `opacity` on the section's
   text color -- opacity blends with whatever's behind it, so the same "muted"
   intent would render as a different actual color on every section background.
-- Size: `text-base` (bumped up from an initial `text-sm`).
+- Size: `text-base`. The link carries `py-2.5 -my-2.5` (padding for a 44px tap
+  target, compensating negative margin so it doesn't grow the eyebrow row).
 
 ## `muted-ink` color token
 
@@ -109,12 +110,94 @@ too, rather than retyping the utility stack (even partially).
 ## Section-background "stock" tokens
 
 Named `tailwind.config.js` color tokens for page-root background colors --
-`stock-blush` (`#F6D9CE`, About), `stock-yellow` (`#F5D37D`, Music) --
-applied as `bg-stock-*` on the page root. A future page's background color
-is a new one-line token (`'stock-<name>': '#hex'`) plus `bg-stock-<name>`
-on its root, not a fresh `bg-[#hex]` arbitrary value. This is the
-"extend, don't fork" mechanism for the one legitimate kind of per-page
-variation the design system needs to support: each section's own color.
+`stock-blush` (`#F6D9CE`, About), `stock-yellow` (`#F5D37D`, Music),
+`stock-chartreuse` (`#D8F172`, Philosophy) -- applied as `bg-stock-*` on
+the page root. A future page's background color is a new one-line token
+(`'stock-<name>': '#hex'`) plus `bg-stock-<name>` on its root, not a fresh
+`bg-[#hex]` arbitrary value. This is the "extend, don't fork" mechanism
+for the one legitimate kind of per-page variation the design system needs
+to support: each section's own color.
+
+## Page genres: essay vs. document
+
+Two shapes of page, not one template with optional pieces:
+
+- **Essay pages** (About, Music, and future Design): hero image inside
+  `.section-panel`, `.hero-headline`, illustrated with photos
+  (`.section-panel` + `.photo-caption`), body prose in `.prose-col`/
+  `.body-copy`, an optional `.movement-heading` break.
+- **Document pages** (Philosophy, and future Resume): text-only, no hero
+  image and no photos. Still opens with `EyebrowNav` + `.hero-headline`
+  inside `.section-panel` (the headline needs the same page-datum edge
+  alignment either way, image or no image) and a lede (see below), but the
+  body is the `.ledger-row` pattern instead of flowing prose paragraphs.
+
+Don't force a document page into the essay shape (no hero image to add
+just to match the pattern) or vice versa -- pick the genre that fits the
+content, and use that genre's own conventions throughout.
+
+## `.ledger-row`: label | rule | text pattern
+
+For document-genre pages: a label column (right-aligned, its own rule via
+`border-r`), then a text column at the standard reading width. Three
+classes compose it:
+
+```html
+<div class="ledger-row">
+  <div class="ledger-label">
+    <h2 class="neogeo text-5xl/[1]">Mission</h2>
+  </div>
+  <div class="ledger-text">
+    <div class="prose-col">
+      <p class="body-copy">Entry copy goes here.</p>
+    </div>
+  </div>
+</div>
+```
+
+- `.ledger-row` (`flex mb-32`): the row shell and spacing token -- `mb-32`
+  is what separates one entry from the next. Don't override per-row; if a
+  row needs more trailing space than its neighbors (e.g. before an exit
+  link block), add that margin on the *following* element instead.
+- `.ledger-label` (`w-1/4 text-right border-r-2 border-almost-black pr-8`):
+  the label + its rule. The rule is a border on this column, not a
+  separate divider element.
+- `.ledger-text` (`w-3/4 pl-8`): the text column's inset. Pair with
+  `.prose-col` (reading-width cap) and `.body-copy` on the actual
+  paragraphs/list items -- don't reach for bespoke font sizing here.
+- Minted from Philosophy's Mission/Manifesto/My Why; Resume will reuse it.
+
+## Lede convention
+
+A document page's epigraph, between the headline and the first
+`.ledger-row`: unlabeled, no rule, set in `.italic-subhead` (see below).
+Reuse `.ledger-text` on an otherwise-empty `w-1/4` spacer row so the lede's
+left edge lands exactly on the ledger's text column, without pulling in
+`.ledger-label`'s visible border/right-alignment:
+
+```html
+<div class="flex mb-48">
+  <div class="w-1/4"></div>
+  <div class="ledger-text">
+    <div class="prose-col">
+      <p class="italic-subhead">Lede copy goes here.</p>
+    </div>
+  </div>
+</div>
+```
+
+Spacing: the gap between the lede and the first ledger row must read as
+the page's biggest gap -- visibly larger than the `mb-32` between ledger
+rows (Philosophy uses `mb-48`, 192px vs. 128px). Preamble, then entries.
+
+## `.italic-subhead`
+
+The italic spoken-voice register (`alaska text-3xl italic`): About's
+"Sound is not a backdrop." and "It takes... So. Much. Time.", Music's "A
+guiding practice...", Philosophy's lede. Previously bare utilities on each
+page (plus a semantic `<em>` where the phrase is emphasis inside a larger
+paragraph, which still applies when that's the actual usage); extracted
+into a class once Philosophy's lede became a third, standalone use.
 
 ## Link grammar (site-wide)
 
