@@ -152,6 +152,16 @@
     @apply alaska text-3xl italic;
   }
 
+  /* Spoken-voice size variant for multi-sentence instances (e.g. Philosophy's
+     lede): the default text-3xl is tuned for a one-line aside and starts
+     competing with the headline once a passage runs to several lines. Pair
+     with .italic-subhead; defined after it here so the font-size/line-height
+     override wins the cascade tie predictably (same layer, same specificity).
+     One-line instances keep the bare .italic-subhead default. */
+  .italic-subhead-compact {
+    @apply text-2xl;
+  }
+
   /* Marks a shift into a new movement within a long page (e.g. Music's "Personal
      Music") -- a tier between the page's hero h1/h2 and its regular body content,
      for pages long enough to need an internal section break. */

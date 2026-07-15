@@ -199,6 +199,17 @@ page (plus a semantic `<em>` where the phrase is emphasis inside a larger
 paragraph, which still applies when that's the actual usage); extracted
 into a class once Philosophy's lede became a third, standalone use.
 
+**Size variant -- `.italic-subhead-compact`:** the base class's `text-3xl`
+is tuned for a one-line aside; a multi-sentence instance (Philosophy's
+lede runs 4-5 lines) at that size competes with the headline above it.
+Pair `.italic-subhead-compact` alongside the base class (`class=
+"italic-subhead italic-subhead-compact"`) to step down to `text-2xl` --
+don't fork a new class or hand-type the override. The rule: one-line
+instances stay bare `.italic-subhead` (3xl); multi-sentence instances add
+the `-compact` modifier (2xl). `.italic-subhead-compact` is defined
+directly after the base class in `main.css` so the cascade tie resolves
+predictably -- if either class ever needs reordering, keep them adjacent.
+
 ## Link grammar (site-wide)
 
 - **Thin underline** = a text link at rest. Structural class `.link-underline`

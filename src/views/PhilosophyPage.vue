@@ -13,7 +13,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
       <div class="w-1/4"></div>
       <div class="ledger-text">
         <div class="prose-col">
-          <p class="italic-subhead">Growth, development, and enjoyment, not utility. Slowing down and embracing nuance as an antidote to a world obsessed with short-sighted productivity and profit.</p>
+          <p class="italic-subhead italic-subhead-compact">Growth, development, and enjoyment, not utility. Slowing down and embracing nuance as an antidote to a world obsessed with short-sighted productivity and profit.</p>
         </div>
       </div>
     </div>
