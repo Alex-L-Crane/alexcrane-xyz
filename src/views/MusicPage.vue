@@ -9,6 +9,7 @@ import cuneiformCover from '@/assets/images/music/Cuneiform-Tabula-Rasa-beach-co
 import directActionCover from '@/assets/images/music/Direct-Action-Cassette-photo-1.jpg'
 import cuneiformWestbeachDrums from '@/assets/images/music/Cuneiform-Westbeach-drums.jpg'
 import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.png'
+import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
 
 const albums = [
   { cover: sreCover, width: 1920, height: 1920, alt: 'TCA Soothing Rays of eternity album cover', title: 'Soothing Rays of Eternity', artist: 'TCA', year: '2017', url: 'https://thecruelestanimal.bandcamp.com/album/soothing-rays-of-eternity' },
@@ -25,11 +26,7 @@ const albums = [
 
     <div class="section-panel">
       <img :src="manifestoAbstract" alt="Garage music" width="1024" height="248" class="aspect-[3/2] md:aspect-[21/9] md:max-h-[40vh] lg:aspect-auto lg:max-h-none w-full object-cover object-[70%_center]"/>
-      <nav aria-label="Breadcrumb" class="alaska pt-4 flex items-center gap-2 text-base italic text-muted-ink">
-        <a href="/about" class="link-underline decoration-muted-ink/40 hover:decoration-muted-ink focus-visible:decoration-muted-ink py-2.5 -my-2.5">About</a>
-        <span aria-hidden="true">→</span>
-        <span>Music</span>
-      </nav>
+      <EyebrowNav parent-label="About" parent-href="/about" current-label="Music" />
       <h1 class="hero-headline">A Mess of Bands</h1>
     </div>
     <div class="flex px-2 sm:px-4 md:px-8">
