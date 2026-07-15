@@ -6,10 +6,10 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
   <main class="atacamamedium bg-stock-chartreuse text-black pt-14 lg:pt-20">
     <div class="section-panel">
       <EyebrowNav parent-label="About" parent-href="/about" current-label="Philosophy" />
-      <h1 class="hero-headline">Methodical non-utilitarianism</h1>
+      <h1 class="hero-headline">Methodical<br>non-utilitarianism</h1>
     </div>
 
-    <div class="flex mb-48">
+    <div class="flex mb-20 mt-5">
       <div class="w-1/4"></div>
       <div class="ledger-text">
         <div class="prose-col">
