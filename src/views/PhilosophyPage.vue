@@ -64,11 +64,9 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
         <p class="body-copy mb-16">
           More about
           <a href="/about" class="highlight-link">
-            the rest of my story</a>.
-          <br>and
+            the rest of my story</a> <br>and
           <a href="/" class="highlight-link">
-            my drumming
-          </a>
+            my drumming</a>.
         </p>
       </div>
     </div>
