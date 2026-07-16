@@ -138,14 +138,13 @@ content, and use that genre's own conventions throughout.
 
 ## `.ledger-row`: label | rule | text pattern
 
-For document-genre pages: a label column (right-aligned, its own rule via
-`border-r`), then a text column at the standard reading width. Three
-classes compose it:
+For document-genre pages: a label column, its own rule, then a text
+column at the standard reading width. Three classes compose it:
 
 ```html
 <div class="ledger-row">
   <div class="ledger-label">
-    <h2 class="neogeo text-5xl/[1]">Mission</h2>
+    <h2 class="neogeo text-3xl lg:text-5xl/[1]">Mission</h2>
   </div>
   <div class="ledger-text">
     <div class="prose-col">
@@ -155,16 +154,36 @@ classes compose it:
 </div>
 ```
 
-- `.ledger-row` (`flex mb-32`): the row shell and spacing token -- `mb-32`
-  is what separates one entry from the next. Don't override per-row; if a
-  row needs more trailing space than its neighbors (e.g. before an exit
+- `.ledger-row` (`flex flex-col lg:flex-row mb-16 md:mb-24 lg:mb-32`): the
+  row shell and spacing token -- the two-column layout is structure
+  (breakpoint doctrine: holds at lg+ only, stacks below). Row-to-row
+  spacing steps down with it (64/96/128px), the same mt-16/md:mt-24/
+  lg:mt-32 convention as Music's movement seam. Don't override per-row; if
+  a row needs more trailing space than its neighbors (e.g. before an exit
   link block), add that margin on the *following* element instead.
-- `.ledger-label` (`w-1/4 text-right border-r-2 border-almost-black pr-8`):
-  the label + its rule. The rule is a border on this column, not a
-  separate divider element.
-- `.ledger-text` (`w-3/4 pl-8`): the text column's inset. Pair with
-  `.prose-col` (reading-width cap) and `.body-copy` on the actual
-  paragraphs/list items -- don't reach for bespoke font sizing here.
+- `.ledger-label` (`w-full lg:w-1/4 text-left lg:text-right mb-4 lg:mb-0
+  lg:border-r-2 border-almost-black lg:pr-8`): the label + its rule at
+  lg+. Below lg it's full-width, left-aligned (a right-aligned label alone
+  on its own line reads wrong once stacked), with no rule of its own --
+  the rule relocates to `.ledger-text` instead (see below). Label
+  font-size is set per-instance on each row's own `<h2>`
+  (`text-3xl lg:text-5xl/[1]` -- tune the mobile step by eye), not baked
+  into `.ledger-label`, since size is a heading-level concern.
+- `.ledger-text` (`w-full lg:w-3/4 border-l-2 lg:border-l-0
+  border-almost-black pl-8`): the text column's inset. At lg+, no rule
+  (the label's `border-r-2` provides it). Below lg, this side picks up a
+  `border-l-2` in the same weight/color as the desktop rule -- the rule
+  *relocates* rather than disappearing, so a stacked entry still reads as
+  label, then a rule-flanked text block. Pair with `.prose-col`
+  (reading-width cap) and `.body-copy` on the actual paragraphs/list items
+  -- don't reach for bespoke font sizing here.
+- **Unlabeled reuse (lede, exit links):** a block that needs `.ledger-text`'s
+  column alignment but isn't an actual entry (no label, no rule) must (a)
+  wrap in `flex flex-col lg:flex-row` too, so the empty `w-1/4` spacer
+  collapses out of the way below lg instead of still claiming a quarter of
+  a row that's supposed to go full-width, and (b) add `border-l-0` to
+  cancel the rule `.ledger-text` now applies at that width. See the lede
+  convention below for the full pattern.
 - Minted from Philosophy's Mission/Manifesto/My Why; Resume will reuse it.
 
 ## Lede convention
@@ -173,12 +192,16 @@ A document page's epigraph, between the headline and the first
 `.ledger-row`: unlabeled, no rule, set in `.italic-subhead` (see below).
 Reuse `.ledger-text` on an otherwise-empty `w-1/4` spacer row so the lede's
 left edge lands exactly on the ledger's text column, without pulling in
-`.ledger-label`'s visible border/right-alignment:
+`.ledger-label`'s visible border/right-alignment. The row wraps in
+`flex flex-col lg:flex-row` and the `.ledger-text` div adds `border-l-0`
+(canceling the rule `.ledger-text` applies below lg for actual ledger
+entries -- the lede/exit-links pattern needs the column alignment but not
+the rule):
 
 ```html
-<div class="flex mb-48">
+<div class="flex flex-col lg:flex-row mb-48">
   <div class="w-1/4"></div>
-  <div class="ledger-text">
+  <div class="ledger-text border-l-0">
     <div class="prose-col">
       <p class="italic-subhead">Lede copy goes here.</p>
     </div>
