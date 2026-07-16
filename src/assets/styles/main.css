@@ -176,18 +176,26 @@
 
   /* Ledger pattern: label | rule | text row, for document-genre pages (Philosophy's
      Mission/Manifesto/My Why; Resume will reuse it). .ledger-row is the row shell
-     and spacing token (mb-32 separates entries); .ledger-label is the right-aligned
-     label column with its own rule (a border, not a separate element); .ledger-text
-     is the text column's own inset, pairing with .prose-col + .body-copy on the
-     actual content for the reading-width cap and standard paragraph treatment. */
+     and spacing token (lg:mb-32 separates entries, stepped down below lg); .ledger-label
+     is the label column with its own rule (a border, not a separate element);
+     .ledger-text is the text column's own inset, pairing with .prose-col + .body-copy
+     on the actual content for the reading-width cap and standard paragraph treatment.
+
+     Breakpoint doctrine: the two-column layout is structure, so it holds at lg+ only.
+     Below lg each row stacks -- label full-width above, text full-width below -- and
+     the rule relocates from the label's right border to the text block's left border
+     (same weight/color), so a stacked entry still reads as label, then a rule-flanked
+     text block. Label font-size is set per-instance on each row's own <h2>
+     (text-3xl lg:text-5xl/[1] -- tune the mobile step by eye), not baked into
+     .ledger-label, since it's a heading-level concern. */
   .ledger-row {
-    @apply flex mb-32;
+    @apply flex flex-col lg:flex-row mb-16 md:mb-24 lg:mb-32;
   }
   .ledger-label {
-    @apply w-1/4 text-right border-r-2 border-almost-black pr-8;
+    @apply w-full lg:w-1/4 text-left lg:text-right mb-4 lg:mb-0 lg:border-r-2 border-almost-black lg:pr-8;
   }
   .ledger-text {
-    @apply w-3/4 pl-8;
+    @apply w-full lg:w-3/4 border-l-2 lg:border-l-0 border-almost-black pl-8;
   }
 }
 
