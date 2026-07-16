@@ -9,9 +9,9 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
       <h1 class="hero-headline">Methodical<br>non-utilitarianism</h1>
     </div>
 
-    <div class="flex mb-20 mt-5">
+    <div class="flex flex-col lg:flex-row mb-20 mt-5">
       <div class="w-1/4"></div>
-      <div class="ledger-text">
+      <div class="ledger-text border-l-0">
         <div class="prose-col">
           <p class="italic-subhead italic-subhead-compact">Craft, growth, and depth, not utility. Slowing down and embracing nuance as an antidote to a world obsessed with short-sighted productivity and profit.</p>
         </div>
@@ -58,16 +58,16 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
       </div>
     </div>
 
-    <div class="flex">
+    <div class="flex flex-col lg:flex-row">
       <div class="w-1/4"></div>
-      <div class="ledger-text">
+      <div class="ledger-text border-l-0">
         <p class="body-copy mb-16">
-          More about my
+          More about
           <a href="/about" class="highlight-link">
             the rest of my story</a>.
           <br>and
           <a href="/" class="highlight-link">
-            drumming
+            my drumming
           </a>
         </p>
       </div>
