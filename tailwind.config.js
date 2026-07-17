@@ -17,6 +17,7 @@ export default {
         'stock-blush': '#F6D9CE',
         'stock-yellow': '#F5D37D',
         'stock-chartreuse': '#D8F172',
+        'stock-coral': '#FA8072',
       },
       keyframes: {
         'bounce-once': {
