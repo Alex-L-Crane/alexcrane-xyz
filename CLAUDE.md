@@ -115,6 +115,15 @@ the "renders the same, styled differently" defect this file warns about.
 Both pages' `h1` now use this class. Any future page's hero headline should
 too, rather than retyping the utility stack (even partially).
 
+**Forcing a line break:** `text-balance` handles automatic wrapping, but a
+headline that needs a specific, deliberate two-line split (About's "All tech
+and no music<br>makes Alex a dull boy", Philosophy's
+"Methodical<br>non-utilitarianism") gets there with a literal `<br>` inside
+the `h1`, not a width constraint or a text-wrap utility. Both pages already
+do this the same way -- it's a content-level break, not something that
+touches `.hero-headline` itself, so it can't drift the class out of sync the
+way a bespoke CSS mechanism could.
+
 ## Section-background "stock" tokens
 
 Named `tailwind.config.js` color tokens for page-root background colors --
@@ -162,64 +171,88 @@ column at the standard reading width. Three classes compose it:
 </div>
 ```
 
-- `.ledger-row` (`flex flex-col lg:flex-row mb-16 md:mb-24 lg:mb-32`): the
-  row shell and spacing token -- the two-column layout is structure
-  (breakpoint doctrine: holds at lg+ only, stacks below). Row-to-row
-  spacing steps down with it (64/96/128px), the same mt-16/md:mt-24/
-  lg:mt-32 convention as Music's movement seam. Don't override per-row; if
-  a row needs more trailing space than its neighbors (e.g. before an exit
-  link block), add that margin on the *following* element instead.
-- `.ledger-label` (`w-full lg:w-1/4 text-left lg:text-right mb-4 lg:mb-0
+- `.ledger-row` (`flex flex-col lg:flex-row mb-16 md:mb-24 lg:mb-32 pl-8
+  pr-2 sm:pr-4 md:pr-8 lg:px-0`): the row shell and spacing token -- the
+  two-column layout is structure (breakpoint doctrine: holds at lg+ only,
+  stacks below). Row-to-row spacing steps down with it (64/96/128px), the
+  same mt-16/md:mt-24/lg:mt-32 convention as Music's movement seam. Don't
+  override per-row; if a row needs more trailing space than its neighbors
+  (e.g. before an exit link block), add that margin on the *following*
+  element instead. Below lg the row also carries a single shared left/right
+  inset, so label, stub rule, and text can't drift apart into different
+  edges: left is a flat `pl-8` (matching the text column's own former
+  stand-alone inset); right is the site's standard mobile body gutter
+  (`px-2 sm:px-4 md:px-8`, the same token About/Music/Design use on their
+  own body rows) -- reused as-is on the right, not re-derived, even though
+  the left side's flat value means the two sides aren't symmetric. Resets
+  to `lg:px-0` since desktop's own `w-1/4`/`w-3/4` + `lg:pr-8` column
+  structure handles spacing there untouched.
+- `.ledger-label` (`w-full lg:w-1/4 text-left lg:text-right mb-3 lg:mb-0
   lg:border-r-2 border-almost-black lg:pr-8`): the label + its rule at
   lg+. Below lg it's full-width, left-aligned (a right-aligned label alone
-  on its own line reads wrong once stacked), with no rule of its own --
-  the rule relocates to `.ledger-text` instead (see below). Label
-  font-size is set per-instance on each row's own `<h2>`
-  (`text-3xl lg:text-5xl/[1]` -- tune the mobile step by eye), not baked
-  into `.ledger-label`, since size is a heading-level concern.
-- `.ledger-text` (`w-full lg:w-3/4 border-l-2 lg:border-l-0
-  border-almost-black pl-8`): the text column's inset. At lg+, no rule
-  (the label's `border-r-2` provides it). Below lg, this side picks up a
-  `border-l-2` in the same weight/color as the desktop rule -- the rule
-  *relocates* rather than disappearing, so a stacked entry still reads as
-  label, then a rule-flanked text block. Pair with `.prose-col`
+  on its own line reads wrong once stacked), with no border of its own --
+  see the stub rule below for the below-lg rule treatment.
+- **Below-lg rule: a stub, not a relocated border.** A left border on
+  `.ledger-text` (the rule "relocating" from label to text block) was tried
+  first and rejected -- it read as a stray edge line once rows stack. The
+  adopted pattern instead is a short (3rem, fixed-width) rule stub, a
+  `.ledger-label::after` pseudo-element living in `main.css` directly below
+  `.ledger-label`, clearly delimited (`MOBILE RULE STUB` comment markers)
+  so it stays easy to compare against a bare/no-rule alternative if a
+  future page wants to try that instead. `display: none` above `lg` (the
+  desktop `border-r-2` is the rule there).
+- `.ledger-text` (`w-full lg:w-3/4 lg:pl-8`): the text column. Its own
+  below-lg inset now comes from `.ledger-row`'s shared padding above (not a
+  stand-alone `pl-8` on this class), so it can't fall out of sync with the
+  label; `lg:pl-8` is kept here for the desktop gap after the label's
+  `border-r-2` rule, which only this column needs. Pair with `.prose-col`
   (reading-width cap) and `.body-copy` on the actual paragraphs/list items
   -- don't reach for bespoke font sizing here.
 - **Unlabeled reuse (lede, exit links):** a block that needs `.ledger-text`'s
-  column alignment but isn't an actual entry (no label, no rule) must (a)
-  wrap in `flex flex-col lg:flex-row` too, so the empty `w-1/4` spacer
-  collapses out of the way below lg instead of still claiming a quarter of
-  a row that's supposed to go full-width, and (b) add `border-l-0` to
-  cancel the rule `.ledger-text` now applies at that width. See the lede
-  convention below for the full pattern.
+  column alignment but isn't an actual entry (no label, no rule) must wrap
+  in `flex flex-col lg:flex-row` too, so the empty `w-1/4` spacer collapses
+  out of the way below lg instead of still claiming a quarter of a row
+  that's supposed to go full-width, and repeat `.ledger-row`'s own
+  `pl-8 pr-2 sm:pr-4 md:pr-8 lg:px-0` directly on the wrapper so it shares
+  the same edges as labeled entries. See the lede convention below for the
+  full pattern.
 - Minted from Philosophy's Mission/Manifesto/My Why; Resume will reuse it.
 
 ## Lede convention
 
 A document page's epigraph, between the headline and the first
-`.ledger-row`: unlabeled, no rule, set in `.italic-subhead` (see below).
-Reuse `.ledger-text` on an otherwise-empty `w-1/4` spacer row so the lede's
-left edge lands exactly on the ledger's text column, without pulling in
-`.ledger-label`'s visible border/right-alignment. The row wraps in
-`flex flex-col lg:flex-row` and the `.ledger-text` div adds `border-l-0`
-(canceling the rule `.ledger-text` applies below lg for actual ledger
-entries -- the lede/exit-links pattern needs the column alignment but not
-the rule):
+`.ledger-row`: unlabeled, no rule, set in `.italic-subhead` (plus the
+`.italic-subhead-compact` size variant for a multi-sentence lede -- see
+below). Reuse `.ledger-text` on an otherwise-empty `w-1/4` spacer row so
+the lede's left edge lands exactly on the ledger's text column, without
+pulling in `.ledger-label`'s visible border/right-alignment. The row wraps
+in `flex flex-col lg:flex-row` and repeats `.ledger-row`'s own
+`pl-8 pr-2 sm:pr-4 md:pr-8 lg:px-0` directly on the wrapper, so the lede
+shares the same left/right edges as labeled entries below lg (no
+`border-l-0` needed here -- `.ledger-text` no longer carries a below-lg
+border to cancel; see the `.ledger-row` entry above):
 
 ```html
-<div class="flex flex-col lg:flex-row mb-48">
+<div class="flex flex-col lg:flex-row pl-8 pr-2 sm:pr-4 md:pr-8 lg:px-0 mb-16 md:mb-24 lg:mb-20 mt-5">
   <div class="w-1/4"></div>
-  <div class="ledger-text border-l-0">
+  <div class="ledger-text">
     <div class="prose-col">
-      <p class="italic-subhead">Lede copy goes here.</p>
+      <p class="italic-subhead italic-subhead-compact">Lede copy goes here.</p>
     </div>
   </div>
 </div>
 ```
 
-Spacing: the gap between the lede and the first ledger row must read as
-the page's biggest gap -- visibly larger than the `mb-32` between ledger
-rows (Philosophy uses `mb-48`, 192px vs. 128px). Preamble, then entries.
+Spacing: below lg, the lede-to-first-entry gap matches the entry-to-entry
+gap exactly (both step `64px` mobile / `96px` at md, from the same
+`mb-16 md:mb-24` values) -- horizontally and rhythmically the lede reads as
+part of the same sequence, not a separate preamble. At lg it's the
+opposite of the original "biggest gap" intent: the lede's own `lg:mb-20`
+(80px) is *smaller* than `.ledger-row`'s `lg:mb-32` (128px) between
+entries, a value that was hand-tuned directly on the page at some point
+after the lede was first built. If a future page wants the "epigraph gap
+bigger than entry gap" feel this section originally described, that's a
+deliberate value change to make, not a bug to silently correct back.
 
 ## `.italic-subhead`
 
