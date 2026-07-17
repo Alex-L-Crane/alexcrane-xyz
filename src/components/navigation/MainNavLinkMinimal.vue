@@ -1,51 +1,54 @@
 <script setup>
-import ArrowIcon from '@/components/icons/ArrowIcon.vue'
-
 defineProps({
   to: {
-    type: [String, Object],
-    required: true
-  },
-  heading: {
     type: String,
     required: true
   },
-  imageSrc: {
+  label: {
     type: String,
-    default: ''
+    required: true
   },
-  darkTheme: {
+  size: {
+    type: String,
+    default: 'display', // 'display' | 'compact'
+    validator: (v) => ['display', 'compact'].includes(v)
+  },
+  external: {
     type: Boolean,
-    default: false,
+    default: false
   }
 })
 
-const emit = defineEmits(['close', 'hover', 'unhover'])
+const emit = defineEmits(['close'])
 function handleClick() {
   emit('close')
-}
-function handleMouseEnter() {
-  emit('hover')
-}
-function handleMouseLeave() {
-  emit('unhover')
 }
 </script>
 
 <template>
-  <span class="w-full group flex items-center justify-between list-none pb-8 last:pb-0"
-      @mouseenter="handleMouseEnter"
-      @mouseleave="handleMouseLeave">
-    <RouterLink :to="to"
-                @click="handleClick"
-                class="nav-link hover:bg-transparent focus:bg-transparent active:bg-transparent">
-      <div>
-        <div :class="['flex', darkTheme ? 'text-white' : 'text-almost-black']">
-          <p class='text-4xl font-bold pr-4'>{{ heading }}</p>
-          <ArrowIcon customClass="group-hover:translate-x-1"/>
-        </div>
-      </div>
-
-    </RouterLink>
-  </span>
+  <a v-if="external"
+     :href="to"
+     target="_blank"
+     rel="noopener noreferrer"
+     @click="handleClick"
+     :class="[
+       'text-black border-b-2 border-transparent hover:border-almost-black focus-visible:border-almost-black transition-colors',
+       size === 'display' ? 'text-6xl py-2' : 'text-4xl py-3'
+     ]">
+    {{ label }}
+  </a>
+  <RouterLink v-else
+              :to="to"
+              custom
+              v-slot="{ href, navigate, isExactActive }">
+    <a :href="href"
+       @click="navigate(); handleClick()"
+       :class="[
+         'text-black border-b-2 hover:border-almost-black focus-visible:border-almost-black transition-colors',
+         size === 'display' ? 'text-6xl py-2' : 'text-4xl py-3',
+         isExactActive ? 'border-almost-black' : 'border-transparent'
+       ]">
+      {{ label }}
+    </a>
+  </RouterLink>
 </template>

@@ -1,6 +1,6 @@
 <script setup>
   import { useRoute, useRouter } from 'vue-router';
-  import { ref, watch } from 'vue';
+  import { ref, watch, nextTick } from 'vue';
 
   import ArrowIcon from '@/components/icons/ArrowIcon.vue'
   import MainMenuOverlay from '@/components/navigation/MainMenuOverlay.vue'
@@ -10,12 +10,31 @@
   import { useSwipeNavigation } from '@/composables/useSwipeNavigation.js'
 
   const showMenu = ref(false)
+  const menuButton = ref(null)
   const router = useRouter()
   const route = useRoute()
 
+  let savedScrollY = 0
+
+  // Locks background scroll with position:fixed (not just overflow:hidden) so
+  // the scroll position is restored exactly on close, with no scrollbar-width
+  // layout shift while the overlay is open.
   watch(showMenu, (isOpen) => {
-    document.body.classList.toggle('overflow-hidden', isOpen)
-    document.body.classList.toggle('h-screen', isOpen)
+    if (isOpen) {
+      savedScrollY = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${savedScrollY}px`
+      document.body.style.width = '100%'
+    } else {
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      // Restoring position:fixed's un-lock needs a reflow before scrollTo takes
+      // effect -- calling it synchronously in the same tick can clamp to the
+      // pre-reflow document height and land short of the saved position.
+      requestAnimationFrame(() => window.scrollTo(0, savedScrollY))
+      nextTick(() => menuButton.value?.focus())
+    }
   })
 
   const {
@@ -89,9 +108,11 @@
           :href="href"
           @click="navigate"
           :class="[
-            'hidden md:inline mr-4 hover:bg-transparent focus:bg-transparent active:bg-transparent hover:border-b-2 focus-visible:border-b-2',
-            (link.section ? route.meta.section === link.section : isExactActive) ? 'font-bold border-b-2' : '',
-            darkTheme ? 'border-white' : 'border-almost-black'
+            'hidden md:inline mr-4 hover:bg-transparent focus:bg-transparent active:bg-transparent border-b-2 transition-colors',
+            darkTheme ? 'hover:border-white focus-visible:border-white' : 'hover:border-almost-black focus-visible:border-almost-black',
+            (link.section ? route.meta.section === link.section : isExactActive)
+              ? (darkTheme ? 'font-bold border-white' : 'font-bold border-almost-black')
+              : 'border-transparent'
           ]"
         >
           {{ link.label }}
@@ -101,9 +122,16 @@
       <button @click="goTo(prevPage)" class="hidden lg:block ml-8">
         <arrow-icon direction="left" customClass="hover:-translate-x-1" />
       </button>
-      <button @click="showMenu = true"
-              class="group p-2 mx-4 overflow-visible text-[1.2rem] cursor-pointer bg-transparent border-none">
+      <button ref="menuButton"
+              @click="showMenu = !showMenu"
+              :aria-expanded="showMenu"
+              :aria-label="showMenu ? 'Close menu' : 'Open menu'"
+              :class="['group p-2 overflow-visible text-[1.2rem] cursor-pointer bg-transparent border-none',
+                       showMenu
+                         ? 'fixed z-[1001] right-[48px] top-[29px] lg:right-[112px] lg:top-[37px] translate-x-1/2 -translate-y-1/2 text-almost-black'
+                         : 'mx-4']">
         <svg
+          v-if="!showMenu"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -4 75 24"
           class="w-8 h-auto overflow-visible"
@@ -124,6 +152,7 @@
             r="9.4"
             class="origin-center transition-transform motion-safe:group-hover:animate-bounce-once-delay-300" />
         </svg>
+        <span v-else class="text-[1.8rem]">✕</span>
       </button>
       <button @click="goTo(nextPage)" class="hidden lg:block">
         <arrow-icon customClass="hover:translate-x-1" />
