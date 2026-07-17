@@ -317,6 +317,9 @@ predictably -- if either class ever needs reordering, keep them adjacent.
 - **Outbound links** (anything leaving the site) always use
   `target="_blank" rel="noopener noreferrer"` -- verified consistent across
   every red link and the Bandcamp links already.
+- **Full-screen menu overlay: all-links context** -- ink-colored links,
+  nav-style hover-underline, persistent underline marks the current page.
+  Documented exemption from red-means-link, same basis as the main nav.
 
 ## Punctuation voice (site-wide, all rendered copy)
 
