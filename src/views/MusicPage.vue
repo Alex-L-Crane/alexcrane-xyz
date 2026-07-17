@@ -143,12 +143,10 @@ const albums = [
         </div>
         <p class="body-copy mb-16">
           More about my
-          <a href="/philosophy" class="highlight-link">
-            philosophy
-          </a>
-          <br>and
           <a href="/design" class="highlight-link">
-            design background</a>.
+            design background</a> <br>and my
+          <a href="/philosophy" class="highlight-link">
+            philosophy</a>.
         </p>
       </div>
     </div>
