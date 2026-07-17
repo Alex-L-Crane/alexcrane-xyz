@@ -177,25 +177,52 @@
   /* Ledger pattern: label | rule | text row, for document-genre pages (Philosophy's
      Mission/Manifesto/My Why; Resume will reuse it). .ledger-row is the row shell
      and spacing token (lg:mb-32 separates entries, stepped down below lg); .ledger-label
-     is the label column with its own rule (a border, not a separate element);
-     .ledger-text is the text column's own inset, pairing with .prose-col + .body-copy
-     on the actual content for the reading-width cap and standard paragraph treatment.
+     is the label column with its own rule (a border at lg, a short stub rule below
+     lg -- see the MOBILE RULE STUB block below, currently pending final selection
+     against a bare/no-rule alternative); .ledger-text is the text column's own
+     inset, pairing with .prose-col + .body-copy on the actual content for the
+     reading-width cap and standard paragraph treatment.
 
      Breakpoint doctrine: the two-column layout is structure, so it holds at lg+ only.
-     Below lg each row stacks -- label full-width above, text full-width below -- and
-     the rule relocates from the label's right border to the text block's left border
-     (same weight/color), so a stacked entry still reads as label, then a rule-flanked
-     text block. Label font-size is set per-instance on each row's own <h2>
-     (text-3xl lg:text-5xl/[1] -- tune the mobile step by eye), not baked into
-     .ledger-label, since it's a heading-level concern. */
+     Below lg each row stacks -- label full-width above, text full-width below.
+     The rule does NOT relocate to a left border on the text block below lg (tried
+     and rejected -- read as a stray edge line once rows stack); instead
+     .ledger-label grows a short (3rem, fixed-width) rule stub under the label
+     itself, in the label's own trailing margin. Label font-size is set
+     per-instance on each row's own <h2> (text-3xl lg:text-5xl/[1] -- tune the
+     mobile step by eye), not baked into .ledger-label, since it's a heading-level
+     concern.
+
+     Below lg, the row carries a single shared left/right inset so label, stub
+     rule, and text can't drift apart -- left is a flat pl-8 (matching the text
+     column's previous stand-alone inset), right is the site's standard mobile
+     body gutter (px-2 sm:px-4 md:px-8, the same token About/Music/Design use on
+     their own body rows). Reset to lg:px-0 since desktop's own w-1/4/w-3/4 +
+     lg:pr-8 column structure handles spacing there untouched. */
   .ledger-row {
-    @apply flex flex-col lg:flex-row mb-16 md:mb-24 lg:mb-32;
+    @apply flex flex-col lg:flex-row mb-16 md:mb-24 lg:mb-32 pl-8 pr-2 sm:pr-4 md:pr-8 lg:px-0;
   }
   .ledger-label {
-    @apply w-full lg:w-1/4 text-left lg:text-right mb-4 lg:mb-0 lg:border-r-2 border-almost-black lg:pr-8;
+    @apply w-full lg:w-1/4 text-left lg:text-right mb-3 lg:mb-0 lg:border-r-2 border-almost-black lg:pr-8;
   }
+
+  /* --- MOBILE RULE STUB (comment out this whole block to compare against bare) --- */
+  .ledger-label::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    margin-top: 0.125rem;
+    border-top: 2px solid theme('colors.almost-black');
+  }
+  @media (min-width: 1024px) {
+    .ledger-label::after {
+      display: none;
+    }
+  }
+  /* --- END MOBILE RULE STUB --- */
+
   .ledger-text {
-    @apply w-full lg:w-3/4 border-l-2 lg:border-l-0 border-almost-black pl-8;
+    @apply w-full lg:w-3/4 lg:pl-8;
   }
 }
 
