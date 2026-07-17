@@ -4,6 +4,14 @@ Shared classes live in `src/assets/styles/main.css` under `@layer components`;
 shared color tokens live in `tailwind.config.js`. Prefer these over re-deriving
 the same utility combination as a one-off on a page.
 
+## Workflow: commits
+
+Never commit unless explicitly told to commit. Toggling, adjusting, or
+trying a variant for review is never a commit trigger. When asked to
+revert, state exactly which commit(s) will be affected and what the
+resulting state will be, then wait for confirmation before running
+anything.
+
 ## Standing rule: About is the reference implementation
 
 About was the first page built with this site's design system and remains its
