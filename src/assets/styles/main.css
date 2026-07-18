@@ -5,6 +5,12 @@
 @layer base {
   :root {
     --font-fallback: "Arial", "Helvetica", "Nimbus Sans", "Liberation Sans", "sans-serif";
+    /* Light-stock defaults for the dark-stock-overridable tokens (RGB
+       channels, not hex, so Tailwind's /40-style opacity modifiers work --
+       see muted-ink/link-red in tailwind.config.js). Overridden per dark
+       stock via a class like .bg-stock-ink, scoped to that page root. */
+    --muted-ink-rgb: 90 85 77;
+    --link-red-rgb: 154 44 44;
   }
 
   /* NeoGeo */
@@ -76,6 +82,19 @@
 }
 
 @layer components {
+  /* Dark-stock token override: muted-ink and link-red (see tailwind.config.js,
+     both CSS-variable-backed with a light-stock default at :root) get scoped
+     to their dark-stock values wherever they're nested inside this class --
+     i.e. on the dark page's own root, alongside bg-stock-ink. No component
+     (EyebrowNav, .link-list, etc.) needs a dark/light prop; the override
+     rides the cascade. muted-ink-dark (#948D7E, "148 141 126") is set here
+     now, for Design's eyebrow; link-red-dark joins the same rule once
+     Design's link-vocabulary pass lands. This is the standard mechanism for
+     any future dark stock, not a one-off for Design specifically. */
+  .bg-stock-ink {
+    --muted-ink-rgb: 148 141 126;
+  }
+
   /* Section wrapper with a horizontal inset (page hero/photo blocks; the headline
      inherits this too, since it's a child of the same hero panel). Self-contained
      across all three tiers so it doesn't compete with .mobile-gutter over the same
@@ -129,7 +148,7 @@
      on hover -- the default signature for inline text links (wayfinding and name
      lists), outside the main nav (which reserves underlines for the active page).
      Decoration color/opacity at rest is set per-usage (e.g. decoration-muted-ink/40,
-     decoration-[#9A2C2C]/40) since the same structural rule serves multiple ink
+     decoration-link-red/40) since the same structural rule serves multiple ink
      colors; hover strengthens to decoration-2 at full opacity. focus-visible gets
      the same decoration-2 thickness bump here (structural, shared); each usage
      also pairs its own hover:decoration-COLOR with a matching focus-visible:
@@ -138,9 +157,38 @@
     @apply underline decoration-1 underline-offset-2 hover:decoration-2 focus-visible:decoration-2 transition-colors;
   }
 
+  /* Red link-list item: one <a> per <li> in a list of outbound links
+     (Music's "engineered for"/"opened for"/mentors lists). Pairs .link-red
+     with .link-underline; py-2 lg:py-0 gives a comfortable tap target below
+     lg without adding visible gap at desktop, where line-height alone
+     separates entries. List markup convention: the intro sentence is a
+     <p> above the <ul>, one <li> per link -- never multiple <a>s crammed
+     into a single <li> and separated by <br>, which reads as one list item
+     to assistive tech and made a stale href (Manring/Hieroglyphics) easy
+     to miss. */
+  .link-list {
+    @apply alaska text-link-red link-underline decoration-link-red/40 hover:decoration-link-red focus-visible:decoration-link-red inline-block py-2 lg:py-0;
+  }
+
   /* Small italic caption under a photo */
   .photo-caption {
     @apply font-thin text-xs italic inline-block;
+  }
+
+  /* Exhibit pattern: a <figure>/<figcaption class="photo-caption"> pairing for
+     showcasing a piece of work outside the main photo-panel convention (that
+     one's for About/Music's hero-adjacent 2-up + wide-photo blocks; this one's
+     for a single mid-body exhibit). Two treatments, named for their shape:
+     .exhibit-inline is a width-capped, centered figure sitting inline with body
+     copy (Design's Kinetic Beats screenshot); .exhibit-full is a near-bleed,
+     wide figure with the caption at the left datum (Design's iMaschine shot).
+     Minted from Design's system pass; both compile to what was already there
+     as bespoke div/span markup. */
+  .exhibit-inline {
+    @apply mb-8 text-center;
+  }
+  .exhibit-full {
+    @apply max-w-6xl mx-auto mb-8;
   }
 
   /* Italic spoken-voice register: short asides/epigraphs and lede paragraphs

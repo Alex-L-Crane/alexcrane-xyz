@@ -10,7 +10,13 @@ export default {
         'almost-black': '#1c1c1c',
         'punk-yellow': '#FBC028',
         'highlight': '#f2695c',
-        'muted-ink': '#5A554D',
+        // muted-ink and link-red are CSS-variable-backed (RGB channels, not a
+        // hex string, so Tailwind's opacity modifiers like /40 keep working)
+        // so a dark stock can override them for everything nested inside it
+        // -- see :root and .bg-stock-ink in main.css -- without any
+        // component threading a dark/light prop. Defaults live at :root.
+        'muted-ink': 'rgb(var(--muted-ink-rgb) / <alpha-value>)',
+        'link-red': 'rgb(var(--link-red-rgb) / <alpha-value>)',
         // Section background "stocks" -- named page-root colors. Add a new
         // stock here (one line) when a future page needs its own section
         // background, rather than typing a raw hex on the page root.
@@ -18,6 +24,7 @@ export default {
         'stock-yellow': '#F5D37D',
         'stock-chartreuse': '#D8F172',
         'stock-coral': '#FA8072',
+        'stock-ink': '#1c1c1c',
       },
       keyframes: {
         'bounce-once': {

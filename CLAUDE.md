@@ -95,6 +95,13 @@ If muted-ink ever needs to sit against a new section background, re-check
 both ratios before shipping -- darken the token, not the type size, if it
 fails.
 
+**Dark stock**: `#5A554D` on `stock-ink` (`#1c1c1c`) measures 2.3:1 -- fails
+AA outright, the direction this token has never had to move before. Rather
+than a one-off dark value, `muted-ink` (and `link-red`, see below) are
+CSS-variable-backed and get their dark-stock values from `.bg-stock-ink`
+automatically -- see "Dark-stock token overrides" below for the mechanism
+and exact values.
+
 ## `.movement-heading`
 
 A heading tier between a page's hero h1/h2 and its regular body content, for
@@ -128,21 +135,104 @@ way a bespoke CSS mechanism could.
 
 Named `tailwind.config.js` color tokens for page-root background colors --
 `stock-blush` (`#F6D9CE`, About), `stock-yellow` (`#F5D37D`, Music),
-`stock-chartreuse` (`#D8F172`, Philosophy) -- applied as `bg-stock-*` on
-the page root. A future page's background color is a new one-line token
-(`'stock-<name>': '#hex'`) plus `bg-stock-<name>` on its root, not a fresh
-`bg-[#hex]` arbitrary value. This is the "extend, don't fork" mechanism
-for the one legitimate kind of per-page variation the design system needs
-to support: each section's own color.
+`stock-chartreuse` (`#D8F172`, Philosophy), `stock-coral` (`#FA8072`, the
+full-screen menu overlay), `stock-ink` (`#1c1c1c`, Design) -- applied as
+`bg-stock-*` on the page root. A future page's background color is a new
+one-line token (`'stock-<name>': '#hex'`) plus `bg-stock-<name>` on its
+root, not a fresh `bg-[#hex]` arbitrary value. This is the "extend, don't
+fork" mechanism for the one legitimate kind of per-page variation the
+design system needs to support: each section's own color.
+
+**Light stock vs. dark stock**: every stock above `stock-ink` is light
+(dark ink text on a light/mid background); `stock-ink` is the site's first
+dark stock (light text on a near-black background). Dark stock isn't just
+"a darker hex" -- it inverts which tokens need overriding (see "Dark-stock
+token overrides" below) and picks up its own structural convention:
+
+**Body/footer separator**: a dark-stock page root and the global footer
+(also near-black) collide with no visual seam between them unless the page
+root supplies one. Design's root carries `border-b border-white/20` --
+tuned down from full-opacity white, which measured as the highest-contrast
+line on the site and read as harsh against near-black. Any future dark
+stock needs the same border-b treatment on its root (start from `/20`, not
+full white); light stocks don't need it (the footer's own near-black
+already reads as a clear break against a light page).
+
+## Dark-stock token overrides (CSS variables)
+
+`muted-ink` and `link-red` are the two tokens whose *value* needs to flip
+between light and dark stock (contrast requirements point in opposite
+directions), so both are defined as CSS-variable lookups rather than a flat
+hex, with the light-stock value as the `:root` default:
+
+```js
+// tailwind.config.js
+'muted-ink': 'rgb(var(--muted-ink-rgb) / <alpha-value>)',
+'link-red': 'rgb(var(--link-red-rgb) / <alpha-value>)',
+```
+```css
+/* main.css -- :root default (light stock) */
+--muted-ink-rgb: 90 85 77;      /* #5A554D */
+--link-red-rgb: 154 44 44;      /* #9A2C2C */
+
+/* main.css -- dark-stock override, scoped to the page root */
+.bg-stock-ink {
+  --muted-ink-rgb: 148 141 126; /* #948D7E, muted-ink-dark, 5.17:1 on stock-ink */
+}
+```
+The RGB-channel format (not a hex string) matters -- it's what lets
+Tailwind's opacity modifiers (`decoration-muted-ink/40`, etc.) keep working
+on a variable-backed color. Every existing `text-muted-ink`,
+`decoration-link-red/40`, etc. usage -- including inside shared components
+like `EyebrowNav.vue` that have no dark/light prop -- automatically resolves
+to the right value based on which stock it's nested inside, via the
+cascade. No component threads a boolean; a future dark stock just adds its
+own override rule scoped to its own `bg-stock-*` class. `link-red-dark`
+joins `.bg-stock-ink` the same way once Design's link-vocabulary pass picks
+a value.
+
+## Exhibit pattern: `.exhibit-inline` / `.exhibit-full`
+
+A `<figure>`/`<figcaption class="photo-caption">` pairing for showcasing a
+single piece of work in the middle of body content -- distinct from
+About/Music's hero-adjacent photo-panel blocks (2-up + wide photo, living
+inside `.section-panel`). Two treatments, named for their shape, both
+minted from Design's system pass:
+
+- **`.exhibit-inline`** (`mb-8 text-center`): a width-capped, centered
+  figure sitting inline with body copy -- pair the `<img>` with its own
+  `mx-auto max-w-*` (tuned per image, not baked into the class). Design's
+  Kinetic Beats screenshot.
+- **`.exhibit-full`** (`max-w-6xl mx-auto mb-8`): a near-bleed, wide figure,
+  caption at the left datum rather than centered. Design's iMaschine shot.
+
+```html
+<figure class="exhibit-inline">
+  <img :src="..." alt="..." class="mx-auto max-w-sm"/>
+  <figcaption class="photo-caption">...</figcaption>
+</figure>
+```
+
+Reach for one of these two on a future page's mid-body exhibit rather than
+retyping the wrapper div/span combination -- that's exactly the shape this
+pattern replaced (Design had both treatments as bespoke, unnamed divs
+before this pass).
 
 ## Page genres: essay vs. document
 
 Two shapes of page, not one template with optional pieces:
 
-- **Essay pages** (About, Music, and future Design): hero image inside
-  `.section-panel`, `.hero-headline`, illustrated with photos
-  (`.section-panel` + `.photo-caption`), body prose in `.prose-col`/
-  `.body-copy`, an optional `.movement-heading` break.
+- **Essay pages** (About, Music, Design): hero image inside `.section-panel`,
+  `.hero-headline`, illustrated with photos (`.section-panel` +
+  `.photo-caption`, or the mid-body `.exhibit-inline`/`.exhibit-full` pair),
+  body prose in `.prose-col`/`.body-copy`, an optional `.movement-heading`
+  break. **Design's hero image is a deliberate exception** -- its full-bleed-
+  into-black look doesn't take `.section-panel`'s inset; the eyebrow +
+  `.hero-headline` still get a minimal `.mobile-gutter` inset so the text
+  isn't flush against the edge, but the image itself stays uninset at every
+  width. Don't treat this as the new default -- About and Music's hero images
+  keep the normal `.section-panel` inset; Design's bleed is a one-off for
+  what that specific piece of art needs, not a genre-wide change.
 - **Document pages** (Philosophy, and future Resume): text-only, no hero
   image and no photos. Still opens with `EyebrowNav` + `.hero-headline`
   inside `.section-panel` (the headline needs the same page-datum edge
@@ -258,10 +348,11 @@ deliberate value change to make, not a bug to silently correct back.
 
 The italic spoken-voice register (`alaska text-3xl italic`): About's
 "Sound is not a backdrop." and "It takes... So. Much. Time.", Music's "A
-guiding practice...", Philosophy's lede. Previously bare utilities on each
-page (plus a semantic `<em>` where the phrase is emphasis inside a larger
-paragraph, which still applies when that's the actual usage); extracted
-into a class once Philosophy's lede became a third, standalone use.
+guiding practice...", Philosophy's lede, Design's creed ("Design is a
+process of evolution..."). Previously bare utilities on each page (plus a
+semantic `<em>` where the phrase is emphasis inside a larger paragraph,
+which still applies when that's the actual usage); extracted into a class
+once Philosophy's lede became a third, standalone use.
 
 **Size variant -- `.italic-subhead-compact`:** the base class's `text-3xl`
 is tuned for a one-line aside; a multi-sentence instance (Philosophy's
@@ -281,8 +372,8 @@ predictably -- if either class ever needs reordering, keep them adjacent.
   focus-visible:decoration-2 transition-colors`) plus a per-usage decoration
   color at ~40% opacity that strengthens to full opacity on hover AND
   keyboard focus (e.g. `decoration-muted-ink/40 hover:decoration-muted-ink
-  focus-visible:decoration-muted-ink`, or `decoration-[#9A2C2C]/40
-  hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]`). This is the
+  focus-visible:decoration-muted-ink`, or `decoration-link-red/40
+  hover:decoration-link-red focus-visible:decoration-link-red`). This is the
   default signature for inline text links: wayfinding (the eyebrow) and name
   lists alike.
   - Add an **external icon** only for a solitary outbound link (e.g. the
@@ -292,21 +383,43 @@ predictably -- if either class ever needs reordering, keep them adjacent.
     `.link-underline`'s `decoration-2`), and per-usage where it's instance-
     specific (the decoration color). Never ship a hover-only effect in this
     system -- keyboard users need the same affordance.
-- **Mentor-line convention** (name + descriptor, no punctuation separator):
-  only the name sits inside the anchor (`.link-underline` red treatment); the
-  descriptor is a plain `<span class="text-muted-ink">` outside the anchor,
-  divided from the name by a single space in the markup and by color/weight
-  alone -- no hyphen, en dash, or other separator character. E.g.:
+- **`.link-list`** (`alaska text-link-red link-underline decoration-link-red/40
+  hover:decoration-link-red focus-visible:decoration-link-red inline-block
+  py-2 lg:py-0`): the shared class for a red link that's one entry in a list
+  of outbound links (Music's "engineered for"/"opened for"/mentors lists).
+  Pairs with the **list-markup convention**: the intro sentence is a `<p>`
+  *above* the `<ul>`, and every link gets its own `<li>` -- never multiple
+  `<a>`s crammed into a single `<li>` and separated by `<br>`. That anti-
+  pattern reads as one list item to assistive tech, and made a stale href
+  (a Manring/Hieroglyphics swap on Music) easy to miss for a long time,
+  since nothing about the markup treated the entries as discrete. E.g.:
   ```html
-  <a href="..." class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C]">Trey Gunn</a> <span class="text-muted-ink">virtuoso and music coach</span>
+  <p class="pb-2">I’ve had some musical mentors:</p>
+  <ul class="text-xl mb-8">
+    <li><a href="..." class="link-list">Trey Gunn</a></li>
+    <li><a href="..." class="link-list">Aloke Dutta</a></li>
+  </ul>
+  ```
+- **Mentor-line convention** (name + descriptor, no punctuation separator):
+  only the name sits inside the anchor (`.link-list`, or bare `.link-underline`
+  red treatment outside a list context); the descriptor is a plain
+  `<span class="text-muted-ink">` outside the anchor, divided from the name
+  by a single space in the markup and by color/weight alone -- no hyphen, en
+  dash, or other separator character. E.g.:
+  ```html
+  <li><a href="..." class="link-list">Trey Gunn</a> <span class="text-muted-ink">virtuoso and music coach</span></li>
   ```
   The underline stops cleanly at the name since the descriptor is outside the `<a>`.
 - **Highlighter** (`.highlight-link`, background wash) = an internal
   content-to-content link (e.g. "More about my music background"). Already
   had its `focus-visible` deepen twin from an earlier pass.
-- **Red** (`text-[#9A2C2C]`) = link, always. No red text may be
-  non-interactive on a content page -- if it's red, it must be a real `<a>`
-  with the `.link-underline` treatment.
+- **Red** (`text-link-red`, a token -- `tailwind.config.js` → `#9A2C2C`,
+  never a raw hex) = link, always. No red text may be non-interactive on a
+  content page -- if it's red, it must be a real `<a>` with the
+  `.link-underline` (or `.link-list`, inside a list) treatment. Design's
+  own project list currently drifts from this (`hover:opacity-80` only, no
+  underline) -- a pre-existing gap, not a deliberate exception, pending its
+  own compliance fix.
 - **Main nav is the one exception** to `.link-underline`, not to focus
   parity: no resting underline, and it uses its own mechanism
   (`border-b-2`) rather than `.link-underline`. The active page/section gets
