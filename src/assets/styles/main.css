@@ -87,12 +87,30 @@
      to their dark-stock values wherever they're nested inside this class --
      i.e. on the dark page's own root, alongside bg-stock-ink. No component
      (EyebrowNav, .link-list, etc.) needs a dark/light prop; the override
-     rides the cascade. muted-ink-dark (#948D7E, "148 141 126") is set here
-     now, for Design's eyebrow; link-red-dark joins the same rule once
-     Design's link-vocabulary pass lands. This is the standard mechanism for
-     any future dark stock, not a one-off for Design specifically. */
+     rides the cascade. This is the standard mechanism for any future dark
+     stock, not a one-off for Design specifically.
+     muted-ink-dark: #948D7E ("148 141 126"), 5.17:1 on stock-ink.
+     link-red-dark: #E0705F ("224 112 95"), 5.40:1 on stock-ink -- lifted
+     toward the coral neighborhood (search range #E0705F-#FA8072) until it
+     cleared AA; picked the darker end since #FA8072 (6.8:1) reads more
+     salmon/pink than red at that lightness. */
   .bg-stock-ink {
     --muted-ink-rgb: 148 141 126;
+    --link-red-rgb: 224 112 95;
+  }
+
+  /* .highlight-link's translucent wash was tuned against light stock
+     (bg-highlight/40, hover/focus/60) and reads muddy on near-black -- a
+     light color at 40% over dark just looks dim rather than like a
+     highlighter. Stepping opacity up across the board (rest 40->60,
+     hover/focus 60->80, same +20-point relationship as light) so it reads as
+     a chalk-on-dark wash instead. Same highlight hue, not a new dark token --
+     this is an opacity-only fix, unlike muted-ink/link-red above. Scoped as a
+     descendant rule (not a CSS variable) since Tailwind's opacity modifiers
+     are baked into the utility class at build time, not swappable via a
+     custom property the way a color hue is. */
+  .bg-stock-ink .highlight-link {
+    @apply bg-highlight/60 hover:bg-highlight/80 focus-visible:bg-highlight/80;
   }
 
   /* Section wrapper with a horizontal inset (page hero/photo blocks; the headline
@@ -168,6 +186,14 @@
      to miss. */
   .link-list {
     @apply alaska text-link-red link-underline decoration-link-red/40 hover:decoration-link-red focus-visible:decoration-link-red inline-block py-2 lg:py-0;
+  }
+
+  /* .link-list minus .link-underline: for a list entry that's part of the
+     same red, same-rhythm sequence but isn't a link (no href to point to --
+     Design's "Dunable Guitars" mention). Same color/size/tap-target,
+     deliberately no underline, since it isn't clickable. */
+  .list-entry {
+    @apply alaska text-link-red inline-block py-2 lg:py-0;
   }
 
   /* Small italic caption under a photo */

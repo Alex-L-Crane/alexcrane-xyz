@@ -422,14 +422,32 @@ needs reordering, keep them adjacent.
   The underline stops cleanly at the name since the descriptor is outside the `<a>`.
 - **Highlighter** (`.highlight-link`, background wash) = an internal
   content-to-content link (e.g. "More about my music background"). Already
-  had its `focus-visible` deepen twin from an earlier pass.
-- **Red** (`text-link-red`, a token -- `tailwind.config.js` → `#9A2C2C`,
-  never a raw hex) = link, always. No red text may be non-interactive on a
-  content page -- if it's red, it must be a real `<a>` with the
-  `.link-underline` (or `.link-list`, inside a list) treatment. Design's
-  own project list currently drifts from this (`hover:opacity-80` only, no
-  underline) -- a pre-existing gap, not a deliberate exception, pending its
-  own compliance fix.
+  had its `focus-visible` deepen twin from an earlier pass. **Dark stock**:
+  the light-stock wash (`bg-highlight/40`, hover/focus `/60`) reads muddy on
+  near-black -- a light color at 40% over dark just looks dim. Overridden
+  for `.bg-stock-ink` via a descendant selector (`.bg-stock-ink
+  .highlight-link`, not the CSS-variable mechanism -- Tailwind's opacity
+  modifiers are baked into the utility class at build time, not swappable
+  via a custom property the way a color hue is) to `/60` rest, `/80`
+  hover/focus -- same hue, same +20-point step as light, just shifted up so
+  it reads as a chalk-on-dark wash instead of a marker-on-paper one.
+- **Red** (`text-link-red`, a token -- `tailwind.config.js` → `#9A2C2C`
+  light-stock / `#E0705F` dark-stock via the CSS-variable mechanism, see
+  "Dark-stock token overrides" -- never a raw hex) = link, always. No red
+  text may be non-interactive on a content page -- if it's red, it must be
+  a real `<a>` with the `.link-underline` (or `.link-list`, inside a list)
+  treatment. Design's own project list was the one drift from this
+  (`hover:opacity-80` only, no underline); brought into compliance in the
+  dark-stock link-vocabulary pass -- every red link on the page is now a
+  real `.link-list` anchor.
+- **`.list-entry`** (`alaska text-link-red inline-block py-2 lg:py-0`): a
+  `.link-list` sibling for a list entry that reads as part of the same red,
+  same-rhythm sequence but isn't itself a link (no href to point to --
+  Design's "Dunable Guitars" mention in the musicians list). Same
+  color/size/tap-target as `.link-list`, minus `.link-underline` -- no
+  underline on something that isn't clickable. Reach for this rather than
+  leaving a non-link entry unstyled (which reads as a missed link, not a
+  deliberate mention) or fabricating a URL just to make it a real link.
 - **Main nav is the one exception** to `.link-underline`, not to focus
   parity: no resting underline, and it uses its own mechanism
   (`border-b-2`) rather than `.link-underline`. The active page/section gets
