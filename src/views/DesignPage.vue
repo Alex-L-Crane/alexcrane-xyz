@@ -17,7 +17,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
           <!--<h2 class="neogeo text-5xl/[1] text-white md:max-w-[15ch] mt-auto">Evolving  <span class="hidden lg:inline"><br></span>processes.</h2>-->
         </div>
       </div>
-      <img :src="phrygianBanner" alt="phrygian" width="full" class="w-full"/>
+      <img :src="phrygianBanner" alt="phrygian" width="full" class="aspect-[3/2] md:aspect-[21/9] md:max-h-[40vh] lg:aspect-auto lg:max-h-none w-full object-cover object-center"/>
       <div class="mobile-gutter">
         <EyebrowNav parent-label="About" parent-href="/about" current-label="Design" />
         <h1 class="hero-headline">Evolving Processes</h1>
@@ -47,7 +47,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
           </p>
 
           <figure class="exhibit-inline mb-0">
-            <img :src="kineticBeatsUI" alt="Garage music" width="full" class="mx-auto max-w-sm"/>
+            <img :src="kineticBeatsUI" alt="Garage music" width="full" class="mx-auto w-full max-w-sm"/>
             <figcaption class="photo-caption mb-2 inline-block">
               2017: Kinetic Beats, an iPhone app for air drumming.
             </figcaption>
