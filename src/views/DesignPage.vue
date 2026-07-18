@@ -27,7 +27,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
       <div class="hidden lg:inline w-1/4 lg:pr-8">
       </div>
       <div class="w-full lg:w-3/4">
-        <div class="md:max-w-[36rem] md:mb-8">
+        <div class="md:max-w-[36rem]">
           <p class="body-copy">
             Projects are born, they grow, and then they die.
             Sometimes they don’t die right away, but they usually die.
@@ -46,20 +46,30 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
             Freelance work is where I developed my chops. A few in-house jobs at tech startups provided more stability.<br><br>
           </p>
 
-          <figure class="exhibit-inline">
+          <figure class="exhibit-inline mb-0">
             <img :src="kineticBeatsUI" alt="Garage music" width="full" class="mx-auto max-w-sm"/>
             <figcaption class="photo-caption mb-2 inline-block">
               2017: Kinetic Beats, an iPhone app for air drumming.
             </figcaption>
           </figure>
+        </div>
+      </div>
+    </div>
 
-          <p class="body-copy mt-16 md:mt-24 lg:mt-32">
-            <em class="italic-subhead">
-              Design is a process of evolution.<br>
-              Design is sensory and experiential.<br>
-              Design is an engineering process.</em>
-          </p>
+    <div class="px-2 sm:px-4 md:px-0 lg:px-0 body-column lg:pl-48 mt-16 md:mt-24 lg:mt-40">
+      <p class="body-copy">
+        <em class="italic-subhead">
+          Design is a process of evolution.<br>
+          Design is sensory and experiential.<br>
+          Design is an engineering process.</em>
+      </p>
+    </div>
 
+    <div class="flex px-2 sm:px-4 md:px-8">
+      <div class="hidden lg:inline w-1/4 lg:pr-8">
+      </div>
+      <div class="w-full lg:w-3/4">
+        <div class="md:max-w-[36rem] md:mb-8">
           <p class="body-copy">
             These days I still see design everywhere, but I focus more on the engineering side.
             Most things that humans interact with were intentionally designed.
