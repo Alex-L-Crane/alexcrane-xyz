@@ -200,12 +200,17 @@
     @apply alaska text-3xl italic;
   }
 
-  /* Spoken-voice size variant for multi-sentence instances (e.g. Philosophy's
-     lede): the default text-3xl is tuned for a one-line aside and starts
-     competing with the headline once a passage runs to several lines. Pair
-     with .italic-subhead; defined after it here so the font-size/line-height
+  /* Spoken-voice size variant for flowing-prose instances (e.g. Philosophy's
+     lede, several sentences of running text): the default text-3xl is tuned
+     for a one-line aside or a short declarative stack and starts competing
+     with the headline once prose runs to several lines. Pair with
+     .italic-subhead; defined after it here so the font-size/line-height
      override wins the cascade tie predictably (same layer, same specificity).
-     One-line instances keep the bare .italic-subhead default. */
+     Not about line count alone -- a creed/manifesto stack (Design's "Design
+     is a process of evolution..." -- one short declarative per line) stays
+     bare .italic-subhead (3xl) even at three lines, since each line reads as
+     its own beat rather than a paragraph. Reach for -compact only for actual
+     prose. */
   .italic-subhead-compact {
     @apply text-2xl;
   }

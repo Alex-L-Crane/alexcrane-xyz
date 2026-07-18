@@ -53,7 +53,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
             </figcaption>
           </figure>
 
-          <p class="body-copy">
+          <p class="body-copy mt-16 md:mt-24 lg:mt-32">
             <em class="italic-subhead">
               Design is a process of evolution.<br>
               Design is sensory and experiential.<br>

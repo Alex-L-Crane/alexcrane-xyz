@@ -355,15 +355,25 @@ which still applies when that's the actual usage); extracted into a class
 once Philosophy's lede became a third, standalone use.
 
 **Size variant -- `.italic-subhead-compact`:** the base class's `text-3xl`
-is tuned for a one-line aside; a multi-sentence instance (Philosophy's
-lede runs 4-5 lines) at that size competes with the headline above it.
-Pair `.italic-subhead-compact` alongside the base class (`class=
-"italic-subhead italic-subhead-compact"`) to step down to `text-2xl` --
-don't fork a new class or hand-type the override. The rule: one-line
-instances stay bare `.italic-subhead` (3xl); multi-sentence instances add
-the `-compact` modifier (2xl). `.italic-subhead-compact` is defined
-directly after the base class in `main.css` so the cascade tie resolves
-predictably -- if either class ever needs reordering, keep them adjacent.
+is tuned for a one-line aside; a multi-*sentence*, flowing-prose instance
+(Philosophy's lede runs 4-5 lines of running text) at that size competes
+with the headline above it. Pair `.italic-subhead-compact` alongside the
+base class (`class="italic-subhead italic-subhead-compact"`) to step down
+to `text-2xl` -- don't fork a new class or hand-type the override.
+
+The real distinction isn't line count, it's *shape*: flowing prose
+paragraphs set in the italic register take `-compact`; a creed/manifesto
+stack (one short declarative statement per line -- Design's "Design is a
+process of evolution. / Design is sensory and experiential. / Design is an
+engineering process.") stays bare `.italic-subhead` (3xl) regardless of how
+many lines it runs to. A stack of short lines doesn't compete with the
+headline the way a paragraph-length lede does at the same size -- each line
+reads as its own beat, not a wall of text. Don't apply `-compact` by line
+count alone; check whether it's prose or a stack first.
+
+`.italic-subhead-compact` is defined directly after the base class in
+`main.css` so the cascade tie resolves predictably -- if either class ever
+needs reordering, keep them adjacent.
 
 ## Link grammar (site-wide)
 
