@@ -8,7 +8,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
 <template>
   <main class="atacamamedium bg-stock-ink text-white pt-14 lg:pt-20 border-b border-white/20">
 
-    <div class="md:mx-8 relative">
+    <div class="section-panel">
       <!--<img :src="garagePhoto" alt="Garage music" width="auto" class="w-full h-auto"/> -->
       <div class="absolute w-full h-full top-0 left-0 flex">
         <div class="hidden lg:inline w-1/4 lg:pr-8">
@@ -18,10 +18,8 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
         </div>
       </div>
       <img :src="phrygianBanner" alt="phrygian" width="full" class="aspect-[3/2] md:aspect-[21/9] md:max-h-[40vh] lg:aspect-auto lg:max-h-none w-full object-cover object-center"/>
-      <div class="mobile-gutter">
-        <EyebrowNav parent-label="About" parent-href="/about" current-label="Design" />
-        <h1 class="hero-headline">Evolving Processes</h1>
-      </div>
+      <EyebrowNav parent-label="About" parent-href="/about" current-label="Design" />
+      <h1 class="hero-headline">Evolving Processes</h1>
     </div>
     <div class="flex px-2 sm:px-4 md:px-8 ">
       <div class="hidden lg:inline w-1/4 lg:pr-8">
@@ -58,7 +56,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
 
     <div class="px-2 sm:px-4 md:px-0 lg:px-0 body-column lg:pl-48 mt-16 md:mt-24 lg:mt-40">
       <p class="body-copy">
-        <em class="italic-subhead">
+        <em class="italic-subhead text-2xl md:text-3xl">
           Design is a process of evolution.<br>
           Design is sensory and experiential.<br>
           Design is an engineering process.</em>
@@ -109,7 +107,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
       </div>
     </div>
 
-    <div class="md:mx-8 relative">
+    <div class="section-panel">
       <div class="w-full">
         <figure class="exhibit-full">
           <img :src="imaschine" alt="imaschine" width="auto" class="w-full h-auto"/>
