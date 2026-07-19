@@ -1,4 +1,20 @@
 <template>
+  <MainMenuOverlay
+    :visible="showColophon"
+    @close="showColophon = false"
+    background="bg-stock-colophon"
+    text-class="atacamamedium text-black"
+    aria-label="Colophon"
+    show-close-button
+  >
+    <div class="prose-col text-left">
+      <h2 class="alaska text-3xl mb-8">Colophon</h2>
+      <p class="body-copy">Designed, written, and built in Eugene, Oregon.</p>
+      <p class="body-copy">JS, HTML, and CSS via Vue and Tailwind. Mocked up in Figma. Coded in WebStorm. In the final stretch, Claude (Anthropic) joined as a coding assistant: refactoring the codebase into a shared design system, building out responsive layouts, and implementing revisions under direction. Every design decision and every word is my own.</p>
+      <p class="body-copy">Set in the following Newglyph fonts: NeoGeo, Swissposters, Alaska, and Atacama. Hosted on GitHub Pages.</p>
+      <p class="body-copy">Each section on its own stock: blush #F6D9CE, yellow #F5D37D, chartreuse #D8F172, ink #1C1C1C, paper #FFFFFF.</p>
+    </div>
+  </MainMenuOverlay>
   <div class="bg-almost-black lg:h-[600px] px-8 pb-36 lg:flex lg:flex-col lg:justify-end">
   <div class="body-column flex flex-col lg:flex-row items-start lg:items-end lg:justify-between">
     <div class="mb-8 lg:mb-0 mt-16 flex items-center lg:w-[200px]">
@@ -25,6 +41,12 @@
         <li><a href="/philosophy" class="text-white font-thin inline-block mb-4 hover:opacity-80">Philosophy</a></li>
         <li><a href="/AlexCrane-Resume.pdf" class="text-white font-thin inline-block hover:opacity-80" target="_blank" rel="noopener noreferrer">Resume</a></li>
       </ul>
+      <button
+        ref="colophonTrigger"
+        type="button"
+        @click="showColophon = true"
+        class="text-white font-thin inline-block mt-8 hover:opacity-80"
+      >Colophon</button>
     </div>
     <div class="w-full lg:w-auto mt-16 self-start lg:self-end">
       <h2 class="text-3xl">Email Signup</h2>
@@ -61,4 +83,29 @@
   </div>
 </template>
 <script setup>
+import { ref, watch, nextTick } from 'vue'
+import MainMenuOverlay from '@/components/navigation/MainMenuOverlay.vue'
+
+const showColophon = ref(false)
+const colophonTrigger = ref(null)
+
+let savedScrollY = 0
+
+// Same scroll-lock + focus-return pattern as MainMenuBar.vue's own
+// showMenu watcher -- this overlay's trigger lives here, not in the shared
+// component, so this is the second caller responsible for it.
+watch(showColophon, (isOpen) => {
+  if (isOpen) {
+    savedScrollY = window.scrollY
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${savedScrollY}px`
+    document.body.style.width = '100%'
+  } else {
+    document.body.style.position = ''
+    document.body.style.top = ''
+    document.body.style.width = ''
+    requestAnimationFrame(() => window.scrollTo(0, savedScrollY))
+    nextTick(() => colophonTrigger.value?.focus())
+  }
+})
 </script>

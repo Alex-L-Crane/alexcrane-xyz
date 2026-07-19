@@ -137,12 +137,20 @@ Named `tailwind.config.js` color tokens for page-root background colors --
 `stock-blush` (`#F6D9CE`, About), `stock-yellow` (`#F5D37D`, Music),
 `stock-chartreuse` (`#D8F172`, Philosophy), `stock-coral` (`#FA8072`, the
 full-screen menu overlay), `stock-ink` (`#1c1c1c`, Design), `stock-paper`
-(`#FFFFFF`, Drumming and Technology) -- applied as `bg-stock-*` on the page
-root. A future page's background color is a new
-one-line token (`'stock-<name>': '#hex'`) plus `bg-stock-<name>` on its
-root, not a fresh `bg-[#hex]` arbitrary value. This is the "extend, don't
-fork" mechanism for the one legitimate kind of per-page variation the
-design system needs to support: each section's own color.
+(`#FFFFFF`, Drumming and Technology), `stock-colophon` (`#D3D7D2`, the
+colophon overlay) -- applied as `bg-stock-*` on the page root. A future
+page's background color is a new one-line token (`'stock-<name>': '#hex'`)
+plus `bg-stock-<name>` on its root, not a fresh `bg-[#hex]` arbitrary value.
+This is the "extend, don't fork" mechanism for the one legitimate kind of
+per-page variation the design system needs to support: each section's own
+color.
+
+`stock-colophon` is deliberately outside the section-stock set above it --
+it doesn't belong to a page the way blush/yellow/chartreuse/ink/paper each
+mark one. It's a neutral cool gray for a piece of overlay chrome (credits,
+colophon-style content about the site itself), chosen to read as
+documentation/meta rather than as another destination in the site's own
+color sequence.
 
 About's blush was re-auditioned against cool candidates (July 2026) and
 deliberately retained -- the front door reads friendly by design.
@@ -194,6 +202,45 @@ cascade. No component threads a boolean; a future dark stock just adds its
 own override rule scoped to its own `bg-stock-*` class. `link-red-dark`
 joins `.bg-stock-ink` the same way once Design's link-vocabulary pass picks
 a value.
+
+## Overlay shell: `MainMenuOverlay.vue`
+
+A single reusable full-screen overlay shell, not a component per overlay.
+Handles everything that's genuinely shared across any full-screen overlay
+on the site: fade transition (motion-safe gated, disabled entirely under
+`prefers-reduced-motion: reduce`), ESC to close, tab-cycling focus trap,
+click-outside-to-close (`@click.self`), `z-[1000]`, and `role="dialog"
+aria-modal="true"`. Content and presentation are props/slot, not forked
+markup:
+
+- `background` (a `bg-stock-*` class), `text-class` (base typography/ink
+  for the panel), `aria-label` (the dialog's accessible name), `content-
+  align` (`'center'` | `'top'`), `show-close-button` (renders an internal
+  44×44 close control when the consumer has no persistent external trigger
+  to morph into one -- see below).
+- Content is the default `<slot>`; the main menu's own `<MainMenuLinks />`
+  is the slot's fallback, so the existing call site (`<MainMenuOverlay
+  :visible="showMenu" @close="showMenu = false" />` in `MainMenuBar.vue`)
+  needed zero changes when the shell went generic.
+
+**Focus-return-to-trigger is NOT the shell's job.** It never was, even
+before the colophon overlay existed -- `MainMenuOverlay.vue` only focuses
+the first focusable element inside itself on open. Returning focus to
+whatever *triggered* the overlay is the caller's responsibility, done via
+the same small pattern in both consumers: a local `ref` on the trigger
+element, a `watch` on the visibility flag that also owns scroll-lock
+(`position: fixed` with the scroll offset preserved and restored), and
+`nextTick(() => trigger.value?.focus())` in the close branch. `MainMenuBar.vue`
+does this for the dots/X button; `GlobalFooter.vue` does the identical
+thing for the "Colophon" link. A third consumer follows the same pattern,
+not a new one.
+
+**Close affordance differs by consumer, not by shell behavior.** The main
+menu's close control is external to the overlay (the dots button morphs
+into an X, positioned above the overlay's own `z-[1000]`) because that
+trigger is always on-screen already. A consumer with no such persistent
+trigger (the colophon, launched from a link buried in the footer) opts
+into `show-close-button` for a visible in-overlay control instead.
 
 ## Exhibit pattern: `.exhibit-inline` / `.exhibit-full`
 

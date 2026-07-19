@@ -2,8 +2,17 @@
 import { ref, watch, nextTick } from 'vue'
 import MainMenuLinks from '@/components/navigation/MainMenuLinks.vue'
 
-const { visible } = defineProps({
-  visible: Boolean
+const props = defineProps({
+  visible: Boolean,
+  // Shell is generic across consumers (the main menu, the colophon, any
+  // future overlay): background/typography/alignment are the page-specific
+  // bits, everything else (fade, ESC, tab-trap, click-outside, z-index) is
+  // shared unconditionally.
+  background: { type: String, default: 'bg-stock-coral' },
+  textClass: { type: String, default: 'neogeo text-black' },
+  ariaLabel: { type: String, default: 'Menu' },
+  contentAlign: { type: String, default: 'center' }, // 'center' | 'top'
+  showCloseButton: { type: Boolean, default: false },
 })
 
 const emit = defineEmits(['close'])
@@ -16,7 +25,7 @@ const overlayRef = ref(null)
 
 function focusableEls() {
   if (!overlayRef.value) return []
-  return Array.from(overlayRef.value.querySelectorAll('a[href]'))
+  return Array.from(overlayRef.value.querySelectorAll('a[href], button:not([disabled])'))
 }
 
 function handleKeydown(e) {
@@ -40,7 +49,7 @@ function handleKeydown(e) {
 }
 
 watch(
-  () => visible,
+  () => props.visible,
   (isVisible) => {
     if (isVisible) {
       document.addEventListener('keydown', handleKeydown)
@@ -56,13 +65,28 @@ watch(
   <Transition name="menu-fade">
     <div v-if="visible"
          ref="overlayRef"
-         class="neogeo text-black flex justify-center fixed inset-0 w-screen overflow-hidden touch-none h-screen bg-stock-coral z-[1000] p-8"
+         role="dialog"
+         aria-modal="true"
+         :aria-label="ariaLabel"
+         :class="[textClass, background, 'flex justify-center fixed inset-0 w-screen overflow-y-auto touch-none h-screen z-[1000] p-8']"
          @click.self="close">
-      <!-- Close is the dots button in MainMenuBar.vue, morphed to an X -- no separate close control here. -->
+      <!-- Close: the main menu's close affordance is the dots button in
+           MainMenuBar.vue (external, higher z-index, morphed to an X) -- no
+           internal control needed there. Other consumers (no persistent
+           external trigger to morph) opt in via show-close-button. -->
+      <button
+        v-if="showCloseButton"
+        type="button"
+        @click="close"
+        aria-label="Close"
+        class="absolute z-10 top-4 right-4 lg:top-8 lg:right-8 text-3xl leading-none min-w-11 min-h-11 flex items-center justify-center -m-2 hover:opacity-70 focus-visible:opacity-70 transition-opacity"
+      >✕</button>
 
       <div class="h-full w-full flex flex-col items-center relative">
-        <div class="flex flex-col items-center my-auto">
-          <MainMenuLinks @close="close" />
+        <div :class="['flex flex-col items-center', contentAlign === 'top' ? 'mt-16 lg:mt-24' : 'my-auto']">
+          <slot>
+            <MainMenuLinks @close="close" />
+          </slot>
         </div>
 
         <!-- Bottom slot: reserved for a future small centered block (socials, post-launch).

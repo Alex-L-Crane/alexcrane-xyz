@@ -26,6 +26,7 @@ export default {
         'stock-coral': '#FA8072',
         'stock-ink': '#1c1c1c',
         'stock-paper': '#FFFFFF',
+        'stock-colophon': '#D3D7D2',
       },
       keyframes: {
         'bounce-once': {
