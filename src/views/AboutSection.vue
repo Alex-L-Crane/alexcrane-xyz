@@ -1,15 +1,19 @@
 <script setup>
-import backgroundAbstract3 from '@/assets/images/background-abstract-3.png'
-import cuneiformWestbeach from '@/assets/images/CuneiformWestbeachThnxgiving.png'
-import fieldAmp from '@/assets/images/alex-field-amp-cropped-1.png'
-import garagePhoto from '@/assets/images/garage-photo-cropped.png'
+import backgroundAbstract3 from '@/assets/images/background-abstract-3.png?w=1024&format=webp&quality=82'
+import backgroundAbstract3Srcset from '@/assets/images/background-abstract-3.png?w=480;800;1024&format=webp&quality=82&as=srcset'
+import cuneiformWestbeach from '@/assets/images/CuneiformWestbeachThnxgiving.png?w=800&format=webp&quality=82'
+import cuneiformWestbeachSrcset from '@/assets/images/CuneiformWestbeachThnxgiving.png?w=400;800&format=webp&quality=82&as=srcset'
+import fieldAmp from '@/assets/images/alex-field-amp-cropped-1.png?w=800&format=webp&quality=82'
+import fieldAmpSrcset from '@/assets/images/alex-field-amp-cropped-1.png?w=400;800&format=webp&quality=82&as=srcset'
+import garagePhoto from '@/assets/images/garage-photo-cropped.png?w=1400&format=webp&quality=82'
+import garagePhotoSrcset from '@/assets/images/garage-photo-cropped.png?w=480;800;1400&format=webp&quality=82&as=srcset'
 </script>
 
 <template>
   <main class="atacamamedium bg-stock-blush pt-14 lg:pt-20 text-black">
 
     <div class="section-panel">
-      <img :src="backgroundAbstract3" alt="" width="1024" height="248" class="aspect-[3/2] md:aspect-[21/9] md:max-h-[40vh] lg:aspect-auto lg:max-h-none w-full object-cover object-[75%_center]"/>
+      <img :src="backgroundAbstract3" :srcset="backgroundAbstract3Srcset" sizes="(min-width: 1024px) 1400px, 100vw" alt="" width="1024" height="248" class="aspect-[3/2] md:aspect-[21/9] md:max-h-[40vh] lg:aspect-[1024/248] lg:max-h-none w-full object-cover object-[75%_center]"/>
       <h1 class="hero-headline">All tech and no music<br>makes Alex a dull boy</h1>
     </div>
     <div class="px-2 sm:px-4 md:px-0 lg:px-0 body-column mt-6 lg:pl-48">
@@ -97,19 +101,19 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
     <div class="section-panel">
       <div class="w-full flex flex-col md:flex-row pb-0 md:pb-2">
         <div class="mb-4 md:mb-0 md:w-[50%] md:pr-2">
-          <img :src="fieldAmp" alt="Sitting in a field adjusting an amplifier" width="1024" height="761" loading="lazy" class="w-full"/>
+          <img :src="fieldAmp" :srcset="fieldAmpSrcset" sizes="(min-width: 768px) 50vw, 100vw" alt="Sitting in a field adjusting an amplifier" width="1024" height="761" loading="lazy" class="w-full"/>
           <span class="photo-caption">
             2020: Dabbling with audio equipment in a field near Eugene, OR
           </span>
         </div>
         <div class="mb-4 md:mb-0 md:w-[50%] md:pl-2">
-          <img :src="cuneiformWestbeach" alt="Listening back to a drum recording at Westbeach Studios, Hollywood, CA" width="1024" height="761" loading="lazy" class="w-full"/>
+          <img :src="cuneiformWestbeach" :srcset="cuneiformWestbeachSrcset" sizes="(min-width: 768px) 50vw, 100vw" alt="Listening back to a drum recording at Westbeach Studios, Hollywood, CA" width="1024" height="761" loading="lazy" class="w-full"/>
           <span class="photo-caption">
            2007: Listening back to a drum recording at Westbeach Studios, Hollywood, CA
           </span>
         </div>
       </div>
-      <img :src="garagePhoto" alt="Hanging out with recording equipment in a home garage studio, Eugene, OR" width="3000" height="1346" loading="lazy" class="w-full h-auto border border-gray-400"/>
+      <img :src="garagePhoto" :srcset="garagePhotoSrcset" sizes="(min-width: 1024px) 1400px, 100vw" alt="Hanging out with recording equipment in a home garage studio, Eugene, OR" width="3000" height="1346" loading="lazy" class="w-full h-auto border border-gray-400"/>
       <span class="photo-caption mb-2">
         2024: Hanging out with some equipment in my garage, Eugene, OR
       </span>
