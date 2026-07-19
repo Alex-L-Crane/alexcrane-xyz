@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import MainLanding from '@/views/MainLanding.vue'
 import TechnologySection from '@/views/TechnologySection.vue'
 
 import DrummingFeed from '@/views/DrummingFeed.vue';
@@ -15,7 +14,7 @@ const routes = [
   {
     path: '/',
     name: 'Landing',
-    component: MainLanding,
+    component: DrummingFeed,
     meta: { title: 'Ritual :: Rhythm — Drumming & Technology' }
   },
   {
@@ -44,9 +43,7 @@ const routes = [
   },
   {
     path: '/feed',
-    name: 'feed',
-    component: DrummingFeed,
-    meta: { title: 'Feed — Ritual :: Rhythm' }
+    redirect: '/'
   },
   {
     path: '/music',
