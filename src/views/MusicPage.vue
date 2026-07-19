@@ -1,23 +1,33 @@
 <script setup>
-import bearBaiting from '@/assets/images/music/bear-baiting-roosters.png'
-import manifestoAbstract from '@/assets/images/manifesto-abstract.png'
-import sreCover from '@/assets/images/music/SRE-cover.jpg'
-import wavesCover from '@/assets/images/music/After-the-Waves-Devour-us-All_cover.jpg'
-import whiteLightCover from '@/assets/images/music/White light.png'
-import holyDoseCover from '@/assets/images/music/Holy-Dose-Album-Cover.jpg'
-import cuneiformCover from '@/assets/images/music/Cuneiform-Tabula-Rasa-beach-cover.jpg'
-import directActionCover from '@/assets/images/music/Direct-Action-Cassette-photo-1.jpg'
-import cuneiformWestbeachDrums from '@/assets/images/music/Cuneiform-Westbeach-drums.jpg'
-import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.png'
+import bearBaiting from '@/assets/images/music/bear-baiting-roosters.png?w=1400&format=webp&quality=82'
+import bearBaitingSrcset from '@/assets/images/music/bear-baiting-roosters.png?w=480;800;1400&format=webp&quality=82&as=srcset'
+import manifestoAbstract from '@/assets/images/manifesto-abstract.png?w=1024&format=webp&quality=82'
+import manifestoAbstractSrcset from '@/assets/images/manifesto-abstract.png?w=480;800;1024&format=webp&quality=82&as=srcset'
+import sreCover from '@/assets/images/music/SRE-cover.jpg?w=800&format=webp&quality=82'
+import sreCoverSrcset from '@/assets/images/music/SRE-cover.jpg?w=400;800&format=webp&quality=82&as=srcset'
+import wavesCover from '@/assets/images/music/After-the-Waves-Devour-us-All_cover.jpg?w=800&format=webp&quality=82'
+import wavesCoverSrcset from '@/assets/images/music/After-the-Waves-Devour-us-All_cover.jpg?w=400;800&format=webp&quality=82&as=srcset'
+import whiteLightCover from '@/assets/images/music/White light.png?w=800&format=webp&quality=82'
+import whiteLightCoverSrcset from '@/assets/images/music/White light.png?w=400;800&format=webp&quality=82&as=srcset'
+import holyDoseCover from '@/assets/images/music/Holy-Dose-Album-Cover.jpg?w=800&format=webp&quality=82'
+import holyDoseCoverSrcset from '@/assets/images/music/Holy-Dose-Album-Cover.jpg?w=400;800&format=webp&quality=82&as=srcset'
+import cuneiformCover from '@/assets/images/music/Cuneiform-Tabula-Rasa-beach-cover.jpg?w=800&format=webp&quality=82'
+import cuneiformCoverSrcset from '@/assets/images/music/Cuneiform-Tabula-Rasa-beach-cover.jpg?w=400;800&format=webp&quality=82&as=srcset'
+import directActionCover from '@/assets/images/music/Direct-Action-Cassette-photo-1.jpg?w=800&format=webp&quality=82'
+import directActionCoverSrcset from '@/assets/images/music/Direct-Action-Cassette-photo-1.jpg?w=400;800&format=webp&quality=82&as=srcset'
+import cuneiformWestbeachDrums from '@/assets/images/music/Cuneiform-Westbeach-drums.jpg?w=800&format=webp&quality=82'
+import cuneiformWestbeachDrumsSrcset from '@/assets/images/music/Cuneiform-Westbeach-drums.jpg?w=400;800&format=webp&quality=82&as=srcset'
+import suicidalTragedy from '@/assets/images/music/suicidal-tragedy-action-bw.png?w=800&format=webp&quality=82'
+import suicidalTragedySrcset from '@/assets/images/music/suicidal-tragedy-action-bw.png?w=400;800&format=webp&quality=82&as=srcset'
 import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
 
 const albums = [
-  { cover: sreCover, width: 1920, height: 1920, alt: 'TCA Soothing Rays of eternity album cover', title: 'Soothing Rays of Eternity', artist: 'TCA', year: '2017', url: 'https://thecruelestanimal.bandcamp.com/album/soothing-rays-of-eternity' },
-  { cover: wavesCover, width: 1000, height: 1000, alt: 'TCA After the Waves Devour Us All album cover', title: 'After the Waves Devour Us All', artist: 'TCA', year: '2014', url: 'https://thecruelestanimal.bandcamp.com/album/after-the-waves-devour-us-all' },
-  { cover: whiteLightCover, width: 1958, height: 1954, alt: 'TCA White Light and the Empire Collapse album cover', title: 'White Light and the Empire Collapse', artist: 'TCA', year: '2012', url: 'https://thecruelestanimal.bandcamp.com/album/white-light-and-the-empire-collapse' },
-  { cover: holyDoseCover, width: 2700, height: 2700, alt: 'Holy Dose EP album cover', title: 'Holy Dose EP', artist: 'Holy Dose', year: '2008', url: 'https://holydose.bandcamp.com/album/holy-dose' },
-  { cover: cuneiformCover, width: 2700, height: 2700, alt: 'Cuneiform Tabula Rasa album cover', title: 'Tabula Rasa', artist: 'Cuneiform', year: '2008', url: 'https://cuneiformband.bandcamp.com/album/tabula-rasa' },
-  { cover: directActionCover, width: 1773, height: 1773, alt: 'Direct Action Free Him cassette cover', title: 'Free Him', artist: 'Direct Action', year: '1997', url: 'https://dissonantdreamland.bandcamp.com/album/direct-action-free-him' },
+  { cover: sreCover, coverSrcset: sreCoverSrcset, width: 1920, height: 1920, alt: 'TCA Soothing Rays of eternity album cover', title: 'Soothing Rays of Eternity', artist: 'TCA', year: '2017', url: 'https://thecruelestanimal.bandcamp.com/album/soothing-rays-of-eternity' },
+  { cover: wavesCover, coverSrcset: wavesCoverSrcset, width: 1000, height: 1000, alt: 'TCA After the Waves Devour Us All album cover', title: 'After the Waves Devour Us All', artist: 'TCA', year: '2014', url: 'https://thecruelestanimal.bandcamp.com/album/after-the-waves-devour-us-all' },
+  { cover: whiteLightCover, coverSrcset: whiteLightCoverSrcset, width: 1958, height: 1954, alt: 'TCA White Light and the Empire Collapse album cover', title: 'White Light and the Empire Collapse', artist: 'TCA', year: '2012', url: 'https://thecruelestanimal.bandcamp.com/album/white-light-and-the-empire-collapse' },
+  { cover: holyDoseCover, coverSrcset: holyDoseCoverSrcset, width: 2700, height: 2700, alt: 'Holy Dose EP album cover', title: 'Holy Dose EP', artist: 'Holy Dose', year: '2008', url: 'https://holydose.bandcamp.com/album/holy-dose' },
+  { cover: cuneiformCover, coverSrcset: cuneiformCoverSrcset, width: 2700, height: 2700, alt: 'Cuneiform Tabula Rasa album cover', title: 'Tabula Rasa', artist: 'Cuneiform', year: '2008', url: 'https://cuneiformband.bandcamp.com/album/tabula-rasa' },
+  { cover: directActionCover, coverSrcset: directActionCoverSrcset, width: 1773, height: 1773, alt: 'Direct Action Free Him cassette cover', title: 'Free Him', artist: 'Direct Action', year: '1997', url: 'https://dissonantdreamland.bandcamp.com/album/direct-action-free-him' },
 ]
 </script>
 
@@ -25,7 +35,7 @@ const albums = [
   <main class="atacamamedium bg-stock-yellow text-[#444244] pt-14 lg:pt-20 text-black">
 
     <div class="section-panel">
-      <img :src="manifestoAbstract" alt="Garage music" width="1024" height="248" class="aspect-[3/2] md:aspect-[21/9] md:max-h-[40vh] lg:aspect-auto lg:max-h-none w-full object-cover object-[70%_center]"/>
+      <img :src="manifestoAbstract" :srcset="manifestoAbstractSrcset" sizes="(min-width: 1024px) 1400px, 100vw" alt="Garage music" width="1024" height="248" class="aspect-[3/2] md:aspect-[21/9] md:max-h-[40vh] lg:aspect-[1024/248] lg:max-h-none w-full object-cover object-[70%_center]"/>
       <EyebrowNav parent-label="About" parent-href="/about" current-label="Music" />
       <h1 class="hero-headline">A Mess of Bands</h1>
     </div>
@@ -78,7 +88,7 @@ const albums = [
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
         <div v-for="album in albums" :key="album.title" class="flex flex-col">
           <div>
-            <img :src="album.cover" :alt="album.alt" :width="album.width" :height="album.height" loading="lazy" class="w-full"/>
+            <img :src="album.cover" :srcset="album.coverSrcset" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" :alt="album.alt" :width="album.width" :height="album.height" loading="lazy" class="w-full"/>
           </div>
           <div>
             <div class="flex justify-between pt-2">
@@ -142,19 +152,19 @@ const albums = [
     <div class="section-panel">
       <div class="w-full flex flex-col md:flex-row pb-0 md:pb-2">
         <div class="mb-4 md:mb-0 md:w-[50%] md:pr-2">
-          <img :src="suicidalTragedy" alt="Playing Drums for The Great American Tragedy opening for Suicidal Tendencies in Tucson, AZ" width="1024" height="761" loading="lazy" class="w-full"/>
+          <img :src="suicidalTragedy" :srcset="suicidalTragedySrcset" sizes="(min-width: 768px) 50vw, 100vw" alt="Playing Drums for The Great American Tragedy opening for Suicidal Tendencies in Tucson, AZ" width="1600" height="1200" loading="lazy" class="w-full"/>
           <span class="photo-caption">
             2007: Playing drums for The Great American Tragedy opening for Suicidal Tendencies, Tucson, AZ
           </span>
         </div>
         <div class="mb-4 md:mb-0 md:w-[50%] md:pl-2">
-          <img :src="cuneiformWestbeachDrums" alt="Recording drums for Cuneiform at Westbeach Studios in Hollywood, CA" width="1024" height="761" loading="lazy" class="w-full"/>
+          <img :src="cuneiformWestbeachDrums" :srcset="cuneiformWestbeachDrumsSrcset" sizes="(min-width: 768px) 50vw, 100vw" alt="Recording drums for Cuneiform at Westbeach Studios in Hollywood, CA" width="1600" height="1200" loading="lazy" class="w-full"/>
           <span class="photo-caption">
            2007: Recording drums for Cuneiform at Westbeach Studios, Hollywood, CA
           </span>
         </div>
       </div>
-      <img :src="bearBaiting" alt="Hanging out with recording equipment in a home garage studio, Eugene, OR" width="3000" height="1346" loading="lazy" class="w-full h-auto"/>
+      <img :src="bearBaiting" :srcset="bearBaitingSrcset" sizes="(min-width: 1024px) 1400px, 100vw" alt="Hanging out with recording equipment in a home garage studio, Eugene, OR" width="3000" height="1346" loading="lazy" class="w-full h-auto"/>
       <span class="photo-caption mb-2">
         2013: Drumming with Bear Baiting, Oakland, CA
       </span>
