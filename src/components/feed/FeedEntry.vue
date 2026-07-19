@@ -35,7 +35,7 @@ const onThumbLoad = (event) => {
 
 <template>
   <section class="mb-16">
-    <div class="mb-4">
+    <div class="mb-2">
       <div class="relative w-full aspect-video bg-black">
         <button
           v-if="!isPlaying"
@@ -79,13 +79,14 @@ const onThumbLoad = (event) => {
       </button>
     </div>
 
-    <h2 class="alaska text-2xl mb-1">
-      {{ title }}
-    </h2>
-
-    <p class="photo-caption block mb-2">
-      {{ date }}
-    </p>
+    <div class="flex justify-between items-baseline gap-4 mb-2">
+      <h2 class="alaska text-2xl">
+        {{ title }}
+      </h2>
+      <span class="alaska text-sm font-thin text-muted-ink whitespace-nowrap">
+        {{ date }}
+      </span>
+    </div>
 
     <p v-if="description" class="photo-caption block">
       {{ description }}

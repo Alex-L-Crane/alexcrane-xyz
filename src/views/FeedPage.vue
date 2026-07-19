@@ -2,7 +2,7 @@
 import { ref, computed, watch } from 'vue'
 import FeedEntry from '@/components/feed/FeedEntry.vue'
 
-const PAGE_SIZE = 10
+const PAGE_SIZE = 6
 
 const props = defineProps({
   masthead: { type: Object, default: null },
@@ -37,16 +37,18 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
 <template>
   <main class="atacamamedium bg-stock-paper text-black pt-14 lg:pt-20">
     <div class="flex px-2 sm:px-4 md:px-8 pb-4 relative snap-start z-0">
-      <div class="w-1/4 pt-24 lg:pr-8">
+      <div class="w-1/4 pt-24 lg:pr-16 text-right">
         <div v-if="masthead">
           <h2 v-if="masthead.variant === 'creed'" class="neogeo text-5xl/[1] mb-24">
             <template v-for="(line, i) in masthead.lines" :key="i">{{ line }}<br v-if="i < masthead.lines.length - 1" /></template>
           </h2>
-          <p v-else class="alaska text-xl text-muted-ink mb-24">{{ masthead.text }}</p>
+          <p v-else class="alaska text-black text-3xl mb-24">
+            <template v-for="(line, i) in masthead.lines" :key="i">{{ line }}<br v-if="i < masthead.lines.length - 1" /></template>
+          </p>
         </div>
 
         <div class="sticky self-start top-40">
-          <ul class="alaska text-l/[2] font-thin lg:max-w-lg">
+          <ul class="alaska text-l/[2] font-thin lg:max-w-lg ml-auto">
             <li v-for="facet in allFilters" :key="facet" class="mb-2">
               <button
                 type="button"
@@ -76,7 +78,7 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
             <button
               v-if="page > 1"
               type="button"
-              class="link-underline decoration-almost-black/40 hover:decoration-almost-black focus-visible:decoration-almost-black"
+              class="alaska hover:opacity-70 focus-visible:opacity-70 transition-opacity"
               @click="goNewer"
             >
               ← Newer
@@ -85,7 +87,7 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
             <button
               v-if="page < totalPages"
               type="button"
-              class="link-underline decoration-almost-black/40 hover:decoration-almost-black focus-visible:decoration-almost-black"
+              class="alaska hover:opacity-70 focus-visible:opacity-70 transition-opacity"
               @click="goOlder"
             >
               Older →
