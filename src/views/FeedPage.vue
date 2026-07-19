@@ -39,9 +39,10 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
     <div class="flex px-2 sm:px-4 md:px-8 pb-4 relative snap-start z-0">
       <div class="w-1/4 pt-24 lg:pr-8">
         <div v-if="masthead">
-          <h2 class="neogeo text-5xl/[1] mb-24">
+          <h2 v-if="masthead.variant === 'creed'" class="neogeo text-5xl/[1] mb-24">
             <template v-for="(line, i) in masthead.lines" :key="i">{{ line }}<br v-if="i < masthead.lines.length - 1" /></template>
           </h2>
+          <p v-else class="text-xl text-muted-ink mb-24">{{ masthead.text }}</p>
         </div>
 
         <div class="sticky self-start top-40">

@@ -245,6 +245,12 @@ Three shapes of page, not one template with optional pieces:
   Takes `stock-paper` rather than a colored stock -- see "Section-background
   'stock' tokens" above: the stock marks genre, not section.
 
+  Feed mastheads are deliberately asymmetric -- Drumming carries the
+  creed-form set ("Systems. Patterns. Perception.", moved here from
+  Technology), Technology a muted descriptive line ("The work behind the
+  work."), reflecting the site's front-door hierarchy. Do not "fix" the
+  mismatch.
+
 Don't force a document page into the essay shape (no hero image to add
 just to match the pattern) or vice versa -- pick the genre that fits the
 content, and use that genre's own conventions throughout.

@@ -3,7 +3,8 @@ import FeedPage from '@/views/FeedPage.vue'
 import { drumVideos } from '@/content/videos.js'
 
 const masthead = {
-  lines: ['Ritual ::', 'Rhythm'],
+  variant: 'creed',
+  lines: ['Systems.', 'Patterns.', 'Perception.'],
 }
 
 const filters = ['Solo', 'Logik Rift', 'TCA']
