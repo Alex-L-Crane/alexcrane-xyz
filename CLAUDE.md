@@ -136,8 +136,9 @@ way a bespoke CSS mechanism could.
 Named `tailwind.config.js` color tokens for page-root background colors --
 `stock-blush` (`#F6D9CE`, About), `stock-yellow` (`#F5D37D`, Music),
 `stock-chartreuse` (`#D8F172`, Philosophy), `stock-coral` (`#FA8072`, the
-full-screen menu overlay), `stock-ink` (`#1c1c1c`, Design) -- applied as
-`bg-stock-*` on the page root. A future page's background color is a new
+full-screen menu overlay), `stock-ink` (`#1c1c1c`, Design), `stock-paper`
+(`#FFFFFF`, Drumming and Technology) -- applied as `bg-stock-*` on the page
+root. A future page's background color is a new
 one-line token (`'stock-<name>': '#hex'`) plus `bg-stock-<name>` on its
 root, not a fresh `bg-[#hex]` arbitrary value. This is the "extend, don't
 fork" mechanism for the one legitimate kind of per-page variation the
@@ -218,9 +219,9 @@ retyping the wrapper div/span combination -- that's exactly the shape this
 pattern replaced (Design had both treatments as bespoke, unnamed divs
 before this pass).
 
-## Page genres: essay vs. document
+## Page genres: essay, document, and feed
 
-Two shapes of page, not one template with optional pieces:
+Three shapes of page, not one template with optional pieces:
 
 - **Essay pages** (About, Music, Design): hero image inside `.section-panel`,
   `.hero-headline`, illustrated with photos (`.section-panel` +
@@ -238,6 +239,11 @@ Two shapes of page, not one template with optional pieces:
   inside `.section-panel` (the headline needs the same page-datum edge
   alignment either way, image or no image) and a lede (see below), but the
   body is the `.ledger-row` pattern instead of flowing prose paragraphs.
+- **Feed pages** (Drumming, Technology): masthead slot (optional/variant),
+  filter list, entry stream, pagination -- no hero image, no `EyebrowNav`
+  (these are top-level nav destinations, not children of another page).
+  Takes `stock-paper` rather than a colored stock -- see "Section-background
+  'stock' tokens" above: the stock marks genre, not section.
 
 Don't force a document page into the essay shape (no hero image to add
 just to match the pattern) or vice versa -- pick the genre that fits the

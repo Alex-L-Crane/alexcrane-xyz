@@ -25,6 +25,7 @@ export default {
         'stock-chartreuse': '#D8F172',
         'stock-coral': '#FA8072',
         'stock-ink': '#1c1c1c',
+        'stock-paper': '#FFFFFF',
       },
       keyframes: {
         'bounce-once': {

@@ -68,11 +68,11 @@ const close = () => { isPlaying.value = false }
       {{ title }}
     </h2>
 
-    <p class="text-sm opacity-70 mb-4">
+    <p class="photo-caption block mb-2">
       {{ date }}
     </p>
 
-    <p v-if="description" class="leading-7">
+    <p v-if="description" class="photo-caption block">
       {{ description }}
     </p>
   </section>

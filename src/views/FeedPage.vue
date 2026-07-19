@@ -35,9 +35,9 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
 </script>
 
 <template>
-  <main class="bg-white text-black p-8 pt-20">
-    <div class="flex pb-4 relative snap-start z-0">
-      <div class="w-1/4 pt-24 pr-40">
+  <main class="atacamamedium bg-stock-paper text-black pt-14 lg:pt-20">
+    <div class="flex px-2 sm:px-4 md:px-8 pb-4 relative snap-start z-0">
+      <div class="w-1/4 pt-24 lg:pr-8">
         <div v-if="masthead">
           <h2 class="neogeo text-5xl/[1] mb-24">
             <template v-for="(line, i) in masthead.lines" :key="i">{{ line }}<br v-if="i < masthead.lines.length - 1" /></template>
@@ -47,16 +47,15 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
         <div class="sticky self-start top-40">
           <p class="inline-block pb-2 mb-4 border-b border-b-almost-black">Projects:</p>
           <ul class="text-l/[2] font-thin lg:max-w-lg">
-            <li
-              v-for="facet in allFilters"
-              :key="facet"
-              @click="selectedFacet = facet"
-              :class="[
-                'cursor-pointer capitalize mb-2',
-                selectedFacet === facet ? 'font-bold' : ''
-              ]"
-            >
-              {{ facet }}
+            <li v-for="facet in allFilters" :key="facet" class="mb-2">
+              <button
+                type="button"
+                class="capitalize border-b-2 transition-colors"
+                :class="selectedFacet === facet
+                  ? 'font-bold border-almost-black'
+                  : 'border-transparent hover:border-almost-black focus-visible:border-almost-black'"
+                @click="selectedFacet = facet"
+              >{{ facet }}</button>
             </li>
           </ul>
         </div>
