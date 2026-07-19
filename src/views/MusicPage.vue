@@ -41,17 +41,13 @@ const albums = [
               I spent my days working sessions in that classic analog room. I spent my nights there too, practicing and recording my own drums.
               That obsession, rhythm, acoustics, how sound actually works, has driven everything since.
             </p>
-            <ul>
-              <li class="text-xl mb-8">
-                <p class="pb-2">I’ve engineered for some artists:</p>
-                <p>
-                  <a href="https://en.wikipedia.org/wiki/George_Clinton_(funk_musician)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">George Clinton and the P-Funk All Stars</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Hieroglyphics_(group)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Michael Manring</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Michael_Manring" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Hieroglyphics</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Ziggy_Modeliste" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Ziggy Modeliste</a><br>
-                  <a href="https://en.wikipedia.org/wiki/Sage_Francis" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Sage Francis</a>
-                </p>
-              </li>
+            <p class="text-xl pb-2">I’ve engineered for some artists:</p>
+            <ul class="text-xl mb-8">
+              <li><a href="https://en.wikipedia.org/wiki/George_Clinton_(funk_musician)" target="_blank" rel="noopener noreferrer" class="link-list">George Clinton and the P-Funk All Stars</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Michael_Manring" target="_blank" rel="noopener noreferrer" class="link-list">Michael Manring</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Hieroglyphics_(group)" target="_blank" rel="noopener noreferrer" class="link-list">Hieroglyphics</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Ziggy_Modeliste" target="_blank" rel="noopener noreferrer" class="link-list">Ziggy Modeliste</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Sage_Francis" target="_blank" rel="noopener noreferrer" class="link-list">Sage Francis</a></li>
             </ul>
           </div>
         </div>
@@ -62,19 +58,15 @@ const albums = [
             DIY bands like Fugazi were the blueprint: book it yourself, record it yourself, answer to no one.
             I’ve played in a long line of little-known bands. None of them made me famous. All of them made me who I am.
           </p>
-          <ul class="text-xl space-y-6 list-none mb-8">
-            <li>
-              <p class="pb-2">I’ve opened for some bands I like:</p>
-              <p>
-                <a href="https://en.wikipedia.org/wiki/Suicidal_Tendencies" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Suicidal Tendencies</a><br>
-                <a href="https://en.wikipedia.org/wiki/Author_&amp;_Punisher" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Author and Punisher</a><br>
-                <a href="https://en.wikipedia.org/wiki/Qui_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Qui (with David Yow on vocals)</a><br>
-                <a href="https://en.wikipedia.org/wiki/Dwarves_(band)" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Dwarves (with Nick Oliveri on bass)</a><br>
-                <a href="https://www.instagram.com/yearofthecobra/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Year of the Cobra</a><br>
-                <a href="https://www.instagram.com/mammothgrinder/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Mammoth Grinder</a><br>
-                <a href="https://www.instagram.com/electrichawkband/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Electric Hawk</a>
-              </p>
-            </li>
+          <p class="text-xl pb-2">I’ve opened for some bands I like:</p>
+          <ul class="text-xl mb-8">
+            <li><a href="https://en.wikipedia.org/wiki/Suicidal_Tendencies" target="_blank" rel="noopener noreferrer" class="link-list">Suicidal Tendencies</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Author_&amp;_Punisher" target="_blank" rel="noopener noreferrer" class="link-list">Author and Punisher</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Qui_(band)" target="_blank" rel="noopener noreferrer" class="link-list">Qui (with David Yow on vocals)</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Dwarves_(band)" target="_blank" rel="noopener noreferrer" class="link-list">Dwarves (with Nick Oliveri on bass)</a></li>
+            <li><a href="https://www.instagram.com/yearofthecobra/" target="_blank" rel="noopener noreferrer" class="link-list">Year of the Cobra</a></li>
+            <li><a href="https://www.instagram.com/mammothgrinder/" target="_blank" rel="noopener noreferrer" class="link-list">Mammoth Grinder</a></li>
+            <li><a href="https://www.instagram.com/electrichawkband/" target="_blank" rel="noopener noreferrer" class="link-list">Electric Hawk</a></li>
           </ul>
           <p class="body-copy">A few of the more interesting releases from my discography:
           </p>
@@ -123,15 +115,12 @@ const albums = [
               A meditation.<br>
               An art.</em>
           </p>
-          <ul>
-            <li class="text-xl mb-8">
-              <p class="pb-2">I’ve had some musical mentors:</p>
-              <p>
-                <a href="http://www.treygunn.com/bio/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Trey Gunn</a> <span class="text-muted-ink">virtuoso and music coach</span><br>
-                <a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Aloke Dutta</a> <span class="text-muted-ink">tabla guru</span><br>
-                <a href="https://daveelitch.com/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Dave Elitch</a> <span class="text-muted-ink">drumset master</span><br>
-                <a href="https://patrickworley.com/about/" target="_blank" rel="noopener noreferrer" class="alaska text-[#9A2C2C] link-underline decoration-[#9A2C2C]/40 hover:decoration-[#9A2C2C] focus-visible:decoration-[#9A2C2C] inline-block py-2 lg:py-0">Patrick Worley</a> <span class="text-muted-ink">guitar expert</span></p>
-            </li>
+          <p class="text-xl pb-2">I’ve had some musical mentors:</p>
+          <ul class="text-xl mb-8">
+            <li><a href="http://www.treygunn.com/bio/" target="_blank" rel="noopener noreferrer" class="link-list">Trey Gunn</a> <span class="text-muted-ink">virtuoso and music coach</span></li>
+            <li><a href="https://alokedutta.com/" target="_blank" rel="noopener noreferrer" class="link-list">Aloke Dutta</a> <span class="text-muted-ink">tabla guru</span></li>
+            <li><a href="https://daveelitch.com/" target="_blank" rel="noopener noreferrer" class="link-list">Dave Elitch</a> <span class="text-muted-ink">drumset master</span></li>
+            <li><a href="https://patrickworley.com/about/" target="_blank" rel="noopener noreferrer" class="link-list">Patrick Worley</a> <span class="text-muted-ink">guitar expert</span></li>
           </ul>
           <p class="body-copy">When it’s time to actually make music, solo or with other players, I want it to work more like cooking than composing:</p>
           <ul class="alaska body-copy">
