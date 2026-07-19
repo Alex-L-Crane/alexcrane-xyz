@@ -137,20 +137,27 @@ Named `tailwind.config.js` color tokens for page-root background colors --
 `stock-blush` (`#F6D9CE`, About), `stock-yellow` (`#F5D37D`, Music),
 `stock-chartreuse` (`#D8F172`, Philosophy), `stock-coral` (`#FA8072`, the
 full-screen menu overlay), `stock-ink` (`#1c1c1c`, Design), `stock-paper`
-(`#FFFFFF`, Drumming and Technology), `stock-colophon` (`#D3D7D2`, the
-colophon overlay) -- applied as `bg-stock-*` on the page root. A future
-page's background color is a new one-line token (`'stock-<name>': '#hex'`)
-plus `bg-stock-<name>` on its root, not a fresh `bg-[#hex]` arbitrary value.
-This is the "extend, don't fork" mechanism for the one legitimate kind of
-per-page variation the design system needs to support: each section's own
-color.
+(`#FFFFFF`, Drumming and Technology), `stock-utility` (`#D3D7D2`, the
+colophon overlay and the 404 page) -- applied as `bg-stock-*` on the page
+root. A future page's background color is a new one-line token
+(`'stock-<name>': '#hex'`) plus `bg-stock-<name>` on its root, not a fresh
+`bg-[#hex]` arbitrary value. This is the "extend, don't fork" mechanism for
+the one legitimate kind of per-page variation the design system needs to
+support: each section's own color.
 
-`stock-colophon` is deliberately outside the section-stock set above it --
+`stock-utility` is deliberately outside the section-stock set above it --
 it doesn't belong to a page the way blush/yellow/chartreuse/ink/paper each
-mark one. It's a neutral cool gray for a piece of overlay chrome (credits,
-colophon-style content about the site itself), chosen to read as
-documentation/meta rather than as another destination in the site's own
-color sequence.
+mark one. **Non-section utility surfaces share one neutral ground**, not a
+fresh stock per surface: the colophon overlay (credits, meta content about
+the site itself) and the 404 page (an error state, not a destination) are
+both "the site talking about itself" rather than a section of it, so both
+sit on the same neutral cool gray, chosen to read as documentation/meta
+rather than as another stop in the site's own color sequence. A future
+non-section surface (another overlay, another system page) reuses
+`stock-utility` rather than minting its own -- mint a new stock only when
+something is a genuine page/section with its own place in that sequence.
+
+**The 404 page also breaks from every page genre's layout** (`src/views/NotFoundPage.vue`), not just its stock: no `.section-panel`, no `EyebrowNav`, no left-aligned body column. It's a single notice block (headline, one-line lede, recovery links), centered both horizontally *and* vertically in the viewport, filling the space below the nav with `min-h-dvh flex items-center justify-center` rather than flowing top-down. **Horizontal centering is a deliberate exception** to the site's left-aligned convention everywhere else (every essay/document/feed page reads left-to-right from a fixed gutter) -- reserved for this one non-publication surface, the same way `stock-utility` is reserved for non-section surfaces. A future page with real content stays left-aligned regardless of how minimal it is; centering marks "this isn't a page, it's a notice." Headline stays at full `.hero-headline` scale (tried stepping it down to `.movement-heading` first -- read as underweight for a single centered line, reverted) inside a widened `max-w-4xl` container (hero-headline's own size needs more room than the block's earlier `max-w-xl` gave it) with its baked-in `pb-8` zeroed via `pb-0` in favor of an explicit `mb-4 lg:mb-6`. Internal spacing between headline/lede/links is intentionally tight (`mb-4 lg:mb-6`, `mb-6 lg:mb-8`) so the three read as one block, with the surrounding whitespace -- not internal margins -- doing the work of framing it.
 
 About's blush was re-auditioned against cool candidates (July 2026) and
 deliberately retained -- the front door reads friendly by design.

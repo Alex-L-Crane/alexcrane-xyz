@@ -2,7 +2,7 @@
   <MainMenuOverlay
     :visible="showColophon"
     @close="showColophon = false"
-    background="bg-stock-colophon"
+    background="bg-stock-utility"
     text-class="atacamamedium text-black"
     aria-label="Colophon"
     show-close-button

@@ -9,6 +9,7 @@ import DesignPage from '@/views/DesignPage.vue';
 import PhilosophyPage from '@/views/PhilosophyPage.vue';
 import InspirationsPage from '@/views/InspirationsPage.vue';
 import AboutSection from '@/views/AboutSection.vue';
+import NotFoundPage from '@/views/NotFoundPage.vue';
 
 const routes = [
   {
@@ -58,8 +59,10 @@ const routes = [
     meta: { title: 'Design — Ritual :: Rhythm', section: 'about' }
   },
   {
-    path: '/:pathMatch(.*)*', // Catch-all for 404
-    redirect: '/' // Redirect invalid routes
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: NotFoundPage,
+    meta: { title: '404 — Ritual :: Rhythm' }
   }
 ];
 
