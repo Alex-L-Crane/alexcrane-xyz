@@ -1,7 +1,10 @@
 <script setup>
-import phrygianBanner from '@/assets/images/phrygian-banner.png'
-import imaschine from '@/assets/images/iMaschine2.png'
-import kineticBeatsUI from '@/assets/images/kinetic-beats.png'
+import phrygianBanner from '@/assets/images/phrygian-banner.png?w=1024&format=webp&quality=82'
+import phrygianBannerSrcset from '@/assets/images/phrygian-banner.png?w=480;800;1024&format=webp&quality=82&as=srcset'
+import imaschine from '@/assets/images/iMaschine2.png?w=1200&format=webp&quality=82'
+import imaschineSrcset from '@/assets/images/iMaschine2.png?w=480;800;1200&format=webp&quality=82&as=srcset'
+import kineticBeatsUI from '@/assets/images/kinetic-beats.png?w=900&format=webp&quality=82'
+import kineticBeatsUISrcset from '@/assets/images/kinetic-beats.png?w=450;900&format=webp&quality=82&as=srcset'
 import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
 </script>
 
@@ -17,7 +20,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
           <!--<h2 class="neogeo text-5xl/[1] text-white md:max-w-[15ch] mt-auto">Evolving  <span class="hidden lg:inline"><br></span>processes.</h2>-->
         </div>
       </div>
-      <img :src="phrygianBanner" alt="phrygian" width="full" class="aspect-[3/2] md:aspect-[21/9] md:max-h-[40vh] lg:aspect-auto lg:max-h-none w-full object-cover object-center"/>
+      <img :src="phrygianBanner" :srcset="phrygianBannerSrcset" sizes="(min-width: 1024px) 1400px, 100vw" alt="phrygian" width="1024" height="248" class="aspect-[3/2] md:aspect-[21/9] md:max-h-[40vh] lg:aspect-[1024/248] lg:max-h-none w-full object-cover object-center"/>
       <EyebrowNav parent-label="About" parent-href="/about" current-label="Design" />
       <h1 class="hero-headline">Evolving Processes</h1>
     </div>
@@ -45,7 +48,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
           </p>
 
           <figure class="exhibit-inline mb-0">
-            <img :src="kineticBeatsUI" alt="Garage music" width="full" class="mx-auto w-full max-w-sm"/>
+            <img :src="kineticBeatsUI" :srcset="kineticBeatsUISrcset" sizes="384px" alt="Garage music" width="653" height="1326" loading="lazy" class="mx-auto w-full max-w-sm"/>
             <figcaption class="photo-caption mb-2 inline-block">
               2017: Kinetic Beats, an iPhone app for air drumming.
             </figcaption>
@@ -110,7 +113,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
     <div class="section-panel">
       <div class="w-full">
         <figure class="exhibit-full">
-          <img :src="imaschine" alt="imaschine" width="auto" class="w-full h-auto"/>
+          <img :src="imaschine" :srcset="imaschineSrcset" sizes="(min-width: 1024px) 1152px, 100vw" alt="imaschine" width="1154" height="865" loading="lazy" class="w-full h-auto"/>
           <figcaption class="photo-caption mb-2">
             2016: A UI design I created for as part of an interview process for Native Instruments.
           </figcaption>
