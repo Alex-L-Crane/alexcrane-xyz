@@ -36,23 +36,23 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
 
 <template>
   <main class="atacamamedium bg-stock-paper text-black pt-14 lg:pt-20">
-    <div class="flex px-2 sm:px-4 md:px-8 pb-4 relative snap-start z-0">
-      <div class="w-1/4 pt-24 lg:pr-16 text-right">
+    <div class="flex flex-col lg:flex-row px-2 sm:px-4 md:px-8 pb-4 relative snap-start z-0">
+      <div class="lg:w-1/4 pt-8 lg:pt-24 lg:pr-16 text-left lg:text-right mb-8 lg:mb-0">
         <div v-if="masthead">
-          <h2 v-if="masthead.variant === 'creed'" class="neogeo text-5xl/[1] mb-24">
+          <h2 v-if="masthead.variant === 'creed'" class="neogeo text-3xl/[1.1] lg:text-5xl/[1.1] mb-8 lg:mb-24">
             <template v-for="(line, i) in masthead.lines" :key="i">{{ line }}<br v-if="i < masthead.lines.length - 1" /></template>
           </h2>
-          <p v-else class="alaska text-black text-3xl mb-24">
+          <p v-else class="alaska text-black text-xl lg:text-3xl mb-8 lg:mb-24">
             <template v-for="(line, i) in masthead.lines" :key="i">{{ line }}<br v-if="i < masthead.lines.length - 1" /></template>
           </p>
         </div>
 
-        <div class="sticky self-start top-40">
-          <ul class="alaska text-l/[2] font-thin lg:max-w-lg ml-auto">
-            <li v-for="facet in allFilters" :key="facet" class="mb-2">
+        <div class="lg:sticky lg:self-start lg:top-40">
+          <ul class="flex flex-wrap gap-x-6 gap-y-1 lg:block alaska text-l/[2] font-thin lg:max-w-lg lg:ml-auto">
+            <li v-for="facet in allFilters" :key="facet" class="lg:mb-2">
               <button
                 type="button"
-                class="capitalize border-b-2 transition-colors"
+                class="capitalize border-b-2 transition-colors inline-flex items-center py-2.5 -my-2.5 lg:py-0 lg:my-0"
                 :class="selectedFacet === facet
                   ? 'font-bold border-almost-black'
                   : 'border-transparent hover:border-almost-black focus-visible:border-almost-black'"
@@ -63,8 +63,8 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
         </div>
       </div>
 
-      <div class="flex flex-col w-3/4">
-        <div class="max-w-4xl">
+      <div class="lg:w-3/4">
+        <div class="body-column lg:max-w-4xl">
           <FeedEntry
             v-for="entry in pagedEntries"
             :key="entry.slug"
@@ -78,7 +78,7 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
             <button
               v-if="page > 1"
               type="button"
-              class="alaska hover:opacity-70 focus-visible:opacity-70 transition-opacity"
+              class="alaska hover:opacity-70 focus-visible:opacity-70 transition-opacity py-2.5 -my-2.5 lg:py-0 lg:my-0"
               @click="goNewer"
             >
               ← Newer
@@ -87,7 +87,7 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
             <button
               v-if="page < totalPages"
               type="button"
-              class="alaska hover:opacity-70 focus-visible:opacity-70 transition-opacity"
+              class="alaska hover:opacity-70 focus-visible:opacity-70 transition-opacity py-2.5 -my-2.5 lg:py-0 lg:my-0"
               @click="goOlder"
             >
               Older →

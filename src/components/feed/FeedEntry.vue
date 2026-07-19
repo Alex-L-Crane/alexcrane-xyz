@@ -79,11 +79,11 @@ const onThumbLoad = (event) => {
       </button>
     </div>
 
-    <div class="flex justify-between items-baseline gap-4 mb-2">
+    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-baseline gap-1 lg:gap-4 mb-2">
       <h2 class="alaska text-2xl">
         {{ title }}
       </h2>
-      <span class="alaska text-sm font-thin text-muted-ink whitespace-nowrap">
+      <span class="alaska text-sm font-thin text-muted-ink lg:whitespace-nowrap">
         {{ date }}
       </span>
     </div>
