@@ -9,8 +9,12 @@ const props = defineProps({
 })
 
 const isPlaying = ref(false)
+const useFallbackThumb = ref(false)
 
-const thumbUrl = computed(() => `https://img.youtube.com/vi/${props.videoId}/hqdefault.jpg`)
+const thumbUrl = computed(() => useFallbackThumb.value
+  ? `https://img.youtube.com/vi/${props.videoId}/hqdefault.jpg`
+  : `https://img.youtube.com/vi/${props.videoId}/maxresdefault.jpg`
+)
 
 const embedUrl = computed(() =>
   `https://www.youtube-nocookie.com/embed/${props.videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`
@@ -18,6 +22,15 @@ const embedUrl = computed(() =>
 
 const play = () => { isPlaying.value = true }
 const close = () => { isPlaying.value = false }
+
+// YouTube serves a 120x90 placeholder for maxresdefault when no maxres
+// thumbnail exists -- it loads successfully (no @error), so detection has
+// to be dimensional, checked once on the real maxres attempt.
+const onThumbLoad = (event) => {
+  if (!useFallbackThumb.value && event.target.naturalWidth < 1000) {
+    useFallbackThumb.value = true
+  }
+}
 </script>
 
 <template>
@@ -34,7 +47,9 @@ const close = () => { isPlaying.value = false }
           <img
             :src="thumbUrl"
             :alt="title"
+            loading="lazy"
             class="absolute inset-0 w-full h-full object-cover"
+            @load="onThumbLoad"
           />
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="text-white text-4xl bg-black/50 px-4 py-2">
@@ -64,7 +79,7 @@ const close = () => { isPlaying.value = false }
       </button>
     </div>
 
-    <h2 class="text-2xl font-semibold mb-1">
+    <h2 class="alaska text-2xl mb-1">
       {{ title }}
     </h2>
 

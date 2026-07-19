@@ -42,12 +42,11 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
           <h2 v-if="masthead.variant === 'creed'" class="neogeo text-5xl/[1] mb-24">
             <template v-for="(line, i) in masthead.lines" :key="i">{{ line }}<br v-if="i < masthead.lines.length - 1" /></template>
           </h2>
-          <p v-else class="text-xl text-muted-ink mb-24">{{ masthead.text }}</p>
+          <p v-else class="alaska text-xl text-muted-ink mb-24">{{ masthead.text }}</p>
         </div>
 
         <div class="sticky self-start top-40">
-          <p class="inline-block pb-2 mb-4 border-b border-b-almost-black">Projects:</p>
-          <ul class="text-l/[2] font-thin lg:max-w-lg">
+          <ul class="alaska text-l/[2] font-thin lg:max-w-lg">
             <li v-for="facet in allFilters" :key="facet" class="mb-2">
               <button
                 type="button"
