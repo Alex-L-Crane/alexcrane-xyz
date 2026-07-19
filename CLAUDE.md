@@ -144,6 +144,9 @@ root, not a fresh `bg-[#hex]` arbitrary value. This is the "extend, don't
 fork" mechanism for the one legitimate kind of per-page variation the
 design system needs to support: each section's own color.
 
+About's blush was re-auditioned against cool candidates (July 2026) and
+deliberately retained -- the front door reads friendly by design.
+
 **Light stock vs. dark stock**: every stock above `stock-ink` is light
 (dark ink text on a light/mid background); `stock-ink` is the site's first
 dark stock (light text on a near-black background). Dark stock isn't just

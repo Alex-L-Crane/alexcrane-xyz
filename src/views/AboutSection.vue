@@ -6,7 +6,7 @@ import garagePhoto from '@/assets/images/garage-photo-cropped.png'
 </script>
 
 <template>
-  <main class="atacamamedium bg-stock-blush text-[#444244] pt-14 lg:pt-20 text-black">
+  <main class="atacamamedium bg-stock-blush pt-14 lg:pt-20 text-black">
 
     <div class="section-panel">
       <img :src="backgroundAbstract3" alt="" width="1024" height="248" class="aspect-[3/2] md:aspect-[21/9] md:max-h-[40vh] lg:aspect-auto lg:max-h-none w-full object-cover object-[75%_center]"/>
