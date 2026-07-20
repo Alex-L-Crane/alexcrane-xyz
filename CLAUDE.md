@@ -542,3 +542,25 @@ needs reordering, keep them adjacent.
 - These rules apply to rendered text content only, not code (JS spread
   syntax, code comments, class/attribute strings, data files) -- don't
   "fix" punctuation inside actual code just because the pattern matches.
+
+## Analytics: GA4
+
+The tag lives in `index.html`'s `<head>`, injected only when
+`import.meta.env.PROD` is true (dev/localhost makes zero network requests to
+Google -- no stub, no script tag at all, not just suppressed calls on top of
+one). The config call sets `send_page_view: false`, because pageviews are
+fired manually from the single `router.afterEach` hook in
+`src/router/index.js` (the same hook that already updates title/meta/OG on
+every navigation) -- not from gtag.js's own automatic detection. Measurement
+ID: `G-VBQZRHH51H`.
+
+**Known gap, not fixable from this code:** `send_page_view: false` only
+suppresses the automatic hit on the very first page load. GA4's Enhanced
+Measurement independently listens for History API changes and fires its own
+automatic `page_view`-shaped hit on every subsequent client-side navigation
+regardless of that flag -- confirmed empirically (every nav after the first
+sends two hits: GA4's automatic one, carrying the *previous* route's stale
+title/location and no page path, immediately followed by the router hook's
+correct one). Turning this off requires the GA4 Admin UI: Data Streams -> the
+web stream -> Enhanced measurement -> gear icon -> "Page changes based on
+browser history events" -- not a code-level setting.

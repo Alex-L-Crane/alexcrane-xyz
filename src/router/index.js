@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { hasAnalyticsConsent } from '@/composables/useConsent.js'
 
 import TechnologySection from '@/views/TechnologySection.vue'
 
@@ -119,6 +120,24 @@ function setMeta(selector, tagName, attrs, contentAttr, contentValue) {
   el.setAttribute(contentAttr, contentValue)
 }
 
+// Manual pageview -- the GA snippet in index.html sends send_page_view:
+// false specifically so this is the only source of pageview events.
+// window.gtag only exists at all in production (see index.html), so this
+// is naturally a no-op in dev with no separate env check needed here.
+// Exported so useConsent()'s accept() can fire the current page's pageview
+// immediately on consent -- otherwise an EU/UK visitor who accepts is
+// invisible in GA until their next navigation, since the initial load's
+// pageview was skipped while undecided.
+export function firePageView(to) {
+  if (!window.gtag) return
+  const title = to.meta?.title ?? DEFAULT_TITLE
+  window.gtag('event', 'page_view', {
+    page_path: to.path,
+    page_title: title,
+    page_location: `${SITE_URL}${to.path}`
+  })
+}
+
 router.afterEach((to) => {
   const title = to.meta.title ?? DEFAULT_TITLE
   const description = to.meta.description ?? DEFAULT_DESCRIPTION
@@ -133,6 +152,8 @@ router.afterEach((to) => {
   setMeta('meta[property="og:title"]', 'meta', { property: 'og:title' }, 'content', title)
   setMeta('meta[property="og:description"]', 'meta', { property: 'og:description' }, 'content', description)
   setMeta('meta[property="og:url"]', 'meta', { property: 'og:url' }, 'content', url)
+
+  if (hasAnalyticsConsent()) firePageView(to)
 })
 
 export default router;

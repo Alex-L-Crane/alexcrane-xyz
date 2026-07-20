@@ -42,7 +42,7 @@ function handleClick() {
               custom
               v-slot="{ href, navigate, isExactActive }">
     <a :href="href"
-       @click="navigate(); handleClick()"
+       @click="(e) => { navigate(e); handleClick() }"
        :class="[
          'text-black border-b-2 hover:border-almost-black focus-visible:border-almost-black transition-colors',
          size === 'display' ? 'text-6xl py-2' : 'text-4xl py-3',

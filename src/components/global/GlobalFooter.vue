@@ -50,6 +50,12 @@
         @click="showColophon = true"
         class="text-white font-thin inline-block mt-8 hover:opacity-80 focus-visible:opacity-80"
       >Colophon</button>
+      <button
+        v-if="showPrivacyChoices"
+        type="button"
+        @click="reopen"
+        class="text-white font-thin block mt-4 hover:opacity-80 focus-visible:opacity-80"
+      >Privacy Choices</button>
     </div>
     <div class="w-full lg:w-auto mt-16 self-start lg:self-end">
       <h2 class="text-3xl">Email Signup</h2>
@@ -100,10 +106,16 @@
 <script setup>
 import { ref, watch, nextTick } from 'vue'
 import MainMenuOverlay from '@/components/navigation/MainMenuOverlay.vue'
+import { isLikelyEuUk, useConsent } from '@/composables/useConsent.js'
 
 const showColophon = ref(false)
 const colophonTrigger = ref(null)
 const currentYear = new Date().getFullYear()
+
+// Only EU/UK visitors have a consent choice to reconsider -- non-EU/UK
+// visitors never saw a banner, so there's nothing for this link to reopen.
+const showPrivacyChoices = isLikelyEuUk()
+const { reopen } = useConsent()
 
 let savedScrollY = 0
 
