@@ -11,30 +11,48 @@ import InspirationsPage from '@/views/InspirationsPage.vue';
 import AboutSection from '@/views/AboutSection.vue';
 import NotFoundPage from '@/views/NotFoundPage.vue';
 
+const SITE_URL = 'https://alexcrane.systems'
+const DEFAULT_TITLE = 'Ritual :: Rhythm'
+const DEFAULT_DESCRIPTION = 'Drumming and audio engineering. Performance studies, improvisations, and the work behind the work. Alex Crane, Eugene, Oregon.'
+
 const routes = [
   {
     path: '/',
     name: 'Landing',
     component: DrummingFeed,
-    meta: { title: 'Ritual :: Rhythm — Drumming & Technology' }
+    meta: {
+      title: 'Ritual :: Rhythm',
+      description: 'Drumming. Improvisations. Sound, rhythm, syncopation, groove, and minimalism. Alex Crane, Eugene, Oregon.'
+    }
   },
   {
     path: '/technology',
     name: 'Technology',
     component: TechnologySection,
-    meta: { title: 'Technology — Ritual :: Rhythm' }
+    meta: {
+      title: 'Technology — Ritual :: Rhythm',
+      description: 'Recording equipment, drums, microphones, midi, engineering, and signal processing. Alex Crane, Eugene, Oregon.'
+    }
   },
   {
     path: '/about',
     name: 'about',
     component: AboutSection,
-    meta: { title: 'About — Ritual :: Rhythm', section: 'about' }
+    meta: {
+      title: 'About — Ritual :: Rhythm',
+      description: 'Drums, art, and technology. Discovery, process, and survival. Alex Crane, Eugene, Oregon.',
+      section: 'about'
+    }
   },
   {
     path: '/philosophy',
     name: 'philosophy',
     component: PhilosophyPage,
-    meta: { title: 'Philosophy — Ritual :: Rhythm', section: 'about' }
+    meta: {
+      title: 'Philosophy — Ritual :: Rhythm',
+      description: 'Creative practice, routine, and artistic growth. Drumming as a way of life. Alex Crane, Eugene, Oregon.',
+      section: 'about'
+    }
   },
   {
     path: '/inspirations',
@@ -50,19 +68,30 @@ const routes = [
     path: '/music',
     name: 'music',
     component: MusicPage,
-    meta: { title: 'Music — Ritual :: Rhythm', section: 'about' }
+    meta: {
+      title: 'Music — Ritual :: Rhythm',
+      description: 'Underground DIY music. Indie bands, live performance, and studio work. Alex Crane, Eugene, Oregon.',
+      section: 'about'
+    }
   },
   {
     path: '/design',
     name: 'tech/design',
     component: DesignPage,
-    meta: { title: 'Design — Ritual :: Rhythm', section: 'about' }
+    meta: {
+      title: 'Design — Ritual :: Rhythm',
+      description: 'Visual and user experience design. Tech design and development. Alex Crane, Eugene, Oregon.',
+      section: 'about'
+    }
   },
   {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: NotFoundPage,
-    meta: { title: '404 — Ritual :: Rhythm' }
+    meta: {
+      title: 'Nothing here — Ritual :: Rhythm',
+      noindex: true
+    }
   }
 ];
 
@@ -77,8 +106,33 @@ const router = createRouter({
   }
 })
 
+// Creates the tag if index.html doesn't already have it, otherwise updates
+// the existing one in place -- works the same whether a tag was seeded
+// statically (the site-wide defaults, for JS-less scrapers) or not.
+function setMeta(selector, tagName, attrs, contentAttr, contentValue) {
+  let el = document.head.querySelector(selector)
+  if (!el) {
+    el = document.createElement(tagName)
+    Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, value))
+    document.head.appendChild(el)
+  }
+  el.setAttribute(contentAttr, contentValue)
+}
+
 router.afterEach((to) => {
-  document.title = to.meta.title ?? 'Ritual :: Rhythm'
+  const title = to.meta.title ?? DEFAULT_TITLE
+  const description = to.meta.description ?? DEFAULT_DESCRIPTION
+  const url = `${SITE_URL}${to.path}`
+
+  document.title = title
+
+  setMeta('meta[name="description"]', 'meta', { name: 'description' }, 'content', description)
+  setMeta('link[rel="canonical"]', 'link', { rel: 'canonical' }, 'href', url)
+  setMeta('meta[name="robots"]', 'meta', { name: 'robots' }, 'content', to.meta.noindex ? 'noindex, nofollow' : 'index, follow')
+
+  setMeta('meta[property="og:title"]', 'meta', { property: 'og:title' }, 'content', title)
+  setMeta('meta[property="og:description"]', 'meta', { property: 'og:description' }, 'content', description)
+  setMeta('meta[property="og:url"]', 'meta', { property: 'og:url' }, 'content', url)
 })
 
 export default router;
