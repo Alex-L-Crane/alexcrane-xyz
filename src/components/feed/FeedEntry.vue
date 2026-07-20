@@ -21,7 +21,6 @@ const embedUrl = computed(() =>
 )
 
 const play = () => { isPlaying.value = true }
-const close = () => { isPlaying.value = false }
 
 // YouTube serves a 120x90 placeholder for maxresdefault when no maxres
 // thumbnail exists -- it loads successfully (no @error), so detection has
@@ -69,14 +68,6 @@ const onThumbLoad = (event) => {
           referrerpolicy="strict-origin-when-cross-origin"
         />
       </div>
-
-      <button
-        v-if="isPlaying"
-        class="mt-2 underline"
-        @click="close"
-      >
-        Close video
-      </button>
     </div>
 
     <div class="flex flex-col lg:flex-row lg:justify-between lg:items-baseline gap-1 lg:gap-4 mb-2">
