@@ -1,8 +1,14 @@
+<script setup>
+import EyebrowNav from "@/components/navigation/EyebrowNav.vue";
+</script>
 <template>
   <div class="bg-[#FA8072] text-black p-8 pt-32 overflow-hidden">
+    <div class="section-panel">
+      <EyebrowNav parent-label="About" parent-href="/about" current-label="Inspirations" />
+      <h1 class="hero-headline">Inspirations</h1>
+    </div>
     <div class="flex flex-col lg:flex-row lg:pt-78 pt-16 relative z-0">
       <div class="w-full lg:w-1/2 grow">
-        <h2 class="neogeo text-5xl/[1] mb-3">Systems. <br/>Patterns. <br/>Perception.</h2>
         <p class="text-2xl/[1.4] leading-tight font-thin">I don’t believe in magic, but do believe in sound. Somehow simultaneously ubiquitous and subversive, deeply misunderstood and underappreciated, sound has permeated every aspect of my life and has been my gateway to learning about visual arts, computer science, electronics, culture, psychology, politics, and, of course, music.</p>
       </div>
       <div class="w-full lg:w-1/2 grow">
