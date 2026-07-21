@@ -3,32 +3,55 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --font-fallback: "Arial", "Helvetica", "Nimbus Sans", "Liberation Sans", "sans-serif";
+    /* Light-stock defaults for the dark-stock-overridable tokens (RGB
+       channels, not hex, so Tailwind's /40-style opacity modifiers work --
+       see muted-ink/link-red in tailwind.config.js). Overridden per dark
+       stock via a class like .bg-stock-ink, scoped to that page root. */
+    --muted-ink-rgb: 90 85 77;
+    --link-red-rgb: 154 44 44;
+  }
+
   /* NeoGeo */
   @font-face {
     font-family: NeoGeo;
     src: url(../fonts/NeoGeo-Trial-VAR-VF.woff2) format("woff2");
+    font-display: swap;
   }
+
   /* Swiss Posters */
   @font-face {
     font-family: Swissposters;
     src: url(../fonts/Swissposters-Trial-VAR-VF.woff2) format("woff2");
+    font-display: swap;
   }
-  /* Crystal */
-  @font-face {
-    font-family: Crystal;
-    src: url(../fonts/Crystal-Trial-VAR-VF.ttf.woff2) format("woff2");
-  }
+
   /* Alaska */
   @font-face {
     font-family: Alaska;
     src: url(../fonts/Alaska-Trial-VAR-VF.ttf.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  /* Atacama */
+  @font-face {
+    font-family: Atacama;
+    src: url(../fonts/AtacamaTrial-Thin.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  /* Atacama Medium */
+  @font-face {
+    font-family: AtacamaMedium;
+    src: url(../fonts/AtacamaTrial-Medium.woff2) format("woff2");
+    font-display: swap;
   }
 
   body {
-    font-family: 'Alaska', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
-    font-size: 18px;
-    color: #fff;
-    background-color: #1C1C1C;
+    @apply bg-almost-black text-white;
+    font-family: "Alaska", var(--font-fallback);
+    font-size: 16px;
   }
   h1 {
     @apply text-2xl;
@@ -38,35 +61,247 @@
   }
 
   .neogeo {
-    font-family: 'NeoGeo', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+    font-family: "NeoGeo", var(--font-fallback);
   }
 
   .swissposters {
-    font-family: 'Swissposters', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
-  }
-
-  .crystal {
-    font-family: 'Crystal', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
+    font-family: "Swissposters", var(--font-fallback);
   }
 
   .alaska {
-    font-family: 'Alaska', 'Arial', 'Helvetica', 'Nimbus Sans', 'Liberation Sans', 'sans-serif';
-  }
-  #app {
-    /*max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-weight: normal;*/
+    font-family: "Alaska", var(--font-fallback);
   }
 
-  @media (hover: hover) {
-    a:hover {
-      background-color: hsla(160, 100%, 37%, 0.2);
+  .atacama {
+    font-family: "Atacama", var(--font-fallback);
+  }
+
+  .atacamamedium {
+    font-family: "AtacamaMedium", var(--font-fallback);
+  }
+}
+
+@layer components {
+  /* Dark-stock token override: muted-ink and link-red (see tailwind.config.js,
+     both CSS-variable-backed with a light-stock default at :root) get scoped
+     to their dark-stock values wherever they're nested inside this class --
+     i.e. on the dark page's own root, alongside bg-stock-ink. No component
+     (EyebrowNav, .link-list, etc.) needs a dark/light prop; the override
+     rides the cascade. This is the standard mechanism for any future dark
+     stock, not a one-off for Design specifically.
+     muted-ink-dark: #948D7E ("148 141 126"), 5.17:1 on stock-ink.
+     link-red-dark: #E0705F ("224 112 95"), 5.40:1 on stock-ink -- lifted
+     toward the coral neighborhood (search range #E0705F-#FA8072) until it
+     cleared AA; picked the darker end since #FA8072 (6.8:1) reads more
+     salmon/pink than red at that lightness. */
+  .bg-stock-ink {
+    --muted-ink-rgb: 148 141 126;
+    --link-red-rgb: 224 112 95;
+  }
+
+  /* .highlight-link's translucent wash was tuned against light stock
+     (bg-highlight/40, hover/focus/60) and reads muddy on near-black -- a
+     light color at 40% over dark just looks dim rather than like a
+     highlighter. Stepping opacity up across the board (rest 40->60,
+     hover/focus 60->80, same +20-point relationship as light) so it reads as
+     a chalk-on-dark wash instead. Same highlight hue, not a new dark token --
+     this is an opacity-only fix, unlike muted-ink/link-red above. Scoped as a
+     descendant rule (not a CSS variable) since Tailwind's opacity modifiers
+     are baked into the utility class at build time, not swappable via a
+     custom property the way a color hue is. */
+  .bg-stock-ink .highlight-link {
+    @apply bg-highlight/60 hover:bg-highlight/80 focus-visible:bg-highlight/80;
+  }
+
+  /* Section wrapper with a horizontal inset (page hero/photo blocks; the headline
+     inherits this too, since it's a child of the same hero panel). Self-contained
+     across all three tiers so it doesn't compete with .mobile-gutter over the same
+     property (that's what caused the md padding to get zeroed out originally --
+     both classes are in the components layer, and .mobile-gutter's md:px-0, being
+     defined later in this file, won the cascade tie).
+     The page datum: at tablet (md), the left edge matches the nav logo (pl-2 =
+     8px, zero extra offset beyond the nav's p-2). The right edge mirrors it
+     symmetrically rather than chasing the dots menu's own inset (which carries
+     extra tap-target padding) -- matching that pixel-for-pixel reads as an
+     unbalanced margin rather than an aligned one. Reverts to the original
+     symmetric lg:mx-8 margin at true desktop, unchanged. */
+  .section-panel {
+    @apply px-2 lg:px-0 lg:mx-8 relative;
+  }
+
+  /* Hero headline: the large page-title treatment sitting inside a .section-panel
+     hero. text-balance prevents orphan words at any width; the four size steps
+     were tuned against About's headline text and reused as-is for Music (both
+     land at text-[10rem]/[1] by lg, same as before this was a shared class). */
+  .hero-headline {
+    @apply swissposters font-light text-balance text-6xl/[1] sm:text-7xl/[1] md:text-[7rem]/[1] lg:text-[10rem]/[1] pb-8 w-full;
+  }
+
+  /* Caps and centers a block at the body column's reading width for tablet only;
+     reverts to full/flush at lg so desktop's existing layout is untouched. Used to
+     line up elements (subhead, footer) that live outside the body column's own
+     row/wrapper structure but need to match its rendered position. */
+  .body-column {
+    @apply md:max-w-[36rem] md:mx-auto lg:max-w-none lg:mx-0;
+  }
+
+  /* Constrains a text column to a comfortable reading width on md+ screens */
+  .prose-col {
+    @apply md:max-w-[36rem];
+  }
+
+  /* Standard body paragraph */
+  .body-copy {
+    @apply mb-8 text-xl leading-8;
+  }
+
+  /* Inline link with a highlighted background, used for cross-page references */
+  .highlight-link {
+    @apply bg-highlight/40 px-1 -mx-0.5 text-inherit decoration-clone hover:bg-highlight/60 transition-colors
+           focus-visible:bg-highlight/60 focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-offset-2 focus-visible:outline-almost-black;
+  }
+
+  /* Site-wide resting-underline text link: a thin rule at rest that strengthens
+     on hover -- the default signature for inline text links (wayfinding and name
+     lists), outside the main nav (which reserves underlines for the active page).
+     Decoration color/opacity at rest is set per-usage (e.g. decoration-muted-ink/40,
+     decoration-link-red/40) since the same structural rule serves multiple ink
+     colors; hover strengthens to decoration-2 at full opacity. focus-visible gets
+     the same decoration-2 thickness bump here (structural, shared); each usage
+     also pairs its own hover:decoration-COLOR with a matching focus-visible:
+     decoration-COLOR, since color/opacity is instance-specific. */
+  .link-underline {
+    @apply underline decoration-1 underline-offset-2 hover:decoration-2 focus-visible:decoration-2 transition-colors;
+  }
+
+  /* Red link-list item: one <a> per <li> in a list of outbound links
+     (Music's "engineered for"/"opened for"/mentors lists). Pairs .link-red
+     with .link-underline; py-2 lg:py-0 gives a comfortable tap target below
+     lg without adding visible gap at desktop, where line-height alone
+     separates entries. List markup convention: the intro sentence is a
+     <p> above the <ul>, one <li> per link -- never multiple <a>s crammed
+     into a single <li> and separated by <br>, which reads as one list item
+     to assistive tech and made a stale href (Manring/Hieroglyphics) easy
+     to miss. */
+  .link-list {
+    @apply alaska text-link-red link-underline decoration-link-red/40 hover:decoration-link-red focus-visible:decoration-link-red inline-block py-2 lg:py-0;
+  }
+
+  /* .link-list minus .link-underline: for a list entry that's part of the
+     same red, same-rhythm sequence but isn't a link (no href to point to --
+     Design's "Dunable Guitars" mention). Same color/size/tap-target,
+     deliberately no underline, since it isn't clickable. */
+  .list-entry {
+    @apply alaska text-link-red inline-block py-2 lg:py-0;
+  }
+
+  /* Small italic caption under a photo */
+  .photo-caption {
+    @apply font-thin text-xs italic inline-block;
+  }
+
+  /* Exhibit pattern: a <figure>/<figcaption class="photo-caption"> pairing for
+     showcasing a piece of work outside the main photo-panel convention (that
+     one's for About/Music's hero-adjacent 2-up + wide-photo blocks; this one's
+     for a single mid-body exhibit). Two treatments, named for their shape:
+     .exhibit-inline is a width-capped, centered figure sitting inline with body
+     copy (Design's Kinetic Beats screenshot); .exhibit-full is a near-bleed,
+     wide figure with the caption at the left datum (Design's iMaschine shot).
+     Minted from Design's system pass; both compile to what was already there
+     as bespoke div/span markup. */
+  .exhibit-inline {
+    @apply mb-8 text-center;
+  }
+  .exhibit-full {
+    @apply max-w-6xl mx-auto mb-8;
+  }
+
+  /* Italic spoken-voice register: short asides/epigraphs and lede paragraphs
+     (About's "Sound is not a backdrop.", "It takes... So. Much. Time.", Music's
+     "A guiding practice...", Philosophy's lede). Previously bare "alaska text-3xl"
+     utilities (plus a semantic <em> where the phrase is emphasis inside a larger
+     paragraph); extracted now that Philosophy's lede is a third, standalone use. */
+  .italic-subhead {
+    @apply alaska text-3xl italic;
+  }
+
+  /* Spoken-voice size variant for flowing-prose instances (e.g. Philosophy's
+     lede, several sentences of running text): the default text-3xl is tuned
+     for a one-line aside or a short declarative stack and starts competing
+     with the headline once prose runs to several lines. Pair with
+     .italic-subhead; defined after it here so the font-size/line-height
+     override wins the cascade tie predictably (same layer, same specificity).
+     Not about line count alone -- a creed/manifesto stack (Design's "Design
+     is a process of evolution..." -- one short declarative per line) stays
+     bare .italic-subhead (3xl) even at three lines, since each line reads as
+     its own beat rather than a paragraph. Reach for -compact only for actual
+     prose. */
+  .italic-subhead-compact {
+    @apply text-2xl;
+  }
+
+  /* Marks a shift into a new movement within a long page (e.g. Music's "Personal
+     Music") -- a tier between the page's hero h1/h2 and its regular body content,
+     for pages long enough to need an internal section break. */
+  .movement-heading {
+    @apply neogeo text-5xl/[1] mb-8;
+  }
+
+  /* Minimum horizontal inset below md so nothing sits flush against the viewport edge; matches MainMenuBar's p-2 */
+  .mobile-gutter {
+    @apply px-2 md:px-0;
+  }
+
+  /* Ledger pattern: label | rule | text row, for document-genre pages (Philosophy's
+     Mission/Manifesto/My Why; Resume will reuse it). .ledger-row is the row shell
+     and spacing token (lg:mb-32 separates entries, stepped down below lg); .ledger-label
+     is the label column with its own rule (a border at lg, a short stub rule below
+     lg -- see the MOBILE RULE STUB block below, currently pending final selection
+     against a bare/no-rule alternative); .ledger-text is the text column's own
+     inset, pairing with .prose-col + .body-copy on the actual content for the
+     reading-width cap and standard paragraph treatment.
+
+     Breakpoint doctrine: the two-column layout is structure, so it holds at lg+ only.
+     Below lg each row stacks -- label full-width above, text full-width below.
+     The rule does NOT relocate to a left border on the text block below lg (tried
+     and rejected -- read as a stray edge line once rows stack); instead
+     .ledger-label grows a short (3rem, fixed-width) rule stub under the label
+     itself, in the label's own trailing margin. Label font-size is set
+     per-instance on each row's own <h2> (text-3xl lg:text-5xl/[1] -- tune the
+     mobile step by eye), not baked into .ledger-label, since it's a heading-level
+     concern.
+
+     Below lg, the row carries a single shared left/right inset so label, stub
+     rule, and text can't drift apart -- left is a flat pl-8 (matching the text
+     column's previous stand-alone inset), right is the site's standard mobile
+     body gutter (px-2 sm:px-4 md:px-8, the same token About/Music/Design use on
+     their own body rows). Reset to lg:px-0 since desktop's own w-1/4/w-3/4 +
+     lg:pr-8 column structure handles spacing there untouched. */
+  .ledger-row {
+    @apply flex flex-col lg:flex-row mb-16 md:mb-24 lg:mb-32 pl-8 pr-2 sm:pr-4 md:pr-8 lg:px-0;
+  }
+  .ledger-label {
+    @apply w-full lg:w-1/4 text-left lg:text-right mb-3 lg:mb-0 lg:border-r-2 border-almost-black lg:pr-8;
+  }
+
+  /* --- MOBILE RULE STUB (comment out this whole block to compare against bare) --- */
+  .ledger-label::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    margin-top: 0.125rem;
+    border-top: 2px solid theme('colors.almost-black');
+  }
+  @media (min-width: 1024px) {
+    .ledger-label::after {
+      display: none;
     }
   }
+  /* --- END MOBILE RULE STUB --- */
 
-  @media (min-width: 1024px) {
-
+  .ledger-text {
+    @apply w-full lg:w-3/4 lg:pl-8;
   }
 }
 

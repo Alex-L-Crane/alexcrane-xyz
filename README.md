@@ -1,57 +1,96 @@
 # alexcrane-xyz
 
-This template should help get you started developing with Vue 3 in Vite.
+Alex Crane's personal site — Vue 3 (Composition API, `<script setup>`) + Vite + Tailwind CSS.
 
-## Recommended IDE Setup
+## Project structure
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+**Routes** (`src/router/index.js`):
 
-## Customize configuration
+| Path | Component |
+|---|---|
+| `/` | `src/views/MainLanding.vue` |
+| `/technology` | `src/views/TechnologySection.vue` |
+| `/philosophy` | `src/views/PhilosophyPage.vue` |
+| `/inspirations` | `src/views/InspirationsPage.vue` |
+| `/about` | `src/views/AboutSection.vue` |
+| `/feed` | `src/views/DrummingFeed.vue` |
+| `/music` | `src/views/MusicPage.vue` |
+| `/design` | `src/views/DesignPage.vue` |
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+There is no `/projects` landing route — that section-index page was removed since nothing linked to it; the sub-pages above are top-level. `/about` was reintroduced later as the route for `AboutSection.vue` (renamed from `BackgroundSection.vue`) to match its "About" nav label — it is unrelated to the old `/about` landing page. Unknown paths (including old `/projects`/`/background` links) redirect to `/`.
 
-## Project Setup
+**Global shell** (`src/App.vue`, rendered on every route): `MainMenuBar.vue` (nav) + `GlobalFooter.vue`. Navigation state/behavior lives in `src/composables/` (`useNavigation`, `useArrowNavigation`, `useSwipeNavigation`).
+
+**Content data**: `src/content/videos.js` feeds `DrummingFeed.vue` and `TechnologySection.vue`. Both embed YouTube directly via `<iframe src="https://www.youtube-nocookie.com/embed/...">` — no video library/SDK involved.
+
+## Setup
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Dev server
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Production build
 
 ```sh
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Unit tests ([Vitest](https://vitest.dev/))
 
 ```sh
 npm run test:unit
 ```
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+### End-to-end tests ([Cypress](https://www.cypress.io/))
 
 ```sh
 npm run test:e2e:dev
 ```
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
+### Lint
 
 ```sh
 npm run lint
 ```
+
+## Branch history
+
+This repo went through a long period of iterating on page designs directly on feature branches (`music-page`, `page-background`, `dev`), which left behind a lot of abandoned components, views, and unreferenced assets.
+
+- **`pre-refactor`** — a snapshot of `music-page` exactly as it stood before cleanup, preserving every experiment tried (including the items removed below) in case any of it is worth revisiting.
+- **`launch-prep`** — this branch, where the dead code/assets/dependencies below were removed to give the site a clean base to build forward from.
+
+### Removed in cleanup (still available on `pre-refactor`)
+
+**Components/views** (unused — either superseded by later versions or never wired into the router):
+- `src/components/PlaceHolder.vue`
+- `src/components/design/DesignSummary.vue` / `src/components/music/MusicSummary.vue` (superseded — `DesignSection.vue`/`MusicSection.vue` build their content inline now)
+- `src/components/formatting/StylizedListItem.vue`
+- `src/components/formatting/TextBlockRightLowerRight.vue`
+- `src/components/navigation/BreadCrumbs.vue`
+- `src/components/navigation/MainMenuImageGrid.vue`
+- `src/components/philosophy/PhilosophyBanner.vue`
+- `src/views/feed/PostFeed.vue` / `src/views/feed/VideoPostDetail.vue` (never routed)
+- `src/views/projects/ProjectsFeed-archive.vue` (early prototype of `ProjectsFeed.vue`)
+
+**State**: `src/stores/navStore.js` and the Pinia dependency (only used by an old commented-out router config, never active).
+
+**Dependencies**: `pinia`, `convertkit-vue`, `video.js` — none were imported anywhere in `src/`.
+
+**Assets** (~98MB, confirmed unreferenced by any `.vue`/`.js`/`.css` file): 34 images under `src/assets/images/` (including several superseded duplicate/variant images, e.g. `garage-photo-3-31-24-v14.png`, `background-abstract-1.png`/`-2.png`, `tragedy-suicidal.png`/`-bw.png`) and one duplicate font format (`NeoGeo-Trial-VAR-VF.otf`, the `.woff2` version is what's actually loaded).
+
+To recover anything on this list: `git checkout pre-refactor -- <path>`.
+
+### Also removed: /about and /projects section routes
+
+`src/views/about/AboutWrapper.vue`, `src/views/projects/ProjectsWrapper.vue`, `src/views/about/AboutLanding.vue`, `src/views/projects/ProjectsLanding.vue`, `src/components/about/AboutLandingBanner.vue`, and `src/components/projects/ProjectsLandingBanner.vue` were removed when the `/about` and `/projects` landing routes were dropped in favor of top-level sub-page routes (see table above). Recoverable the same way, from `pre-refactor` or `music-page`.
+
+### Also removed: unused VideoPlayer component and its assets
+
+`src/components/formatting/VideoPlayer.vue` (an unused `vue3-youtube`-based player — the live pages use a plain `<iframe>` instead) and the `vue3-youtube` dependency, plus nine images that had become unreferenced as side effects of earlier removals (`kinetic-beats-sketch.png`, `abstract-header-drumhead.png`, `landing-banner-1.png`, `Phenyx-portfolio-mockup.png`, `tca-silouhette-pic-2017.jpg`, `music/tragedy-suicidal-wide-bw.png`, `music/DSC_0217.JPG`, `nav-images/music-nav-1024x576.png`, `nav-images/background-nav-1024x576.png`). Recoverable from `pre-refactor` or `music-page`.

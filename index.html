@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Methodical Non-utilitarianism</title>
+    <meta name="theme-color" content="#1c1c1c">
+    <title>Ritual :: Rhythm</title>
+    <meta name="description" content="Drumming and audio engineering. Performance studies, improvisations, and the work behind the work. Alex Crane, Eugene, Oregon.">
+    <link rel="canonical" href="https://alexcrane.systems/">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ritual :: Rhythm">
+    <meta property="og:description" content="Drumming and audio engineering. Performance studies, improvisations, and the work behind the work. Alex Crane, Eugene, Oregon.">
+    <meta property="og:url" content="https://alexcrane.systems/">
+    <meta property="og:image" content="https://alexcrane.systems/social-share.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="module">
+      import { isLikelyEuUk } from '/src/composables/useConsent.js'
+
+      // Production-only: dynamically injecting the gtag.js script (rather
+      // than a static <script src>) means dev/localhost makes zero network
+      // requests to Google, not just suppressed tracking calls on top of a
+      // loaded-anyway script. send_page_view:false is deliberate -- the
+      // router's afterEach hook (src/router/index.js) is the single source
+      // of truth for pageviews, so the automatic one here would double-count
+      // the initial load.
+      if (import.meta.env.PROD) {
+        const s = document.createElement('script')
+        s.async = true
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VBQZRHH51H'
+        document.head.appendChild(s)
+        window.dataLayer = window.dataLayer || []
+        window.gtag = function () { window.dataLayer.push(arguments) }
+        window.gtag('js', new Date())
+        // Geofenced consent default -- must fire before 'config', per
+        // Google's Consent Mode ordering requirement, so no analytics
+        // cookie is set for an EU/UK visitor before they choose. Reads
+        // the same localStorage key useConsent.js writes on Accept/Decline,
+        // so a returning visitor's prior choice applies immediately without
+        // a re-prompt. Non-EU/UK visitors get no 'consent' call at all --
+        // Consent Mode's own default (granted, when unset) preserves the
+        // existing "fires immediately" behavior exactly.
+        if (isLikelyEuUk()) {
+          window.gtag('consent', 'default', {
+            analytics_storage: localStorage.getItem('ga-consent-eu-uk') === 'granted' ? 'granted' : 'denied'
+          })
+        }
+        window.gtag('config', 'G-VBQZRHH51H', { send_page_view: false })
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>

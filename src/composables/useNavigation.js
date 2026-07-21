@@ -13,26 +13,9 @@ export function useNavigation() {
     navSections.value.findIndex(section => section.path === route.path)
   )
 
-  // Helper: first sub-page in a section
-  function getSectionStart(sectionName) {
-    return navSections.value.find(section =>
-      section.path.startsWith(`/${sectionName}/`)
-    )
-  }
-
-  function getSectionEnd(sectionName) {
-    const matches = navSections.value.filter(section =>
-      section.path.startsWith(`/${sectionName}/`)
-    )
-    return matches.at(-1) // last sub-page in section
-  }
-
   const prevPage = computed(() => {
     const index = currentIndex.value
     if (index === -1) {
-      // On a landing page
-      if (route.path === '/projects') return getSectionEnd('projects')?.path
-      if (route.path === '/about') return getSectionEnd('about')?.path
       return navSections.value.at(-1).path // fallback: last overall page
     }
 
@@ -44,9 +27,6 @@ export function useNavigation() {
   const nextPage = computed(() => {
     const index = currentIndex.value
     if (index === -1) {
-      // On a landing page
-      if (route.path === '/projects') return getSectionStart('projects')?.path
-      if (route.path === '/about') return getSectionStart('about')?.path
       return navSections.value[0].path // fallback: first overall page
     }
 
