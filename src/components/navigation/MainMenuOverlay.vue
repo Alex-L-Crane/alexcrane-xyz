@@ -9,7 +9,7 @@ const props = defineProps({
   // bits, everything else (fade, ESC, tab-trap, click-outside, z-index) is
   // shared unconditionally.
   background: { type: String, default: 'bg-stock-coral' },
-  textClass: { type: String, default: 'neogeo text-black' },
+  textClass: { type: String, default: 'alaska text-black' },
   ariaLabel: { type: String, default: 'Menu' },
   contentAlign: { type: String, default: 'center' }, // 'center' | 'top'
   showCloseButton: { type: Boolean, default: false },

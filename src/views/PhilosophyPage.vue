@@ -20,7 +20,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
 
     <div class="ledger-row">
       <div class="ledger-label">
-        <h2 class="neogeo text-3xl lg:text-5xl/[1]">Mission</h2>
+        <h2 class="swissposters font-light text-4xl lg:text-6xl/[1]">Mission</h2>
       </div>
       <div class="ledger-text">
         <div class="prose-col">
@@ -31,7 +31,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
 
     <div class="ledger-row">
       <div class="ledger-label">
-        <h2 class="neogeo text-3xl lg:text-5xl/[1]">Manifesto</h2>
+        <h2 class="swissposters font-light text-4xl lg:text-6xl/[1]">Manifesto</h2>
       </div>
       <div class="ledger-text">
         <div class="prose-col">
@@ -49,7 +49,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
 
     <div class="ledger-row">
       <div class="ledger-label">
-        <h2 class="neogeo text-3xl lg:text-5xl/[1]">My Why</h2>
+        <h2 class="swissposters font-light text-4xl lg:text-6xl/[1]">My Why</h2>
       </div>
       <div class="ledger-text">
         <div class="prose-col">
