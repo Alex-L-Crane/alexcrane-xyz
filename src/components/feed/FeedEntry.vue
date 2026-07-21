@@ -6,6 +6,8 @@ const props = defineProps({
   date: { type: String, required: true },
   description: { type: String, default: '' },
   videoId: { type: String, required: true },
+  thumbnail: { type: String, default: '' },
+  thumbnailSrcset: { type: String, default: '' },
 })
 
 const isPlaying = ref(false)
@@ -44,6 +46,16 @@ const onThumbLoad = (event) => {
           :aria-label="`Play ${title}`"
         >
           <img
+            v-if="thumbnail"
+            :src="thumbnail"
+            :srcset="thumbnailSrcset"
+            sizes="(min-width: 1024px) 896px, 100vw"
+            :alt="title"
+            loading="lazy"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+          <img
+            v-else
             :src="thumbUrl"
             :alt="title"
             loading="lazy"

@@ -72,6 +72,8 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
             :date="entry.date"
             :description="entry.description"
             :video-id="entry.youtubeId"
+            :thumbnail="entry.thumbnail"
+            :thumbnail-srcset="entry.thumbnailSrcset"
           />
 
           <div v-if="totalPages > 1" class="flex justify-between text-xl mb-16">
