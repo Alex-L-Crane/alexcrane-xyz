@@ -9,10 +9,29 @@
   >
     <div class="prose-col text-left">
       <h2 class="alaska text-3xl mb-8">Colophon</h2>
-      <p class="body-copy">Designed, written, and built in Eugene, Oregon.</p>
-      <p class="body-copy">JS, HTML, and CSS via Vue and Tailwind. Mocked up in Figma. Coded in WebStorm. In the final stretch, Claude (Anthropic) joined as a coding assistant: refactoring the codebase into a shared design system, building out responsive layouts, and implementing revisions under direction. Every design decision and every word is my own.</p>
-      <p class="body-copy">Set in the following Newglyph fonts: NeoGeo, Swissposters, Alaska, and Atacama. Hosted on GitHub Pages.</p>
-      <p class="body-copy">Each section on its own stock: blush #F6D9CE, yellow #F5D37D, chartreuse #D8F172, ink #1C1C1C, paper #FFFFFF.</p>
+      <p class="body-copy">Designed, written, and built in
+        <a href="https://en.wikipedia.org/wiki/Eugene,_Oregon" target="_blank" rel="noopener noreferrer" class="colophon-link">Eugene, Oregon</a>.
+      </p>
+      <p class="body-copy">
+        <span class="alaska font-bold">Built with:</span> <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener noreferrer" class="colophon-link">JS</a>,
+        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer" class="colophon-link">HTML</a>, and
+        <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer" class="colophon-link">CSS</a> via
+        <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" class="colophon-link">Vue</a> and
+        <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="colophon-link">Tailwind</a>.
+        Mocked up in <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer" class="colophon-link">Figma</a>.
+        Coded in <a href="https://www.jetbrains.com/webstorm/" target="_blank" rel="noopener noreferrer" class="colophon-link">WebStorm</a>.
+        In the final stretch, <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer" class="colophon-link">Claude (Anthropic)</a> joined as a coding assistant: refactoring the codebase into a shared design system, building out responsive layouts, and implementing revisions under direction. Every design decision and every word is my own.
+      </p>
+      <p class="body-copy">
+        <span class="alaska font-bold">Typefaces:</span> Set in the following
+        <a href="https://newglyph.com/" target="_blank" rel="noopener noreferrer" class="colophon-link">Newglyph</a> fonts: NeoGeo, Swissposters, Alaska, and Atacama.
+      </p>
+      <p class="body-copy">
+        <span class="alaska font-bold">Hosted on:</span> <a href="https://docs.github.com/en/pages" target="_blank" rel="noopener noreferrer" class="colophon-link">GitHub Pages</a>.
+      </p>
+      <p class="body-copy">
+        <span class="alaska font-bold">Stocks:</span> blush #F6D9CE, yellow #F5D37D, chartreuse #D8F172, ink #1C1C1C, paper #FFFFFF.
+      </p>
     </div>
   </MainMenuOverlay>
   <div class="bg-almost-black lg:h-[600px] px-8 pb-36 lg:flex lg:flex-col lg:justify-end">

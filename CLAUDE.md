@@ -530,6 +530,15 @@ needs reordering, keep them adjacent.
 - **Full-screen menu overlay: all-links context** -- ink-colored links,
   nav-style hover-underline, persistent underline marks the current page.
   Documented exemption from red-means-link, same basis as the main nav.
+- **Colophon: ink-colored underline, not red.** `.colophon-link`
+  (`text-black link-underline decoration-black/40 hover:decoration-black
+  focus-visible:decoration-black`) -- same `.link-underline` mechanics as
+  every other text link, just ink instead of red. A credits/reference page
+  reads better understated, and the linked terms (Wikipedia entries, tool
+  homepages) already carry their own recognition without needing the
+  red-means-link signal to flag them. Third documented exception to
+  red-means-link, same footing as the main nav and the menu overlay above --
+  not a drift to flag later.
 
 ## Punctuation voice (site-wide, all rendered copy)
 
