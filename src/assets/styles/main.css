@@ -13,38 +13,44 @@
     --link-red-rgb: 154 44 44;
   }
 
-  /* NeoGeo */
+  /* NeoGeo -- purchased variable-font license (was NeoGeo-Trial-VAR-VF.woff2) */
   @font-face {
     font-family: NeoGeo;
-    src: url(../fonts/NeoGeo-Trial-VAR-VF.woff2) format("woff2");
+    src: url(../fonts/NeoGeo%20VAR-VF.ttf.woff2) format("woff2");
     font-display: swap;
   }
 
-  /* Swiss Posters */
+  /* Swiss Posters -- purchased variable-font license (was Swissposters-Trial-VAR-VF.woff2) */
   @font-face {
     font-family: Swissposters;
-    src: url(../fonts/Swissposters-Trial-VAR-VF.woff2) format("woff2");
+    src: url(../fonts/Swissposters%20VAR-VF.ttf.woff2) format("woff2");
     font-display: swap;
   }
 
-  /* Alaska */
+  /* Alaska -- purchased variable-font license (was Alaska-Trial-VAR-VF.ttf.woff2) */
   @font-face {
     font-family: Alaska;
-    src: url(../fonts/Alaska-Trial-VAR-VF.ttf.woff2) format("woff2");
+    src: url(../fonts/Alaska%20VAR-VF.woff2) format("woff2");
     font-display: swap;
   }
 
-  /* Atacama */
+  /* Atacama (Thin) -- purchased file is one variable font covering the full
+     weight range; .atacama and .atacamamedium both point at it now, pinned
+     to different font-weight values below since neither class historically
+     needed to request a weight (each was its own static trial file). Thin =
+     wght 100, confirmed against the file's own named instances and checked
+     via fontTools that this reproduces the trial file's exact glyph metrics. */
   @font-face {
     font-family: Atacama;
-    src: url(../fonts/AtacamaTrial-Thin.woff2) format("woff2");
+    src: url(../fonts/Atacama%20VAR-VF.ttf.woff2) format("woff2");
     font-display: swap;
   }
 
-  /* Atacama Medium */
+  /* Atacama Medium -- same purchased file as above, pinned to wght 500
+     (Medium) below. Was AtacamaTrial-Medium.woff2. */
   @font-face {
     font-family: AtacamaMedium;
-    src: url(../fonts/AtacamaTrial-Medium.woff2) format("woff2");
+    src: url(../fonts/Atacama%20VAR-VF.ttf.woff2) format("woff2");
     font-display: swap;
   }
 
@@ -72,12 +78,18 @@
     font-family: "Alaska", var(--font-fallback);
   }
 
+  /* font-weight pinned explicitly -- both classes now share one variable
+     file (see the @font-face rules above), so without this they'd both
+     silently render at the file's own default instance (Regular/400)
+     instead of their historical Thin/Medium weights. */
   .atacama {
     font-family: "Atacama", var(--font-fallback);
+    font-weight: 100;
   }
 
   .atacamamedium {
     font-family: "AtacamaMedium", var(--font-fallback);
+    font-weight: 500;
   }
 }
 
@@ -194,6 +206,16 @@
      deliberately no underline, since it isn't clickable. */
   .list-entry {
     @apply alaska text-link-red inline-block py-2 lg:py-0;
+  }
+
+  /* Colophon-specific exception to red-means-link -- see CLAUDE.md's link
+     grammar section for the reasoning (a credits page reads better
+     understated; the terms themselves carry recognition). Ink-colored
+     instead of red, otherwise identical mechanics to .link-list:
+     .link-underline's structural underline, decoration at ~40% opacity
+     strengthening to full on hover/focus-visible. */
+  .colophon-link {
+    @apply text-black link-underline decoration-black/40 hover:decoration-black focus-visible:decoration-black;
   }
 
   /* Small italic caption under a photo */

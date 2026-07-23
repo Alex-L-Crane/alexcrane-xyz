@@ -49,7 +49,7 @@ import garagePhotoSrcset from '@/assets/images/garage-photo-cropped.png?w=480;80
         <div class="lg:pl-[40rem] mb-8 lg:mb-16">
           <div class="flex align-baseline lg:max-w-[18rem] pt-6 lg:pt-8 pb-4 relative z-0">
             <p><span class="alaska tracking-tight mr-2"><em>kaizen (Japanese):</em></span>
-              <em class="atacama font-thin">The practice of continually seeking improvement.</em>
+              <em class="alaska">The practice of continually seeking improvement.</em>
             </p>
           </div>
         </div>
