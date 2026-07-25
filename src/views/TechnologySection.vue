@@ -4,7 +4,7 @@ import { techVideos } from '@/content/videos.js'
 
 const masthead = {
   variant: 'muted',
-  lines: ['The work behind', 'the work'],
+  lines: ['The work behind', 'the work.'],
 }
 
 const filters = ['Solo', 'Logik Rift', 'TCA']

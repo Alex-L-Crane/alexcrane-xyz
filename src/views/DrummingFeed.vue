@@ -4,7 +4,7 @@ import { drumVideos } from '@/content/videos.js'
 
 const masthead = {
   variant: 'creed',
-  lines: ['Systems', 'Patterns', 'Perception'],
+  lines: ['Systems.', 'Patterns.', 'Noises.'],
 }
 
 const filters = ['Solo', 'Logik Rift', 'TCA']
