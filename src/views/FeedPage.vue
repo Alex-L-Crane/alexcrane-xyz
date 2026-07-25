@@ -47,7 +47,7 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
           </p>
         </div>
 
-        <div class="lg:sticky lg:self-start lg:top-40">
+       <!-- <div class="lg:sticky lg:self-start lg:top-40">
           <ul class="flex flex-wrap gap-x-6 gap-y-1 lg:block alaska text-l/[2] font-thin lg:max-w-lg lg:ml-auto">
             <li v-for="facet in allFilters" :key="facet" class="lg:mb-2">
               <button
@@ -60,7 +60,7 @@ const goOlder = () => { if (page.value < totalPages.value) page.value++ }
               >{{ facet }}</button>
             </li>
           </ul>
-        </div>
+        </div>-->
       </div>
 
       <div class="lg:w-3/4">
