@@ -1,8 +1,13 @@
+/* Drumming thumbnails */
+import vivaCascadiaThumb from '@/assets/images/feed/viva-cascadia-playthrough.png?w=800&format=webp&quality=82'
+import vivaCascadiaThumbSrcset from '@/assets/images/feed/viva-cascadia-playthrough.png?w=480;800;1024&format=webp&quality=82&as=srcset'
+
 import preparedDrumsThumb from '@/assets/images/feed/prepared-drums.png?w=800&format=webp&quality=82'
 import preparedDrumsThumbSrcset from '@/assets/images/feed/prepared-drums.png?w=480;800;1024&format=webp&quality=82&as=srcset'
 
-import vivaCascadiaThumb from '@/assets/images/feed/viva-cascadia-playthrough.png?w=800&format=webp&quality=82'
-import vivaCascadiaThumbSrcset from '@/assets/images/feed/viva-cascadia-playthrough.png?w=480;800;1024&format=webp&quality=82&as=srcset'
+/* Technology thumbnails */
+import kineticBeatsThumb from '@/assets/images/feed/kinetic-beats-app.png?w=800&format=webp&quality=82'
+import kineticBeatsThumbSrcset from '@/assets/images/feed/kinetic-beats-app.png?w=480;800;1024&format=webp&quality=82&as=srcset'
 
 import oneManRigRundownThumb from '@/assets/images/feed/one-man-rig-rundown.png?w=800&format=webp&quality=82'
 import oneManRigRundownThumbSrcset from '@/assets/images/feed/one-man-rig-rundown.png?w=480;800;1024&format=webp&quality=82&as=srcset'
@@ -38,6 +43,16 @@ export const drumVideos = [
 ].sort((a, b) => new Date(b.date) - new Date(a.date))
 
 export const techVideos = [
+  {
+    slug: 'kinetic-beats-app',
+    title: 'Kinetic Beats App',
+    date: '08-14-2026',
+    youtubeId: 'dKy42f76F8Q',
+    description: 'I collaborated with an engineer friend to create Kinetic Beats, an iPhone app for air drumming.',
+    thumbnail: kineticBeatsThumb,
+    thumbnailSrcset: kineticBeatsThumbSrcset,
+    body: ``,
+  },
   {
     slug: 'one-man-rig-rundown',
     title: 'One-man Rig Rundown',
