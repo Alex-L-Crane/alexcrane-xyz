@@ -5,6 +5,9 @@ import vivaCascadiaThumbSrcset from '@/assets/images/feed/viva-cascadia-playthro
 import preparedDrumsThumb from '@/assets/images/feed/prepared-drums.png?w=800&format=webp&quality=82'
 import preparedDrumsThumbSrcset from '@/assets/images/feed/prepared-drums.png?w=480;800;1024&format=webp&quality=82&as=srcset'
 
+import fastWormsThumb from '@/assets/images/feed/intronaut-fast-worms-playthrough.png?w=800&format=webp&quality=82'
+import fastWormsThumbSrcset from '@/assets/images/feed/intronaut-fast-worms-playthrough.png?w=480;800;1024&format=webp&quality=82&as=srcset'
+
 /* Technology thumbnails */
 import kineticBeatsThumb from '@/assets/images/feed/kinetic-beats-app.png?w=800&format=webp&quality=82'
 import kineticBeatsThumbSrcset from '@/assets/images/feed/kinetic-beats-app.png?w=480;800;1024&format=webp&quality=82&as=srcset'
@@ -35,9 +38,19 @@ export const drumVideos = [
     title: 'Viva Cascadia Playthrough',
     date: '01-08-2025',
     youtubeId: 'TyKsowvmngs',
-    description: 'Plathrough of the drum parts I wrote for the song Viva Cascadia by Eugene band Red Cloud.',
+    description: 'Playthrough of the drum parts I wrote for the song Viva Cascadia by Eugene band Red Cloud.',
     thumbnail: vivaCascadiaThumb,
     thumbnailSrcset: vivaCascadiaThumbSrcset,
+    body: ``,
+  },
+  {
+    slug: 'fast-worms',
+    title: 'Fast Worms Playthrough',
+    date: '07-30-2018',
+    youtubeId: 'iWecdzFCryc',
+    description: 'Playthrough of an Intronaut song called Fast worms.',
+    thumbnail: fastWormsThumb,
+    thumbnailSrcset: fastWormsThumbSrcset,
     body: ``,
   }
 ].sort((a, b) => new Date(b.date) - new Date(a.date))
