@@ -31,7 +31,7 @@ import EyebrowNav from '@/components/navigation/EyebrowNav.vue'
         <div class="md:max-w-[36rem]">
           <p class="body-copy">
             Projects are born, they grow, and then they die.
-            Sometimes they don’t die right away, but they usually die.
+            Sometimes they don’t die right away, but they do die.
             There’s a tangible lifecycle.
             Sometimes they are just envisioned and then die before they are even born.
           </p>
