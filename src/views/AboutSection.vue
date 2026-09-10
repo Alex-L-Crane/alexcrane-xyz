@@ -27,7 +27,7 @@ import garagePhotoSrcset from '@/assets/images/garage-photo-cropped.png?w=480;80
       <div class="w-full body-column lg:w-3/4">
         <div class="prose-col mt-6 mb-8">
           <p class="body-copy">
-            Every sound is an event born of vibrating bodies, shaped by spaces, and completed inside us, the listeners.
+            Every sound is an event born of vibrating bodies, shaped by spaces, and completed inside of us, the listeners.
           </p>
         </div>
         <div class="prose-col mb-8">
