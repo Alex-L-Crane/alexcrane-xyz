@@ -38,7 +38,7 @@ import garagePhotoSrcset from '@/assets/images/garage-photo-cropped.png?w=480;80
             I’ve never been satisfied as a cog in a soulless machine.
             I haven’t followed a straight professional path.
             Most things I’ve done that mattered were born from personal projects, from freelance work, and from figuring things out on the fly.
-            <br>Engaging... Cultivating something <em>REAL</em> takes time.<br><br>
+            <br><br>Engaging... cultivating something <em>REAL</em> takes time.<br><br>
             <em class="alaska text-3xl">It takes…<span class="inline-block w-4 lg:w-8"></span>
               <span class="inline lg:hidden"><br></span>
               So.<span class="inline-block w-2 lg:w-8"></span>
