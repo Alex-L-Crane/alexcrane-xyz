@@ -32,7 +32,7 @@ import garagePhotoSrcset from '@/assets/images/garage-photo-cropped.png?w=480;80
         </div>
         <div class="prose-col mb-8">
           <p class="body-copy">
-            That's where my mind lives: where the drum as acoustic instrument intersects with the microphone as witness and the space around them. That's where music, <em>and culture</em>, exists.
+            That's where my mind lives: where the drum as acoustic instrument intersects with the microphone as witness and the surrounding spaces. That's where music, <em>and culture</em>, exists.
           </p>
           <p class="body-copy">
             I’ve never been satisfied as a cog in a soulless machine.
